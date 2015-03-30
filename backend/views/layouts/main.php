@@ -38,15 +38,21 @@ AppAsset::register($this);
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/user/login']];
             } else {
-                $menuItems[] = [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/user/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ];
+                $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> ' . Yii::$app->user->identity->username,
+                    'items' => [
+                        ['label' => '<span class="fa fa-edit"></span> Update Profile', 'url' => ['/user/settings/account']],
+                        '<li class="divider"></li>',
+                        ['label' => '<span class="fa fa-sign-out"></span> Logout', 'url' => ['/user/security/logout'],
+                            'linkOptions' => ['data-method' => 'post'],
+                        ],
+                    ],
+                ];                
+
             }
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
+                'encodeLabels' => false,
             ]);
             NavBar::end();
             ?>

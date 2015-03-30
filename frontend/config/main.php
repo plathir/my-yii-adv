@@ -1,9 +1,7 @@
 <?php
+
 $params = array_merge(
-    require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
 return [
@@ -11,11 +9,31 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'admins' => ['admin'],
+            'enableUnconfirmedLogin' => true,
+        ],
+    ],
     'components' => [
         'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'dektrium\user\models\User',
+            'enableAutoLogin' => true,  
         ],
+//        'authClientCollection' => [
+//            'class' => 'yii\authclient\Collection',
+//            'clients' => [
+//                'google' => [
+//                    'class' => 'yii\authclient\clients\GoogleOpenId'
+//                ],
+//                'facebook' => [
+//                    'class' => 'yii\authclient\clients\Facebook',
+//                    'clientId' => 'facebook_client_id',
+//                    'clientSecret' => 'facebook_client_secret',
+//                ],
+//            ],
+//        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
