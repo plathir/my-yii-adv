@@ -14,6 +14,9 @@ return [
             'class' => 'dektrium\user\Module',
             'admins' => ['admin']
         ],
+        'smartblog' => [
+            'class' => 'plathir\smartblog\Module',
+        ]
     ],
     'components' => [
         'user' => [
