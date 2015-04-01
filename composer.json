@@ -19,7 +19,7 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "dektrium/yii2-user": "0.9.*@dev",
-        "plathir/yii2-smartblog": "@dev",
+        "plathir/yii2-smart-blog": "@dev",
         "plathir/yii2-smart-user": "@dev"
     },
     "require-dev": {

@@ -15,11 +15,14 @@ return [
             'admins' => ['admin'],
             'enableUnconfirmedLogin' => true,
         ],
+        'smartblog' => [
+            'class' => 'plathir\smartblog\Module',
+        ]
     ],
     'components' => [
         'user' => [
             'identityClass' => 'dektrium\user\models\User',
-            'enableAutoLogin' => true,  
+            'enableAutoLogin' => true,
         ],
 //        'authClientCollection' => [
 //            'class' => 'yii\authclient\Collection',

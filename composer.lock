@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "be4249b2776c4cc188ea15462b03f66e",
+    "hash": "874cafa087dafb8b8d93f4f89073ac76",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -305,12 +305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dektrium/yii2-user.git",
-                "reference": "bea25eef1bcfae9bc311c8cf47f27199d462ecb7"
+                "reference": "01588286c58ad1a26b7469457b7756dda11548d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/bea25eef1bcfae9bc311c8cf47f27199d462ecb7",
-                "reference": "bea25eef1bcfae9bc311c8cf47f27199d462ecb7",
+                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/01588286c58ad1a26b7469457b7756dda11548d9",
+                "reference": "01588286c58ad1a26b7469457b7756dda11548d9",
                 "shasum": ""
             },
             "require": {
@@ -360,7 +360,7 @@
                 "yii2",
                 "yii2-user"
             ],
-            "time": "2015-04-01 09:03:58"
+            "time": "2015-04-01 13:49:16"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1529,6 +1529,46 @@
             "time": "2014-11-09 19:54:17"
         },
         {
+            "name": "plathir/yii2-smart-blog",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plathir/yii2-smart-blog.git",
+                "reference": "cc5c9ab539b1254c6f433c1b42d3bd9cb5021d6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/cc5c9ab539b1254c6f433c1b42d3bd9cb5021d6b",
+                "reference": "cc5c9ab539b1254c6f433c1b42d3bd9cb5021d6b",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-widgets": "*",
+                "php": ">=5.4.0",
+                "vova07/yii2-imperavi-widget": "*",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "plathir\\smartblog\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "plathir",
+                    "email": "plathir@gmail.com"
+                }
+            ],
+            "description": "smartblog",
+            "time": "2015-04-01 13:55:51"
+        },
+        {
             "name": "plathir/yii2-smart-user",
             "version": "dev-master",
             "source": {
@@ -1565,46 +1605,6 @@
             ],
             "description": "user",
             "time": "2015-04-01 09:24:36"
-        },
-        {
-            "name": "plathir/yii2-smartblog",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/plathir/yii2-smartblog.git",
-                "reference": "f22051a6aaed1faed1a46ca217c68279c70f9cbd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smartblog/zipball/f22051a6aaed1faed1a46ca217c68279c70f9cbd",
-                "reference": "f22051a6aaed1faed1a46ca217c68279c70f9cbd",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-widgets": "*",
-                "php": ">=5.4.0",
-                "vova07/yii2-imperavi-widget": "*",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-bootstrap": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "plathir\\smartblog\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "plathir",
-                    "email": "plathir@gmail.com"
-                }
-            ],
-            "description": "smartblog",
-            "time": "2014-12-11 09:35:52"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2349,7 +2349,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "dektrium/yii2-user": 20,
-        "plathir/yii2-smartblog": 20,
+        "plathir/yii2-smart-blog": 20,
         "plathir/yii2-smart-user": 20
     },
     "prefer-stable": false,
