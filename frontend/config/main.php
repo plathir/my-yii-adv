@@ -11,9 +11,9 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
         'user' => [
-            'class' => 'dektrium\user\Module',
-            'admins' => ['admin'],
-            'enableUnconfirmedLogin' => true,
+            'class' => 'plathir\user\Module',
+//            'admins' => ['admin'],
+//            'enableUnconfirmedLogin' => true,
         ],
         'smartblog' => [
             'class' => 'plathir\smartblog\Module',
@@ -21,9 +21,13 @@ return [
     ],
     'components' => [
         'user' => [
-            'identityClass' => 'dektrium\user\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'plathir\user\models\User',
         ],
+        
+//        'user' => [
+//            'identityClass' => 'dektrium\user\models\User',
+//            'enableAutoLogin' => true,
+//        ],
 //        'authClientCollection' => [
 //            'class' => 'yii\authclient\Collection',
 //            'clients' => [

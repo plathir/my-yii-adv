@@ -39,8 +39,8 @@ AppAsset::register($this);
                 ['label' => 'Contact', 'url' => ['/site/contact']],
             ];
             if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/register']];
-                $menuItems[] = ['label' => 'Login', 'url' => ['/user/login']];
+                $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/signup']];
+                $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
             } else {
                 $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> ' . Yii::$app->user->identity->username,
                     'items' => [

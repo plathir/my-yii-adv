@@ -305,12 +305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dektrium/yii2-user.git",
-                "reference": "01588286c58ad1a26b7469457b7756dda11548d9"
+                "reference": "4b4f0f981daa056bcb173efab24a20a4fd28910f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/01588286c58ad1a26b7469457b7756dda11548d9",
-                "reference": "01588286c58ad1a26b7469457b7756dda11548d9",
+                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/4b4f0f981daa056bcb173efab24a20a4fd28910f",
+                "reference": "4b4f0f981daa056bcb173efab24a20a4fd28910f",
                 "shasum": ""
             },
             "require": {
@@ -321,6 +321,7 @@
                 "yiisoft/yii2-swiftmailer": "~2.0"
             },
             "require-dev": {
+                "codeception/aspect-mock": "*",
                 "codeception/specify": "*",
                 "codeception/verify": "*",
                 "yiisoft/yii2-codeception": "~2.0"
@@ -360,7 +361,7 @@
                 "yii2",
                 "yii2-user"
             ],
-            "time": "2015-04-01 13:49:16"
+            "time": "2015-04-01 17:48:11"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1574,12 +1575,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "bddcdcb7984f8fc4fc1d439bea204ccbdc64447b"
+                "reference": "4af4609f9450b3c0de8c8bf57b1c9f185b6afbd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/bddcdcb7984f8fc4fc1d439bea204ccbdc64447b",
-                "reference": "bddcdcb7984f8fc4fc1d439bea204ccbdc64447b",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/4af4609f9450b3c0de8c8bf57b1c9f185b6afbd4",
+                "reference": "4af4609f9450b3c0de8c8bf57b1c9f185b6afbd4",
                 "shasum": ""
             },
             "require": {
@@ -1604,7 +1605,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-04-01 09:24:36"
+            "time": "2015-04-02 09:14:11"
         },
         {
             "name": "swiftmailer/swiftmailer",
