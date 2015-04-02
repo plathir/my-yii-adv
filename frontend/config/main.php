@@ -23,6 +23,9 @@ return [
         'user' => [
             'identityClass' => 'plathir\user\models\User',
         ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+        ],
         
 //        'user' => [
 //            'identityClass' => 'dektrium\user\models\User',
