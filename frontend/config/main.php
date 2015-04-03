@@ -23,8 +23,6 @@ return [
         'user' => [
             'identityClass' => 'plathir\user\models\User',
         ],
-
-        
 //        'user' => [
 //            'identityClass' => 'dektrium\user\models\User',
 //            'enableAutoLogin' => true,
