@@ -12,8 +12,6 @@ return [
     'modules' => [
         'user' => [
             'class' => 'plathir\user\Module',
-//            'admins' => ['admin'],
-//            'enableUnconfirmedLogin' => true,
         ],
         'smartblog' => [
             'class' => 'plathir\smartblog\Module',
@@ -22,24 +20,8 @@ return [
     'components' => [
         'user' => [
             'identityClass' => 'plathir\user\models\User',
+            'loginUrl' => ['user/security/login'], 
         ],
-//        'user' => [
-//            'identityClass' => 'dektrium\user\models\User',
-//            'enableAutoLogin' => true,
-//        ],
-//        'authClientCollection' => [
-//            'class' => 'yii\authclient\Collection',
-//            'clients' => [
-//                'google' => [
-//                    'class' => 'yii\authclient\clients\GoogleOpenId'
-//                ],
-//                'facebook' => [
-//                    'class' => 'yii\authclient\clients\Facebook',
-//                    'clientId' => 'facebook_client_id',
-//                    'clientSecret' => 'facebook_client_secret',
-//                ],
-//            ],
-//        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

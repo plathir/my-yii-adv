@@ -305,12 +305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dektrium/yii2-user.git",
-                "reference": "b761671a781764bd7bb813e28cf2d1bdccb99c59"
+                "reference": "e7ff2737af895d0376c3570b692e57ba75870a77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/b761671a781764bd7bb813e28cf2d1bdccb99c59",
-                "reference": "b761671a781764bd7bb813e28cf2d1bdccb99c59",
+                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/e7ff2737af895d0376c3570b692e57ba75870a77",
+                "reference": "e7ff2737af895d0376c3570b692e57ba75870a77",
                 "shasum": ""
             },
             "require": {
@@ -361,7 +361,7 @@
                 "yii2",
                 "yii2-user"
             ],
-            "time": "2015-04-02 18:40:20"
+            "time": "2015-04-04 08:09:57"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1575,12 +1575,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "c73cae809dca31489d2bbeddf54c94e6eec7d5c9"
+                "reference": "e88c353b8248f2e5885d372557e01a1c3d1d5ddf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/c73cae809dca31489d2bbeddf54c94e6eec7d5c9",
-                "reference": "c73cae809dca31489d2bbeddf54c94e6eec7d5c9",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/e88c353b8248f2e5885d372557e01a1c3d1d5ddf",
+                "reference": "e88c353b8248f2e5885d372557e01a1c3d1d5ddf",
                 "shasum": ""
             },
             "require": {
@@ -1605,7 +1605,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-04-02 14:25:24"
+            "time": "2015-04-04 09:15:09"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1661,16 +1661,16 @@
         },
         {
             "name": "vova07/yii2-imperavi-widget",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vova07/yii2-imperavi-widget.git",
-                "reference": "958b9a4e325d907cb7c5d6d2a2ffb7771886ea79"
+                "reference": "d51f5708f123984cb16644c944fdfeb49de45a2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vova07/yii2-imperavi-widget/zipball/958b9a4e325d907cb7c5d6d2a2ffb7771886ea79",
-                "reference": "958b9a4e325d907cb7c5d6d2a2ffb7771886ea79",
+                "url": "https://api.github.com/repos/vova07/yii2-imperavi-widget/zipball/d51f5708f123984cb16644c944fdfeb49de45a2d",
+                "reference": "d51f5708f123984cb16644c944fdfeb49de45a2d",
                 "shasum": ""
             },
             "require": {
@@ -1719,7 +1719,7 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2015-03-30 21:04:15"
+            "time": "2015-04-03 08:07:30"
         },
         {
             "name": "yiisoft/yii2",

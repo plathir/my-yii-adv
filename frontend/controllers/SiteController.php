@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\LoginForm;
+use plathir\user\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -68,20 +68,22 @@ class SiteController extends Controller {
         return $this->render('index');
     }
 
-    public function actionLogin() {
-        if (!\Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                        'model' => $model,
-            ]);
-        }
-    }
+//    public function actionLogin() {
+//        if (!\Yii::$app->user->isGuest) {
+//            return $this->goHome();
+//        }
+//
+//        $model = new LoginForm();
+//        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+//            return $this->goBack();
+//        } else {
+//            Yii::$app->runAction('user/security/login');
+////            return $this->render('../user/security/login', [
+////                        'model' => $model,
+////            ]);
+//            //      return $this->redirect('../user/security/login');
+//        }
+//    }
 
     public function actionLogout() {
         Yii::$app->user->logout();
@@ -161,15 +163,14 @@ class SiteController extends Controller {
     }
 
     public function actionSend() {
-       $msg =  \Yii::$app->mailer->compose()
+        $msg = \Yii::$app->mailer->compose()
                 ->setFrom([\Yii::$app->params['supportEmail'] => 'Test Mail'])
                 ->setTo('plathir@quest.gr')
                 ->setSubject('This is a test mail ')
                 ->send();
 
-        return $this->render('send',
-                  [ 'msg' => $msg]
-                );
+        return $this->render('send', [ 'msg' => $msg]
+        );
     }
 
 }

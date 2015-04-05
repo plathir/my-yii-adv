@@ -11,16 +11,16 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'user' => [
-            'class' => 'dektrium\user\Module',
-            'admins' => ['admin']
+            'class' => 'plathir\user\Module',
+      //      'admins' => ['admin']
         ],
         'smartblog' => [
             'class' => 'plathir\smartblog\Module',
         ]
     ],
     'components' => [
-        'user' => [
-            'identityClass' => 'dektrium\user\models\User',
+                'user' => [
+            'identityClass' => 'plathir\user\models\User',
             'enableAutoLogin' => true,
         ],
         'log' => [
