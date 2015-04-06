@@ -32,7 +32,7 @@ $this->title = 'My Yii Application';
                 ?>        
             </pre> 
 
-            <h3>User Registration</h3>
+            <h3>User Registration actions</h3>
             <ul>
                 <li><?= Html::a('user/registration/signup', ['user/registration/signup']) ?> </li>    
                 <li><?= Html::a('user/registration/user-activation?token= ( need tocken )', ['user/registration/user-activation?token= ']) ?> </li>    
@@ -41,25 +41,27 @@ $this->title = 'My Yii Application';
 
             </ul>
 
-            <h3>User Security</h3>
+            <h3>User Security actions</h3>
             <ul>
                 <li><?= Html::a('user/security/login', ['user/security/login']) ?> </li>    
                 <li><?= Html::a('user/security/logout', ['user/security/logout']) ?> </li>    
             </ul>
 
-            <h3>User Account edit</h3>
+            <h3>User Account edit actions ( logged in User ) </h3>
 
             <ul>
+                <li><?= Html::a('user/account/index', ['user/account/index']) ?> </li>    
                 <li><?= Html::a('user/account/edit', ['user/account/edit']) ?> </li>    
+                <li><?= Html::a('user/account/change-password', ['user/account/change-password']) ?> </li>    
 
             </ul>      
-            <h3>User Profile edit</h3>
+            <h3>User Profile edit actions ( logged in User ) </h3>
 
             <ul>
                 <li><?= Html::a('user/profile/login', ['user/profile/edit']) ?> </li>    
             </ul>  
 
-            <h3>User Administration ( login as Administrator ) </h3>
+            <h3>User Administration actions ( login as Administrator ) </h3>
 
             <ul>
                 <li><?= Html::a('user/admin/index', ['user/admin/index']) ?> </li>    
