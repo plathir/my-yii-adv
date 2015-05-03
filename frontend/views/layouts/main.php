@@ -51,7 +51,7 @@ AppAsset::register($this);
                         ],
                     ],
                 ];
-           }
+            }
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
@@ -79,7 +79,7 @@ AppAsset::register($this);
                 <p class="pull-right"><?= Yii::powered() ?></p>
             </div>
         </footer>
-
+        <?php echo Yii::getAlias('@media'); ?>
         <?php $this->endBody() ?>
     </body>
 </html>
