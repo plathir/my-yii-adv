@@ -35,9 +35,9 @@ $this->title = 'My Yii Application';
             <h3>User Registration actions</h3>
             <ul>
                 <li><?= Html::a('user/registration/signup', ['user/registration/signup']) ?> </li>    
-                <li><?= Html::a('user/registration/user-activation?token= ( need tocken )', ['user/registration/user-activation?token= ']) ?> </li>    
+                <li><?= Html::a('user/registration/user-activation?token= ( need token )', ['user/registration/user-activation?token= ']) ?> </li>    
                 <li><?= Html::a('user/registration/request-password-reset', ['user/registration/request-password-reset']) ?> </li>    
-                <li><?= Html::a('user/registration/reset-password?token= ( need tocken )', ['user/registration/reset-password?token= ']) ?> </li>    
+                <li><?= Html::a('user/registration/reset-password?token= ( need token )', ['user/registration/reset-password?token= ']) ?> </li>    
 
             </ul>
 
@@ -64,10 +64,10 @@ $this->title = 'My Yii Application';
             <h3>User Administration actions ( login as Administrator ) </h3>
 
             <ul>
-                <li><?= Html::a('user/admin/index', ['user/admin/index']) ?> </li>    
-                <li><?= Html::a('user/admin/create', ['user/admin/create']) ?> </li>    
-                <li><?= Html::a('user/admin/view', ['user/admin/view']) ?> </li>    
-                <li><?= Html::a('user/admin/edit', ['user/admin/edit']) ?> </li>    
+                <li><?= Html::a('user/user-profile/index', ['user/user-profile/index']) ?> </li>    
+                <li><?= Html::a('user/user-profile/create', ['user/user-profile/create']) ?> </li>    
+                <li><?= Html::a('user/user-profile/view?id= (need user id)', ['user/user-profile/view?id=']) ?> </li>    
+                <li><?= Html::a('user/user-profile/edit?id= (need user id)', ['user/user-profile/edit?id=']) ?> </li>    
             </ul>  
 
         </div>
