@@ -50,15 +50,16 @@ $this->title = 'My Yii Application';
             <h3>User Account edit actions ( logged in User ) </h3>
 
             <ul>
-                <li><?= Html::a('user/account/index', ['user/account/index']) ?> </li>    
-                <li><?= Html::a('user/account/edit', ['user/account/edit']) ?> </li>    
-                <li><?= Html::a('user/account/change-password', ['user/account/change-password']) ?> </li>    
+                <li><?= Html::a('user/account/my', ['user/account/my']) ?> </li>    
+                <li><?= Html::a('user/account/edit ( with Ajax render )', ['user/account/edit']) ?> </li>    
+                <li><?= Html::a('user/account/change-password ( with Ajax render )', ['user/account/change-password']) ?> </li>    
 
             </ul>      
             <h3>User Profile edit actions ( logged in User ) </h3>
 
             <ul>
-                <li><?= Html::a('user/profile/login', ['user/profile/edit']) ?> </li>    
+                <li><?= Html::a('user/user-profile/edit-my-profile ( with Ajax render )', ['user/user-profile/edit-my-profile']) ?> </li>    
+                <li><?= Html::a('user/user-profile/create-my-profile ( with Ajax render )', ['user/user-profile/create-my-profile']) ?> </li>    
             </ul>  
 
             <h3>User Administration actions ( login as Administrator ) </h3>
@@ -69,9 +70,6 @@ $this->title = 'My Yii Application';
                 <li><?= Html::a('user/user-profile/view?id= (need user id)', ['user/user-profile/view?id=']) ?> </li>    
                 <li><?= Html::a('user/user-profile/edit?id= (need user id)', ['user/user-profile/edit?id=']) ?> </li>    
             </ul>  
-
         </div>
-
-
     </div>
 </div>
