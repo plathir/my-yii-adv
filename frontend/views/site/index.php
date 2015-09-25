@@ -65,10 +65,10 @@ $this->title = 'My Yii Application';
             <h3>User Administration actions ( login as Administrator ) </h3>
 
             <ul>
-                <li><?= Html::a('user/user-profile/index', ['user/user-profile/index']) ?> </li>    
-                <li><?= Html::a('user/user-profile/create', ['user/user-profile/create']) ?> </li>    
-                <li><?= Html::a('user/user-profile/view?id= (need user id)', ['user/user-profile/view?id=']) ?> </li>    
-                <li><?= Html::a('user/user-profile/edit?id= (need user id)', ['user/user-profile/edit?id=']) ?> </li>    
+                <li><?= Html::a('user/admin/index', ['user/admin/index']) ?> </li>    
+                <li><?= Html::a('user/admin/create', ['user/admin/create']) ?> </li>    
+                <li><?= Html::a('user/admin/view?id= (need user id)', ['user/admin/view?id=']) ?> </li>    
+                <li><?= Html::a('user/admin/update?id= (need user id)', ['user/admin/update?id=']) ?> </li>    
             </ul>  
         </div>
     </div>

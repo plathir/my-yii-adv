@@ -367,16 +367,16 @@
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
-            "version": "v3.5.3",
+            "version": "v3.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-star-rating.git",
-                "reference": "bd9c52db6ac71cb270620c1aee601d142ab2cc00"
+                "reference": "987777ee21a599bebbc545c743063fcee9833842"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/bd9c52db6ac71cb270620c1aee601d142ab2cc00",
-                "reference": "bd9c52db6ac71cb270620c1aee601d142ab2cc00",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/987777ee21a599bebbc545c743063fcee9833842",
+                "reference": "987777ee21a599bebbc545c743063fcee9833842",
                 "shasum": ""
             },
             "type": "library",
@@ -404,7 +404,7 @@
                 "jquery",
                 "star"
             ],
-            "time": "2015-06-18 14:42:46"
+            "time": "2015-09-21 09:06:33"
         },
         {
             "name": "kartik-v/dependent-dropdown",
@@ -1485,12 +1485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "6d98934239aa0181cbd27fd3052d8a0522310ed3"
+                "reference": "636743db94addbefafc214eae5984bf6965eaa5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/6d98934239aa0181cbd27fd3052d8a0522310ed3",
-                "reference": "6d98934239aa0181cbd27fd3052d8a0522310ed3",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/636743db94addbefafc214eae5984bf6965eaa5e",
+                "reference": "636743db94addbefafc214eae5984bf6965eaa5e",
                 "shasum": ""
             },
             "require": {
@@ -1515,7 +1515,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-09-18 11:47:34"
+            "time": "2015-09-21 04:59:31"
         },
         {
             "name": "swiftmailer/swiftmailer",
