@@ -8,8 +8,6 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <h3>My yii Advance Frontend</h3>
-
-
     <div class="body-content">
 
         <div class="row">
