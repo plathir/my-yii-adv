@@ -12,17 +12,26 @@ return [
     'modules' => [
         'user' => [
             'class' => 'plathir\user\Module',
-      //      'admins' => ['admin']
+        //      'admins' => ['admin']
         ],
         'smartblog' => [
             'class' => 'plathir\smartblog\Module',
         ]
     ],
     'components' => [
-                'user' => [
-            'identityClass' => 'plathir\user\models\User',
+        'user' => [
+            'identityClass' => 'plathir\user\models\account\User',
             'enableAutoLogin' => true,
+            'identityCookie' => [
+                'name' => '_backendUser', // unique for backend
+            ]
         ],
+        
+        'session' => [
+            'name' => 'PHPBACKSESSID',
+            'savePath' => sys_get_temp_dir(),
+        ],
+        
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

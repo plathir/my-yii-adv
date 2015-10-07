@@ -19,8 +19,15 @@ return [
     ],
     'components' => [
         'user' => [
-            'identityClass' => 'plathir\user\models\User',
-            'loginUrl' => ['user/security/login'], 
+            'identityClass' => 'plathir\user\models\account\User',
+            'loginUrl' => ['user/security/login'],
+            'identityCookie' => [
+                'name' => '_frontendUser', // unique for frontend
+            ]
+        ],
+        'session' => [
+            'name' => 'PHPFRONTSESSID',
+            'savePath' => sys_get_temp_dir(),
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

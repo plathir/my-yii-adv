@@ -4,7 +4,8 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'nQ5Nxtcj75mX9Es4RSGTZkWXoxj3dqZ6',
+            'cookieValidationKey' => 'frontend-key-for-my-yii-adv',   
+            'csrfParam' => '_frontendCSRF',
         ],
     ],
 ];
