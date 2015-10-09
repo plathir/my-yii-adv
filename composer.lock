@@ -1577,17 +1577,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "a2f5059c74c37faff44901a6a196be7b968c9012"
+                "reference": "8fcc9e80fb08b7b5c7834834a06c82f8bd021ced"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/a2f5059c74c37faff44901a6a196be7b968c9012",
-                "reference": "a2f5059c74c37faff44901a6a196be7b968c9012",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/8fcc9e80fb08b7b5c7834834a06c82f8bd021ced",
+                "reference": "8fcc9e80fb08b7b5c7834834a06c82f8bd021ced",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-datecontrol": "@dev",
                 "php": ">=5.4.0",
+                "vova07/yii2-fileapi-widget": "*",
                 "yiisoft/yii2": "*",
                 "yiisoft/yii2-bootstrap": "*"
             },
@@ -1608,7 +1609,43 @@
                 }
             ],
             "description": "user",
-            "time": "2015-10-06 14:15:23"
+            "time": "2015-10-09 06:57:38"
+        },
+        {
+            "name": "rubaxa/fileapi",
+            "version": "0.4.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RubaXa/jquery.fileapi.git",
+                "reference": "5fc1013e103bb0931f5fbd18f15a9194ddf573d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RubaXa/jquery.fileapi/zipball/5fc1013e103bb0931f5fbd18f15a9194ddf573d4",
+                "reference": "5fc1013e103bb0931f5fbd18f15a9194ddf573d4",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Konstantin Lebedev",
+                    "email": "ibnRubaXa@gmail.com"
+                }
+            ],
+            "description": "jQuery plugin for FileAPI (multiupload, image upload, crop, resize and etc.)",
+            "homepage": "https://github.com/RubaXa/jquery.fileapi",
+            "keywords": [
+                "file upload",
+                "fileapi",
+                "jquery",
+                "multiupload",
+                "upload"
+            ],
+            "time": "2015-09-11 15:56:14"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1662,6 +1699,52 @@
                 "mailer"
             ],
             "time": "2015-06-06 14:19:39"
+        },
+        {
+            "name": "vova07/yii2-fileapi-widget",
+            "version": "0.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vova07/yii2-fileapi-widget.git",
+                "reference": "9b12de8e9e035be673c412df1aa7ed76ad1f621c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vova07/yii2-fileapi-widget/zipball/9b12de8e9e035be673c412df1aa7ed76ad1f621c",
+                "reference": "9b12de8e9e035be673c412df1aa7ed76ad1f621c",
+                "shasum": ""
+            },
+            "require": {
+                "rubaxa/fileapi": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "vova07\\fileapi\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Crudu Vasile",
+                    "email": "bazillio07@yandex.ru"
+                }
+            ],
+            "description": "The FileAPI widget for Yii2 framework.",
+            "keywords": [
+                "fileapi",
+                "files",
+                "multiupload",
+                "upload",
+                "widget",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2015-03-06 09:36:05"
         },
         {
             "name": "vova07/yii2-imperavi-widget",
