@@ -42,5 +42,6 @@ return [
             'errorAction' => 'site/error',
         ],
     ],
+
     'params' => $params,
 ];

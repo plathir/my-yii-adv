@@ -68,6 +68,8 @@ $this->title = 'My Yii Application';
                 <li><?= Html::a('user/admin/view?id= (need user id)', ['user/admin/view?id=']) ?> </li>    
                 <li><?= Html::a('user/admin/update?id= (need user id)', ['user/admin/update?id=']) ?> </li>    
             </ul>  
+            <?php echo 'media path : '. yii::getAlias('@media') ?>
+           
         </div>
     </div>
 </div>

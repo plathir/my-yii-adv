@@ -1577,12 +1577,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "8fcc9e80fb08b7b5c7834834a06c82f8bd021ced"
+                "reference": "59ce0a2504ca31baf6c8d0a73b054bed4944850e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/8fcc9e80fb08b7b5c7834834a06c82f8bd021ced",
-                "reference": "8fcc9e80fb08b7b5c7834834a06c82f8bd021ced",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/59ce0a2504ca31baf6c8d0a73b054bed4944850e",
+                "reference": "59ce0a2504ca31baf6c8d0a73b054bed4944850e",
                 "shasum": ""
             },
             "require": {
@@ -1609,7 +1609,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-10-09 06:57:38"
+            "time": "2015-10-12 06:56:59"
         },
         {
             "name": "rubaxa/fileapi",

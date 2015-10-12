@@ -8,8 +8,7 @@ return [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            
-            ],
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true
         ],
