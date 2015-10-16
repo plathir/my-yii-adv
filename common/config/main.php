@@ -11,6 +11,6 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true
-        ],
+        ],              
     ],
 ];
