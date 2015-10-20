@@ -1532,6 +1532,57 @@
             "time": "2014-11-09 19:54:17"
         },
         {
+            "name": "mdmsoft/yii2-admin",
+            "version": "2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mdmsoft/yii2-admin.git",
+                "reference": "99f828c8cc70602a5c9a7abc67591fdd6dfda889"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/99f828c8cc70602a5c9a7abc67591fdd6dfda889",
+                "reference": "99f828c8cc70602a5c9a7abc67591fdd6dfda889",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.4"
+            },
+            "suggest": {
+                "yiisoft/yii2-bootstrap": "Used when using layout 'left-menu', 'right-menu' or 'top-menu'"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.master": "1.0.x-dev",
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mdm\\admin\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Misbahul Munir",
+                    "email": "misbahuldmunir@gmail.com"
+                }
+            ],
+            "description": "RBAC Auth manager for Yii2 ",
+            "keywords": [
+                "admin",
+                "auth",
+                "rbac",
+                "yii"
+            ],
+            "time": "2015-10-06 02:49:00"
+        },
+        {
             "name": "plathir/yii2-smart-blog",
             "version": "dev-master",
             "source": {
@@ -1577,16 +1628,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "6e75da8ed9a3a6768ec5c120fc344843bcc34880"
+                "reference": "93566da7f6b789c0fdc4a002e7157cdbe93981c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/6e75da8ed9a3a6768ec5c120fc344843bcc34880",
-                "reference": "6e75da8ed9a3a6768ec5c120fc344843bcc34880",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/93566da7f6b789c0fdc4a002e7157cdbe93981c4",
+                "reference": "93566da7f6b789c0fdc4a002e7157cdbe93981c4",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-datecontrol": "@dev",
+                "mdmsoft/yii2-admin": "~2.0",
                 "php": ">=5.4.0",
                 "vova07/yii2-fileapi-widget": "*",
                 "yiisoft/yii2": "*",
@@ -1610,7 +1662,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-10-15 07:47:37"
+            "time": "2015-10-20 08:57:37"
         },
         {
             "name": "rubaxa/fileapi",
