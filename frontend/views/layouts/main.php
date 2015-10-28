@@ -42,6 +42,9 @@ AppAsset::register($this);
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
             } else {
+            if ( Yii::$app->user->can('permission_admin') ) {
+                 $menuItems[] = ['label' => 'Permissions', 'url' => ['/admin/assignment']];
+            }                
                 $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> ' . Yii::$app->user->identity->username,
                     'items' => [
                         '<li class="divider"></li>',
@@ -55,6 +58,7 @@ AppAsset::register($this);
                     ],
                 ];
             }
+
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
