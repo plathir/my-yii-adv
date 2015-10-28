@@ -11,7 +11,7 @@ $this->title = 'My Yii Application';
     <div class="body-content">
 
         <div class="row">
-            <h3>Site Actions</h3>
+            <h1>Smart User - Site Actions</h1>
             <ul>
                 <li><?= Html::a('send test email', ['site/send']) ?> </li>    
             </ul>
@@ -22,9 +22,21 @@ $this->title = 'My Yii Application';
                 $str = "'modules' => [
                 ... 
                      'user' => [ 
-                     'class' => 'plathir\user\Module',
-                    ],
-                  ... 
+                        'class' => 'plathir\user\Module',
+                        'ProfileImagePath' => '@media/images/users',
+                        'ProfileImageTempPath' => '@media/temp/images/users',
+                        'ProfileImagePathPreview' => '/my-yii-adv/media/images/users',
+                  ...
+                  'components' => [
+                  ...
+                    'user' => [
+                        'identityClass' => 'plathir\user\models\account\User',
+                        'loginUrl' => ['user/security/login'],
+                        'identityCookie' => [
+                            'name' => '_frontendUser', // unique for frontend
+                        ],
+                        ...
+                    ]
                 ]>";
                 echo $str;
                 ?>        
@@ -68,8 +80,29 @@ $this->title = 'My Yii Application';
                 <li><?= Html::a('user/admin/view?id= (need user id)', ['user/admin/view?id=']) ?> </li>    
                 <li><?= Html::a('user/admin/update?id= (need user id)', ['user/admin/update?id=']) ?> </li>    
             </ul>  
-            <?php echo 'media path : '. yii::getAlias('@media') ?>
-           
+
+        </div>
+
+
+        <div class="row">
+            <h1>Smart blog  - Site Actions</h1>
+            <h2> <a href="https://github.com/plathir/yii2-smart-blog">plathir/yii2-smart-blog</a></h2>
+            <h3>Installation</h3>
+            <pre>
+                <?php
+                $str = "'modules' => [
+                ... 
+                     'blog' => [ 
+                     'class' => 'plathir\blog\Module',
+                    ],
+                  ... 
+                ]>";
+                echo $str;
+                ?>        
+            </pre> 
+            <h3>Blog actions</h3>
+            <ul>
+                <li><?= Html::a('blog/', ['blog/']) ?> </li>    
+            </ul>
         </div>
     </div>
-</div>

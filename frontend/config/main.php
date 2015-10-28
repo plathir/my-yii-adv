@@ -19,7 +19,7 @@ return [
         'admin' => [
             'class' => 'mdm\admin\Module',
         ],
-        'smartblog' => [
+        'blog' => [
             'class' => 'plathir\smartblog\Module',
         ]
     ],
@@ -31,6 +31,10 @@ return [
                 'name' => '_frontendUser', // unique for frontend
             ],
         ],
+        'blog' => [
+            'class' => 'plathir\smartblog',
+         ],
+
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
