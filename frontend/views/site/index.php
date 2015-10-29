@@ -100,9 +100,17 @@ $this->title = 'My Yii Application';
                 echo $str;
                 ?>        
             </pre> 
-            <h3>Blog actions</h3>
+            <h3> Public actions </h3>
+            <ul>
+                <li><?= Html::a('blog/posts/list', ['blog/posts/list']) ?> </li>    
+                <li><?= Html::a('blog/posts/view?id= ( need post id )', ['blog/posts/view?id=']) ?> </li>    
+            </ul>
+
+            <h3> Longed in user actions </h3>
+
             <ul>
                 <li><?= Html::a('blog/', ['blog/']) ?> </li>    
+                <li><?= Html::a('blog/posts', ['blog/posts']) ?> </li>    
             </ul>
         </div>
     </div>
