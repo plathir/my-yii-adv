@@ -1587,12 +1587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-blog.git",
-                "reference": "cc5c9ab539b1254c6f433c1b42d3bd9cb5021d6b"
+                "reference": "8b46268227f3e6e53ad2ce2905017f34e7d1007b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/cc5c9ab539b1254c6f433c1b42d3bd9cb5021d6b",
-                "reference": "cc5c9ab539b1254c6f433c1b42d3bd9cb5021d6b",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/8b46268227f3e6e53ad2ce2905017f34e7d1007b",
+                "reference": "8b46268227f3e6e53ad2ce2905017f34e7d1007b",
                 "shasum": ""
             },
             "require": {
@@ -1619,7 +1619,7 @@
                 }
             ],
             "description": "smartblog",
-            "time": "2015-04-01 13:55:51"
+            "time": "2015-10-27 14:50:00"
         },
         {
             "name": "plathir/yii2-smart-user",
@@ -1627,12 +1627,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "93566da7f6b789c0fdc4a002e7157cdbe93981c4"
+                "reference": "93da2c19a07514bbcfa9eda5d6753ec42494ad96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/93566da7f6b789c0fdc4a002e7157cdbe93981c4",
-                "reference": "93566da7f6b789c0fdc4a002e7157cdbe93981c4",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/93da2c19a07514bbcfa9eda5d6753ec42494ad96",
+                "reference": "93da2c19a07514bbcfa9eda5d6753ec42494ad96",
                 "shasum": ""
             },
             "require": {
@@ -1661,7 +1661,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-10-20 08:57:37"
+            "time": "2015-10-29 15:01:07"
         },
         {
             "name": "rubaxa/fileapi",

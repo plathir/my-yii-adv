@@ -42,9 +42,24 @@ AppAsset::register($this);
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
             } else {
-            if ( Yii::$app->user->can('permission_admin') ) {
-                 $menuItems[] = ['label' => 'Permissions', 'url' => ['/admin/assignment']];
-            }                
+                if (Yii::$app->user->can('permission_admin')) {
+                    $menuItems[] = ['label' => '<span class=""></span> Permissions ',
+                        'items' => [
+                            '<li class="divider"></li>',
+                            ['label' => '<span class="fa fa-edit"></span> Roles', 'url' => ['/admin/role']],
+                            '<li class="divider"></li>',
+                            ['label' => '<span class="fa fa-edit"></span> Routes', 'url' => ['/admin/route']],
+                            '<li class="divider"></li>',
+                            ['label' => '<span class="fa fa-edit"></span> Rules', 'url' => ['/admin/rule']],
+                            '<li class="divider"></li>',                            
+                            ['label' => '<span class="fa fa-sign-out"></span> Permissions', 'url' => ['/admin/permission']],
+                            '<li class="divider"></li>',                              
+                            ['label' => '<span class="fa fa-sign-out"></span> Assignments', 'url' => ['/admin/assignment']],
+                            '<li class="divider"></li>',                          
+                            ['label' => '<span class="fa fa-edit"></span> Menus', 'url' => ['/admin/menu']],
+                        ],
+                    ];
+                }
                 $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> ' . Yii::$app->user->identity->username,
                     'items' => [
                         '<li class="divider"></li>',
@@ -69,11 +84,11 @@ AppAsset::register($this);
 
 
             <div class="container">
-<?=
-Breadcrumbs::widget([
-    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-])
-?>
+                <?=
+                Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ])
+                ?>
 
                 <?= Alert::widget() ?>
                 <?= $content ?>
@@ -86,7 +101,7 @@ Breadcrumbs::widget([
                 <p class="pull-right"><?= Yii::powered() ?></p>
             </div>
         </footer>
-<?php echo Yii::getAlias('@media'); ?>
+        <?php echo Yii::getAlias('@media'); ?>
         <?php $this->endBody() ?>
     </body>
 </html>
