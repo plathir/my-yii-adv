@@ -42,7 +42,7 @@ AppAsset::register($this);
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
             } else {
-                if (Yii::$app->user->can('permission_admin')) {
+                if (Yii::$app->user->can('/admin/*')) {
                     $menuItems[] = ['label' => '<span class=""></span> Permissions ',
                         'items' => [
                             '<li class="divider"></li>',
