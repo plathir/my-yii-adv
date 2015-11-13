@@ -34,7 +34,7 @@ return [
         'blog' => [
             'class' => 'plathir\smartblog',
          ],
-
+       
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
@@ -69,8 +69,9 @@ return [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
             'site/*',
+            'user/auth/*',
             'user/registration/*',
-           'user/security/auth', // for Oauth ( Login from facebook etc. )
+            'user/security/auth', // for Oauth ( Login from facebook etc. )
             'blog/posts/list',
             'blog/posts/view',
 //            '*'
