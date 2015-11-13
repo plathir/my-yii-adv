@@ -79,7 +79,7 @@ return [
         'allowActions' => [
             'site/*',
             'user/registration/*',
-           'user/security/auth', // for Oauth ( Login from facebook etc. )
+            'user/security/auth', // for Oauth ( Login from facebook etc. )
             'blog/posts/list',
             'blog/posts/view',
             'apps/*',
