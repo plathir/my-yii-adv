@@ -19,7 +19,9 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "plathir/yii2-smart-blog": "@dev",
-        "plathir/yii2-smart-user": "@dev"
+        "plathir/yii2-smart-user": "@dev",
+        "plathir/yii2-smart-apps": "@dev",
+        "dmstr/yii2-adminlte-asset": "2.*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

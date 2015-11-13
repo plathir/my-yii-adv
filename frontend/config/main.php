@@ -21,8 +21,13 @@ return [
         ],
         'blog' => [
             'class' => 'plathir\smartblog\Module',
+        ],
+        'apps' => [
+            'class' => 'plathir\apps\Module',
         ]
-    ],
+
+        
+        ],
     'components' => [
         'user' => [
             'identityClass' => 'plathir\user\models\account\User',
@@ -34,7 +39,11 @@ return [
         'blog' => [
             'class' => 'plathir\smartblog',
          ],
+        'apps' => [
+            'class' => 'plathir\apps',
+         ],
 
+        
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
@@ -73,6 +82,7 @@ return [
            'user/security/auth', // for Oauth ( Login from facebook etc. )
             'blog/posts/list',
             'blog/posts/view',
+            'apps/*',
 //            '*'
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.
