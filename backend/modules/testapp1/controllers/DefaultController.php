@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\recipes\controllers;
+namespace app\modules\testapp1\controllers;
 
 use yii\web\Controller;
 

@@ -28,8 +28,8 @@ return [
         'apps' => [
             'class' => 'plathir\apps\Module',
         ],
-        'recipes' => [
-            'class' => 'app\modules\recipes\Module',
+        'testapp1' => [
+            'class' => 'app\modules\testapp1\Module',
         ],
     ],
     'components' => [
