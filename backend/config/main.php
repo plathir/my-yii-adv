@@ -27,7 +27,10 @@ return [
         ],
         'apps' => [
             'class' => 'plathir\apps\Module',
-        ]        
+        ],
+        'recipes' => [
+            'class' => 'app\modules\recipes\Module',
+        ],
     ],
     'components' => [
         'user' => [
@@ -39,11 +42,10 @@ return [
         ],
         'blog' => [
             'class' => 'plathir\smartblog',
-         ],
+        ],
         'apps' => [
             'class' => 'plathir\apps',
-         ],
-        
+        ],
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
@@ -56,7 +58,7 @@ return [
         ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
-        ],        
+        ],
         'session' => [
             'name' => 'PHPBACKSESSID',
             'savePath' => sys_get_temp_dir(),
@@ -74,7 +76,7 @@ return [
             'errorAction' => 'site/error',
         ],
     ],
-        'as access' => [
+    'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
 //            'site/*',

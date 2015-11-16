@@ -1762,12 +1762,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-apps.git",
-                "reference": "ab3334b27cc1c7a6931da9e96ff5d22c187f1f71"
+                "reference": "e30371efe28b397e3cfd5a3b75700b02cb129ba2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-apps/zipball/ab3334b27cc1c7a6931da9e96ff5d22c187f1f71",
-                "reference": "ab3334b27cc1c7a6931da9e96ff5d22c187f1f71",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-apps/zipball/e30371efe28b397e3cfd5a3b75700b02cb129ba2",
+                "reference": "e30371efe28b397e3cfd5a3b75700b02cb129ba2",
                 "shasum": ""
             },
             "require": {
@@ -1791,7 +1791,7 @@
                 }
             ],
             "description": "apps",
-            "time": "2015-11-10 13:33:34"
+            "time": "2015-11-14 05:59:28"
         },
         {
             "name": "plathir/yii2-smart-blog",
@@ -1839,12 +1839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "747e2ad420d24d548e1e0624ce461a18e0061a9a"
+                "reference": "49bed4cb061e6a53baecdfe8e527f2cfb4114564"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/747e2ad420d24d548e1e0624ce461a18e0061a9a",
-                "reference": "747e2ad420d24d548e1e0624ce461a18e0061a9a",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/49bed4cb061e6a53baecdfe8e527f2cfb4114564",
+                "reference": "49bed4cb061e6a53baecdfe8e527f2cfb4114564",
                 "shasum": ""
             },
             "require": {
@@ -1873,7 +1873,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-11-05 15:12:00"
+            "time": "2015-11-13 18:44:58"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -2427,9 +2427,9 @@
                 "bower-asset/jquery": ">=1.7"
             },
             "require-dev": {
-                "bower-asset/jasmine-ajax": "~1.3.1",
-                "bower-asset/jasmine-jquery": "~1.5.2",
-                "bower-asset/jquery": "~1.7"
+                "bower-asset/jasmine-ajax": ">=1.3.1,<1.4",
+                "bower-asset/jasmine-jquery": ">=1.5.2,<1.6",
+                "bower-asset/jquery": ">=1.7,<1.8"
             },
             "type": "bower-asset-library",
             "extra": {

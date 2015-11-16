@@ -68,23 +68,6 @@ class SiteController extends Controller {
         return $this->render('index');
     }
 
-//    public function actionLogin() {
-//        if (!\Yii::$app->user->isGuest) {
-//            return $this->goHome();
-//        }
-//
-//        $model = new LoginForm();
-//        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-//            return $this->goBack();
-//        } else {
-//            Yii::$app->runAction('user/security/login');
-////            return $this->render('../user/security/login', [
-////                        'model' => $model,
-////            ]);
-//            //      return $this->redirect('../user/security/login');
-//        }
-//    }
-
     public function actionLogout() {
         Yii::$app->user->logout();
 
@@ -171,6 +154,18 @@ class SiteController extends Controller {
 
         return $this->render('send', [ 'msg' => $msg]
         );
+    }
+
+    public function actionSmartUser() {
+        return $this->render('smart-user');
+    }
+
+    public function actionSmartBlog() {
+        return $this->render('smart-blog');
+    }
+
+    public function actionSmartApps() {
+        return $this->render('smart-apps');
     }
 
 }
