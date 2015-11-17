@@ -241,7 +241,7 @@ use plathir\user\controllers\UserProfileController;
                                  alt="User Image"/>
 
                             <p>
-                                   <?= Yii::$app->user->identity->username ?>
+                                   <?= '('. Yii::$app->user->identity->username. ')' ?> <?= \plathir\user\helpers\UserHelper::getProfileFullName(Yii::$app->user->identity->id) ?>
                                 <small>Member since <?= Yii::$app->formatter->asDatetime(Yii::$app->user->identity->created_at); ?></small>
                             </p>
                         </li>

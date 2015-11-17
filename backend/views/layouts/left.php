@@ -8,7 +8,7 @@
                 <img src="<?= \plathir\user\helpers\UserHelper::getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p><?= \plathir\user\helpers\UserHelper::getProfileFullName(Yii::$app->user->identity->id) ?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
