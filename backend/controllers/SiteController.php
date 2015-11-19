@@ -1,4 +1,5 @@
 <?php
+
 namespace backend\controllers;
 
 use Yii;
@@ -6,27 +7,28 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use plathir\user\models\security\LoginForm;
 use yii\filters\VerbFilter;
+use pheme\settings\SettingsAction;
+
 
 /**
  * Site controller
  */
-class SiteController extends Controller
-{
+class SiteController extends Controller {
+
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'site-settings'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'site-settings'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -44,22 +46,26 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
+            'site-settings' => [
+                'class' => 'pheme\settings\SettingsAction',
+                'modelClass' => 'backend\models\Settings',
+            //    'sourceLanguage' => 'gr',
+                //'scenario' => 'site', // Change if you want to re-use the model for multiple setting form.
+                'viewName' => 'site-settings'   // The form we need to render
+            ],
         ];
     }
 
-    public function actionIndex()
-    {
+    public function actionIndex() {
         return $this->render('index');
     }
 
-    public function actionLogin()
-    {
+    public function actionLogin() {
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -69,15 +75,15 @@ class SiteController extends Controller
             return $this->goBack();
         } else {
             return $this->render('login', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
 
-    public function actionLogout()
-    {
+    public function actionLogout() {
         Yii::$app->user->logout();
 
         return $this->goHome();
     }
+
 }

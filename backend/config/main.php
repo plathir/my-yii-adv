@@ -4,6 +4,7 @@ $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
+
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
@@ -31,6 +32,10 @@ return [
         'testapp1' => [
             'class' => 'app\modules\testapp1\Module',
         ],
+        'settings' => [
+            'class' => 'pheme\settings\Module'
+          //  'sourceLanguage' => 'gr'
+        ]
     ],
     'components' => [
         'user' => [
@@ -45,6 +50,9 @@ return [
         ],
         'apps' => [
             'class' => 'plathir\apps',
+        ],
+        'settings' => [
+            'class' => 'pheme\settings\components\Settings'
         ],
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
@@ -79,6 +87,7 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
+            'settings/*'
 //            'site/*',
 //            'user/registration/*',
 //            'user/security/auth', // for Oauth ( Login from facebook etc. )

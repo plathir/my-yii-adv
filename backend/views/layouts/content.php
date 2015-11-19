@@ -31,6 +31,12 @@ use dmstr\widgets\Alert;
 
     <section class="content">
         <?= Alert::widget() ?>
+       <?php $settings = Yii::$app->settings;
+       $value = $settings->get('test.test');
+       echo $value;
+       // print_r($settings);
+       ?>
+       
         <?= $content ?>
         
     </section>
