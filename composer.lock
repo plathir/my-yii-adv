@@ -493,16 +493,16 @@
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "0468bbba9c28c1250aca83eba9b33e32ec135f78"
+                "reference": "6ba4295298ee3abe26171b4e2078c27a2f3b35b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/0468bbba9c28c1250aca83eba9b33e32ec135f78",
-                "reference": "0468bbba9c28c1250aca83eba9b33e32ec135f78",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/6ba4295298ee3abe26171b4e2078c27a2f3b35b0",
+                "reference": "6ba4295298ee3abe26171b4e2078c27a2f3b35b0",
                 "shasum": ""
             },
             "type": "library",
@@ -537,7 +537,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2015-09-13 17:39:44"
+            "time": "2015-11-18 17:56:04"
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
@@ -1757,6 +1757,90 @@
             "time": "2015-10-06 02:49:00"
         },
         {
+            "name": "pheme/yii2-settings",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phemellc/yii2-settings.git",
+                "reference": "5966762e1e9cc75da1196fa39089fe6732eea636"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phemellc/yii2-settings/zipball/5966762e1e9cc75da1196fa39089fe6732eea636",
+                "reference": "5966762e1e9cc75da1196fa39089fe6732eea636",
+                "shasum": ""
+            },
+            "require": {
+                "pheme/yii2-toggle-column": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "pheme\\settings\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aris Karageorgos",
+                    "email": "aris@phe.me"
+                }
+            ],
+            "description": "Yii2 Database settings",
+            "keywords": [
+                "Settings",
+                "config",
+                "yii2"
+            ],
+            "time": "2015-07-27 14:56:32"
+        },
+        {
+            "name": "pheme/yii2-toggle-column",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phemellc/yii2-toggle-column.git",
+                "reference": "6fb846a86f76234c63b3d475dc70dd59022718c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phemellc/yii2-toggle-column/zipball/6fb846a86f76234c63b3d475dc70dd59022718c1",
+                "reference": "6fb846a86f76234c63b3d475dc70dd59022718c1",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "\\pheme\\grid\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aris Karageorgos",
+                    "email": "aris@phe.me"
+                }
+            ],
+            "description": "Provides a toggle data column and action",
+            "keywords": [
+                "column",
+                "extension",
+                "toggle",
+                "yii2"
+            ],
+            "time": "2014-10-12 15:54:14"
+        },
+        {
             "name": "plathir/yii2-smart-apps",
             "version": "dev-master",
             "source": {
@@ -1839,17 +1923,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "d003c9578c497380f581e00b79a24aaf283b2abd"
+                "reference": "8c09b6bd88c87231c2528f21ffbb6de2a143bf15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/d003c9578c497380f581e00b79a24aaf283b2abd",
-                "reference": "d003c9578c497380f581e00b79a24aaf283b2abd",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/8c09b6bd88c87231c2528f21ffbb6de2a143bf15",
+                "reference": "8c09b6bd88c87231c2528f21ffbb6de2a143bf15",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-datecontrol": "@dev",
                 "mdmsoft/yii2-admin": "~2.0",
+                "pheme/yii2-settings": "*",
                 "php": ">=5.4.0",
                 "vova07/yii2-fileapi-widget": "*",
                 "yiisoft/yii2": "*",
@@ -1873,7 +1958,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-11-18 06:40:41"
+            "time": "2015-11-19 13:15:33"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
