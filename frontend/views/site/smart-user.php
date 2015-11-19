@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'ProfileImagePath' => '@media/images/users',
                         'ProfileImageTempPath' => '@media/temp/images/users',
                         'ProfileImagePathPreview' => '/my-yii-adv/media/images/users',
+                     ],
                   ...
                   'components' => [
                   ...
@@ -34,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             'name' => '_frontendUser', // unique for frontend
                         ],
                         ...
-                    ]
-                ]>";
+                    ],
+                ],";
                 echo $str;
                 ?>        
             </code> 
