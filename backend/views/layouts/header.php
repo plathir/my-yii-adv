@@ -8,8 +8,6 @@ use plathir\user\controllers\UserProfileController;
 ?>
 
 <header class="main-header">
-<?php $settings = Yii::$app->settings; ?>
-<?php Yii::$app->name =$settings->get('Settings.siteName'); ?>    
 <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">

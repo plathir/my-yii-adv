@@ -21,6 +21,7 @@
         "plathir/yii2-smart-blog": "@dev",
         "plathir/yii2-smart-user": "@dev",
         "plathir/yii2-smart-apps": "@dev",
+        "plathir/yii2-smart-settings": "@dev",
         "dmstr/yii2-adminlte-asset": "2.*"
     },
     "require-dev": {

@@ -32,10 +32,6 @@ return [
         'testapp1' => [
             'class' => 'app\modules\testapp1\Module',
         ],
-        'settings' => [
-            'class' => 'pheme\settings\Module'
-          //  'sourceLanguage' => 'gr'
-        ]
     ],
     'components' => [
         'user' => [
@@ -50,9 +46,6 @@ return [
         ],
         'apps' => [
             'class' => 'plathir\apps',
-        ],
-        'settings' => [
-            'class' => 'pheme\settings\components\Settings'
         ],
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
@@ -83,11 +76,19 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'view' => [
+            'theme' => [
+                
+                'pathMap' => [
+                    '@vendor/plathir/user/views' => '@app/views/user'
+                ],
+            ],
+        ]
     ],
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'settings/*'
+//            'settings/*'
 //            'site/*',
 //            'user/registration/*',
 //            'user/security/auth', // for Oauth ( Login from facebook etc. )

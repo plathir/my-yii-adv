@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "18d82f5a6406e992cf112de69cdda3f4",
-    "content-hash": "465011c96ef081ee08e55136c28b17c0",
+    "hash": "cf828041f1b72ed0c3cbec0c0f93f35e",
+    "content-hash": "3e9c05959afb33cdcd8c57dbb4c8755f",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -1757,90 +1757,6 @@
             "time": "2015-10-06 02:49:00"
         },
         {
-            "name": "pheme/yii2-settings",
-            "version": "0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phemellc/yii2-settings.git",
-                "reference": "5966762e1e9cc75da1196fa39089fe6732eea636"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phemellc/yii2-settings/zipball/5966762e1e9cc75da1196fa39089fe6732eea636",
-                "reference": "5966762e1e9cc75da1196fa39089fe6732eea636",
-                "shasum": ""
-            },
-            "require": {
-                "pheme/yii2-toggle-column": "*",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "pheme\\settings\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Aris Karageorgos",
-                    "email": "aris@phe.me"
-                }
-            ],
-            "description": "Yii2 Database settings",
-            "keywords": [
-                "Settings",
-                "config",
-                "yii2"
-            ],
-            "time": "2015-07-27 14:56:32"
-        },
-        {
-            "name": "pheme/yii2-toggle-column",
-            "version": "0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phemellc/yii2-toggle-column.git",
-                "reference": "6fb846a86f76234c63b3d475dc70dd59022718c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phemellc/yii2-toggle-column/zipball/6fb846a86f76234c63b3d475dc70dd59022718c1",
-                "reference": "6fb846a86f76234c63b3d475dc70dd59022718c1",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "\\pheme\\grid\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aris Karageorgos",
-                    "email": "aris@phe.me"
-                }
-            ],
-            "description": "Provides a toggle data column and action",
-            "keywords": [
-                "column",
-                "extension",
-                "toggle",
-                "yii2"
-            ],
-            "time": "2014-10-12 15:54:14"
-        },
-        {
             "name": "plathir/yii2-smart-apps",
             "version": "dev-master",
             "source": {
@@ -1918,23 +1834,61 @@
             "time": "2015-10-27 14:50:00"
         },
         {
+            "name": "plathir/yii2-smart-settings",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plathir/yii2-smart-settings.git",
+                "reference": "4ed392ea15405f8af78bf1d67b38049fc358cd8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-settings/zipball/4ed392ea15405f8af78bf1d67b38049fc358cd8b",
+                "reference": "4ed392ea15405f8af78bf1d67b38049fc358cd8b",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-datecontrol": "@dev",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "plathir\\settings\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "plathir",
+                    "email": "plathir@gmail.com"
+                }
+            ],
+            "description": "Settings",
+            "time": "2015-11-20 12:15:16"
+        },
+        {
             "name": "plathir/yii2-smart-user",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "c71196ab7ba2554fa8613c8f6f3a5b2a60100854"
+                "reference": "af9f43810a5a3bf2bb6c3eda8a3ee67627cfe41f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/c71196ab7ba2554fa8613c8f6f3a5b2a60100854",
-                "reference": "c71196ab7ba2554fa8613c8f6f3a5b2a60100854",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/af9f43810a5a3bf2bb6c3eda8a3ee67627cfe41f",
+                "reference": "af9f43810a5a3bf2bb6c3eda8a3ee67627cfe41f",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-datecontrol": "@dev",
                 "mdmsoft/yii2-admin": "~2.0",
-                "pheme/yii2-settings": "*",
                 "php": ">=5.4.0",
                 "vova07/yii2-fileapi-widget": "*",
                 "yiisoft/yii2": "*",
@@ -1958,20 +1912,20 @@
                 }
             ],
             "description": "user",
-            "time": "2015-11-19 15:28:39"
+            "time": "2015-11-20 12:23:57"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
-            "version": "2.12.1",
+            "version": "2.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "6bfb628f5d93170bfe896866faac494c24783c2e"
+                "reference": "62308687477734c166753de0ad9e2333dc7dce32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/6bfb628f5d93170bfe896866faac494c24783c2e",
-                "reference": "6bfb628f5d93170bfe896866faac494c24783c2e",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/62308687477734c166753de0ad9e2333dc7dce32",
+                "reference": "62308687477734c166753de0ad9e2333dc7dce32",
                 "shasum": ""
             },
             "require": {
@@ -2010,7 +1964,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2015-11-09 15:03:05"
+            "time": "2015-11-20 09:17:45"
         },
         {
             "name": "rubaxa/fileapi",
@@ -2805,7 +2759,8 @@
     "stability-flags": {
         "plathir/yii2-smart-blog": 20,
         "plathir/yii2-smart-user": 20,
-        "plathir/yii2-smart-apps": 20
+        "plathir/yii2-smart-apps": 20,
+        "plathir/yii2-smart-settings": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -51,13 +51,6 @@ class SiteController extends Controller {
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
-            'site-settings' => [
-                'class' => 'pheme\settings\SettingsAction',
-                'modelClass' => 'backend\models\Settings',
-            //    'sourceLanguage' => 'gr',
-                //'scenario' => 'site', // Change if you want to re-use the model for multiple setting form.
-                'viewName' => 'site-settings'   // The form we need to render
-            ],
         ];
     }
 
