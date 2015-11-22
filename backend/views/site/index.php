@@ -13,7 +13,7 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             
-            
+            <?= Yii::$app->settings->test(); ?>
         </div>
 
     </div>

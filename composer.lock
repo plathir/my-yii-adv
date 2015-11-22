@@ -1839,12 +1839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-settings.git",
-                "reference": "4ed392ea15405f8af78bf1d67b38049fc358cd8b"
+                "reference": "4644a60c81a7a7e6a7b79d8f17a3a7a9fb330020"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-settings/zipball/4ed392ea15405f8af78bf1d67b38049fc358cd8b",
-                "reference": "4ed392ea15405f8af78bf1d67b38049fc358cd8b",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-settings/zipball/4644a60c81a7a7e6a7b79d8f17a3a7a9fb330020",
+                "reference": "4644a60c81a7a7e6a7b79d8f17a3a7a9fb330020",
                 "shasum": ""
             },
             "require": {
@@ -1870,7 +1870,7 @@
                 }
             ],
             "description": "Settings",
-            "time": "2015-11-20 12:15:16"
+            "time": "2015-11-20 15:14:09"
         },
         {
             "name": "plathir/yii2-smart-user",
@@ -1878,12 +1878,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "af9f43810a5a3bf2bb6c3eda8a3ee67627cfe41f"
+                "reference": "2b34927c1689b18711947a754f044c9d271e1c86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/af9f43810a5a3bf2bb6c3eda8a3ee67627cfe41f",
-                "reference": "af9f43810a5a3bf2bb6c3eda8a3ee67627cfe41f",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/2b34927c1689b18711947a754f044c9d271e1c86",
+                "reference": "2b34927c1689b18711947a754f044c9d271e1c86",
                 "shasum": ""
             },
             "require": {
@@ -1912,7 +1912,7 @@
                 }
             ],
             "description": "user",
-            "time": "2015-11-20 12:23:57"
+            "time": "2015-11-20 15:14:28"
         },
         {
             "name": "rmrevin/yii2-fontawesome",

@@ -32,6 +32,10 @@ return [
         'testapp1' => [
             'class' => 'app\modules\testapp1\Module',
         ],
+        'settings' => [
+            'class' => 'plathir\settings\Module',
+            'modulename' => 'site'
+        ],
     ],
     'components' => [
         'user' => [
@@ -76,14 +80,10 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'view' => [
-            'theme' => [
-                
-                'pathMap' => [
-                    '@vendor/plathir/user/views' => '@app/views/user'
-                ],
-            ],
-        ]
+        'settings' => [
+            'class' => 'plathir\settings\components\Settings',
+            'modulename' => 'site',
+        ],
     ],
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
