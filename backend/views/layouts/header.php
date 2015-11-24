@@ -7,7 +7,7 @@ use yii\helpers\Html;
 ?>
 
 <header class="main-header">
-<?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->settings->getSettings('ApplicationName') . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+    <?= Html::a('<span class="logo-mini">' . Yii::$app->settings->getSettings('ApplicationNameMini') . '</span><span class="logo-lg">' . Yii::$app->settings->getSettings('ApplicationName') . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
@@ -239,20 +239,26 @@ use yii\helpers\Html;
                                  alt="User Image"/>
 
                             <p>
-                                   <?= '('. Yii::$app->user->identity->username. ')' ?> <?= \plathir\user\helpers\UserHelper::getProfileFullName(Yii::$app->user->identity->id) ?>
+                                <?= '(' . Yii::$app->user->identity->username . ')' ?> <?= \plathir\user\helpers\UserHelper::getProfileFullName(Yii::$app->user->identity->id) ?>
                                 <small>Member since <?= Yii::$app->formatter->asDatetime(Yii::$app->user->identity->created_at); ?></small>
                             </p>
                         </li>
                         <!-- Menu Body -->
                         <li class="user-body">
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Followers</a>
+                            <div class="col-xs-6 text-center">
+                                <?=
+                                Html::a(
+                                        'Settings for Users', ['/user/settings'], ['data-method' => 'post']
+                                )
+                                ?>                                
                             </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Sales</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Friends</a>
+                            <div class="col-xs-6 text-center">
+                                                          <?=
+                                Html::a(
+                                        'Site Settings', ['/settings'], ['data-method' => 'post']
+                                )
+                                ?>                                
+
                             </div>
                         </li>
                         <!-- Menu Footer-->

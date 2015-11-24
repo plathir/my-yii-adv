@@ -168,4 +168,8 @@ class SiteController extends Controller {
         return $this->render('smart-apps');
     }
 
+        public function actionSmartSettings() {
+        return $this->render('smart-settings');
+    }
+
 }

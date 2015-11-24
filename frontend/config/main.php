@@ -24,10 +24,12 @@ return [
         ],
         'apps' => [
             'class' => 'plathir\apps\Module',
-        ]
-
-        
         ],
+        'settings' => [
+            'class' => 'plathir\settings\Module',
+            'modulename' => 'site'
+        ],
+    ],
     'components' => [
         'user' => [
             'identityClass' => 'plathir\user\models\account\User',
@@ -38,8 +40,7 @@ return [
         ],
         'blog' => [
             'class' => 'plathir\smartblog',
-         ],
-       
+        ],
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
@@ -68,6 +69,10 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'settings' => [
+            'class' => 'plathir\settings\components\Settings',
+            'modulename' => 'site',
         ],
     ],
     'as access' => [
