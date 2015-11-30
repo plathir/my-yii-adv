@@ -16,7 +16,7 @@ $this->title = 'My Yii Application';
     <div class="body-content">
 
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6" >
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
                     <div class="panel-heading">
@@ -29,7 +29,7 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
                     <div class="panel-heading">
@@ -42,7 +42,7 @@ $this->title = 'My Yii Application';
                 </div>
             </div>                
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
                     <div class="panel-heading">
@@ -56,7 +56,7 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
                     <div class="panel-heading">
