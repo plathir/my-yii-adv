@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app>
+<name>app_test1</name>
+<description>This ia a test application</description>
+<type>test type</type>
+<alias>app_test1</alias>
+<key>app key</key>
+<vendor>plathir</vendor>
+<vendor_email>plathir@gmail.com</vendor_email>
+<version>1.0</version>
+</app>
