@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<app>
+    <name>recipes</name>
+    <description>Application for Recipes</description>
+    <type>Recipes</type>
+    <description>This is a recipe Application </description>
+    <alias>recipes </alias>
+    <key>123456</key>    
+    <vendor>plathir</vendor>    
+    <vendor_email>plathir@gmail.com</vendor_email>    
+    <version>1.0</version>    
+</app>
