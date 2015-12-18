@@ -5,86 +5,120 @@ $params = array_merge(
 );
 
 
+
+$modules_var = [
+    'user' => [
+        'class' => 'plathir\user\Module',
+        'ProfileImagePath' => '@media/images/users',
+        'ProfileImageTempPath' => '@media/temp/images/users',
+        'ProfileImagePathPreview' => '/my-yii-adv/media/images/users'
+    ],
+    'admin' => [
+        'class' => 'mdm\admin\Module',
+    ],
+    'smartblog' => [
+        'class' => 'plathir\smartblog\Module',
+    ],
+    'blog' => [
+        'class' => 'plathir\smartblog\Module',
+    ],
+    'apps' => [
+        'class' => 'plathir\apps\Module',
+    ],
+    'settings' => [
+        'class' => 'plathir\settings\Module',
+        'modulename' => 'site'
+    ],
+];
+
+$components_var = [
+    'user' => [
+        'identityClass' => 'plathir\user\models\account\User',
+        'loginUrl' => ['user/security/login'],
+        'identityCookie' => [
+            'name' => '_backendUser', // unique for frontend
+        ]
+    ],
+    'blog' => [
+        'class' => 'plathir\smartblog',
+    ],
+    'apps' => [
+        'class' => 'plathir\apps',
+    ],
+    'view' => [
+        'theme' => [
+            'pathMap' => [
+                '@vendor/plathir/yii2-smart-user/views' => '@app/views/user'
+            ],
+        ]
+    ],
+    'authClientCollection' => [
+        'class' => 'yii\authclient\Collection',
+        'clients' => [
+            'facebook' => [
+                'class' => 'yii\authclient\clients\Facebook',
+                'clientId' => '1705693669662485',
+                'clientSecret' => 'a20b265600a4a65506e13f4494ebe4b4',
+            ],
+        ],
+    ],
+    'authManager' => [
+        'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
+    ],
+    'session' => [
+        'name' => 'PHPBACKSESSID',
+        'savePath' => sys_get_temp_dir(),
+    ],
+    'log' => [
+        'traceLevel' => YII_DEBUG ? 3 : 0,
+        'targets' => [
+            [
+                'class' => 'yii\log\FileTarget',
+                'levels' => ['error', 'warning'],
+            ],
+        ],
+    ],
+    'errorHandler' => [
+        'errorAction' => 'site/error',
+    ],
+    'settings' => [
+        'class' => 'plathir\settings\components\Settings',
+        'modulename' => 'site',
+    ],
+];
+
+// load apps
+$modules_dir = Yii::getAlias('@apps');
+$handle = opendir($modules_dir);
+
+while (false !== ($file = readdir($handle))) {
+    if ($file != '.' && $file != '..' && $file != 'uploads') {
+        $modules_var["$file"] = [
+            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'backend\Module',
+        ];
+
+        $components_var["$file"] = [
+            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'backend',
+        ];
+
+//        $components_var["view"] = [
+//            'theme' => [
+//                'pathMap' => [
+//                    '@apps/' . $file . '/backend/views/' => '@app/views/' . $file
+//                ],
+//            ],
+//        ];
+    }
+}
+closedir($handle);
+
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [
-        'user' => [
-            'class' => 'plathir\user\Module',
-            'ProfileImagePath' => '@media/images/users',
-            'ProfileImageTempPath' => '@media/temp/images/users',
-            'ProfileImagePathPreview' => '/my-yii-adv/media/images/users'
-        ],
-        'admin' => [
-            'class' => 'mdm\admin\Module',
-        ],
-        'smartblog' => [
-            'class' => 'plathir\smartblog\Module',
-        ],
-        'blog' => [
-            'class' => 'plathir\smartblog\Module',
-        ],
-        'apps' => [
-            'class' => 'plathir\apps\Module',
-        ],
-        'testapp1' => [
-            'class' => 'app\modules\testapp1\Module',
-        ],
-        'settings' => [
-            'class' => 'plathir\settings\Module',
-            'modulename' => 'site'
-        ],
-    ],
-    'components' => [
-        'user' => [
-            'identityClass' => 'plathir\user\models\account\User',
-            'loginUrl' => ['user/security/login'],
-            'identityCookie' => [
-                'name' => '_backendUser', // unique for frontend
-            ]
-        ],
-        'blog' => [
-            'class' => 'plathir\smartblog',
-        ],
-        'apps' => [
-            'class' => 'plathir\apps',
-        ],
-        'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
-            'clients' => [
-                'facebook' => [
-                    'class' => 'yii\authclient\clients\Facebook',
-                    'clientId' => '1705693669662485',
-                    'clientSecret' => 'a20b265600a4a65506e13f4494ebe4b4',
-                ],
-            ],
-        ],
-        'authManager' => [
-            'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
-        ],
-        'session' => [
-            'name' => 'PHPBACKSESSID',
-            'savePath' => sys_get_temp_dir(),
-        ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
-        'settings' => [
-            'class' => 'plathir\settings\components\Settings',
-            'modulename' => 'site',
-        ],
-    ],
+    'modules' => $modules_var,
+    'components' => $components_var,
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
