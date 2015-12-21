@@ -1,13 +1,13 @@
 <?php
 
-namespace apps\apptest1\backend;
+namespace apps\apptest1\frontend;
 
 use plathir\apps\models\AppsSearch;
 use yii\web\NotFoundHttpException;
 
 class Module extends \yii\base\Module {
 
-    public $controllerNamespace = 'apps\apptest1\backend\controllers';
+    public $controllerNamespace = 'apps\apptest1\frontend\controllers';
 
     public function init() {
         parent::init();
@@ -31,11 +31,6 @@ class Module extends \yii\base\Module {
         // custom initialization code goes here
     }
 
-    
-    /**
-     *  Check application activation
-     * @return boolean
-     */
      public function checkActive(){
 
         $searchModel = new AppsSearch();

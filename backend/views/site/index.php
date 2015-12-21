@@ -48,15 +48,15 @@ $this->title = 'My Yii Application';
 
             <?php //echo Yii::$app->settings->test(); ?>
             <?php
-//            $comp = \Yii::$app->getModules();
+            $comp = \Yii::$app->getModules();
 //            echo '<pre>';
 //            print_r($comp);
 //            echo '</pre>';
 
        //     $comp = \Yii::$app->getComponents();
-//            echo '<pre>';
-//            print_r($comp);
-//            echo '</pre>';
+            echo '<pre>';
+            print_r($comp);
+            echo '</pre>';
             
             ?>
             

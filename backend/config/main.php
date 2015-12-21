@@ -100,14 +100,6 @@ while (false !== ($file = readdir($handle))) {
         $components_var["$file"] = [
             'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'backend',
         ];
-
-//        $components_var["view"] = [
-//            'theme' => [
-//                'pathMap' => [
-//                    '@apps/' . $file . '/backend/views/' => '@app/views/' . $file
-//                ],
-//            ],
-//        ];
     }
 }
 closedir($handle);

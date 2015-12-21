@@ -4,12 +4,7 @@ $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
-return [
-    'id' => 'app-frontend',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
-    'controllerNamespace' => 'frontend\controllers',
-    'modules' => [
+$modules_var = [
         'user' => [
             'class' => 'plathir\user\Module',
             'ProfileImagePath' => '@media/images/users',
@@ -29,8 +24,9 @@ return [
             'class' => 'plathir\settings\Module',
             'modulename' => 'site'
         ],
-    ],
-    'components' => [
+    ];
+
+$components_var = [
         'user' => [
             'identityClass' => 'plathir\user\models\account\User',
             'loginUrl' => ['user/security/login'],
@@ -74,7 +70,34 @@ return [
             'class' => 'plathir\settings\components\Settings',
             'modulename' => 'site',
         ],
-    ],
+    ];
+        
+// load apps
+$modules_dir = Yii::getAlias('@apps');
+$handle = opendir($modules_dir);
+
+while (false !== ($file = readdir($handle))) {
+    if ($file != '.' && $file != '..' && $file != 'uploads') {
+        $modules_var["$file"] = [
+            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'frontend\Module',
+        ];
+
+        $components_var["$file"] = [
+            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'frontend',
+        ];
+    }
+}
+closedir($handle);
+
+
+
+return [
+    'id' => 'app-frontend',
+    'basePath' => dirname(__DIR__),
+    'bootstrap' => ['log'],
+    'controllerNamespace' => 'frontend\controllers',
+    'modules' => $modules_var,
+    'components' => $components_var,
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
@@ -85,6 +108,7 @@ return [
             'blog/posts/list',
             'blog/posts/view',
             'apps/*',
+            'apptest1/*',
 //            '*'
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.

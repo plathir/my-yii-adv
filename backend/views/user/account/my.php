@@ -50,7 +50,7 @@ use yii\bootstrap\Modal;
                 '<br><br>';
     }
 
-    $account_html = DetailView::widget([
+    $account_html =  '<div class="box box-primary">' . DetailView::widget([
                 'model' => $account,
                 'attributes' => [
                     'id',
@@ -64,7 +64,7 @@ use yii\bootstrap\Modal;
                     'created_at:datetime',
                     'updated_at:datetime',
                 ],
-    ]);
+    ]).'</div>' ;
 
 
     $social_html = 'Tab for Social Data';
