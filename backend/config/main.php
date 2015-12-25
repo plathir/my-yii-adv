@@ -85,6 +85,29 @@ $components_var = [
         'class' => 'plathir\settings\components\Settings',
         'modulename' => 'site',
     ],
+//    'assetManager' => [
+//        'bundles' => [
+//            'dmstr\web\AdminLteAsset' => [
+//                'sourcePath' => '@vendor/almasaeed2010/adminlte/',
+//                'js' => [
+//                    'dist/js/app.min.js',
+//                    'plugins/slimScroll/jquery.slimscroll.min.js',
+//                ],
+//                'css' => [
+//                  'dist/css/AdminLTE.min.css',  
+//                ],
+//                'depends' => [
+//                    'rmrevin\yii\fontawesome\AssetBundle',
+//                    'yii\web\YiiAsset',
+//                    'yii\bootstrap\BootstrapAsset',
+//                    'yii\bootstrap\BootstrapPluginAsset',
+//                ],
+//            ],
+//           'skin' => 'skin-red',
+           
+//		   ],
+//    ],
+//	],
 ];
 
 // load apps

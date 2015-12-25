@@ -2,8 +2,8 @@
 
 namespace apps\apptest1\backend;
 
-use plathir\apps\models\AppsSearch;
-use yii\web\NotFoundHttpException;
+use Yii;
+use apps\apptest1\backend\apptest1Asset;
 
 class Module extends \yii\base\Module {
 
@@ -11,10 +11,6 @@ class Module extends \yii\base\Module {
 
     public function init() {
         parent::init();
-        
-       if (!$this->checkActive()) {
-            throw new NotFoundHttpException('The requested app is disabled or is not installed.');
-        }
         $this->setModules([
             'settings' => [
                 'class' => 'plathir\settings\Module',
@@ -29,18 +25,12 @@ class Module extends \yii\base\Module {
             ],
         ]);
         // custom initialization code goes here
+        $this->registerAssets();
     }
 
-    
-    /**
-     *  Check application activation
-     * @return boolean
-     */
-     public function checkActive(){
+    public function registerAssets() {
+        $view = Yii::$app->getView();
+        apptest1Asset::register($view);
+    }
 
-        $searchModel = new AppsSearch();
-        if ( $searchModel->find()->where(['name' => 'apptest1', 'active' => true])->one()) {
-            return true;
-        }
-     }
 }
