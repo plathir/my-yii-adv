@@ -19,7 +19,7 @@ use yii\helpers\Html;
 
             $img = $bundle->baseUrl . $application->app_icon;
             ?>
-            <div class="col-lg-2 col-md-4 col-xs-12" >
+            <div class="col-lg-2 col-md-2 col-xs-6" >
                 <div class="row row-centered">
                     <?php
                     echo Html::a(Html::img($img, ['alt' => '...',

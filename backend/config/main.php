@@ -4,14 +4,14 @@ $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
-
+$FrontEndUrl =  '/my-yii-adv/frontend/web'; // Change if publish site
 
 $modules_var = [
     'user' => [
         'class' => 'plathir\user\Module',
         'ProfileImagePath' => '@media/images/users',
         'ProfileImageTempPath' => '@media/temp/images/users',
-        'ProfileImagePathPreview' => '/my-yii-adv/media/images/users'
+        'ProfileImagePathPreview' =>  $FrontEndUrl. '/media/images/users',
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
@@ -85,6 +85,17 @@ $components_var = [
         'class' => 'plathir\settings\components\Settings',
         'modulename' => 'site',
     ],
+    'urlManager' => [
+        'class' => 'yii\web\urlManager',
+        'enablePrettyUrl' => true,
+    ],
+    'urlManagerFrontEnd' => [
+        'enablePrettyUrl' => true,
+        'class' => 'yii\web\urlManager',
+        'baseUrl' => $FrontEndUrl,
+        'scriptUrl' => 'index.php',
+    ],
+    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
@@ -104,7 +115,6 @@ $components_var = [
 //                ],
 //            ],
 //           'skin' => 'skin-red',
-           
 //		   ],
 //    ],
 //	],

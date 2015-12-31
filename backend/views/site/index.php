@@ -6,7 +6,7 @@ use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
 
-<?php //echo Yii::$app->settings->test(); ?>
+<?php //echo Yii::$app->settings->test();  ?>
 <?php
 $comp = \Yii::$app->getModules();
 
@@ -25,11 +25,10 @@ $applications = plathir\apps\helpers\AppsHelper::getAppsList();
                 'apps.php', ['applications' => $applications]
         )
         ?>
-
+        <?= Html::a('test', Yii::$app->urlManagerFrontEnd->getBaseUrl() . DIRECTORY_SEPARATOR . Yii::$app->urlManagerFrontEnd->createUrl('/blog/posts/list')) . '<br>'; ?>
     </div>
-
 </div>
-    
+
 <div class="row">
     <div class="col-md-4">
         <?php

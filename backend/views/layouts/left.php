@@ -31,7 +31,7 @@
                 [
                     'options' => ['class' => 'sidebar-menu'],
                     'items' => [
-                        ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
+                        ['label' => 'Main Menu', 'options' => ['class' => 'header']],
                         ['label' => 'Users', 'icon' => 'fa fa-users', 'url' => ['/user/admin']],
                         ['label' => 'Blog', 'icon' => 'fa fa-list-alt', 'url' => ['/blog'],
                               'items' => [

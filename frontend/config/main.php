@@ -9,7 +9,8 @@ $modules_var = [
             'class' => 'plathir\user\Module',
             'ProfileImagePath' => '@media/images/users',
             'ProfileImageTempPath' => '@media/temp/images/users',
-            'ProfileImagePathPreview' => '/my-yii-adv/media/images/users',
+            'ProfileImagePathPreview' => '/my-yii-adv/frontend/web/media/images/users',
+            
         ],
         'admin' => [
             'class' => 'mdm\admin\Module',
@@ -69,6 +70,9 @@ $components_var = [
         'settings' => [
             'class' => 'plathir\settings\components\Settings',
             'modulename' => 'site',
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
         ],
     ];
         
