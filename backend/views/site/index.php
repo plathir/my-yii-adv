@@ -25,7 +25,7 @@ $applications = plathir\apps\helpers\AppsHelper::getAppsList();
                 'apps.php', ['applications' => $applications]
         )
         ?>
-        <?= Html::a('test', Yii::$app->urlManagerFrontEnd->getBaseUrl() . DIRECTORY_SEPARATOR . Yii::$app->urlManagerFrontEnd->createUrl('/blog/posts/list')) . '<br>'; ?>
+        <?= '' // Html::a('test', Yii::$app->urlManagerFrontEnd->getBaseUrl() . DIRECTORY_SEPARATOR . Yii::$app->urlManagerFrontEnd->createUrl('/blog/posts/list')) . '<br>'; ?>
     </div>
 </div>
 

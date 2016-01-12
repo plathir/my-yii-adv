@@ -28,5 +28,5 @@ composer.phar
 phpunit.phar
 # local phpunit config
 /phpunit.xml
-/media/images/users/
-/media/temp/images/users/
+/frontend/web/media/images/users/
+/frontend/web/media/temp/images/users/

@@ -4,14 +4,14 @@ $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
-$FrontEndUrl =  '/my-yii-adv/frontend/web'; // Change if publish site
+$FrontEndUrl = '/my-yii-adv/frontend/web'; // Change if publish site
 
 $modules_var = [
     'user' => [
         'class' => 'plathir\user\Module',
         'ProfileImagePath' => '@media/images/users',
         'ProfileImageTempPath' => '@media/temp/images/users',
-        'ProfileImagePathPreview' =>  $FrontEndUrl. '/media/images/users',
+        'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
@@ -34,7 +34,7 @@ $modules_var = [
 $components_var = [
     'user' => [
         'identityClass' => 'plathir\user\models\account\User',
-        'loginUrl' => ['user/security/login'],
+        'loginUrl' => ['user/security/backend-login'],
         'identityCookie' => [
             'name' => '_backendUser', // unique for frontend
         ]
@@ -52,16 +52,16 @@ $components_var = [
             ],
         ]
     ],
-    'authClientCollection' => [
-        'class' => 'yii\authclient\Collection',
-        'clients' => [
-            'facebook' => [
-                'class' => 'yii\authclient\clients\Facebook',
-                'clientId' => '1705693669662485',
-                'clientSecret' => 'a20b265600a4a65506e13f4494ebe4b4',
-            ],
-        ],
-    ],
+//    'authClientCollection' => [
+//        'class' => 'yii\authclient\Collection',
+//        'clients' => [
+//            'facebook' => [
+//                'class' => 'yii\authclient\clients\Facebook',
+//                'clientId' => '1705693669662485',
+//                'clientSecret' => 'a20b265600a4a65506e13f4494ebe4b4',
+//            ],
+//        ],
+//    ],
     'authManager' => [
         'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
     ],
@@ -95,7 +95,6 @@ $components_var = [
         'baseUrl' => $FrontEndUrl,
         'scriptUrl' => 'index.php',
     ],
-    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
@@ -139,9 +138,13 @@ closedir($handle);
 
 return [
     'id' => 'app-backend',
+    'name' => 'test Name',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+    //      'app\components\Bootstrap'
+    ],
     'modules' => $modules_var,
     'components' => $components_var,
     'as access' => [

@@ -7,8 +7,6 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use plathir\user\models\security\LoginForm;
 use yii\filters\VerbFilter;
-use pheme\settings\SettingsAction;
-
 
 /**
  * Site controller
@@ -65,10 +63,10 @@ class SiteController extends Controller {
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load(Yii::$app->request->post ()) && $model->login()) {
             return $this->goBack();
         } else {
-            return $this->render('login', [
+            return $this->render('backend-login', [
                         'model' => $model,
             ]);
         }

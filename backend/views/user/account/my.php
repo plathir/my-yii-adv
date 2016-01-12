@@ -50,7 +50,7 @@ use yii\bootstrap\Modal;
                 '<br><br>';
     }
 
-    $account_html =  '<div class="box box-primary">' . DetailView::widget([
+    $account_html = '<div class="box box-primary">' . DetailView::widget([
                 'model' => $account,
                 'attributes' => [
                     'id',
@@ -64,7 +64,7 @@ use yii\bootstrap\Modal;
                     'created_at:datetime',
                     'updated_at:datetime',
                 ],
-    ]).'</div>' ;
+            ]) . '</div>';
 
 
     $social_html = 'Tab for Social Data';
@@ -159,6 +159,9 @@ use yii\bootstrap\Modal;
                         </li>
                         <li class="list-group-item">
                             <b>Updated</b> <a class="pull-right"><?= Yii::$app->formatter->asDatetime($account->updated_at); ?></a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Last Login</b> <a class="pull-right"><?= Yii::$app->formatter->asDatetime($account->last_visited); ?></a>
                         </li>
                     </ul>
 

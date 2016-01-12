@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $content string */
 
 
-if (Yii::$app->controller->action->id === 'login' || Yii::$app->controller->action->id === 'request-password-reset') {
+if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controller->action->id === 'request-password-reset') {
     /**
      * Pass Login form data into main-login view
      * 
