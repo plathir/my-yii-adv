@@ -30,3 +30,5 @@ phpunit.phar
 /phpunit.xml
 /frontend/web/media/images/users/
 /frontend/web/media/temp/images/users/
+/frontend/web/media/images/blog/posts/
+/frontend/web/media/temp/images/blog/posts/
