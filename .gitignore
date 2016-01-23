@@ -32,3 +32,5 @@ phpunit.phar
 /frontend/web/media/temp/images/users/
 /frontend/web/media/images/blog/posts/
 /frontend/web/media/temp/images/blog/posts/
+/frontend/web/media/images/blog/
+/frontend/web/media/temp/images/blog/

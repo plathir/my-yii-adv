@@ -1893,12 +1893,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-blog.git",
-                "reference": "44fa5ef21ee1db1990b10c36ef9648e60163e48f"
+                "reference": "dfd53a9140ee0e844e62d3f72851f81e73eb49f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/44fa5ef21ee1db1990b10c36ef9648e60163e48f",
-                "reference": "44fa5ef21ee1db1990b10c36ef9648e60163e48f",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/dfd53a9140ee0e844e62d3f72851f81e73eb49f9",
+                "reference": "dfd53a9140ee0e844e62d3f72851f81e73eb49f9",
                 "shasum": ""
             },
             "require": {
@@ -1925,7 +1925,7 @@
                 }
             ],
             "description": "smartblog",
-            "time": "2016-01-16 21:09:05"
+            "time": "2016-01-18 06:13:03"
         },
         {
             "name": "plathir/yii2-smart-cropper",
@@ -1933,12 +1933,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-cropper.git",
-                "reference": "7241e6bef36e217ce111903f815811c94ce80d31"
+                "reference": "57dc91233004f57f8107664f4b37f53c82c0badf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/7241e6bef36e217ce111903f815811c94ce80d31",
-                "reference": "7241e6bef36e217ce111903f815811c94ce80d31",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/57dc91233004f57f8107664f4b37f53c82c0badf",
+                "reference": "57dc91233004f57f8107664f4b37f53c82c0badf",
                 "shasum": ""
             },
             "require": {
@@ -1968,7 +1968,7 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2016-01-17 13:45:52"
+            "time": "2016-01-18 06:12:42"
         },
         {
             "name": "plathir/yii2-smart-settings",
@@ -2015,12 +2015,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "e0386a67795d0cf183e1246b4e95a47ea6699489"
+                "reference": "ddef97617eac4f5795189e9d8280c0fb6315f19e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/e0386a67795d0cf183e1246b4e95a47ea6699489",
-                "reference": "e0386a67795d0cf183e1246b4e95a47ea6699489",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/ddef97617eac4f5795189e9d8280c0fb6315f19e",
+                "reference": "ddef97617eac4f5795189e9d8280c0fb6315f19e",
                 "shasum": ""
             },
             "require": {
@@ -2032,7 +2032,7 @@
                 "yiisoft/yii2-authclient": "*",
                 "yiisoft/yii2-bootstrap": "*"
             },
-            "type": "library",
+            "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
                     "plathir\\user\\": ""
@@ -2049,7 +2049,7 @@
                 }
             ],
             "description": "user",
-            "time": "2016-01-15 15:09:12"
+            "time": "2016-01-18 06:12:09"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
