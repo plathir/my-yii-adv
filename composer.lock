@@ -134,6 +134,22 @@
             "description": "Font Awesome"
         },
         {
+            "name": "bower-asset/jcrop",
+            "version": "v0.9.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tapmodo/Jcrop.git",
+                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tapmodo/Jcrop/zipball/1902fbc6afa14481dc019a17e0dcb7d62b808a98",
+                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
+        {
             "name": "bower-asset/jquery",
             "version": "2.1.4",
             "source": {
@@ -258,6 +274,36 @@
             }
         },
         {
+            "name": "bower-asset/simple-ajax-uploader",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LPology/Simple-Ajax-Uploader.git",
+                "reference": "ea7f092e2e11efb282ccdd9352f3ac3f28fd228e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LPology/Simple-Ajax-Uploader/zipball/ea7f092e2e11efb282ccdd9352f3ac3f28fd228e",
+                "reference": "ea7f092e2e11efb282ccdd9352f3ac3f28fd228e",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "SimpleAjaxUploader.js"
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Javascript plugin for cross-browser Ajax file uploading. Supports drag and drop, CORS, and multiple file uploading with progress bars. Works in IE7-9, mobile, and all modern browsers.",
+            "keywords": [
+                "ajax",
+                "cors",
+                "cross-browser",
+                "php",
+                "upload"
+            ]
+        },
+        {
             "name": "bower-asset/yii2-pjax",
             "version": "v2.0.5",
             "source": {
@@ -292,19 +338,21 @@
         },
         {
             "name": "budyaga/yii2-cropper",
-            "version": "2.0.1",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/budyaga/yii2-cropper.git",
-                "reference": "aa079dfc333c81bef4e826a27be92596e4d44066"
+                "reference": "88279ecd4b6a3f520e083c062e5db6ed9a45641b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/budyaga/yii2-cropper/zipball/aa079dfc333c81bef4e826a27be92596e4d44066",
-                "reference": "aa079dfc333c81bef4e826a27be92596e4d44066",
+                "url": "https://api.github.com/repos/budyaga/yii2-cropper/zipball/88279ecd4b6a3f520e083c062e5db6ed9a45641b",
+                "reference": "88279ecd4b6a3f520e083c062e5db6ed9a45641b",
                 "shasum": ""
             },
             "require": {
+                "bower-asset/jcrop": "=0.9.12",
+                "bower-asset/simple-ajax-uploader": "@dev",
                 "yiisoft/yii2": "*",
                 "yiisoft/yii2-imagine": "*"
             },
@@ -331,7 +379,7 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2015-12-23 15:08:48"
+            "time": "2015-12-28 17:13:58"
         },
         {
             "name": "cebe/markdown",
@@ -588,16 +636,16 @@
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
-            "version": "v4.2.9",
+            "version": "v4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "728f6a94cc2a6ea5350b8733835cf444516e40e1"
+                "reference": "cde72929649da55470e0a81a5e85921f80f28f29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/728f6a94cc2a6ea5350b8733835cf444516e40e1",
-                "reference": "728f6a94cc2a6ea5350b8733835cf444516e40e1",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/cde72929649da55470e0a81a5e85921f80f28f29",
+                "reference": "cde72929649da55470e0a81a5e85921f80f28f29",
                 "shasum": ""
             },
             "type": "library",
@@ -637,7 +685,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2016-01-21 19:35:12"
+            "time": "2016-01-25 16:55:20"
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
@@ -1903,12 +1951,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-blog.git",
-                "reference": "dfd53a9140ee0e844e62d3f72851f81e73eb49f9"
+                "reference": "24cea9cbbc069b15271dd109829523e744770405"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/dfd53a9140ee0e844e62d3f72851f81e73eb49f9",
-                "reference": "dfd53a9140ee0e844e62d3f72851f81e73eb49f9",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/24cea9cbbc069b15271dd109829523e744770405",
+                "reference": "24cea9cbbc069b15271dd109829523e744770405",
                 "shasum": ""
             },
             "require": {
@@ -1935,7 +1983,7 @@
                 }
             ],
             "description": "smartblog",
-            "time": "2016-01-18 06:13:03"
+            "time": "2016-01-26 21:54:59"
         },
         {
             "name": "plathir/yii2-smart-cropper",
@@ -1943,12 +1991,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-cropper.git",
-                "reference": "88c484536c1f327a527ec4ed0154db2a0ec3bc49"
+                "reference": "1508f60ee2b90932e862ca65729db1911b1916e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/88c484536c1f327a527ec4ed0154db2a0ec3bc49",
-                "reference": "88c484536c1f327a527ec4ed0154db2a0ec3bc49",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/1508f60ee2b90932e862ca65729db1911b1916e6",
+                "reference": "1508f60ee2b90932e862ca65729db1911b1916e6",
                 "shasum": ""
             },
             "require": {
@@ -1978,7 +2026,7 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2016-01-23 08:17:01"
+            "time": "2016-01-26 21:54:21"
         },
         {
             "name": "plathir/yii2-smart-settings",

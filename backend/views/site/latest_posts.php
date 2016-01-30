@@ -31,7 +31,7 @@ use yii\helpers\Html;
                             <?php } else { ?>
                                 <td><span class="label label-danger">Unpublished</span></td>
                             <?php } ?>  
-                            <td><?= Yii::$app->formatter->asDatetime($Post['date_created']) ?></td>
+                            <td><?= Yii::$app->formatter->asDatetime($Post['created_at']) ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
