@@ -1060,22 +1060,27 @@
         },
         {
             "name": "kartik-v/yii2-widget-colorinput",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-colorinput.git",
-                "reference": "b84ed3db199c71b71f3b1f0fe57b1b893a7d82c3"
+                "reference": "3f6e847ef72cf6e27e4d3b4870b00b8f80d51752"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-colorinput/zipball/b84ed3db199c71b71f3b1f0fe57b1b893a7d82c3",
-                "reference": "b84ed3db199c71b71f3b1f0fe57b1b893a7d82c3",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-colorinput/zipball/3f6e847ef72cf6e27e4d3b4870b00b8f80d51752",
+                "reference": "3f6e847ef72cf6e27e4d3b4870b00b8f80d51752",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-krajee-base": "*"
             },
             "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "kartik\\color\\": ""
@@ -1105,7 +1110,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-12-27 16:47:58"
+            "time": "2016-01-14 11:15:49"
         },
         {
             "name": "kartik-v/yii2-widget-datepicker",
@@ -1951,12 +1956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-blog.git",
-                "reference": "24cea9cbbc069b15271dd109829523e744770405"
+                "reference": "bb5ec9f29858f6b859b964063f0375df5a3845fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/24cea9cbbc069b15271dd109829523e744770405",
-                "reference": "24cea9cbbc069b15271dd109829523e744770405",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/bb5ec9f29858f6b859b964063f0375df5a3845fd",
+                "reference": "bb5ec9f29858f6b859b964063f0375df5a3845fd",
                 "shasum": ""
             },
             "require": {
@@ -1983,7 +1988,7 @@
                 }
             ],
             "description": "smartblog",
-            "time": "2016-01-26 21:54:59"
+            "time": "2016-01-30 07:25:31"
         },
         {
             "name": "plathir/yii2-smart-cropper",
