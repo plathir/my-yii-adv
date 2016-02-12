@@ -8,6 +8,7 @@ use apps\recipes\common\models\RecipesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * RecipesController implements the CRUD actions for Recipes model.
@@ -68,8 +69,20 @@ class RecipesController extends Controller {
     public function actionCreate() {
         $model = new Recipes();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            if ($model->validate()) {
+                $model->imageFile->saveAs('uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension);
+                $model->attachments = 'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
+            }
+
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('create', [
+                            'model' => $model,
+                ]);
+            }
         } else {
             return $this->render('create', [
                         'model' => $model,
@@ -119,6 +132,16 @@ class RecipesController extends Controller {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
+    public function upload() {
+        if ($model->validate()) {
+            $model->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+            $model->attachments = 'uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension;
+            return true;
+        } else {
+            return false;
         }
     }
 

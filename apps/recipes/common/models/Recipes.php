@@ -3,6 +3,7 @@
 namespace apps\recipes\common\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "{{%recipes1}}".
@@ -10,25 +11,28 @@ use Yii;
  * @property integer $id
  * @property string $title
  * @property string $content
+ * @property string $attachments
  */
-class Recipes extends \yii\db\ActiveRecord
-{
+class Recipes extends \yii\db\ActiveRecord {
+
+    public $imageFile;
+
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return '{{%recipes1}}';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['title'], 'required'],
             [['content'], 'string'],
+            [['attachments'], 'string'],
+            [['imageFile'], 'file'],
             [['title'], 'string', 'max' => 255]
         ];
     }
@@ -36,12 +40,14 @@ class Recipes extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => Yii::t('app', 'ID'),
             'title' => Yii::t('app', 'Title'),
             'content' => Yii::t('app', 'Content'),
         ];
     }
+
+
+
 }

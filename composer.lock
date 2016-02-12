@@ -1956,12 +1956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-blog.git",
-                "reference": "bb5ec9f29858f6b859b964063f0375df5a3845fd"
+                "reference": "064b9e64bb706c738ef64c1714ff4f2ccd69834f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/bb5ec9f29858f6b859b964063f0375df5a3845fd",
-                "reference": "bb5ec9f29858f6b859b964063f0375df5a3845fd",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/064b9e64bb706c738ef64c1714ff4f2ccd69834f",
+                "reference": "064b9e64bb706c738ef64c1714ff4f2ccd69834f",
                 "shasum": ""
             },
             "require": {
@@ -1988,7 +1988,7 @@
                 }
             ],
             "description": "smartblog",
-            "time": "2016-01-30 07:25:31"
+            "time": "2016-02-08 22:40:23"
         },
         {
             "name": "plathir/yii2-smart-cropper",
@@ -1996,12 +1996,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-cropper.git",
-                "reference": "1508f60ee2b90932e862ca65729db1911b1916e6"
+                "reference": "834175093b16aab37807a475247b203fc31e776e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/1508f60ee2b90932e862ca65729db1911b1916e6",
-                "reference": "1508f60ee2b90932e862ca65729db1911b1916e6",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/834175093b16aab37807a475247b203fc31e776e",
+                "reference": "834175093b16aab37807a475247b203fc31e776e",
                 "shasum": ""
             },
             "require": {
@@ -2031,7 +2031,7 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2016-01-26 21:54:21"
+            "time": "2016-02-08 22:41:04"
         },
         {
             "name": "plathir/yii2-smart-settings",
@@ -2555,12 +2555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "574dcb1d101ae55be230e0c00a2428af6ec4c5c1"
+                "reference": "d33d1046a5951f2f7823fe343f28ddc58b3421a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/574dcb1d101ae55be230e0c00a2428af6ec4c5c1",
-                "reference": "574dcb1d101ae55be230e0c00a2428af6ec4c5c1",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/d33d1046a5951f2f7823fe343f28ddc58b3421a4",
+                "reference": "d33d1046a5951f2f7823fe343f28ddc58b3421a4",
                 "shasum": ""
             },
             "require": {
@@ -2594,7 +2594,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2015-12-01 20:06:03"
+            "time": "2016-02-06 01:03:32"
         },
         {
             "name": "yiisoft/yii2-imagine",
