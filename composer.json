@@ -1,5 +1,5 @@
 {
-    "name": "yiisoft/yii2-app-advanced",
+    "name": "plathir/my-yii-adv",
     "description": "Yii 2 Advanced Application Template",
     "keywords": ["yii2", "framework", "advanced", "application template"],
     "homepage": "http://www.yiiframework.com/",
@@ -12,7 +12,7 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*",
