@@ -12,6 +12,8 @@ $modules_var = [
         'ProfileImagePath' => '@media/images/users',
         'ProfileImageTempPath' => '@media/temp/images/users',
         'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
+        'ProfileImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/users',
+        
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
@@ -45,13 +47,15 @@ $components_var = [
     'apps' => [
         'class' => 'plathir\apps',
     ],
-    'view' => [
-        'theme' => [
-            'pathMap' => [
-                '@vendor/plathir/yii2-smart-user/views' => '@app/views/user'
-            ],
-        ]
-    ],
+//    'view' => [
+//        'theme' => [
+//            'pathMap' => [
+//                '@vendor/plathir/yii2-smart-user/views' => '@app/views/user'
+//            ],
+//        ]
+//    ],
+
+    
 //    'authClientCollection' => [
 //        'class' => 'yii\authclient\Collection',
 //        'clients' => [
