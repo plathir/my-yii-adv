@@ -25,7 +25,12 @@
         "plathir/yii2-smart-settings": "@dev",
         "dmstr/yii2-adminlte-asset": "2.*",
         "budyaga/yii2-cropper": "*",
-        "plathir/yii2-smart-cropper": "@dev"       
+        "plathir/yii2-smart-cropper": "@dev",
+        "kartik-v/yii2-datecontrol": "dev-master",
+        "justinvoelker/yii2-tagging": "*",
+        "yiisoft/yii2-jui": "^2.0",
+        "kartik-v/yii2-ipinfo": "*",
+        "2amigos/yii2-gallery-widget": "~1.0"       
 
     },
     "require-dev": {

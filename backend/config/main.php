@@ -13,7 +13,6 @@ $modules_var = [
         'ProfileImageTempPath' => '@media/temp/images/users',
         'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
         'ProfileImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/users',
-        
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
@@ -22,7 +21,15 @@ $modules_var = [
         'class' => 'plathir\smartblog\Module',
     ],
     'blog' => [
-        'class' => 'plathir\smartblog\Module',
+        'class' => 'plathir\smartblog\backend\Module',
+        'ImagePath' => '@media/images/blog/posts',
+        'ImageTempPath' => '@media/temp/images/blog/posts',
+        'ImagePathPreview' => '/my-yii-adv/frontend/web/media/images/blog/posts',
+        'ImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/posts',
+        'KeyFolder' => 'id',
+        'userModel' => 'plathir\user\models\account\User',
+        'userNameField' => 'username'
+        
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
@@ -42,7 +49,7 @@ $components_var = [
         ]
     ],
     'blog' => [
-        'class' => 'plathir\smartblog',
+        'class' => 'plathir\smartblog\backend',
     ],
     'apps' => [
         'class' => 'plathir\apps',
@@ -54,8 +61,6 @@ $components_var = [
 //            ],
 //        ]
 //    ],
-
-    
 //    'authClientCollection' => [
 //        'class' => 'yii\authclient\Collection',
 //        'clients' => [
@@ -143,6 +148,7 @@ closedir($handle);
 return [
     'id' => 'app-backend',
     'name' => 'test Name',
+    'timezone' => 'Europe/Athens',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => [
@@ -151,6 +157,12 @@ return [
     ],
     'modules' => $modules_var,
     'components' => $components_var,
+    'on beforeRequest' => function () {
+$user = Yii::$app->user->identity;
+if ($user && $user->timezone) {
+    Yii::$app->setTimeZone($user->timezone);
+}
+},
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
