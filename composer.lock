@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5f9ff5c20d1a302029bc73db2fb0c983",
-    "content-hash": "01f32046b80776eccab80bb2bb4edcf9",
+    "hash": "cb8f9bd2f13f1132dcca1d86b712860f",
+    "content-hash": "b92e0ae3cdce01a68096e67633c72b97",
     "packages": [
         {
             "name": "2amigos/yii2-gallery-widget",
@@ -67,72 +67,6 @@
                 "yii2"
             ],
             "time": "2016-01-04 06:35:58"
-        },
-        {
-            "name": "2amigos/yii2-selectize-widget",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/yii2-selectize-widget.git",
-                "reference": "4bb419e5aafc47b0d38962f870e36659096667b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-selectize-widget/zipball/4bb419e5aafc47b0d38962f870e36659096667b9",
-                "reference": "4bb419e5aafc47b0d38962f870e36659096667b9",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/selectize": "~0.12.0",
-                "yiisoft/yii2": "~2.0.0",
-                "yiisoft/yii2-bootstrap": "~2.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "asset-installer-paths": {
-                    "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor/bower"
-                },
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "dosamigos\\selectize\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "2amigOS! Consulting Group",
-                    "email": "hola@2amigos.us",
-                    "homepage": "http://2amigos.us",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Alexander Kochetov",
-                    "email": "creocoder@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The selectize.js widget for the Yii framework",
-            "homepage": "https://github.com/2amigos/yii2-selectize-widget",
-            "keywords": [
-                "2amigos",
-                "selectize",
-                "widget",
-                "yii",
-                "yii 2",
-                "yii2"
-            ],
-            "time": "2016-02-13 06:52:46"
         },
         {
             "name": "almasaeed2010/adminlte",
@@ -241,16 +175,16 @@
         },
         {
             "name": "bower-asset/fontawesome",
-            "version": "v4.6.2",
+            "version": "v4.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "e7cc59d666ed0826656f695afad7c56e95eb6513"
+                "reference": "8e241f209faa1dd2182c9fdc9c352d8806504a4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e7cc59d666ed0826656f695afad7c56e95eb6513",
-                "reference": "e7cc59d666ed0826656f695afad7c56e95eb6513",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/8e241f209faa1dd2182c9fdc9c352d8806504a4e",
+                "reference": "8e241f209faa1dd2182c9fdc9c352d8806504a4e",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -294,16 +228,16 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "af22a351b2ea5801ffb1695abb3bb34d5bed9198"
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/af22a351b2ea5801ffb1695abb3bb34d5bed9198",
-                "reference": "af22a351b2ea5801ffb1695abb3bb34d5bed9198",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -395,44 +329,6 @@
             ]
         },
         {
-            "name": "bower-asset/microplugin",
-            "version": "v0.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/brianreavis/microplugin.js.git",
-                "reference": "d8671e6cc769938648f8735610534427cdeeaf67"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/brianreavis/microplugin.js/zipball/d8671e6cc769938648f8735610534427cdeeaf67",
-                "reference": "d8671e6cc769938648f8735610534427cdeeaf67",
-                "shasum": ""
-            },
-            "type": "bower-asset-library",
-            "extra": {
-                "bower-asset-main": [
-                    "src/microplugin.js"
-                ],
-                "bower-asset-ignore": [
-                    "Makefile",
-                    "test",
-                    ".travis.yml",
-                    ".npmignore.yml"
-                ]
-            },
-            "license": [
-                "Apache License, Version 2.0"
-            ],
-            "description": "A lightweight plugin / dependency system for javascript libraries.",
-            "keywords": [
-                "architecture",
-                "dependencies",
-                "extensibility",
-                "plugins",
-                "require"
-            ]
-        },
-        {
             "name": "bower-asset/punycode",
             "version": "v1.3.2",
             "source": {
@@ -459,110 +355,6 @@
                     "package.json"
                 ]
             }
-        },
-        {
-            "name": "bower-asset/selectize",
-            "version": "v0.12.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/brianreavis/selectize.js.git",
-                "reference": "3dc07d40047cd98de8a8f8beacca06a73970139d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/brianreavis/selectize.js/zipball/3dc07d40047cd98de8a8f8beacca06a73970139d",
-                "reference": "3dc07d40047cd98de8a8f8beacca06a73970139d",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/jquery": ">=1.7.0",
-                "bower-asset/microplugin": "dev-0.0.x|0.0.x",
-                "bower-asset/sifter": "dev-0.4.x|0.4.x"
-            },
-            "require-dev": {
-                "bower-asset/bootstrap-2": "2",
-                "bower-asset/bootstrap-3.2": "3.2"
-            },
-            "type": "bower-asset-library",
-            "extra": {
-                "bower-asset-main": [
-                    "dist/css/selectize.css",
-                    "dist/js/selectize.js"
-                ],
-                "bower-asset-ignore": [
-                    "Makefile",
-                    "Gruntfile.js",
-                    "examples",
-                    "node_modules",
-                    "bower_components",
-                    "docs",
-                    "src",
-                    "test",
-                    ".travis.yml",
-                    "testem.json",
-                    "selectize.jquery.json",
-                    "*.sh",
-                    "package.json"
-                ]
-            },
-            "license": [
-                "Apache License, Version 2.0"
-            ],
-            "description": "Selectize is a jQuery-based custom <select> UI control. Useful for tagging, contact lists, country selectors, etc.",
-            "keywords": [
-                "autocomplete",
-                "control",
-                "form",
-                "input",
-                "select",
-                "tag",
-                "tagging",
-                "ui"
-            ]
-        },
-        {
-            "name": "bower-asset/sifter",
-            "version": "v0.4.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/brianreavis/sifter.js.git",
-                "reference": "facff802f388feba9bc4c649fe5acd3ad53d84e9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/brianreavis/sifter.js/zipball/facff802f388feba9bc4c649fe5acd3ad53d84e9",
-                "reference": "facff802f388feba9bc4c649fe5acd3ad53d84e9",
-                "shasum": ""
-            },
-            "type": "bower-asset-library",
-            "extra": {
-                "bower-asset-main": [
-                    "sifter.js"
-                ],
-                "bower-asset-ignore": [
-                    "Makefile",
-                    "test",
-                    "lib",
-                    "bin",
-                    "benchmark",
-                    "node_modules",
-                    ".travis.yml"
-                ]
-            },
-            "license": [
-                "Apache License, Version 2.0"
-            ],
-            "description": "A library for textually searching arrays and hashes of objects by property (or multiple properties). Designed specifically for autocomplete.",
-            "keywords": [
-                "autocomplete",
-                "data",
-                "filter",
-                "match",
-                "results",
-                "search",
-                "sift",
-                "sort"
-            ]
         },
         {
             "name": "bower-asset/simple-ajax-uploader",
@@ -786,12 +578,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lipis/flag-icon-css.git",
-                "reference": "d9c140891b443b02acf7f2ebba9bb2121ea555a8"
+                "reference": "836eca11ecf437ae3d0f0c93dd245ab00d94cee1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lipis/flag-icon-css/zipball/d9c140891b443b02acf7f2ebba9bb2121ea555a8",
-                "reference": "d9c140891b443b02acf7f2ebba9bb2121ea555a8",
+                "url": "https://api.github.com/repos/lipis/flag-icon-css/zipball/836eca11ecf437ae3d0f0c93dd245ab00d94cee1",
+                "reference": "836eca11ecf437ae3d0f0c93dd245ab00d94cee1",
                 "shasum": ""
             },
             "type": "component",
@@ -816,7 +608,7 @@
                 }
             ],
             "description": "CSS for vector based country flags",
-            "time": "2016-05-08 12:24:15"
+            "time": "2016-05-18 13:50:30"
         },
         {
             "name": "dmstr/yii2-adminlte-asset",
@@ -922,12 +714,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "97412d13845d680ab6fbc6fe5d933eec033fd696"
+                "reference": "8e241f209faa1dd2182c9fdc9c352d8806504a4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/97412d13845d680ab6fbc6fe5d933eec033fd696",
-                "reference": "97412d13845d680ab6fbc6fe5d933eec033fd696",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/8e241f209faa1dd2182c9fdc9c352d8806504a4e",
+                "reference": "8e241f209faa1dd2182c9fdc9c352d8806504a4e",
                 "shasum": ""
             },
             "require-dev": {
@@ -962,7 +754,7 @@
                 "font",
                 "icon"
             ],
-            "time": "2016-05-05 16:56:57"
+            "time": "2016-05-13 15:42:25"
         },
         {
             "name": "imagine/imagine",
@@ -1067,12 +859,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "3eac947ab60ba0d1208d9732c113d7188b42bde8"
+                "reference": "06deb8f6c8013d192063e2d30f89a717a052a767"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/3eac947ab60ba0d1208d9732c113d7188b42bde8",
-                "reference": "3eac947ab60ba0d1208d9732c113d7188b42bde8",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/06deb8f6c8013d192063e2d30f89a717a052a767",
+                "reference": "06deb8f6c8013d192063e2d30f89a717a052a767",
                 "shasum": ""
             },
             "type": "library",
@@ -1112,7 +904,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2016-04-27 11:35:03"
+            "time": "2016-05-22 06:12:10"
         },
         {
             "name": "kartik-v/bootstrap-popover-x",
@@ -1164,12 +956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-star-rating.git",
-                "reference": "76e60f0469438fb838bb6f289622b1c57e338766"
+                "reference": "3d0ac4b92f85333f42169c4299026d18a0845668"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/76e60f0469438fb838bb6f289622b1c57e338766",
-                "reference": "76e60f0469438fb838bb6f289622b1c57e338766",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/3d0ac4b92f85333f42169c4299026d18a0845668",
+                "reference": "3d0ac4b92f85333f42169c4299026d18a0845668",
                 "shasum": ""
             },
             "type": "library",
@@ -1200,7 +992,7 @@
                 "star",
                 "svg"
             ],
-            "time": "2016-05-06 18:49:29"
+            "time": "2016-05-12 17:37:56"
         },
         {
             "name": "kartik-v/dependent-dropdown",
@@ -1907,12 +1699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-fileinput.git",
-                "reference": "36f9f493c2d814529f2a195422a8af2e020fc80c"
+                "reference": "c9471b2489feec5534d4ac42cede6ee0677170f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-fileinput/zipball/36f9f493c2d814529f2a195422a8af2e020fc80c",
-                "reference": "36f9f493c2d814529f2a195422a8af2e020fc80c",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-fileinput/zipball/c9471b2489feec5534d4ac42cede6ee0677170f8",
+                "reference": "c9471b2489feec5534d4ac42cede6ee0677170f8",
                 "shasum": ""
             },
             "require": {
@@ -1949,7 +1741,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-01-10 16:10:58"
+            "time": "2016-05-13 17:23:21"
         },
         {
             "name": "kartik-v/yii2-widget-growl",
@@ -2055,12 +1847,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-rating.git",
-                "reference": "e3110576b60ecb6098bc8389efb5ef3a402b6e61"
+                "reference": "3327e9cecf1f1fec2c614afbdb6545091a87fc56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-rating/zipball/e3110576b60ecb6098bc8389efb5ef3a402b6e61",
-                "reference": "e3110576b60ecb6098bc8389efb5ef3a402b6e61",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-rating/zipball/3327e9cecf1f1fec2c614afbdb6545091a87fc56",
+                "reference": "3327e9cecf1f1fec2c614afbdb6545091a87fc56",
                 "shasum": ""
             },
             "require": {
@@ -2103,7 +1895,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-04-27 19:26:00"
+            "time": "2016-05-13 03:22:54"
         },
         {
             "name": "kartik-v/yii2-widget-select2",
@@ -2520,12 +2312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-admin.git",
-                "reference": "58b3d023de9899da42c7be47c901391b8ef43663"
+                "reference": "f1711779ea3c19e334d9774d223a9682e693b31e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/58b3d023de9899da42c7be47c901391b8ef43663",
-                "reference": "58b3d023de9899da42c7be47c901391b8ef43663",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/f1711779ea3c19e334d9774d223a9682e693b31e",
+                "reference": "f1711779ea3c19e334d9774d223a9682e693b31e",
                 "shasum": ""
             },
             "require": {
@@ -2570,7 +2362,7 @@
                 "rbac",
                 "yii"
             ],
-            "time": "2016-04-26 07:03:27"
+            "time": "2016-05-20 23:38:13"
         },
         {
             "name": "plathir/yii2-smart-apps",
@@ -2615,12 +2407,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-blog.git",
-                "reference": "20f8893c763106d3ce665d283ee6442f57ee425f"
+                "reference": "f9f08c622626dd5dad9eced5ff3ed85a11ed00f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/20f8893c763106d3ce665d283ee6442f57ee425f",
-                "reference": "20f8893c763106d3ce665d283ee6442f57ee425f",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/f9f08c622626dd5dad9eced5ff3ed85a11ed00f5",
+                "reference": "f9f08c622626dd5dad9eced5ff3ed85a11ed00f5",
                 "shasum": ""
             },
             "require": {
@@ -2630,7 +2422,7 @@
                 "yiisoft/yii2": "*",
                 "yiisoft/yii2-bootstrap": "*"
             },
-            "type": "library",
+            "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
                     "plathir\\smartblog\\": ""
@@ -2647,7 +2439,7 @@
                 }
             ],
             "description": "smartblog",
-            "time": "2016-02-21 15:58:13"
+            "time": "2016-05-22 06:56:37"
         },
         {
             "name": "plathir/yii2-smart-cropper",
@@ -2655,12 +2447,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-cropper.git",
-                "reference": "c91887d3c6602cf97c5ef9b08e8cd7c09bede905"
+                "reference": "3bad5045ddbe3c18afcbc35a44b0f88977c64bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/c91887d3c6602cf97c5ef9b08e8cd7c09bede905",
-                "reference": "c91887d3c6602cf97c5ef9b08e8cd7c09bede905",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-cropper/zipball/3bad5045ddbe3c18afcbc35a44b0f88977c64bf8",
+                "reference": "3bad5045ddbe3c18afcbc35a44b0f88977c64bf8",
                 "shasum": ""
             },
             "require": {
@@ -2691,7 +2483,7 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2016-02-22 14:26:22"
+            "time": "2016-05-22 06:54:28"
         },
         {
             "name": "plathir/yii2-smart-settings",
@@ -2738,12 +2530,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-upload.git",
-                "reference": "a6d3e5f06170cbf222bd6108b38e208aa18b6531"
+                "reference": "a13e3dcaf85bc2091afc924c098de1eddaa0f4cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-upload/zipball/a6d3e5f06170cbf222bd6108b38e208aa18b6531",
-                "reference": "a6d3e5f06170cbf222bd6108b38e208aa18b6531",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-upload/zipball/a13e3dcaf85bc2091afc924c098de1eddaa0f4cd",
+                "reference": "a13e3dcaf85bc2091afc924c098de1eddaa0f4cd",
                 "shasum": ""
             },
             "require": {
@@ -2772,7 +2564,7 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2016-02-22 14:25:32"
+            "time": "2016-05-22 06:51:51"
         },
         {
             "name": "plathir/yii2-smart-user",
@@ -2780,12 +2572,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "3bd3fd3a18ac12decf3d1f6a5b7321e7ba574fa1"
+                "reference": "496430522b59bed33c56f98d6a86a24c32a8eca4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/3bd3fd3a18ac12decf3d1f6a5b7321e7ba574fa1",
-                "reference": "3bd3fd3a18ac12decf3d1f6a5b7321e7ba574fa1",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/496430522b59bed33c56f98d6a86a24c32a8eca4",
+                "reference": "496430522b59bed33c56f98d6a86a24c32a8eca4",
                 "shasum": ""
             },
             "require": {
@@ -2814,7 +2606,7 @@
                 }
             ],
             "description": "user",
-            "time": "2016-02-21 16:02:36"
+            "time": "2016-05-22 06:55:22"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -3071,12 +2863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "13ad09ee1ce299fd11797142d298aaf39f1d3a2d"
+                "reference": "a9da4d6dc7b032989bad90b2e9673d58832c6eb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/13ad09ee1ce299fd11797142d298aaf39f1d3a2d",
-                "reference": "13ad09ee1ce299fd11797142d298aaf39f1d3a2d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/a9da4d6dc7b032989bad90b2e9673d58832c6eb8",
+                "reference": "a9da4d6dc7b032989bad90b2e9673d58832c6eb8",
                 "shasum": ""
             },
             "require": {
@@ -3157,7 +2949,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-05-11 12:14:36"
+            "time": "2016-05-21 12:32:34"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -3487,12 +3279,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "191fc2b648e1b00ad4725fcae0ab0729537725c8"
+                "reference": "df56110269ffaaea78295290c74d0bd1b3ac176f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/191fc2b648e1b00ad4725fcae0ab0729537725c8",
-                "reference": "191fc2b648e1b00ad4725fcae0ab0729537725c8",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/df56110269ffaaea78295290c74d0bd1b3ac176f",
+                "reference": "df56110269ffaaea78295290c74d0bd1b3ac176f",
                 "shasum": ""
             },
             "require": {
@@ -3529,7 +3321,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-05-10 09:22:13"
+            "time": "2016-05-19 20:16:37"
         },
         {
             "name": "phpspec/php-diff",
@@ -3714,12 +3506,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "6777f007457b4f18597d03ac707581e59a3084b6"
+                "reference": "ad215b7f8c679e11e70ff3dc29c7306f28cef576"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/6777f007457b4f18597d03ac707581e59a3084b6",
-                "reference": "6777f007457b4f18597d03ac707581e59a3084b6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/ad215b7f8c679e11e70ff3dc29c7306f28cef576",
+                "reference": "ad215b7f8c679e11e70ff3dc29c7306f28cef576",
                 "shasum": ""
             },
             "require": {
@@ -3759,7 +3551,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2016-04-30 16:12:40"
+            "time": "2016-05-12 20:54:42"
         }
     ],
     "aliases": [],
@@ -3771,7 +3563,6 @@
         "plathir/yii2-smart-apps": 20,
         "plathir/yii2-smart-settings": 20,
         "plathir/yii2-smart-cropper": 20,
-        "kartik-v/yii2-widget-fileinput": 20,
         "kartik-v/yii2-datecontrol": 20
     },
     "prefer-stable": false,
