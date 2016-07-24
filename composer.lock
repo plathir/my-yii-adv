@@ -4,9 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cb8f9bd2f13f1132dcca1d86b712860f",
-    "content-hash": "b92e0ae3cdce01a68096e67633c72b97",
+    "hash": "78d7010c4ce47063deafaadbb8c69c4c",
+    "content-hash": "8dc8422711bcdcddf114fc83ea871763",
     "packages": [
+        {
+            "name": "2amigos/yii2-ckeditor-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-ckeditor-widget.git",
+                "reference": "fa0ce0c1783e91fec40c576a9967639ee6d4a138"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-ckeditor-widget/zipball/fa0ce0c1783e91fec40c576a9967639ee6d4a138",
+                "reference": "fa0ce0c1783e91fec40c576a9967639ee6d4a138",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\ckeditor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CKEditor widget for Yii2.",
+            "homepage": "http://yiiwheels.com/extension/ckeditor-widget",
+            "keywords": [
+                "2amigos",
+                "CKEditor",
+                "extension",
+                "widget",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2016-03-11 16:56:15"
+        },
         {
             "name": "2amigos/yii2-gallery-widget",
             "version": "dev-master",
@@ -67,6 +126,72 @@
                 "yii2"
             ],
             "time": "2016-01-04 06:35:58"
+        },
+        {
+            "name": "2amigos/yii2-selectize-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-selectize-widget.git",
+                "reference": "4bb419e5aafc47b0d38962f870e36659096667b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-selectize-widget/zipball/4bb419e5aafc47b0d38962f870e36659096667b9",
+                "reference": "4bb419e5aafc47b0d38962f870e36659096667b9",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/selectize": "~0.12.0",
+                "yiisoft/yii2": "~2.0.0",
+                "yiisoft/yii2-bootstrap": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\selectize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alexander Kochetov",
+                    "email": "creocoder@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The selectize.js widget for the Yii framework",
+            "homepage": "https://github.com/2amigos/yii2-selectize-widget",
+            "keywords": [
+                "2amigos",
+                "selectize",
+                "widget",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2016-02-13 06:52:46"
         },
         {
             "name": "almasaeed2010/adminlte",
@@ -211,22 +336,6 @@
             "description": "Font Awesome"
         },
         {
-            "name": "bower-asset/jcrop",
-            "version": "v0.9.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tapmodo/Jcrop.git",
-                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tapmodo/Jcrop/zipball/1902fbc6afa14481dc019a17e0dcb7d62b808a98",
-                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98",
-                "shasum": ""
-            },
-            "type": "bower-asset-library"
-        },
-        {
             "name": "bower-asset/jquery",
             "version": "2.2.4",
             "source": {
@@ -329,6 +438,44 @@
             ]
         },
         {
+            "name": "bower-asset/microplugin",
+            "version": "v0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brianreavis/microplugin.js.git",
+                "reference": "d8671e6cc769938648f8735610534427cdeeaf67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brianreavis/microplugin.js/zipball/d8671e6cc769938648f8735610534427cdeeaf67",
+                "reference": "d8671e6cc769938648f8735610534427cdeeaf67",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "src/microplugin.js"
+                ],
+                "bower-asset-ignore": [
+                    "Makefile",
+                    "test",
+                    ".travis.yml",
+                    ".npmignore.yml"
+                ]
+            },
+            "license": [
+                "Apache License, Version 2.0"
+            ],
+            "description": "A lightweight plugin / dependency system for javascript libraries.",
+            "keywords": [
+                "architecture",
+                "dependencies",
+                "extensibility",
+                "plugins",
+                "require"
+            ]
+        },
+        {
             "name": "bower-asset/punycode",
             "version": "v1.3.2",
             "source": {
@@ -357,38 +504,108 @@
             }
         },
         {
-            "name": "bower-asset/simple-ajax-uploader",
-            "version": "dev-master",
+            "name": "bower-asset/selectize",
+            "version": "v0.12.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/LPology/Simple-Ajax-Uploader.git",
-                "reference": "dc8968e1669eb184dcaeb306d606702d20756935"
+                "url": "https://github.com/brianreavis/selectize.js.git",
+                "reference": "3dc07d40047cd98de8a8f8beacca06a73970139d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LPology/Simple-Ajax-Uploader/zipball/dc8968e1669eb184dcaeb306d606702d20756935",
-                "reference": "dc8968e1669eb184dcaeb306d606702d20756935",
+                "url": "https://api.github.com/repos/brianreavis/selectize.js/zipball/3dc07d40047cd98de8a8f8beacca06a73970139d",
+                "reference": "3dc07d40047cd98de8a8f8beacca06a73970139d",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0",
+                "bower-asset/microplugin": "dev-0.0.x|0.0.x",
+                "bower-asset/sifter": "dev-0.4.x|0.4.x"
+            },
+            "require-dev": {
+                "bower-asset/bootstrap-2": "2",
+                "bower-asset/bootstrap-3.2": "3.2"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "dist/css/selectize.css",
+                    "dist/js/selectize.js"
+                ],
+                "bower-asset-ignore": [
+                    "Makefile",
+                    "Gruntfile.js",
+                    "examples",
+                    "node_modules",
+                    "bower_components",
+                    "docs",
+                    "src",
+                    "test",
+                    ".travis.yml",
+                    "testem.json",
+                    "selectize.jquery.json",
+                    "*.sh",
+                    "package.json"
+                ]
+            },
+            "license": [
+                "Apache License, Version 2.0"
+            ],
+            "description": "Selectize is a jQuery-based custom <select> UI control. Useful for tagging, contact lists, country selectors, etc.",
+            "keywords": [
+                "autocomplete",
+                "control",
+                "form",
+                "input",
+                "select",
+                "tag",
+                "tagging",
+                "ui"
+            ]
+        },
+        {
+            "name": "bower-asset/sifter",
+            "version": "v0.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brianreavis/sifter.js.git",
+                "reference": "facff802f388feba9bc4c649fe5acd3ad53d84e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brianreavis/sifter.js/zipball/facff802f388feba9bc4c649fe5acd3ad53d84e9",
+                "reference": "facff802f388feba9bc4c649fe5acd3ad53d84e9",
                 "shasum": ""
             },
             "type": "bower-asset-library",
             "extra": {
-                "bower-asset-main": "SimpleAjaxUploader.js",
-                "branch-alias": {
-                    "dev-master": "2.5.1-dev"
-                }
+                "bower-asset-main": [
+                    "sifter.js"
+                ],
+                "bower-asset-ignore": [
+                    "Makefile",
+                    "test",
+                    "lib",
+                    "bin",
+                    "benchmark",
+                    "node_modules",
+                    ".travis.yml"
+                ]
             },
             "license": [
-                "MIT"
+                "Apache License, Version 2.0"
             ],
-            "description": "A Javascript plugin for cross-browser Ajax file uploading. Supports drag and drop, CORS, and multiple file uploading with progress bars. Works in IE7-9, mobile, and all modern browsers.",
+            "description": "A library for textually searching arrays and hashes of objects by property (or multiple properties). Designed specifically for autocomplete.",
             "keywords": [
-                "ajax",
-                "cors",
-                "cross-browser",
-                "php",
-                "upload"
-            ],
-            "time": "2016-02-16 12:58:36"
+                "autocomplete",
+                "data",
+                "filter",
+                "match",
+                "results",
+                "search",
+                "sift",
+                "sort"
+            ]
         },
         {
             "name": "bower-asset/yii2-pjax",
@@ -423,51 +640,6 @@
             "license": [
                 "MIT"
             ]
-        },
-        {
-            "name": "budyaga/yii2-cropper",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/budyaga/yii2-cropper.git",
-                "reference": "a8932b4cf77bf9f1a3ac8d3f59fc5c019ceef0bf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/budyaga/yii2-cropper/zipball/a8932b4cf77bf9f1a3ac8d3f59fc5c019ceef0bf",
-                "reference": "a8932b4cf77bf9f1a3ac8d3f59fc5c019ceef0bf",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/jcrop": "=0.9.12",
-                "bower-asset/simple-ajax-uploader": "@dev",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-imagine": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "budyaga\\cropper\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sergey Krivochenko",
-                    "email": "budyaga@gmail.com"
-                }
-            ],
-            "description": "Yii-Framework widget for uploading and cropping images",
-            "keywords": [
-                "crop",
-                "extension",
-                "upload",
-                "yii2"
-            ],
-            "time": "2016-04-05 08:46:52"
         },
         {
             "name": "cebe/markdown",
@@ -812,6 +984,85 @@
                 "image processing"
             ],
             "time": "2014-06-13 10:54:04"
+        },
+        {
+            "name": "iutbay/yii2-fontawesome",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iutbay/yii2-fontawesome.git",
+                "reference": "da7ae426f927f87932a86d7ca3aa7e84e22b31a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iutbay/yii2-fontawesome/zipball/da7ae426f927f87932a86d7ca3aa7e84e22b31a6",
+                "reference": "da7ae426f927f87932a86d7ca3aa7e84e22b31a6",
+                "shasum": ""
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "iutbay\\yii2fontawesome\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Kevin LEVRON",
+                    "email": "kevin.levron@gmail.com"
+                }
+            ],
+            "description": "Simple Font Awesome helper for Yii2",
+            "homepage": "https://github.com/iutbay/yii2-fontawesome",
+            "keywords": [
+                "FontAwesome",
+                "extension",
+                "icon",
+                "yii2"
+            ],
+            "time": "2015-11-03 13:35:36"
+        },
+        {
+            "name": "iutbay/yii2-kcfinder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iutbay/yii2-kcfinder.git",
+                "reference": "d4b6f0a554585e85e5652ab0e60e61fad755b46d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iutbay/yii2-kcfinder/zipball/d4b6f0a554585e85e5652ab0e60e61fad755b46d",
+                "reference": "d4b6f0a554585e85e5652ab0e60e61fad755b46d",
+                "shasum": ""
+            },
+            "require": {
+                "iutbay/yii2-fontawesome": "dev-master",
+                "sunhater/kcfinder": "*",
+                "yiisoft/yii2-bootstrap": "*",
+                "yiisoft/yii2-jui": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "iutbay\\yii2kcfinder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Kevin LEVRON",
+                    "email": "kevin.levron@gmail.com"
+                }
+            ],
+            "description": "KCFinder for Yii2",
+            "homepage": "https://github.com/iutbay/yii2-kcfinder",
+            "keywords": [
+                "extension",
+                "kcfinder",
+                "yii2"
+            ],
+            "time": "2016-05-03 14:55:59"
         },
         {
             "name": "justinvoelker/yii2-tagging",
@@ -2407,17 +2658,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-blog.git",
-                "reference": "f9f08c622626dd5dad9eced5ff3ed85a11ed00f5"
+                "reference": "57facb10590ccda0acee9fbebe4ab6991dc1985b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/f9f08c622626dd5dad9eced5ff3ed85a11ed00f5",
-                "reference": "f9f08c622626dd5dad9eced5ff3ed85a11ed00f5",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-blog/zipball/57facb10590ccda0acee9fbebe4ab6991dc1985b",
+                "reference": "57facb10590ccda0acee9fbebe4ab6991dc1985b",
                 "shasum": ""
             },
             "require": {
+                "2amigos/yii2-gallery-widget": "~1.0",
+                "2amigos/yii2-selectize-widget": "~1.0",
+                "justinvoelker/yii2-tagging": "*",
+                "kartik-v/yii2-datecontrol": "dev-master",
                 "kartik-v/yii2-widgets": "*",
                 "php": ">=5.4.0",
+                "plathir/yii2-smart-cropper": "@dev",
                 "vova07/yii2-imperavi-widget": "*",
                 "yiisoft/yii2": "*",
                 "yiisoft/yii2-bootstrap": "*"
@@ -2439,7 +2695,7 @@
                 }
             ],
             "description": "smartblog",
-            "time": "2016-05-22 06:56:37"
+            "time": "2016-05-22 07:26:55"
         },
         {
             "name": "plathir/yii2-smart-cropper",
@@ -2572,19 +2828,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plathir/yii2-smart-user.git",
-                "reference": "496430522b59bed33c56f98d6a86a24c32a8eca4"
+                "reference": "7d6487ffb41e32d181dfcbe792411e906cae6af6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/496430522b59bed33c56f98d6a86a24c32a8eca4",
-                "reference": "496430522b59bed33c56f98d6a86a24c32a8eca4",
+                "url": "https://api.github.com/repos/plathir/yii2-smart-user/zipball/7d6487ffb41e32d181dfcbe792411e906cae6af6",
+                "reference": "7d6487ffb41e32d181dfcbe792411e906cae6af6",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-datecontrol": "@dev",
                 "mdmsoft/yii2-admin": "~2.0",
                 "php": ">=5.4.0",
-                "vova07/yii2-fileapi-widget": "*",
+                "plathir/yii2-smart-cropper": "@dev",
                 "yiisoft/yii2": "*",
                 "yiisoft/yii2-authclient": "*",
                 "yiisoft/yii2-bootstrap": "*"
@@ -2606,7 +2862,7 @@
                 }
             ],
             "description": "user",
-            "time": "2016-05-22 06:55:22"
+            "time": "2016-05-22 07:26:17"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -2661,40 +2917,59 @@
             "time": "2016-04-21 11:55:25"
         },
         {
-            "name": "rubaxa/fileapi",
+            "name": "sunhater/kcfinder",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RubaXa/jquery.fileapi.git",
-                "reference": "5fc1013e103bb0931f5fbd18f15a9194ddf573d4"
+                "url": "https://github.com/sunhater/kcfinder.git",
+                "reference": "b645d2a81e647d63780c238b130593e32b4d95a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RubaXa/jquery.fileapi/zipball/5fc1013e103bb0931f5fbd18f15a9194ddf573d4",
-                "reference": "5fc1013e103bb0931f5fbd18f15a9194ddf573d4",
+                "url": "https://api.github.com/repos/sunhater/kcfinder/zipball/b645d2a81e647d63780c238b130593e32b4d95a9",
+                "reference": "b645d2a81e647d63780c238b130593e32b4d95a9",
                 "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "ext-exif": "*",
+                "ext-fileinfo": "*",
+                "ext-gmagick": "*",
+                "ext-http": "*",
+                "ext-imagick": "*",
+                "ext-sockets": "*",
+                "ext-zip": "*"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "GPL-3.0+",
+                "LGPL-3.0+"
             ],
             "authors": [
                 {
-                    "name": "Konstantin Lebedev",
-                    "email": "ibnRubaXa@gmail.com"
+                    "name": "Pavel Tzonkov",
+                    "email": "sunhater@sunhater.com",
+                    "homepage": "http://sunhater.com",
+                    "role": "Developer"
                 }
             ],
-            "description": "jQuery plugin for FileAPI (multiupload, image upload, crop, resize and etc.)",
-            "homepage": "https://github.com/RubaXa/jquery.fileapi",
+            "description": "KCFinder web file manager",
+            "homepage": "http://kcfinder.sunhater.com",
             "keywords": [
-                "file upload",
-                "fileapi",
-                "jquery",
-                "multiupload",
-                "upload"
+                "explorer",
+                "file",
+                "file explorer",
+                "file manager",
+                "finder",
+                "kcfinder",
+                "manager"
             ],
-            "time": "2015-09-11 15:56:14"
+            "time": "2014-09-27 18:47:34"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2748,52 +3023,6 @@
                 "mailer"
             ],
             "time": "2016-05-11 12:36:48"
-        },
-        {
-            "name": "vova07/yii2-fileapi-widget",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vova07/yii2-fileapi-widget.git",
-                "reference": "a392ab7d9c6fb429b28e1ce5a04b4d1cfd75cf89"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vova07/yii2-fileapi-widget/zipball/a392ab7d9c6fb429b28e1ce5a04b4d1cfd75cf89",
-                "reference": "a392ab7d9c6fb429b28e1ce5a04b4d1cfd75cf89",
-                "shasum": ""
-            },
-            "require": {
-                "rubaxa/fileapi": "*",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "vova07\\fileapi\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Crudu Vasile",
-                    "email": "bazillio07@yandex.ru"
-                }
-            ],
-            "description": "The FileAPI widget for Yii2 framework.",
-            "keywords": [
-                "fileapi",
-                "files",
-                "multiupload",
-                "upload",
-                "widget",
-                "yii 2",
-                "yii2"
-            ],
-            "time": "2016-02-26 18:30:53"
         },
         {
             "name": "vova07/yii2-imperavi-widget",
@@ -3274,6 +3503,46 @@
             }
         },
         {
+            "name": "creocoder/yii2-nested-sets",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/creocoder/yii2-nested-sets.git",
+                "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/cb8635a459b6246e5a144f096b992dcc30cf9954",
+                "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "creocoder\\nestedsets\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Kochetov",
+                    "email": "creocoder@gmail.com"
+                }
+            ],
+            "description": "The nested sets behavior for the Yii framework",
+            "keywords": [
+                "nested sets",
+                "yii2"
+            ],
+            "time": "2015-01-27 10:53:51"
+        },
+        {
             "name": "fzaninotto/faker",
             "version": "dev-master",
             "source": {
@@ -3322,6 +3591,62 @@
                 "fixtures"
             ],
             "time": "2016-05-19 20:16:37"
+        },
+        {
+            "name": "kartik-v/yii2-tree-manager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-tree-manager.git",
+                "reference": "3944915919d159879cb35db90f1d66f65904f4c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-tree-manager/zipball/3944915919d159879cb35db90f1d66f65904f4c6",
+                "reference": "3944915919d159879cb35db90f1d66f65904f4c6",
+                "shasum": ""
+            },
+            "require": {
+                "creocoder/yii2-nested-sets": "~0.9",
+                "kartik-v/yii2-widget-activeform": "~1.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\tree\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An enhanced tree management module with tree node selection and manipulation using nested sets.",
+            "homepage": "https://github.com/kartik-v/yii2-tree-manager",
+            "keywords": [
+                "ajax",
+                "bootstrap",
+                "hierarchy",
+                "jquery",
+                "krajee",
+                "nested",
+                "nestedset",
+                "set",
+                "tree",
+                "treeview"
+            ],
+            "time": "2016-05-17 17:12:14"
         },
         {
             "name": "phpspec/php-diff",
@@ -3562,8 +3887,7 @@
         "plathir/yii2-smart-user": 20,
         "plathir/yii2-smart-apps": 20,
         "plathir/yii2-smart-settings": 20,
-        "plathir/yii2-smart-cropper": 20,
-        "kartik-v/yii2-datecontrol": 20
+        "iutbay/yii2-kcfinder": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

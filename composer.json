@@ -25,8 +25,9 @@
         "plathir/yii2-smart-settings": "@dev",
         "dmstr/yii2-adminlte-asset": "2.*",
         "yiisoft/yii2-jui": "^2.0",
-        "kartik-v/yii2-ipinfo": "*"
-
+        "kartik-v/yii2-ipinfo": "*",
+        "iutbay/yii2-kcfinder": "dev-master",
+        "2amigos/yii2-ckeditor-widget": "~1.0"
 
     },
     "require-dev": {

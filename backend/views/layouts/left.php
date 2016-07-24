@@ -34,21 +34,19 @@
                         ['label' => 'Main Menu', 'options' => ['class' => 'header']],
                         ['label' => 'Users', 'icon' => 'fa fa-users', 'url' => ['/user/admin']],
                         ['label' => 'Blog', 'icon' => 'fa fa-list-alt', 'url' => ['/blog'],
-                              'items' => [
+                            'items' => [
                                 ['label' => 'Blog Dashboard', 'icon' => 'fa fa-dashboard', 'url' => ['/blog'],],
+                                ['label' => 'Categories', 'icon' => 'fa  fa-file-text-o', 'url' => ['/blog/category'],],
                                 ['label' => 'Posts', 'icon' => 'fa  fa-file-text-o', 'url' => ['/blog/posts'],],
                                 ['label' => 'Posts List Preview', 'icon' => 'fa fa-file-text-o', 'url' => ['/blog/posts/list'],],
                             ]
                         ],
-                        
-                        
                         ['label' => 'Apps', 'icon' => 'fa fa-cogs', 'url' => ['/apps'],
-                             'items' => [
+                            'items' => [
                                 ['label' => 'Apps Dashboard', 'icon' => 'fa fa-dashboard', 'url' => ['/apps'],],
                                 ['label' => 'Apps Admin', 'icon' => 'fa fa-cogs', 'url' => ['/apps/admin'],],
                             ]
                         ],
-
                         [
                             'label' => 'Permissions',
                             'icon' => 'fa fa-share',
@@ -59,7 +57,6 @@
                                 ['label' => 'Rules', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/rule'],],
                                 ['label' => 'Permissions', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/permission'],],
                                 ['label' => 'Assignments', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/assignment'],],
-
                             ],
                         ],
                     ],

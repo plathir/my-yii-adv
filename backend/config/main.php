@@ -26,6 +26,12 @@ $modules_var = [
         'ImageTempPath' => '@media/temp/images/blog/posts',
         'ImagePathPreview' => '/my-yii-adv/frontend/web/media/images/blog/posts',
         'ImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/posts',
+ 
+        'CategoryImagePath' => '@media/images/blog/categories',
+        'CategoryImageTempPath' => '@media/temp/images/blog/categories',
+        'CategoryImagePathPreview' => '/my-yii-adv/frontend/web/media/images/blog/categories',
+        'CategoryImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/categories',
+         
         'KeyFolder' => 'id',
         'userModel' => 'plathir\user\models\account\User',
         'userNameField' => 'username'
