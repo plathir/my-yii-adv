@@ -2,6 +2,10 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use plathir\user\common\helpers\UserHelper;
+use plathir\smartblog\helpers\PostHelper;
+use plathir\apps\models\AppsSearch;
+use plathir\apps\helpers\AppsHelper;
 
 $this->title = 'My Yii Application';
 ?>
@@ -10,11 +14,11 @@ $this->title = 'My Yii Application';
 <?php
 $comp = \Yii::$app->getModules();
 
-$LatestUsers = \plathir\user\helpers\UserHelper::getLatestUsers(5);
-$LatestPosts = \plathir\smartblog\helpers\PostHelper::getLatestPosts(10);
+$LatestUsers = UserHelper::getLatestUsers(5);
+$LatestPosts = PostHelper::getLatestPosts(10);
 
-$searchModel = new plathir\apps\models\AppsSearch();
-$applications = plathir\apps\helpers\AppsHelper::getAppsList();
+$searchModel = new AppsSearch();
+$applications = AppsHelper::getAppsList();
 ?>
 
 <div class="row row-centered">

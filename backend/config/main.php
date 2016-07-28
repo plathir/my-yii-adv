@@ -8,7 +8,7 @@ $FrontEndUrl = '/my-yii-adv/frontend/web'; // Change if publish site
 
 $modules_var = [
     'user' => [
-        'class' => 'plathir\user\Module',
+        'class' => 'plathir\user\backend\Module',
         'ProfileImagePath' => '@media/images/users',
         'ProfileImageTempPath' => '@media/temp/images/users',
         'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
@@ -33,7 +33,7 @@ $modules_var = [
         'CategoryImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/categories',
          
         'KeyFolder' => 'id',
-        'userModel' => 'plathir\user\models\account\User',
+        'userModel' => 'plathir\user\common\models\account\User',
         'userNameField' => 'username'
         
     ],
@@ -48,7 +48,7 @@ $modules_var = [
 
 $components_var = [
     'user' => [
-        'identityClass' => 'plathir\user\models\account\User',
+        'identityClass' => 'plathir\user\common\models\account\User',
         'loginUrl' => ['user/security/backend-login'],
         'identityCookie' => [
             'name' => '_backendUser', // unique for frontend

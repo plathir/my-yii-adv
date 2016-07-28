@@ -5,7 +5,7 @@ namespace backend\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
-use plathir\user\models\security\LoginForm;
+use plathir\user\common\models\security\LoginForm;
 use yii\filters\VerbFilter;
 
 /**
@@ -53,19 +53,25 @@ class SiteController extends Controller {
     }
 
     public function actionIndex() {
-        
+
         return $this->render('index');
     }
 
     public function actionLogin() {
+
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post ()) && $model->login()) {
+
+
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
+            echo 'test in site Controller   ';
+            print_r($model);
+            die();
             return $this->render('backend-login', [
                         'model' => $model,
             ]);
