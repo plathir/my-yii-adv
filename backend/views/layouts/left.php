@@ -1,3 +1,7 @@
+<?php 
+use plathir\user\common\helpers\UserHelper;
+
+?>
 <aside class="main-sidebar">
 
     <section class="sidebar">
@@ -5,10 +9,10 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="<?= \plathir\user\common\helpers\UserHelper::getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="img-circle" alt="User Image"/>
+                <img src="<?= UserHelper::getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p><?= \plathir\user\common\helpers\UserHelper::getProfileFullName(Yii::$app->user->identity->id) ?></p>
+                <p><?=UserHelper::getProfileFullName(Yii::$app->user->identity->id) ?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>

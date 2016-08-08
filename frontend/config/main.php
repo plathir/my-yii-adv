@@ -10,7 +10,7 @@ use \yii\web\Request;
 
 $modules_var = [
     'user' => [
-        'class' => 'plathir\user\Module',
+        'class' => 'plathir\user\frontend\Module',
         'ProfileImagePath' => '@media/images/users',
         'ProfileImageTempPath' => '@media/temp/images/users',
         'ProfileImagePathPreview' => '/my-yii-adv/frontend/web/media/images/users',
@@ -19,7 +19,23 @@ $modules_var = [
         'class' => 'mdm\admin\Module',
     ],
     'blog' => [
-        'class' => 'plathir\smartblog\Module',
+        'class' => 'plathir\smartblog\frontend\Module',
+        'ImagePath' => '@media/images/blog/posts',
+        'ImageTempPath' => '@media/temp/images/blog/posts',
+        'ImagePathPreview' => '/my-yii-adv/frontend/web/media/images/blog/posts',
+        'ImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/posts',
+        'mediaUrl' => '@MediaUrl',
+        'mediaPath' => '@media',
+        
+        'CategoryImagePath' => '@media/images/blog/categories',
+        'CategoryImageTempPath' => '@media/temp/images/blog/categories',
+        'CategoryImagePathPreview' => '/my-yii-adv/frontend/web/media/images/blog/categories',
+        'CategoryImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/categories',
+         
+        'KeyFolder' => 'id',
+        'userModel' => 'plathir\user\common\models\account\User',
+        'userNameField' => 'username'
+        
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
@@ -32,14 +48,14 @@ $modules_var = [
 
 $components_var = [
     'user' => [
-        'identityClass' => 'plathir\user\models\account\User',
+        'identityClass' => 'plathir\user\common\models\account\User',
         'loginUrl' => ['user/security/login'],
         'identityCookie' => [
             'name' => '_frontendUser', // unique for frontend
         ],
     ],
     'blog' => [
-        'class' => 'plathir\smartblog',
+        'class' => 'plathir\smartblog\frontend',
     ],
 //    'authClientCollection' => [
 //        'class' => 'yii\authclient\Collection',
@@ -120,8 +136,8 @@ return [
             'user/security/login',
             'user/registration/*',
             'user/security/auth', // for Oauth ( Login from facebook etc. )
-            'blog/posts/list',
-            'blog/posts/view',
+            'blog/*',
+        //    'blog/posts/view',
             'apps/*',
             'apptest1/*',
             'debug/*'

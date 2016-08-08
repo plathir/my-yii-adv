@@ -67,8 +67,6 @@ AppAsset::register($this);
                             '<li class="divider"></li>',
                             ['label' => '<span class="fa fa-edit"></span> Update Account', 'url' => ['/user/account/my']],
                             '<li class="divider"></li>',
-                            ['label' => '<span class="fa fa-edit"></span> Users', 'url' => ['/user/admin/index']],
-                            '<li class="divider"></li>',
                             ['label' => '<span class="fa fa-sign-out"></span> Logout', 'url' => ['/user/security/logout'],
                                 'linkOptions' => ['data-method' => 'post'],
                             ],
