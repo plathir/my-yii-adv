@@ -4,7 +4,8 @@ $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
-$FrontEndUrl = '/my-yii-adv/frontend/web'; // Change if publish site
+//$FrontEndUrl = '/my-yii-adv/frontend/web'; // Change if publish site
+$FrontEndUrl = ''; // Change if publish site
 
 $modules_var = [
     'user' => [
@@ -24,20 +25,17 @@ $modules_var = [
         'class' => 'plathir\smartblog\backend\Module',
         'ImagePath' => '@media/images/blog/posts',
         'ImageTempPath' => '@media/temp/images/blog/posts',
-        'ImagePathPreview' => '/my-yii-adv/frontend/web/media/images/blog/posts',
-        'ImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/posts',
-         'mediaUrl' => '@MediaUrl',
+        'ImagePathPreview' => $FrontEndUrl . '/media/images/blog/posts',
+        'ImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/blog/posts',
+        'mediaUrl' => '@MediaUrl',
         'mediaPath' => '@media',
-        
         'CategoryImagePath' => '@media/images/blog/categories',
         'CategoryImageTempPath' => '@media/temp/images/blog/categories',
-        'CategoryImagePathPreview' => '/my-yii-adv/frontend/web/media/images/blog/categories',
-        'CategoryImageTempPathPreview' => '/my-yii-adv/frontend/web/media/temp/images/blog/categories',
-         
+        'CategoryImagePathPreview' => $FrontEndUrl . '/media/images/blog/categories',
+        'CategoryImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/blog/categories',
         'KeyFolder' => 'id',
         'userModel' => 'plathir\user\common\models\account\User',
         'userNameField' => 'username'
-        
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
@@ -105,13 +103,16 @@ $components_var = [
     'urlManager' => [
         'class' => 'yii\web\urlManager',
         'enablePrettyUrl' => true,
+        'rules' => [
+            'admin' => 'www/admin', 
+        ]
     ],
     'urlManagerFrontEnd' => [
         'enablePrettyUrl' => true,
         'class' => 'yii\web\urlManager',
         'baseUrl' => $FrontEndUrl,
         'scriptUrl' => 'index.php',
-    ],
+    ],    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
