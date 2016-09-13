@@ -6,6 +6,7 @@ use Yii;
 use apps\comics\backend\comicsAsset;
 use plathir\apps\models\AppsSearch;
 use yii\web\NotFoundHttpException;
+use yii\helpers\Url;
 
 class Module extends \yii\base\Module {
 
@@ -15,6 +16,7 @@ class Module extends \yii\base\Module {
     public $ComicsTempPath = '';
     public $ComicsPathPreview = '';
     public $ComicsTempPathPreview = '';
+    public $WatermarkImage = '';
 
     public function init() {
         parent::init();
@@ -43,6 +45,7 @@ class Module extends \yii\base\Module {
         $this->ComicsTempPath = $this->settings->getSettings('ComicsTempPath');
         $this->ComicsPathPreview = $this->settings->getSettings('ComicsPathPreview');
         $this->ComicsTempPathPreview = $this->settings->getSettings('ComicsTempPathPreview');
+        $this->WatermarkImage = Yii::getAlias($this->settings->getSettings('watermark')) ;
 
 
         $this->controllerMap = [

@@ -14,6 +14,7 @@ $modules_var = [
         'ProfileImageTempPath' => '@media/temp/images/users',
         'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
         'ProfileImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/users',
+        'Theme' => 'smart',
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
@@ -35,7 +36,8 @@ $modules_var = [
         'CategoryImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/blog/categories',
         'KeyFolder' => 'id',
         'userModel' => 'plathir\user\common\models\account\User',
-        'userNameField' => 'username'
+        'userNameField' => 'username',
+        'Theme' => 'smart',
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
@@ -104,7 +106,7 @@ $components_var = [
         'class' => 'yii\web\urlManager',
         'enablePrettyUrl' => true,
         'rules' => [
-            'admin' => 'www/admin', 
+            'admin' => 'www/admin',
         ]
     ],
     'urlManagerFrontEnd' => [
@@ -112,7 +114,7 @@ $components_var = [
         'class' => 'yii\web\urlManager',
         'baseUrl' => $FrontEndUrl,
         'scriptUrl' => 'index.php',
-    ],    
+    ],
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [

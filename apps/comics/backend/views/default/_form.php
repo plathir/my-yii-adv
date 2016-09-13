@@ -6,6 +6,8 @@ use kartik\datecontrol\DateControl;
 use plathir\cropper\Widget as NewWidget;
 use plathir\upload\Widget as UplWidget;
 use yii\helpers\Url;
+use yii\imagine\Image;
+use Imagine\Image\Box;
 
 /* @var $this yii\web\View */
 /* @var $model apps\comics\backend\models\Comics */
@@ -13,7 +15,6 @@ use yii\helpers\Url;
 ?>
 
 <div class="comics-form">
-
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -27,8 +28,8 @@ use yii\helpers\Url;
         'previewUrl' => $model->module->ComicsPathPreview,
         'tempPreviewUrl' => $model->module->ComicsTempPathPreview,
         'KeyFolder' => $model->id,
-        'width' => 200,
-        'height' => 300,
+        'width' => 600,
+        'height' => 800,
         'maxSize' => 10145728,
     ]);
     ?>
@@ -43,20 +44,20 @@ use yii\helpers\Url;
     ?>
 
 
-    <?php
-    echo $form->field($model, 'created_at')->widget(DateControl::classname(), [
-        'type' => DateControl::FORMAT_DATETIME,
-        'ajaxConversion' => true,
-        'saveFormat' => 'php:U',
-        'options' => [
-            'layout' => '{picker}{input}',
-            'pluginOptions' => [
-                'autoclose' => true,
-                'todayBtn' => true,
-            ]
+<?php
+echo $form->field($model, 'created_at')->widget(DateControl::classname(), [
+    'type' => DateControl::FORMAT_DATETIME,
+    'ajaxConversion' => true,
+    'saveFormat' => 'php:U',
+    'options' => [
+        'layout' => '{picker}{input}',
+        'pluginOptions' => [
+            'autoclose' => true,
+            'todayBtn' => true,
         ]
-    ]);
-    ?>
+    ]
+]);
+?>
     <?php
     echo $form->field($model, 'updated_at')->widget(DateControl::classname(), [
         'type' => DateControl::FORMAT_DATETIME,
@@ -72,10 +73,10 @@ use yii\helpers\Url;
     ]);
     ?>
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
-    <?php ActiveForm::end(); ?>
+<?php ActiveForm::end(); ?>
 
 
 </div>

@@ -37,12 +37,18 @@ class DefaultController extends Controller {
             'uploadphoto' => [
                 'class' => '\plathir\cropper\actions\UploadAction',
                 'width' => 600,
-                'height' => 600,
+                'height' => 800,
                 'temp_path' => $this->module->ComicsTempPath,
+                'thumbnail' =>true,
+                'watermark' => $this->module->WatermarkImage,
             ],
             'uploadfile' => [
                 'class' => '\plathir\upload\actions\FileUploadAction',
                 'uploadDir' => $this->module->ComicsTempPath,
+                'thumbnail' =>true,
+                'watermark' => $this->module->WatermarkImage,
+                'resize_max_width' => 800,
+                'resize_max_height' => 800,
             ],
             'deletetempfile' => [
                 'class' => '\plathir\upload\actions\FileDeleteAction',

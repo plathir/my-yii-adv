@@ -49,9 +49,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         'value' => function($model, $key, $index, $grid) {
                             if ($model->cover_page) {
 
-                                $image_html = Html::img($model->module->ComicsPathPreview . '/' . $model->id . '/' . $model->cover_page, ['alt' => '...',
+                                $image_html = Html::img($model->module->ComicsPathPreview . '/' . $model->id . '/' . 'thumbs/' . $model->cover_page, ['alt' => '...',
                                             //  'class' => 'img-circle',
-                                            'width' => '200',
+                                            'width' => '100',
                                             'align' => 'center']);
                                 return Html::a($image_html, ['view', 'id' => $model->id]);
                             }

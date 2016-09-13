@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use plathir\user\common\helpers\UserHelper;
 use plathir\smartblog\helpers\PostHelper;
+use plathir\smartblog\backend\widgets\LatestPosts;
 use plathir\apps\models\AppsSearch;
 use plathir\apps\helpers\AppsHelper;
 
@@ -45,10 +46,11 @@ $applications = AppsHelper::getAppsList();
 
 
     <div class="col-md-8">
-        <?php
-        echo $this->render(
-                'latest_posts.php', ['LatestPosts' => $LatestPosts]
-        )
+        <?=
+        LatestPosts::widget([
+            'latest_num' => 10,
+            'Theme' => 'smart',
+        ]);
         ?>
 
     </div>

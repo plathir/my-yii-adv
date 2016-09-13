@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'attribute' => 'cover_page',
                         'value' => $model->cover_page == '' ? '' : ( $model->module->ComicsPathPreview . '/' . $model->id . '/' . $model->cover_page),
-                        'format' => $model->cover_page == '' ? 'html' : ['image', ['width' => '100', 'height' => '100']],
+                        'format' => $model->cover_page == '' ? 'html' : ['image', ['width' => '100']],
                     ],
                     'created_at:datetime',
                     'updated_at:datetime',
