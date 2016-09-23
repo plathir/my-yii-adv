@@ -23,7 +23,7 @@
         "plathir/yii2-smart-user": "@dev",
         "plathir/yii2-smart-apps": "@dev",
         "plathir/yii2-smart-settings": "@dev",
-        "plathir/yii2-smart-widget": "@dev",        
+        "plathir/yii2-smart-widgets": "@dev",        
         "dmstr/yii2-adminlte-asset": "2.*",
         "yiisoft/yii2-jui": "^2.0",
         "kartik-v/yii2-ipinfo": "*",
