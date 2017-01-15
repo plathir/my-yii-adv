@@ -8,6 +8,9 @@ $params = array_merge(
 $FrontEndUrl = ''; // Change if publish site
 
 $modules_var = [
+    'backend_dashboard' => [
+      'class' => 'backend\models\BackendDashBoard',  
+    ],
     'user' => [
         'class' => 'plathir\user\backend\Module',
         'ProfileImagePath' => '@media/images/users',
@@ -46,6 +49,10 @@ $modules_var = [
         'class' => 'plathir\settings\Module',
         'modulename' => 'site'
     ],
+    'widgets' => [
+        'class' => 'plathir\widgets\backend\Module',
+        'Theme' => 'smart',
+    ]
 ];
 
 $components_var = [
@@ -115,6 +122,10 @@ $components_var = [
         'baseUrl' => $FrontEndUrl,
         'scriptUrl' => 'index.php',
     ],
+    'widgets' => [
+        'class' => 'plathir\widgets\backend\Module',
+    ],
+    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [

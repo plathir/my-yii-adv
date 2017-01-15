@@ -46,13 +46,7 @@ $applications = AppsHelper::getAppsList();
 
 
     <div class="col-md-8">
-        <?=
-        LatestPosts::widget([
-            'latest_num' => 10,
-            'Theme' => 'smart',
-        ]);
-        ?>
-
+        <?= plathir\widgets\common\helpers\PositionHelper::LoadPosition(10); ?>
     </div>
 
 </div>

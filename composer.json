@@ -30,7 +30,9 @@
         "iutbay/yii2-kcfinder": "dev-master",
         "2amigos/yii2-ckeditor-widget": "~1.0",
         "mihaildev/yii2-ckeditor": "*",
-        "mihaildev/yii2-elfinder": "*"
+        "mihaildev/yii2-elfinder": "*",
+        "kartik-v/yii2-sortable": "*",
+        "kartik-v/yii2-sortable-input": "dev-master"
 
     },
     "require-dev": {
