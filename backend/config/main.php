@@ -8,6 +8,7 @@ $params = array_merge(
 $FrontEndUrl = ''; // Change if publish site
 
 $modules_var = [
+    'frontendconfig' => require(__DIR__ . '/../../frontend/config/main.php'),
     'backend_dashboard' => [
       'class' => 'backend\models\BackendDashBoard',  
     ],
