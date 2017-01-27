@@ -158,11 +158,11 @@ $handle = opendir($modules_dir);
 while (false !== ($file = readdir($handle))) {
     if ($file != '.' && $file != '..' && $file != 'uploads') {
         $modules_var["$file"] = [
-            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'backend\Module',
+            'class' => 'apps' . '\\' . $file . '\\' . 'backend\Module',
         ];
 
         $components_var["$file"] = [
-            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'backend',
+            'class' => 'apps' . '\\' . $file . '\\' . 'backend',
         ];
     }
 }
