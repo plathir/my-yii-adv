@@ -7,6 +7,7 @@ use plathir\smartblog\helpers\PostHelper;
 use plathir\smartblog\backend\widgets\LatestPosts;
 use plathir\apps\models\AppsSearch;
 use plathir\apps\helpers\AppsHelper;
+use plathir\widgets\common\helpers\PositionHelper;
 
 $this->title = 'My Yii Application';
 ?>
@@ -15,11 +16,16 @@ $this->title = 'My Yii Application';
 <?php
 $comp = \Yii::$app->getModules();
 
-$LatestUsers = UserHelper::getLatestUsers(5);
-$LatestPosts = PostHelper::getLatestPosts(10);
+$userHelper =  new UserHelper();
+$postHelper =  new PostHelper();
+$appsHelper =  new AppsHelper();
+$positionHelper = new PositionHelper();
+
+$LatestUsers = $userHelper->getLatestUsers(5);
+$LatestPosts = $postHelper->getLatestPosts(10);
 
 $searchModel = new AppsSearch();
-$applications = AppsHelper::getAppsList();
+$applications = $appsHelper->getAppsList();
 ?>
 
 <div class="row row-centered">
@@ -46,7 +52,7 @@ $applications = AppsHelper::getAppsList();
 
 
     <div class="col-md-8">
-        <?= plathir\widgets\common\helpers\PositionHelper::LoadPosition(10); ?>
+        <?= $positionHelper->LoadPosition(10); ?>
     </div>
 
 </div>

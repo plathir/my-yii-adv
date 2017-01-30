@@ -4,6 +4,9 @@ use yii\helpers\Html;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
+use \plathir\user\common\helpers\UserHelper;
+$userHelper = new UserHelper();
+
 ?>
 
 <header class="main-header">
@@ -229,17 +232,17 @@ use yii\helpers\Html;
 
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="<?= \plathir\user\common\helpers\UserHelper::getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="user-image" alt="User Image"/>
+                        <img src="<?= $userHelper->getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="user-image" alt="User Image"/>
                         <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="<?= \plathir\user\common\helpers\UserHelper::getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="img-circle"
+                            <img src="<?= $userHelper->getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="img-circle"
                                  alt="User Image"/>
 
                             <p>
-                                <?= '(' . Yii::$app->user->identity->username . ')' ?> <?= \plathir\user\common\helpers\UserHelper::getProfileFullName(Yii::$app->user->identity->id) ?>
+                                <?= '(' . Yii::$app->user->identity->username . ')' ?> <?= $userHelper->getProfileFullName(Yii::$app->user->identity->id) ?>
                                 <small>Member since <?= Yii::$app->formatter->asDatetime(Yii::$app->user->identity->created_at); ?></small>
                             </p>
                         </li>

@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Url;
 $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
@@ -10,7 +10,7 @@ $FrontEndUrl = ''; // Change if publish site
 $modules_var = [
     'frontendconfig' => require(__DIR__ . '/../../frontend/config/main.php'),
     'backend_dashboard' => [
-      'class' => 'backend\models\BackendDashBoard',  
+        'class' => 'backend\models\BackendDashBoard',
     ],
     'user' => [
         'class' => 'plathir\user\backend\Module',
@@ -42,6 +42,11 @@ $modules_var = [
         'userModel' => 'plathir\user\common\models\account\User',
         'userNameField' => 'username',
         'Theme' => 'smart',
+//        'i18n' => [
+//            'class' => 'yii\i18n\PhpMessageSource',
+//            'basePath' => '@vendor/kartik-v/yii2-tree-manager/messages',
+//            'forceTranslation' => true
+//        ],
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
@@ -53,7 +58,13 @@ $modules_var = [
     'widgets' => [
         'class' => 'plathir\widgets\backend\Module',
         'Theme' => 'smart',
-    ]
+    ],
+//    'treemanager' => [
+//        'class' => '\kartik\tree\Module',
+//    // enter other module properties if needed
+//    // for advanced/personalized configuration
+//    // (refer module properties available below)
+//    ]
 ];
 
 $components_var = [
@@ -126,7 +137,6 @@ $components_var = [
     'widgets' => [
         'class' => 'plathir\widgets\backend\Module',
     ],
-    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
@@ -181,11 +191,11 @@ return [
     'modules' => $modules_var,
     'components' => $components_var,
     'on beforeRequest' => function () {
-$user = Yii::$app->user->identity;
-if ($user && $user->timezone) {
-    Yii::$app->setTimeZone($user->timezone);
-}
-},
+        $user = Yii::$app->user->identity;
+        if ($user && $user->timezone) {
+            Yii::$app->setTimeZone($user->timezone);
+        }
+    },
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [

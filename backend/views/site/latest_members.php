@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use plathir\user\common\helpers\UserHelper;
+
+$userHelper = new UserHelper();
 ?>
 
 <!-- USERS LIST -->
@@ -17,7 +19,7 @@ use plathir\user\common\helpers\UserHelper;
         <ul class="users-list clearfix">
             <?php foreach ($LatestUsers as $user) { ?>
                 <li>
-                    <img src="<?php echo UserHelper::getProfileImage($user['id'], $this) ?>"User Image">
+                    <img src="<?php echo $userHelper->getProfileImage($user['id'], $this) ?>"User Image">
                          <a class="users-list-name" <?= Html::a($user['username'], ['/user/admin/view', 'id' => $user['id']]) ?></a>
                     <span class="users-list-date"><?= Yii::$app->formatter->asDate($user['created_at']) ?> </span>
                 </li>

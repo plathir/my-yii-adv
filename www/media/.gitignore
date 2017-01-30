@@ -1,3 +1,7 @@
-files
-images
-temp
+files/*
+images/blog/*
+images/users/*
+images/comics/*
+temp/images/blog/*
+temp/images/users/*
+temp/images/comics/*

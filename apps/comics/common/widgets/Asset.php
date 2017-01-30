@@ -12,7 +12,7 @@ class Asset extends AssetBundle {
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@apps/comics/common/widgets/assets';
+    //public $sourcePath = '@apps/comics/common/widgets/assets';
 
     /**
      * @inheritdoc
