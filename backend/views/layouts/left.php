@@ -3,7 +3,6 @@
 use plathir\user\common\helpers\UserHelper;
 
 $userHelper = new UserHelper();
-
 ?>
 <aside class="main-sidebar">
 
@@ -69,6 +68,11 @@ $userHelper = new UserHelper();
                                 ['label' => 'Assignments', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/assignment'],],
                             ],
                         ],
+                        [
+                            'label' => 'Documentation',
+                            'icon' => 'fa fa-book',
+                            'url' => ['/doc'],
+                        ]
                     ],
                 ]
         )

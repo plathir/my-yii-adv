@@ -59,6 +59,10 @@ $modules_var = [
         'class' => 'plathir\widgets\backend\Module',
         'Theme' => 'smart',
     ],
+        'doc' => [
+        'class' => 'common\modules\doc\Module',
+    ],
+
 //    'treemanager' => [
 //        'class' => '\kartik\tree\Module',
 //    // enter other module properties if needed
