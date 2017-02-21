@@ -72,7 +72,13 @@ $userHelper = new UserHelper();
                             'label' => 'Documentation',
                             'icon' => 'fa fa-book',
                             'url' => ['/doc'],
+                        ],
+                                                [
+                            'label' => 'Code Snippets',
+                            'icon' => 'fa fa-gear',
+                            'url' => ['/snippets'],
                         ]
+                        
                     ],
                 ]
         )

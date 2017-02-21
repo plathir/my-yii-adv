@@ -79,7 +79,7 @@ class Module extends \yii\base\Module {
      */
     public function checkActive() {
         $searchModel = new AppsSearch();
-        if ($searchModel->find()->where(['name' => 'recipes', 'active' => true])->one()) {
+        if ($searchModel->find()->where(['name' => 'comics', 'active' => true])->one()) {
             return true;
         }
     }

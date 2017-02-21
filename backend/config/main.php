@@ -1,5 +1,7 @@
 <?php
+
 use yii\helpers\Url;
+
 $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
@@ -59,10 +61,12 @@ $modules_var = [
         'class' => 'plathir\widgets\backend\Module',
         'Theme' => 'smart',
     ],
-        'doc' => [
+    'doc' => [
         'class' => 'common\modules\doc\Module',
     ],
-
+    'snippets' => [
+        'class' => 'common\modules\snippets\Module',
+    ],    
 //    'treemanager' => [
 //        'class' => '\kartik\tree\Module',
 //    // enter other module properties if needed
@@ -129,7 +133,7 @@ $components_var = [
         'class' => 'yii\web\urlManager',
         'enablePrettyUrl' => true,
         'rules' => [
-            'admin' => 'www/admin',
+            //'admin' => 'www/admin',
         ]
     ],
     'urlManagerFrontEnd' => [
@@ -210,7 +214,7 @@ return [
 //            'blog/posts/list',
 //            'blog/posts/view',
 //            'apps/*',
-//            '*'
+//            '*'  
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.
         // But in the earlier stages of your development, you may probably want to
