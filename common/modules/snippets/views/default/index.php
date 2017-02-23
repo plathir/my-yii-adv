@@ -125,7 +125,7 @@
        &lt;?= $form->field($model, 'publish')->widget(SwitchInput::classname(), []); ?&gt;
     </pre>  
 
-    
+
     <h3>
         CKEditor
     </h3>    
@@ -155,8 +155,8 @@
     </pre>
 
     <strong>In View (ActiveForm): </strong>   
-    
-    
+
+
     <pre>
        use mihaildev\ckeditor\CKEditor;
        use mihaildev\elfinder\ElFinder;
@@ -166,6 +166,164 @@
          ]),
        ]);
     </pre>
+
+    <h3>
+        Module Trait
+    </h3>    
+    Trait module data and use it as a variant into controller and model <br>
+    <strong>ModuleTrait.php  : </strong>   
+    <pre>
+    namespace plathir\smartblog\backend\traits;
+
+    use plathir\smartblog\backend\Module;
+    use Yii;
+
+    /**
+     * Class ModuleTrait
+     * @package plathir\smartblog\traits
+     * Implements `getModule` method, to receive current module instance.
+     */
+    trait ModuleTrait
+    {
+        /**
+         * @var \plathir\smartblog\backend\Module|null Module instance
+         */
+        private $_module;
+
+        /**
+         * @return \plathir\smartblog\backend\Module|null Module instance
+         */
+        public function getModule()
+        {
+            if ($this->_module === null) {
+                $module = Module::getInstance();
+                if ($module instanceof Module) {
+                    $this->_module = $module;
+                } else {
+                    $this->_module = Yii::$app->getModule('blog');
+                }
+            }
+            return $this->_module;
+        }
+    }
+    </pre>    
+
+    <strong>Use trait In Model : </strong>       
+    <pre>
+
+  use plathir\cropper\behaviors\UploadImageBehavior;
+
+  class Posts extends \plathir\smartblog\common\models\Posts {
+
+    use \plathir\smartblog\backend\traits\ModuleTrait;
+    
+    ...
+        public function behaviors() {
+        return [
+                'uploadImageBehavior' => [
+                    'class' => UploadImageBehavior::className(),
+                    'attributes' => [
+                        'intro_image' => [
+                            'path' => $this->module->ImagePath,
+                            'temp_path' => $this->module->ImageTempPath,
+                            'url' => $this->module->ImagePathPreview,
+                            'key_folder' => 'id',
+                        ],
+                    ]
+                ]    
+        ]                    
+    ...        
+    </pre>
+    
+    <strong>Use module In Controller ( not with trait php file ) : </strong>    
+    <pre>
+        
+
+    /**
+     * @property \plathir\smartblog\backend\Module $module
+     *
+     */
+    class PostsController extends Controller {
+
+        public function __construct($id, $module) {
+            parent::__construct($id, $module);
+        }
+    
+    ...
+    public function actions() {
+        $actions = [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            //Upload cropped image into temp directory
+            'uploadphoto' => [
+                'class' => '\plathir\cropper\actions\UploadAction',
+                'width' => 600,
+                'height' => 600,
+                'thumbnail' => true,
+                'temp_path' => $this->module->ImageTempPath,
+            ],    
+    
+      </pre>  
+  
+    <h3>
+        Image Cropper
+    </h3>    
+
+    <strong>In Model : </strong>   
+    <pre>
+    use plathir\cropper\behaviors\UploadImageBehavior;
+    ...
+    public function behaviors() {
+        return [
+          ....
+            'uploadImageBehavior' => [
+                'class' => UploadImageBehavior::className(),
+                'attributes' => [
+                    'intro_image' => [
+                        'path' => $this->module->ImagePath,
+                        'temp_path' => $this->module->ImageTempPath,
+                        'url' => $this->module->ImagePathPreview,
+                        'key_folder' => 'id',
+                    ],
+                ]
+            ],   
+    ]     
+    </pre>
+
+    <strong>In Controller : </strong>   
+    <pre>
+     public function actions() {
+        $actions = [
+            ...
+            //Upload cropped image into temp directory
+            'uploadphoto' => [
+                'class' => '\plathir\cropper\actions\UploadAction',
+                'width' => 600,
+                'height' => 600,
+                'thumbnail' => true,
+                'temp_path' => $this->module->ImageTempPath,
+            ],           
+        ]
+    ]
+    </pre>
+
+
+    <strong>In View : </strong>   
+    <pre>
+        use plathir\cropper\Widget as NewWidget;
+        use yii\helpers\Url;
+
+        $form->field($model, 'intro_image')->widget(NewWidget::className(), [
+            'uploadUrl' => Url::toRoute(['/blog/posts/uploadphoto']),
+            'previewUrl' => $model->module->ImagePathPreview,
+            'tempPreviewUrl' => $model->module->ImageTempPathPreview,
+            'KeyFolder' => $model->id,
+            'width' => 200,
+            'height' => 200,
+        ]);        
+    </pre>
+
 </section>
 <!-- /.content -->
 
