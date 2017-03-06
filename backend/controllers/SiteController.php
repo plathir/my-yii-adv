@@ -53,8 +53,11 @@ class SiteController extends Controller {
     }
 
     public function actionIndex() {
-
+     if (\yii::$app->user->can('BackendIndex')) {
         return $this->render('index');
+     } else {
+        throw new \yii\web\NotAcceptableHttpException(Yii::t('app', 'No Permission to Backend index'));
+     }  
     }
 
     public function actionLogin() {

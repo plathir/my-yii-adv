@@ -36,7 +36,8 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
             <title><?= Html::encode($this->title) ?></title>
             <?php $this->head() ?>
         </head>
-        <body class="hold-transition skin-blue sidebar-mini">
+        
+        <body class="<?= \dmstr\helpers\AdminLteHelper::skinClass() ?> hold-transition sidebar-mini">    
             <?php $this->beginBody() ?>
             <div class="wrapper">
 

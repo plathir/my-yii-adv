@@ -66,7 +66,7 @@ $modules_var = [
     ],
     'snippets' => [
         'class' => 'common\modules\snippets\Module',
-    ],    
+    ],
 //    'treemanager' => [
 //        'class' => '\kartik\tree\Module',
 //    // enter other module properties if needed
@@ -133,7 +133,7 @@ $components_var = [
         'class' => 'yii\web\urlManager',
         'enablePrettyUrl' => true,
         'rules' => [
-            //'admin' => 'www/admin',
+        //'admin' => 'www/admin',
         ]
     ],
     'urlManagerFrontEnd' => [
@@ -144,6 +144,13 @@ $components_var = [
     ],
     'widgets' => [
         'class' => 'plathir\widgets\backend\Module',
+    ],
+    'assetManager' => [
+        'bundles' => [
+            'dmstr\web\AdminLteAsset' => [
+                'skin' => 'skin-blue',
+            ],
+        ],
     ],
 //    'assetManager' => [
 //        'bundles' => [
@@ -207,8 +214,9 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
+//      'admin/*'
 //            'settings/*'
-//            'site/*',
+//              'site/*',
 //            'user/registration/*',
 //            'user/security/auth', // for Oauth ( Login from facebook etc. )
 //            'blog/posts/list',
