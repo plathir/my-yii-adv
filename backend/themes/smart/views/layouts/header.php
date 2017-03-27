@@ -5,9 +5,12 @@ use yii\helpers\Html;
 /* @var $this \yii\web\View */
 /* @var $content string */
 use \plathir\user\common\helpers\UserHelper;
-$userHelper = new UserHelper();
+use mdm\admin\components\MenuHelper;
+use yii\widgets\Menu;
 
+$userHelper = new UserHelper();
 ?>
+
 
 <header class="main-header">
     <?= Html::a('<span class="logo-mini">' . Yii::$app->settings->getSettings('ApplicationNameMini') . '</span><span class="logo-lg">' . Yii::$app->settings->getSettings('ApplicationName') . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
@@ -17,9 +20,32 @@ $userHelper = new UserHelper();
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <?php
+
+        use yii\bootstrap\Nav;
+
+$appsHelper = new \plathir\apps\helpers\AppsHelper();
+        $apps = $appsHelper->getAppsList();
+
+        foreach ($apps as $app) {
+            $items[] = ['label' => $app->name,
+                'url' => ["/$app->name"],
+            ];
+        }
+        echo Nav::widget([
+            'items' =>
+            [
+                ['label' => 'Applications',
+                    'items' => $items,
+                ],
+            ],
+            'options' => ['class' => 'navbar-nav navbar-left'],
+        ]);
+        ?>
+
 
         <div class="navbar-custom-menu">
-
             <ul class="nav navbar-nav">
 
                 <!-- Messages: style can be found in dropdown.less-->
@@ -229,7 +255,6 @@ $userHelper = new UserHelper();
                     </ul>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
-
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="<?= $userHelper->getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="user-image" alt="User Image"/>
@@ -256,7 +281,7 @@ $userHelper = new UserHelper();
                                 ?>                                
                             </div>
                             <div class="col-xs-6 text-center">
-                                                          <?=
+                                <?=
                                 Html::a(
                                         'Site Settings', ['/settings'], ['data-method' => 'post']
                                 )

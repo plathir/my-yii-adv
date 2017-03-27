@@ -89,6 +89,15 @@ $components_var = [
     'apps' => [
         'class' => 'plathir\apps',
     ],
+    'view' => [
+        'theme' => [
+//            'basePath' => '@app/themes/smart/views',
+//            'baseUrl' => '@web/themes/smart',
+            'pathMap' => [
+                '@app/views' => '@app/themes/smart/views',
+            ],
+        ],
+    ],    
 //    'view' => [
 //        'theme' => [
 //            'pathMap' => [
@@ -131,6 +140,7 @@ $components_var = [
     ],
     'urlManager' => [
         'class' => 'yii\web\urlManager',
+        //'showScriptName' => false,
         'enablePrettyUrl' => true,
         'rules' => [
         //'admin' => 'www/admin',
@@ -214,6 +224,7 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
+            //'*'
 //      'admin/*'
 //            'settings/*'
 //              'site/*',
