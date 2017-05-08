@@ -152,7 +152,7 @@ class SiteController extends Controller {
                 ->setSubject('This is a test mail ')
                 ->send();
 
-        return $this->render('send', [ 'msg' => $msg]
+        return $this->render('send', ['msg' => $msg]
         );
     }
 
@@ -168,7 +168,7 @@ class SiteController extends Controller {
         return $this->render('smart-apps');
     }
 
-        public function actionSmartSettings() {
+    public function actionSmartSettings() {
         return $this->render('smart-settings');
     }
 

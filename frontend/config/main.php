@@ -26,16 +26,13 @@ $modules_var = [
         'ImageTempPathPreview' => '/media/temp/images/blog/posts',
         'mediaUrl' => '@MediaUrl',
         'mediaPath' => '@media',
-        
         'CategoryImagePath' => '@media/images/blog/categories',
         'CategoryImageTempPath' => '@media/temp/images/blog/categories',
         'CategoryImagePathPreview' => '/media/images/blog/categories',
         'CategoryImageTempPathPreview' => '/media/temp/images/blog/categories',
-         
         'KeyFolder' => 'id',
         'userModel' => 'plathir\user\common\models\account\User',
         'userNameField' => 'username'
-        
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
@@ -44,6 +41,9 @@ $modules_var = [
         'class' => 'plathir\settings\Module',
         'modulename' => 'site'
     ],
+    'installer' => [
+        'class' => 'common\modules\installer\Module',
+    ],   
 ];
 
 $components_var = [
@@ -130,6 +130,7 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
+            'installer/*',
             'site/*',
             'user/auth/*',
             'user/security/logout',
@@ -137,7 +138,7 @@ return [
             'user/registration/*',
             'user/security/auth', // for Oauth ( Login from facebook etc. )
             'blog/*',
-        //    'blog/posts/view',
+            //    'blog/posts/view',
             'apps/*',
             'apptest1/*',
             'debug/*'
