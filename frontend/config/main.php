@@ -106,14 +106,15 @@ $handle = opendir($modules_dir);
 while (false !== ($file = readdir($handle))) {
     if ($file != '.' && $file != '..' && $file != 'uploads') {
         $modules_var["$file"] = [
-            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'frontend\Module',
+            'class' => 'apps' . '\\' . $file . '\\' . 'frontend\Module',
         ];
 
         $components_var["$file"] = [
-            'class' => 'apps' . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . 'frontend',
+            'class' => 'apps' . '\\' . $file . '\\' . 'frontend',
         ];
     }
 }
+
 closedir($handle);
 
 
@@ -141,7 +142,8 @@ return [
             //    'blog/posts/view',
             'apps/*',
             'apptest1/*',
-            'debug/*'
+            'debug/*',
+            'recipes/*',            
 //            '*'
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.

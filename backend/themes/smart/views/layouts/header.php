@@ -24,55 +24,61 @@ $userHelper = new UserHelper();
         <?php
         $appsHelper = new \plathir\apps\helpers\AppsHelper();
         $apps = $appsHelper->getAppsList();
-        $cnt = count((array)$apps);
+        $cnt = count((array) $apps);
         ?>
 
 
         <ul class="nav navbar-nav">
 
-            <!-- Messages: style can be found in dropdown.less-->
-            <li class="dropdown messages-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-cogs"></i> Apps 
-                    <span class="label label-success"><?=$cnt ?></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="header">You have <?=$cnt ?> Active Applications</li>
-                    <li>
-                        <!-- inner menu: contains the actual data -->
-                        <ul class="menu">
-                            <?php
-                            foreach ($apps as $app) {
-
-                                $bundle = null;
-                                $h_text = '$bundle = apps' . '\\' . $app->name . '\\backend\\' . $app->name . 'Asset::register($this);';
-                                eval($h_text);
-
-                                $img = $bundle->baseUrl . $app->app_icon;
-                                ?>
-
-                                <li><!-- start message -->
-                                    <a href=<?= Url::to(["/$app->name"]); ?> >
-
-                                        <div class="pull-left">
-                                            <img src="<?= $img ?>" class="img-circle"
-                                                 alt="user image"/>
-                                        </div>
-
-                                        <h4>
-                                            <?= $app->name ?>
-                                        </h4>
-                                        <p><?= $app->descr ?></p>
-                                    </a>
-                                </li>
-                                <!-- end message -->
-                            <?php } ?>                                                           
-                        </ul>
-                    </li>
-                    <li class="footer"><a href="<?= Url::to(["/apps/admin"]); ?>">Manage All Applications</a></li>
-                </ul>
-            </li>
         </ul>
+
+        <div class="navbar-custom-menu pull-left">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-cogs"></i> Apps 
+                        <span class="label label-success"><?= $cnt ?></span>
+                    </a>
+                    <ul class="dropdown-menu" style="right:auto">
+                        <li class="header">You have <?= $cnt ?> Active Applications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <?php
+                                foreach ($apps as $app) {
+
+                                    $bundle = null;
+                                    $h_text = '$bundle = apps' . '\\' . $app->name . '\\backend\\' . $app->name . 'Asset::register($this);';
+                                    eval($h_text);
+
+                                    $img = $bundle->baseUrl . $app->app_icon;
+                                    ?>
+
+                                    <li><!-- start message -->
+                                        <a href=<?= Url::to(["/$app->name"]); ?> >
+
+                                            <div class="pull-left">
+                                                <img src="<?= $img ?>" class="img-circle"
+                                                     alt="user image"/>
+                                            </div>
+
+                                            <h4>
+                                                <?= $app->name ?>
+                                            </h4>
+                                            <p><?= $app->descr ?></p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                <?php } ?>                                                           
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="<?= Url::to(["/apps/admin"]); ?>">Manage All Applications</a></li>
+                    </ul>
+                </li>              
+
+            </ul>
+        </div>
 
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">

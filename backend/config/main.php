@@ -225,7 +225,7 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            //'*'
+            'debug/*'
 //      'admin/*'
 //            'settings/*'
 //              'site/*',

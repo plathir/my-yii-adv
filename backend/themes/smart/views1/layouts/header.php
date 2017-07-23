@@ -1,80 +1,22 @@
 <?php
-
 use yii\helpers\Html;
-use yii\helpers\Url;
+
 /* @var $this \yii\web\View */
 /* @var $content string */
-use \plathir\user\common\helpers\UserHelper;
-use mdm\admin\components\MenuHelper;
-use yii\widgets\Menu;
-
-$userHelper = new UserHelper();
 ?>
 
-
 <header class="main-header">
-    <?= Html::a('<span class="logo-mini">' . Yii::$app->settings->getSettings('ApplicationNameMini') . '</span><span class="logo-lg">' . Yii::$app->settings->getSettings('ApplicationName') . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+
+    <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <?php
-        $appsHelper = new \plathir\apps\helpers\AppsHelper();
-        $apps = $appsHelper->getAppsList();
-        $cnt = count((array)$apps);
-        ?>
-
-
-        <ul class="nav navbar-nav">
-
-            <!-- Messages: style can be found in dropdown.less-->
-            <li class="dropdown messages-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-cogs"></i> Apps 
-                    <span class="label label-success"><?=$cnt ?></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="header">You have <?=$cnt ?> Active Applications</li>
-                    <li>
-                        <!-- inner menu: contains the actual data -->
-                        <ul class="menu">
-                            <?php
-                            foreach ($apps as $app) {
-
-                                $bundle = null;
-                                $h_text = '$bundle = apps' . '\\' . $app->name . '\\backend\\' . $app->name . 'Asset::register($this);';
-                                eval($h_text);
-
-                                $img = $bundle->baseUrl . $app->app_icon;
-                                ?>
-
-                                <li><!-- start message -->
-                                    <a href=<?= Url::to(["/$app->name"]); ?> >
-
-                                        <div class="pull-left">
-                                            <img src="<?= $img ?>" class="img-circle"
-                                                 alt="user image"/>
-                                        </div>
-
-                                        <h4>
-                                            <?= $app->name ?>
-                                        </h4>
-                                        <p><?= $app->descr ?></p>
-                                    </a>
-                                </li>
-                                <!-- end message -->
-                            <?php } ?>                                                           
-                        </ul>
-                    </li>
-                    <li class="footer"><a href="<?= Url::to(["/apps/admin"]); ?>">Manage All Applications</a></li>
-                </ul>
-            </li>
-        </ul>
 
         <div class="navbar-custom-menu">
+
             <ul class="nav navbar-nav">
 
                 <!-- Messages: style can be found in dropdown.less-->
@@ -284,56 +226,46 @@ $userHelper = new UserHelper();
                     </ul>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
+
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="<?= $userHelper->getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="user-image" alt="User Image"/>
-                        <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
+                        <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
+                        <span class="hidden-xs">Alexander Pierce</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="<?= $userHelper->getProfileImage(Yii::$app->user->identity->id, $this) ?>" class="img-circle"
+                            <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle"
                                  alt="User Image"/>
 
                             <p>
-                                <?= '(' . Yii::$app->user->identity->username . ')' ?> <?= $userHelper->getProfileFullName(Yii::$app->user->identity->id) ?>
-                                <small>Member since <?= Yii::$app->formatter->asDatetime(Yii::$app->user->identity->created_at); ?></small>
+                                Alexander Pierce - Web Developer
+                                <small>Member since Nov. 2012</small>
                             </p>
                         </li>
                         <!-- Menu Body -->
                         <li class="user-body">
-                            <div class="col-xs-6 text-center">
-                                <?=
-                                Html::a(
-                                        'Settings for Users', ['/user/settings'], ['data-method' => 'post']
-                                )
-                                ?>                                
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Followers</a>
                             </div>
-                            <div class="col-xs-6 text-center">
-                                <?=
-                                Html::a(
-                                        'Site Settings', ['/settings'], ['data-method' => 'post']
-                                )
-                                ?>                                
-
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Sales</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Friends</a>
                             </div>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <?=
-                                Html::a(
-                                        'Profile', ['/user/account/my'], ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
-                                )
-                                ?>
-
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <?=
-                                Html::a(
-                                        'Sign out', ['/user/security/logout'], ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
-                                )
-                                ?>
+                                <?= Html::a(
+                                    'Sign out',
+                                    ['/site/logout'],
+                                    ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
+                                ) ?>
                             </div>
                         </li>
                     </ul>

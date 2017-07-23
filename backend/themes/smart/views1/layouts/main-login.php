@@ -20,15 +20,8 @@ dmstr\web\AdminLteAsset::register($this);
 <body class="login-page">
 
 <?php $this->beginBody() ?>
-<div class="login-box">
-    <div class="login-logo">
-        <a href="#"><b>My-yii-adv </b>Backend</a>
-    </div>
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <?= $content ?>
-    </div>
-    
+
+    <?= $content ?>
 
 <?php $this->endBody() ?>
 </body>

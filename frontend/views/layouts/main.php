@@ -6,6 +6,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
+use plathir\widgets\common\helpers\PositionHelper;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -97,6 +98,14 @@ AppAsset::register($this);
 
             <footer class="footer">
                 <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">   
+                            
+                            <?php
+                            $positionHelper = new PositionHelper();
+                            echo $positionHelper->LoadPosition('fe_blog_dashboard_footer'); ?>
+                        </div>
+                    </div>    
                     <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
                     <p class="pull-right"><?= Yii::powered() ?></p>
                 </div>
