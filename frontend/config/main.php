@@ -9,6 +9,9 @@ use \yii\web\Request;
 //$baseUrl = str_replace('/frontend/web', '', (new Request)->getBaseUrl());
 
 $modules_var = [
+    'frontend_dashboard' => [
+        'class' => 'frontend\models\BackendDashBoard',
+    ],
     'user' => [
         'class' => 'plathir\user\frontend\Module',
         'ProfileImagePath' => '@media/images/users',
@@ -43,7 +46,7 @@ $modules_var = [
     ],
     'installer' => [
         'class' => 'common\modules\installer\Module',
-    ],   
+    ],
 ];
 
 $components_var = [
@@ -97,6 +100,35 @@ $components_var = [
         //   'baseUrl' => $baseUrl,
         'enablePrettyUrl' => true,
     ],
+    'view' => [
+        'theme' => [
+//            'basePath' => '@app/themes/smart/views',
+//            'baseUrl' => '@web/themes/smart',
+            'pathMap' => [
+                '@app/views' => '@app/themes/smart/views',
+            ],
+        ],
+    ],
+    'assetManager' => [
+        'bundles' => [
+            'dmstr\web\AdminLteAsset' => [
+                'skin' => 'skin-red',
+            ],
+        ],
+    ],
+    'searcher' => [
+        'class' => \vintage\search\SearchComponent::class,
+        'models' => [
+            'Posts' => [
+                'class' => \plathir\smartblog\frontend\models\PostsGlobalSearch::class,
+                'label' => 'Posts',
+            ],
+            'Recipes' => [
+                'class' => apps\recipes\frontend\models\RecipesGlobalSearch::class,
+                'label' => 'Recipes',
+            ],
+        ]
+    ],
 ];
 
 // load apps
@@ -143,7 +175,7 @@ return [
             'apps/*',
             'apptest1/*',
             'debug/*',
-            'recipes/*',            
+            'recipes/*',
 //            '*'
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.

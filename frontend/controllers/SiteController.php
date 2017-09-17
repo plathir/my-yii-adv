@@ -68,6 +68,16 @@ class SiteController extends Controller {
         return $this->render('index');
     }
 
+        public function actionSearch($q) {
+        if ($q) {
+            $results = Yii::$app->get('searcher')->search($q);
+            return $this->render('search_results', ['results' => $results]);
+        } else {
+            return $this->goBack();
+        }
+    }
+
+    
     public function actionLogout() {
         Yii::$app->user->logout();
 

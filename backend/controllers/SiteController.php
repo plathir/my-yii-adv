@@ -26,7 +26,7 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'site-settings'],
+                        'actions' => ['logout', 'index', 'site-settings', 'search'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -60,6 +60,15 @@ class SiteController extends Controller {
             ]);
         } else {
             throw new \yii\web\NotAcceptableHttpException(Yii::t('app', 'No Permission to Backend index'));
+        }
+    }
+
+    public function actionSearch($q) {
+        if ($q) {
+            $results = Yii::$app->get('searcher')->search($q);
+            return $this->render('search_results', ['results' => $results]);
+        } else {
+            return $this->goBack();
         }
     }
 

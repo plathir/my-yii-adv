@@ -163,6 +163,20 @@ $components_var = [
             ],
         ],
     ],
+    'searcher' => [
+        'class' => \vintage\search\SearchComponent::class,
+        'models' => [
+            'Posts' => [
+                'class' => \plathir\smartblog\backend\models\PostsGlobalSearch::class,
+                'label' => 'Posts',
+                
+            ],
+            'Recipes' => [
+                'class' => apps\recipes\backend\models\RecipesGlobalSearch::class,
+                'label' => 'Recipes',
+            ],
+        ]
+    ],    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
