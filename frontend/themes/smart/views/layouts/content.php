@@ -8,6 +8,12 @@ $positionHelper = new PositionHelper();
 ?>
 <div class="content-wrapper">
     <!--<div class="box">-->
+    <?php if ($positionHelper->LoadPosition('fe_dashboard_global_header')) { ?>
+        <div class="content-header">
+            <?php echo $positionHelper->LoadPosition('fe_dashboard_global_header'); ?>
+        </div>
+    <?php } ?>
+
     <section class="content-header">
         <?php if (isset($this->blocks['content-header'])) { ?>
             <h1><?= $this->blocks['content-header'] ?></h1>
@@ -36,17 +42,12 @@ $positionHelper = new PositionHelper();
     </section>
 
     <section class="content">
-  
-        <div class="row">
-            <?php echo $positionHelper->LoadPosition('fe_dashboard_global_header'); ?>
-        </div>
-
         <div class="row">
             <?= Alert::widget() ?>
             <?= $content ?>
         </div>
-
     </section>
+
 </div>
 
 <!--</div>-->

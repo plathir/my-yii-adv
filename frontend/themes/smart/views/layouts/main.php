@@ -25,6 +25,9 @@ if (class_exists('backend\assets\AppAsset')) {
 frontend\assets\GoogleAsset::register($this);
 dmstr\web\AdminLteAsset::register($this);
 
+frontend\assets\AdminLtePluginAsset::register($this);
+
+
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 ?>
 <?php $this->beginPage() ?>
