@@ -31,7 +31,6 @@ use yii\helpers\Url;
               <input type="text" name="q" class="form-control" id="navbar-search-input" placeholder="Search">
             </div>
           </form>
-
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <?php if (!Yii::$app->user->isGuest) { ?>
@@ -47,8 +46,12 @@ use yii\helpers\Url;
                         <?php
                         require('header_files/header_user.php');
                     } else {
+                        require('header_files/header_user_signup.php'); ?>
+                        <li>
+                        <?php
                         require('header_files/header_user_login.php');
-                        ?>
+                            ?>
+                        </li>
 
                     <?php } ?>
 

@@ -13,7 +13,7 @@ $userHelper = new UserHelper();
 ?>
 <li class="dropdown user user-menu">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <span class="glyphicon glyphicon-user"></span><span class="hidden-xs">Login</span>
+        <span class="fa fa-sign-in"></span><span class="hidden-xs">Login</span>
     </a>
     <ul class="dropdown-menu">
         <!-- User image -->

@@ -13,7 +13,7 @@ $this->title = 'My Yii Application';
         <div class="col-lg-12">        
             <?php echo $positionHelper->LoadPosition('fe_dashboard_header'); ?>
         </div>
-
+        
     </div>
     <div class="row-fluid">
         <div class="col-lg-9">        
