@@ -28,7 +28,7 @@ foreach ($grp_modules as $moduleName) {
     $content = '';
     foreach ($results as $result) {
         if ($result->moduleName == $moduleName) {
-            $content .= '<h3><a href = "' . $result->url . '">' . $result->title . '</a></h3>'
+            $content .= '<h3><a class="btn-loader" href = "' . $result->url . '">' . $result->title . '</a></h3>'
                     . $result->description
                     . '<hr>';
         }

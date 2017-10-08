@@ -2,13 +2,15 @@
 
 use yii\widgets\Breadcrumbs;
 use dmstr\widgets\Alert;
+use yii\helpers\Url;
 ?>
 <div class="content-wrapper">
     <section class="content-header">
+<?php $loader = '<div class="inline loader" id="loader"><img src="' . Url::to('@web/images/loader.gif') . '" alt="Loading"/></div>'; ?>        
         <?php if (isset($this->blocks['content-header'])) { ?>
             <h1><?= $this->blocks['content-header'] ?></h1>
         <?php } else { ?>
-            <h1>
+            <h1> <?= $loader; ?>
                 <?php
                 if ($this->title !== null) {
                     echo \yii\helpers\Html::encode($this->title);

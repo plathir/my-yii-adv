@@ -13,8 +13,6 @@ use \plathir\user\common\helpers\UserHelper;
 $userHelper = new UserHelper();
 ?>
 <li class="dropdown user user-menu">
-    <a href="<?= Url::to(["user/registration/signup"]); ?>" class="dropdown-toggle">
-        <span class="fa fa-pencil-square-o"></span><span class="hidden-xs">Signup</span>
-    </a>
+    <?= Html::a('<span class="fa fa-pencil-square-o"></span><span class="hidden-xs">Signup</span>', ['/user/registration/signup']) ?>
 
 </li>

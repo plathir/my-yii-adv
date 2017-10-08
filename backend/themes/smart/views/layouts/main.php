@@ -38,7 +38,7 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
             <title><?= Html::encode($this->title) ?></title>
             <?php $this->head() ?>
         </head>
-        <body class="hold-transition skin-blue sidebar-mini">
+        <body class="hold-transition skin-blue sidebar-mini" onload="$('#loader').hide();">            
             <?php $this->beginBody() ?>
             <div class="wrapper">
 
@@ -63,6 +63,14 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
             </div>
 
             <?php $this->endBody() ?>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    //When clicking on a button, it shows the loader
+                    $('.btn-loader').on('click', function () {
+                        $('#loader').show();
+                    });
+                });
+            </script>              
         </body>
     </html>
     <?php $this->endPage() ?>

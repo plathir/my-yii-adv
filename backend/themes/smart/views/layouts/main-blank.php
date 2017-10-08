@@ -5,7 +5,19 @@ use yii\helpers\Html;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+//if (class_exists('backend\assets\AppAsset')) {
+//    backend\assets\AppAsset::register($this);
+//} else {
+//    app\assets\AppAsset::register($this);
+//}
+//
+//backend\assets\GoogleAsset::register($this);
+//dmstr\web\AdminLteAsset::register($this);
+//
+//backend\assets\AdminLtePluginAsset::register($this);
+
 dmstr\web\AdminLteAsset::register($this);
+//backend\assets\AdminLtePluginAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

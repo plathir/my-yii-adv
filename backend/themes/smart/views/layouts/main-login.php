@@ -7,6 +7,7 @@ use yii\helpers\Html;
 /* @var $content string */
 backend\assets\GoogleAsset::register($this);
 dmstr\web\AdminLteAsset::register($this);
+backend\assets\AdminLtePluginAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -21,15 +22,9 @@ dmstr\web\AdminLteAsset::register($this);
     <body class="login-page">
 
         <?php $this->beginBody() ?>
-        <div class="login-box">
-            <div class="login-logo">
-                <a href="#"><b>My-yii-adv </b>Backend</a>
-            </div>
-            <!-- /.login-logo -->
-            <div class="login-box-body">
+
                 <?= $content ?>
-            </div>
-        </div>  
+
 
         <?php $this->endBody() ?>
     </body>
