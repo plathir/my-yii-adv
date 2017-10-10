@@ -27,11 +27,6 @@ $userHelper = new UserHelper();
         $cnt = count((array) $apps);
         ?>
 
-
-        <ul class="nav navbar-nav">
-
-        </ul>
-
         <div class="navbar-custom-menu pull-left">
             <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
