@@ -6,7 +6,7 @@ use yii\helpers\Url;
 ?>
 <div class="content-wrapper">
     <section class="content-header">
-<?php $loader = '<div class="inline loader" id="loader"><img src="' . Url::to('@web/images/loader.gif') . '" alt="Loading"/></div>'; ?>        
+        <?php $loader = '<div class="inline loader" id="loader"><img src="' . Url::to('@web/images/loader.gif') . '" alt="Loading"/></div>'; ?>        
         <?php if (isset($this->blocks['content-header'])) { ?>
             <h1><?= $this->blocks['content-header'] ?></h1>
         <?php } else { ?>
@@ -34,7 +34,12 @@ use yii\helpers\Url;
     </section>
 
     <section class="content">
-        <?= Alert::widget() ?>
+        <?php $alert = Alert::widget(); ?>
+        <?php if ($alert) { ?>
+            <div id="alert">
+                <?= $alert; ?>
+            </div>             
+        <?php }; ?>
         <?= $content ?>
 
     </section>
@@ -50,7 +55,6 @@ use yii\helpers\Url;
 
 <!-- Control Sidebar -->
 <?php
-
 // include sidebar
 require 'sidebar.php';
 ?>           

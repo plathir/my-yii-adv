@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+use yii\web\View;
 
 if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controller->action->id === 'request-password-reset') {
     /**
@@ -63,14 +63,25 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
             </div>
 
             <?php $this->endBody() ?>
-            <script type="text/javascript">
-                $(document).ready(function () {
+
+            <?php
+            // Enable Loader icon 
+            $this->registerJs(
+                    "$(document).ready(function () {
                     //When clicking on a button, it shows the loader
                     $('.btn-loader').on('click', function () {
                         $('#loader').show();
                     });
-                });
-            </script>              
+                });", View::POS_END
+            );
+            // Fade Out Alert Message 
+            $this->registerJs("$(document).ready(function () {
+                    setTimeout(function () {
+                        $('#alert').fadeOut()
+                    }, 5000);
+                });", View::POS_END
+            );
+            ?>
         </body>
     </html>
     <?php $this->endPage() ?>
