@@ -239,7 +239,8 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'debug/*'
+            'debug/*',
+            'datecontrol/*',
 //      'admin/*'
 //            'settings/*'
 //              'site/*',

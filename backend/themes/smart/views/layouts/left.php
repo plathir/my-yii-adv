@@ -53,7 +53,7 @@ $userHelper = new UserHelper();
                         ['label' => 'Applications', 'options' => ['class' => 'header']],
                         $apps_items,
                         ['label' => 'Main Menu', 'options' => ['class' => 'header']],
-                        ['label' => 'Users', 'icon' => 'fa fa-users', 'url' => ['/user/admin']],
+                        ['label' => 'Users', 'icon' => 'fa fa-users', 'url' => ['/user']],
                         ['label' => 'Blog', 'icon' => 'fa fa-list-alt', 'url' => ['/blog'],
                             'items' => [
                                 ['label' => 'Blog Dashboard', 'icon' => 'fa fa-dashboard', 'url' => ['/blog'],],
