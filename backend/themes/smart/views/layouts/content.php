@@ -23,13 +23,14 @@ use yii\helpers\Url;
                 ?>
             </h1>
         <?php } ?>
-
         <?=
         Breadcrumbs::widget(
                 [
+                    'homeLink' => ['label' => 'Home',
+                    'url' => Yii::$app->getHomeUrl() . '/'.Yii::$app->controller->module->id],
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 ]
-        )
+        );
         ?>
     </section>
 
@@ -49,7 +50,7 @@ use yii\helpers\Url;
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.0
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2017 <a href="http://smartbyii.com">SmartByii.com</a>.</strong> All rights
     reserved.
 </footer>
 

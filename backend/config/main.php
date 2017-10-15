@@ -21,6 +21,9 @@ $modules_var = [
         'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
         'ProfileImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/users',
         'Theme' => 'smart',
+        'mediaUrl' => '@MediaUrl'  . '/images/users',
+        'mediaPath' => '@media'  . '/images/users',
+        
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
