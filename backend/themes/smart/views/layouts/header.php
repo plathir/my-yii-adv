@@ -324,7 +324,7 @@ $userHelper = new UserHelper();
                             <div class="pull-left">
                                 <?=
                                 Html::a(
-                                        'Profile', ['/user/account/my'], ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
+                                        'Profile', ['/user/account/my'], [ 'class' => 'btn btn-default btn-flat']
                                 )
                                 ?>
 
