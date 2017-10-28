@@ -23,6 +23,7 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
     }
 
     backend\assets\GoogleAsset::register($this);
+    backend\assets\CodeHighlight::register($this);
 
     dmstr\web\AdminLteAsset::register($this);
 

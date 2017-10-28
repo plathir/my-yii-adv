@@ -21,9 +21,8 @@ $modules_var = [
         'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
         'ProfileImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/users',
         'Theme' => 'smart',
-        'mediaUrl' => '@MediaUrl'  . '/images/users',
-        'mediaPath' => '@media'  . '/images/users',
-        
+        'mediaUrl' => '@MediaUrl' . '/images/users',
+        'mediaPath' => '@media' . '/images/users',
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
@@ -70,7 +69,7 @@ $modules_var = [
     'snippets' => [
         'class' => 'common\modules\snippets\Module',
     ],
- 
+
 //    'treemanager' => [
 //        'class' => '\kartik\tree\Module',
 //    // enter other module properties if needed
@@ -101,7 +100,7 @@ $components_var = [
                 '@app/views' => '@app/themes/smart/views',
             ],
         ],
-    ],    
+    ],
 //    'view' => [
 //        'theme' => [
 //            'pathMap' => [
@@ -172,14 +171,13 @@ $components_var = [
             'Posts' => [
                 'class' => \plathir\smartblog\backend\models\PostsGlobalSearch::class,
                 'label' => 'Posts',
-                
             ],
             'Recipes' => [
                 'class' => apps\recipes\backend\models\RecipesGlobalSearch::class,
                 'label' => 'Recipes',
             ],
         ]
-    ],    
+    ],
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [

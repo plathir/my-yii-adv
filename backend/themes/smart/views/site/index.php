@@ -8,6 +8,8 @@ use plathir\smartblog\backend\widgets\LatestPosts;
 use plathir\apps\models\AppsSearch;
 use plathir\apps\helpers\AppsHelper;
 use plathir\widgets\common\helpers\PositionHelper;
+//use kartik\markdown\MarkdownEditor;
+use yii\web\View;
 
 $this->title = 'My Yii Application';
 ?>
@@ -16,15 +18,15 @@ $this->title = 'My Yii Application';
 <?php
 $comp = \Yii::$app->getModules();
 
-$userHelper =  new UserHelper();
-$postHelper =  new PostHelper();
+$userHelper = new UserHelper();
+$postHelper = new PostHelper();
 
 $positionHelper = new PositionHelper();
 
 $LatestUsers = $userHelper->getLatestUsers(5);
 $LatestPosts = $postHelper->getLatestPosts(10);
 
-        ?>
+?>
 
 <div class="row row-centered">
 
@@ -54,3 +56,17 @@ $LatestPosts = $postHelper->getLatestPosts(10);
     </div>
 
 </div>
+
+
+<?php echo \yii2mod\markdown\MarkdownEditor::widget([
+    'name' => 'markdown-editor',
+    'editorOptions' => [
+        'showIcons' => ["code", "table"],
+        'renderingConfig' => [
+            'codeSyntaxHighlighting' => true,
+            
+        ]
+    ],
+]);
+?>
+
