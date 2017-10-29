@@ -23,7 +23,7 @@ $userHelper = new UserHelper();
         </div>
 
         <!-- search form -->
-         <?php $url = Url::toRoute(['/site/search']) ?>
+        <?php $url = Url::toRoute(['/site/search']) ?>
         <form action="<?= $url ?>" method="get" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="Search..."/>
@@ -39,9 +39,30 @@ $userHelper = new UserHelper();
         $apps = $appsHelper->getAppsList();
         $apps_items[] = '';
 
+        $callback = function($menu) {
+            if ($menu['data']) {
+                $return = [
+                    'label' => $menu['name'],
+                    'url' => [$menu['route']],
+                    'icon' => $menu['data'],
+                    'items' => $menu['children'],
+                ];
+            } else {
+                $return = [
+                    'label' => $menu['name'],
+                    'url' => [$menu['route']],
+                    'option' => $menu['data'],
+                    'items' => $menu['children'],
+                ];
+            }
+
+
+            return $return;
+        };
+
         foreach ($apps as $app) {
             if ($app->menu != null) {
-                $apps_items = ['label' => $app->descr, 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, $app->menu->menu_id, null, true)];
+                $apps_items = ['label' => $app->descr, 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, $app->menu->menu_id, $callback, true)];
             }
         }
         ?>
@@ -53,25 +74,25 @@ $userHelper = new UserHelper();
                         ['label' => 'Applications', 'options' => ['class' => 'header']],
                         $apps_items,
                         ['label' => 'Main Menu', 'options' => ['class' => 'header']],
-                        ['label' => 'Users', 'icon' => 'fa fa-users', 'url' => ['/user']],
-                        ['label' => 'Blog', 'icon' => 'fa fa-list-alt', 'url' => ['/blog'],
+                        ['label' => 'Users', 'icon' => 'users', 'url' => ['/user']],
+                        ['label' => 'Blog', 'icon' => 'list-alt', 'url' => ['/blog'],
                             'items' => [
-                                ['label' => 'Blog Dashboard', 'icon' => 'fa fa-dashboard', 'url' => ['/blog'],],
-                                ['label' => 'Categories', 'icon' => 'fa  fa-file-text-o', 'url' => ['/blog/category'],],
-                                ['label' => 'Posts', 'icon' => 'fa  fa-file-text-o', 'url' => ['/blog/posts'],],
-                                ['label' => 'Static Pages', 'icon' => 'fa  fa-file-text-o', 'url' => ['/blog/static-pages'],],
-                                ['label' => 'Posts List Preview', 'icon' => 'fa fa-file-text-o', 'url' => ['/blog/posts/list'],],
-                                ['label' => 'File Manager', 'icon' => 'fa fa-file-text-o', 'url' => ['/blog/posts/filemanager'],],
+                                ['label' => 'Blog Dashboard', 'icon' => 'dashboard', 'url' => ['/blog'],],
+                                ['label' => 'Categories', 'icon' => 'file-text-o', 'url' => ['/blog/category'],],
+                                ['label' => 'Posts', 'icon' => 'file-text-o', 'url' => ['/blog/posts'],],
+                                ['label' => 'Static Pages', 'icon' => 'file-text-o', 'url' => ['/blog/static-pages'],],
+                                ['label' => 'Posts List Preview', 'icon' => 'file-text-o', 'url' => ['/blog/posts/list'],],
+                                ['label' => 'File Manager', 'icon' => 'file-text-o', 'url' => ['/blog/posts/filemanager'],],
                             ]
                         ],
-                        ['label' => 'Apps', 'icon' => 'fa fa-cogs', 'url' => ['/apps'],
+                        ['label' => 'Apps', 'icon' => 'cogs', 'url' => ['/apps'],
                             'items' => [
-                                ['label' => 'Apps Dashboard', 'icon' => 'fa fa-dashboard', 'url' => ['/apps'],],
+                                ['label' => 'Apps Dashboard', 'icon' => 'dashboard', 'url' => ['/apps'],],
                                 ['label' => 'Apps Admin', 'icon' => 'fa fa-cogs', 'url' => ['/apps/admin'],],
                             ]
                         ],
-                        ['label' => 'Widgets', 'icon' => 'fa fa-gear', 'url' => ['/widgets'],],
-                        ['label' => 'Permissions', 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 1)],
+                        ['label' => 'Widgets', 'icon' => 'gear', 'url' => ['/widgets'],],
+                        ['label' => 'Permissions', 'icon' => 'user-times', 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 1, $callback, true)],
 //                        [
 //                            'label' => 'Permissions',
 //                            'icon' => 'fa fa-share',
@@ -88,12 +109,12 @@ $userHelper = new UserHelper();
 //                        ],
                         [
                             'label' => 'Documentation',
-                            'icon' => 'fa fa-book',
+                            'icon' => 'book',
                             'url' => ['/doc'],
                         ],
                         [
                             'label' => 'Code Snippets',
-                            'icon' => 'fa fa-gear',
+                            'icon' => 'file-code-o',
                             'url' => ['/snippets'],
                         ]
                     ],

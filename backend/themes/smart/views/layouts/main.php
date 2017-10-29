@@ -83,6 +83,12 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
                 });", View::POS_END
             );
             ?>
+            <?php
+            // Code Syntax highlight
+            $this->registerJs(
+                    "hljs.initHighlightingOnLoad();", View::POS_END);
+            ?>
+
         </body>
     </html>
     <?php $this->endPage() ?>

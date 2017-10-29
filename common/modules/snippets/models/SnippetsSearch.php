@@ -5,20 +5,20 @@ namespace common\modules\snippets\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\modules\snippets\models\Snippets;
+use \common\modules\snippets\models\Snippets;
 
 /**
  * SnippetsSearch represents the model behind the search form of `common\modules\snippets\models\Snippets`.
  */
-class SnippetsSearch extends Snippets
-{
+class SnippetsSearch extends Snippets {
+
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-            [['id', 'created_by', 'created_at', 'updated_by', 'updated_at'], 'integer'],
+            [['id', 'updated_by', 'updated_at'], 'integer'],
+            [['created_at'], 'date', 'format' => Yii::$app->settings->getSettings('ShortDateFormat'), 'message' => '{attribute} must be DD/MM/YYYY format.'],
             [['description', 'full_text', 'publish'], 'safe'],
         ];
     }
@@ -26,8 +26,7 @@ class SnippetsSearch extends Snippets
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,8 +38,7 @@ class SnippetsSearch extends Snippets
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Snippets::find();
 
         // add conditions that should always apply here
@@ -60,16 +58,15 @@ class SnippetsSearch extends Snippets
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'created_by' => $this->created_by,
-            'created_at' => $this->created_at,
-            'updated_by' => $this->updated_by,
-            'updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'full_text', $this->full_text])
-            ->andFilterWhere(['like', 'publish', $this->publish]);
+                ->andFilterWhere(['like', 'full_text', $this->full_text])
+                ->andFilterWhere(['like', "( FROM_UNIXTIME(snippets.created_at, '" . Yii::$app->settings->getSettings('DBShortDateFormat') . " %h:%i:%s %p' ))", $this->created_at])
+                ->andFilterWhere(['like', "( FROM_UNIXTIME(snippets.updated_at, '" . Yii::$app->settings->getSettings('DBShortDateFormat') . " %h:%i:%s %p' ))", $this->updated_at])
+                ->andFilterWhere(['like', 'publish', $this->publish]);
 
         return $dataProvider;
     }
+
 }

@@ -58,15 +58,3 @@ $LatestPosts = $postHelper->getLatestPosts(10);
 </div>
 
 
-<?php echo \yii2mod\markdown\MarkdownEditor::widget([
-    'name' => 'markdown-editor',
-    'editorOptions' => [
-        'showIcons' => ["code", "table"],
-        'renderingConfig' => [
-            'codeSyntaxHighlighting' => true,
-            
-        ]
-    ],
-]);
-?>
-
