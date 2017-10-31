@@ -15,7 +15,8 @@ class CodeHighlight extends AssetBundle {
     public $basePath = 'https://cdn.jsdelivr.net/';
     public $baseUrl = 'https://cdn.jsdelivr.net/';
     public $css = [
-        'highlight.js/latest/styles/github.min.css',
+        'highlight.js/latest/styles/darcula.min.css',
+        //'highlight.js/latest/styles/github.min.css',
     ];
     public $js = ['highlight.js/latest/highlight.min.js',
     ];
