@@ -68,7 +68,7 @@ class SiteController extends Controller {
         return $this->render('index');
     }
 
-        public function actionSearch($q) {
+    public function actionSearch($q) {
         if ($q) {
             $results = Yii::$app->get('searcher')->search($q);
             return $this->render('search_results', ['results' => $results]);
@@ -77,10 +77,8 @@ class SiteController extends Controller {
         }
     }
 
-    
     public function actionLogout() {
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 

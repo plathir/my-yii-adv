@@ -18,9 +18,6 @@ $modules_var = [
         'ProfileImageTempPath' => '@media/temp/images/users',
         'ProfileImagePathPreview' => '/media/images/users',
     ],
-    'admin' => [
-        'class' => 'mdm\admin\Module',
-    ],
     'blog' => [
         'class' => 'plathir\smartblog\frontend\Module',
         'ImagePath' => '@media/images/blog/posts',
@@ -149,8 +146,6 @@ while (false !== ($file = readdir($handle))) {
 
 closedir($handle);
 
-
-
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
@@ -160,12 +155,18 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'modules' => $modules_var,
     'components' => $components_var,
+    'on beforeRequest' => function () {
+        $user = Yii::$app->user->identity;
+        if ($user && $user->timezone) {
+            Yii::$app->setTimeZone($user->timezone);
+        }
+    },
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'installer/*',
+//            'installer/*',
             'site/*',
-            'user/auth/*',
+//            'user/auth/*',
             'user/security/logout',
             'user/security/login',
             'user/registration/*',
@@ -173,9 +174,9 @@ return [
             'blog/*',
             //    'blog/posts/view',
             'apps/*',
-            'apptest1/*',
-            'debug/*',
-            'recipes/*',
+//            'apptest1/*',
+//            'debug/*',
+           'recipes/*',
 //            '*'
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.
