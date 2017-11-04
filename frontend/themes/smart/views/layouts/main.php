@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\web\View;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -59,6 +60,15 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
         </div>
 
         <?php $this->endBody() ?>
+        <?php
+        // Fade Out Alert Message 
+        $this->registerJs("$(document).ready(function () {
+                    setTimeout(function () {
+                        $('#alert').fadeOut()
+                    }, 5000);
+                });", View::POS_END
+        );
+        ?>
     </body>
 </html>
 <?php $this->endPage() ?>

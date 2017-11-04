@@ -43,7 +43,14 @@ $positionHelper = new PositionHelper();
 
     <section class="content">
         <div class="row">
-            <?= Alert::widget() ?>
+            <?php $alert = Alert::widget(); ?>
+            <?php if ($alert) { ?>
+            <div class="col-lg-12">
+                <div id="alert">
+                    <?= $alert; ?>
+                </div>             
+            </div>
+            <?php }; ?>
             <?= $content ?>
         </div>
     </section>

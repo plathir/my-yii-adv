@@ -24,8 +24,5 @@ $userHelper = new UserHelper();
             <?= plathir\user\frontend\widgets\LoginWidget::widget([]); ?>
 
         </li>
-        <!-- Menu Footer-->
-        <li class="user-footer">
-        </li>
     </ul>
 </li>
