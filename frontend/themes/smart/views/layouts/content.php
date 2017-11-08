@@ -6,6 +6,7 @@ use plathir\widgets\common\helpers\PositionHelper;
 
 $positionHelper = new PositionHelper();
 ?>
+<!--<div class="content-wrapper" style="background-color: beige; background-image: url('http://smartbase.dev/media/images/blog/posts/35/58889f1ed4962.jpg')">-->
 <div class="content-wrapper">
     <!--<div class="box">-->
     <?php if ($positionHelper->LoadPosition('fe_dashboard_global_header')) { ?>

@@ -11,7 +11,7 @@ use plathir\widgets\common\helpers\PositionHelper;
 //use kartik\markdown\MarkdownEditor;
 use yii\web\View;
 
-$this->title = 'My Yii Application';
+$this->title = Yii::$app->settings->getSettings('ApplicationName');
 ?>
 
 <?php //echo Yii::$app->settings->test();  ?>

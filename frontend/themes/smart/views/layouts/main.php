@@ -17,8 +17,8 @@ use yii\web\View;
 //    );
 //} else {
 
-if (class_exists('backend\assets\AppAsset')) {
-    backend\assets\AppAsset::register($this);
+if (class_exists('frontend\assets\AppAsset')) {
+    frontend\assets\AppAsset::register($this);
 } else {
     app\assets\AppAsset::register($this);
 }

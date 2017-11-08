@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
@@ -12,7 +12,7 @@ use yii\helpers\Url;
     <nav class="navbar navbar-static-top">
 
         <div class="navbar-header">
-            <?= Html::a('<span class="logo-mini">APP</span><span>' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+            <?= Html::a('<span class="logo-mini">' . Yii::$app->settings->getSettings('ApplicationNameMini') . '</span><span class="logo-lg">' . Yii::$app->settings->getSettings('ApplicationName') . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>            
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                 <i class="fa fa-bars"></i>
             </button>
@@ -26,11 +26,11 @@ use yii\helpers\Url;
             )
             ?>
             <?php $url = Url::toRoute(['/site/search']) ?>
-          <form action="<?= $url ?>" method="get" class="navbar-form navbar-left" role = "search">  
-            <div class="form-group">
-              <input type="text" name="q" class="form-control" id="navbar-search-input" placeholder="Search">
-            </div>
-          </form>
+            <form action="<?= $url ?>" method="get" class="navbar-form navbar-left" role = "search">  
+                <div class="form-group">
+                    <input type="text" name="q" class="form-control" id="navbar-search-input" placeholder="Search">
+                </div>
+            </form>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <?php if (!Yii::$app->user->isGuest) { ?>
@@ -46,10 +46,11 @@ use yii\helpers\Url;
                         <?php
                         require('header_files/header_user.php');
                     } else {
-                        require('header_files/header_user_signup.php'); ?>
+                        require('header_files/header_user_signup.php');
+                        ?>
                         <li>
-                        <?php
-                        require('header_files/header_user_login.php');
+                            <?php
+                            require('header_files/header_user_login.php');
                             ?>
                         </li>
 

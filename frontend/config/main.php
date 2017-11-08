@@ -7,16 +7,24 @@ $params = array_merge(
 use \yii\web\Request;
 
 //$baseUrl = str_replace('/frontend/web', '', (new Request)->getBaseUrl());
+$FrontEndUrl = ''; // Change if publish site
 
 $modules_var = [
     'frontend_dashboard' => [
         'class' => 'frontend\models\BackendDashBoard',
     ],
     'user' => [
+        
+        
         'class' => 'plathir\user\frontend\Module',
         'ProfileImagePath' => '@media/images/users',
         'ProfileImageTempPath' => '@media/temp/images/users',
-        'ProfileImagePathPreview' => '/media/images/users',
+        'ProfileImagePathPreview' => $FrontEndUrl . '/media/images/users',
+        'ProfileImageTempPathPreview' => $FrontEndUrl . '/media/temp/images/users',
+        'Theme' => 'smart',
+        'mediaUrl' => '@MediaUrl' . '/images/users',
+        'mediaPath' => '@media' . '/images/users',
+      
     ],
     'blog' => [
         'class' => 'plathir\smartblog\frontend\Module',
