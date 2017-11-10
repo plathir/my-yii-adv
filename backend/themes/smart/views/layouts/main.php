@@ -15,17 +15,16 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
             'main-login', ['content' => $content]
     );
 } elseif (!Yii::$app->user->isGuest) {
+    
+    backend\assets\GoogleAsset::register($this);
+    backend\assets\CodeHighlight::register($this);
+    dmstr\web\AdminLteAsset::register($this);
 
     if (class_exists('backend\assets\AppAsset')) {
         backend\assets\AppAsset::register($this);
     } else {
         app\assets\AppAsset::register($this);
     }
-
-    backend\assets\GoogleAsset::register($this);
-    backend\assets\CodeHighlight::register($this);
-
-    dmstr\web\AdminLteAsset::register($this);
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
     ?>

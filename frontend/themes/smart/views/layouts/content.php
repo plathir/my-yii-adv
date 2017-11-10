@@ -46,30 +46,27 @@ $positionHelper = new PositionHelper();
         <div class="row">
             <?php $alert = Alert::widget(); ?>
             <?php if ($alert) { ?>
-            <div class="col-lg-12">
-                <div id="alert">
-                    <?= $alert; ?>
-                </div>             
-            </div>
+                <div class="col-lg-12">
+                    <div id="alert">
+                        <?= $alert; ?>
+                    </div>             
+                </div>
             <?php }; ?>
             <?= $content ?>
         </div>
     </section>
-
 </div>
 
 <!--</div>-->
 <footer class="main-footer">
-    <p>
-        This is a Frontend Footer            
-    </p>
+    <div class= "footer-widgets">
+        <?= $positionHelper->LoadPosition('fe_dashboard_global_footer') ?> 
+    </div>
+    
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.0
-
-
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; 2017 <a href="http://smartbyii.com">SmartByii.com</a>.</strong> All rights reserved.
 </footer>
 
 <!-- Control Sidebar -->
