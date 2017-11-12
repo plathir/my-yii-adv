@@ -4,6 +4,35 @@
     background-color: inherit;
 }
 
+.global-header {
+    line-height: 30px; 
+    background-color:  #ffffcc; 
+    padding: 0 0 0 0;    
+}
+
+.footer-widgets {
+    color : white;
+    background-color: grey; 
+    line-height: 30px;
+    padding: 0 0 0 0;      
+}
+
+.main-footer {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.copyright {
+    padding : 5px 5px 5px 5px;    
+}
+
+.content-wrapper {
+/*    background-color: white;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url("../images/background.jpeg");
+*/
+}
 
 /*html,
 body {

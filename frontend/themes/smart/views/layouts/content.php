@@ -10,7 +10,7 @@ $positionHelper = new PositionHelper();
 <div class="content-wrapper">
     <!--<div class="box">-->
     <?php if ($positionHelper->LoadPosition('fe_dashboard_global_header')) { ?>
-        <div class="content-header">
+        <div class="global-header">
             <?php echo $positionHelper->LoadPosition('fe_dashboard_global_header'); ?>
         </div>
     <?php } ?>
@@ -59,14 +59,19 @@ $positionHelper = new PositionHelper();
 
 <!--</div>-->
 <footer class="main-footer">
-    <div class= "footer-widgets">
-        <?= $positionHelper->LoadPosition('fe_dashboard_global_footer') ?> 
+    <div class="row">
+        <div class= "footer-widgets">
+            <?= $positionHelper->LoadPosition('fe_dashboard_global_footer') ?> 
+        </div>
     </div>
-    
-    <div class="pull-right hidden-xs">
-        <b>Version</b> 2.0
+
+    <div class="row copyright">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.0
+        </div>
+        <strong>Copyright &copy; 2017 <a href="http://smartbyii.com">SmartByii.com</a>.</strong> All rights reserved.        
     </div>
-    <strong>Copyright &copy; 2017 <a href="http://smartbyii.com">SmartByii.com</a>.</strong> All rights reserved.
+
 </footer>
 
 <!-- Control Sidebar -->

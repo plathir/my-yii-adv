@@ -183,7 +183,7 @@ return [
             //    'blog/posts/view',
             'apps/*',
 //            'apptest1/*',
-//            'debug/*',
+            'debug/*',
            'recipes/*',
 //            '*'
         // The actions listed here will be allowed to everyone including guests.
