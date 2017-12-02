@@ -17,6 +17,7 @@ class Bootstrap implements BootstrapInterface {
             $facebook = [
                 'class' => 'yii\authclient\clients\Facebook',
                 'clientId' => Yii::$app->settings->getSettings('FacebookClientID'),
+             //   '_name' => 'Facebook Name',
                 'clientSecret' => Yii::$app->settings->getSettings('FacebookClientSecret'),
             ];
 

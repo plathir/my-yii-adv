@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2017, 10:58:10 PM
+    Author     : Panagiotis
+*/
+.blog-post-area .post-image-box {
+  max-height: 400px;
+  overflow: hidden;
+}
+.blog-post-area .post-image-box .post-image {
+  width: 100%;
+}
+.blog-post-area .author-info {
+  padding: 15px 0px 15px 0px;
+}
+.blog-post-area .author-info .post-author-image {
+  width: 30px;
+}
+.blog-post-area .post-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=blog_post.css.map */

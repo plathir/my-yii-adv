@@ -18,16 +18,18 @@ use yii\web\View;
 //} else {
 
 frontend\assets\GoogleAsset::register($this);
-dmstr\web\AdminLteAsset::register($this);
-frontend\assets\AdminLtePluginAsset::register($this);
+//dmstr\web\AdminLteAsset::register($this);
+//frontend\assets\AdminLtePluginAsset::register($this);
+//
+//if (class_exists('frontend\assets\AppAsset')) {
+//    frontend\assets\AppAsset::register($this);
+//} else {
+//    app\assets\AppAsset::register($this);
+//}
 
-if (class_exists('frontend\assets\AppAsset')) {
-    frontend\assets\AppAsset::register($this);
-} else {
-    app\assets\AppAsset::register($this);
-}
+frontend\assets\AppAsset::register($this);
 
-$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
+//$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -39,19 +41,19 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-red layout-top-nav">
+    <body>
         <?php $this->beginBody() ?>
-        <div class="wrapper">
+        <div class="wrap">
 
             <?=
             $this->render(
-                    'header.php', ['directoryAsset' => $directoryAsset]
+                    'header.php'
             )
             ?>
 
             <?=
             $this->render(
-                    'content.php', ['content' => $content, 'directoryAsset' => $directoryAsset]
+                    'content.php', ['content' => $content]
             )
             ?>
 
@@ -60,6 +62,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
         <?php $this->endBody() ?>
         <?php
         // Fade Out Alert Message 
+
         $this->registerJs("$(document).ready(function () {
                     setTimeout(function () {
                         $('#alert').fadeOut()

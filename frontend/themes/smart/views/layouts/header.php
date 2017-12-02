@@ -2,45 +2,78 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
 use yii\helpers\Url;
+use yii\bootstrap\Dropdown;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
+
+NavBar::begin([
+    'brandLabel' => Yii::$app->settings->getSettings('ApplicationName'),
+    'brandUrl' => Yii::$app->homeUrl,
+    'options' => [
+        'class' => 'navbar-default',
+        'display' => 'inline-block',
+        'white-space' => 'nowrap',
+    ],
+]);
+
+
+$menuItemsLeft = [
+    ['label' => '<i class="fa fa-book" aria-hidden="true"></i> Blog', 'url' => ['/blog']],
+];
+$appsItems = new \frontend\helpers\AppsMenuHelper();
+$menuAppItemsLeft = $appsItems->getFrontendMenu($this);
+
+$menuItemsRight = [
+    ['label' => 'About', 'url' => ['/site/about']],
+    ['label' => 'Contact', 'url' => ['/site/contact']],
+];
+if (Yii::$app->user->isGuest) {
+    $menuItemsRight[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+    $menuItemsRight[] = ['label' => 'Login', 'url' => ['/site/login']];
+} else {
+    $menuItems[] = '<li>'
+            . Html::beginForm(['/site/logout'], 'post')
+            . Html::submitButton(
+                    'Logout (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link logout']
+            )
+            . Html::endForm()
+            . '</li>';
+}
+echo Nav::widget([
+    'encodeLabels' => false,
+    'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block',  'white-space' => 'nowrap'],
+    'items' => $menuItemsLeft,
+]);
+
+echo Nav::widget([
+    'encodeLabels' => false,
+    'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block',  'white-space' => 'nowrap'],
+    'items' => $menuAppItemsLeft,
+]);
+
+$url = Url::toRoute(['/site/search']);
+$search_html = '<form action="' . $url . '" method="get" class="navbar-form navbar-nav navbar-left" role = "search"> 
+    <div class="form-group">
+        <input type="text" name="q" class="form-control navbar-nav navbar-left" id="navbar-search-input" placeholder="Search">
+    </div>
+</form>';
+echo $search_html;
+
+
 ?>
 
-<header class="main-header">
-    <nav class="navbar navbar-static-top">
-
-        <div class="navbar-header">
-            <?= Html::a('<span class="logo-mini">' . Yii::$app->settings->getSettings('ApplicationNameMini') . '</span><span class="logo-lg">' . Yii::$app->settings->getSettings('ApplicationName') . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>            
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-            <?=
-            $this->render(
-                    'apps.php', ['directoryAsset' => $directoryAsset]
-            )
-            ?>
-            <?php $url = Url::toRoute(['/site/search']) ?>
-            <form action="<?= $url ?>" method="get" class="navbar-form navbar-left" role = "search">  
-                <div class="form-group">
-                    <input type="text" name="q" class="form-control" id="navbar-search-input" placeholder="Search">
-                </div>
-            </form>
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <?php if (!Yii::$app->user->isGuest) { ?>
                         <!-- Messages: style can be found in dropdown.less-->
-                        <?php require('header_files/header_messages.php'); ?>
+                        <?php //require('header_files/header_messages.php'); ?>
                         <!-- Notifications -->
-                        <?php require('header_files/header_notifications.php'); ?>
+                        <?php //require('header_files/header_notifications.php'); ?>
 
                         <!-- Tasks: style can be found in dropdown.less -->
-                        <?php require('header_files/header_tasks.php'); ?>
+                        <?php //require('header_files/header_tasks.php'); ?>
 
                         <!-- User Account: style can be found in dropdown.less -->
                         <?php
@@ -56,17 +89,14 @@ use yii\helpers\Url;
 
                     <?php } ?>
 
+<?php
 
-                    <li>
-                        <!--  Uncomment to enable sidebar
-                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>-->
-                    </li>
-                </ul>
-            </div>
+//echo Nav::widget([
+//    'encodeLabels' => false,
+//    'options' => ['class' => 'navbar-nav navbar-right', 'display' => 'inline-block',  'white-space' => 'nowrap'],
+//    'items' => $menuItemsRight,
+//]);
 
-        </div>
-        <!-- /.navbar-collapse -->
 
-        <!-- /.container-fluid -->
-    </nav>
-</header>
+NavBar::end();
+

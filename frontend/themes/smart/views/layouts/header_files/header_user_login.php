@@ -11,18 +11,9 @@ use \plathir\user\common\helpers\UserHelper;
 
 $userHelper = new UserHelper();
 ?>
-<li class="dropdown user user-menu">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <span class="fa fa-sign-in"></span><span class="hidden-xs">Login</span>
-    </a>
-    <ul class="dropdown-menu">
-        <!-- User image -->
 
-        <!-- Menu Body -->
-        <li class="user-body">
-            
-            <?= plathir\user\frontend\widgets\LoginWidget::widget([]); ?>
+    <li class="dropdown user user-menu">
+    <?= Html::a('<span class="fa fa-sign-in"></span><span class="hidden-xs"> Login</span>', ['/user/security/login']) ?>
 
-        </li>
-    </ul>
-</li>
+   </li>
+    

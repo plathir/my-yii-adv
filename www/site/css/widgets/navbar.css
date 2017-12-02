@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 25, 2017, 12:16:40 AM
+    Author     : Panagiotis
+*/
+/* Red Color */
+/*
+@bgDefault      : #e74c3c;
+@bgHighlight    : #c0392b;
+@colDefault     : #ecf0f1;
+@colHighlight   : #ffbbbc;
+@colbgHighlight : #c0392b;*/
+/* Dark Grey */
+.navbar-default {
+  border-radius: 0px;
+  background-color: #2C3E50;
+  border-color: #566573;
+}
+.navbar-default .app-image {
+  width: 18px;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+  font-size: 20px !important;
+  min-width: 200px;
+  text-align: center;
+  font-weight: 800;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #D5D8DC;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #566573;
+  color: #D5D8DC;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #D5D8DC;
+  background-color: #566573;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #D5D8DC;
+  background-color: #566573;
+}
+.navbar-default .navbar-toggle {
+  border-color: #566573;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #566573;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #D5D8DC;
+}
+.navbar-default .nav-user-image {
+  width: 25px;
+  margin-top: -2px;
+  margin-right: 10px;
+  float: left;
+}
+.navbar-default .navbar-user-dropdown {
+  min-height: 210px;
+}
+.navbar-default .navbar-user-dropdown {
+  min-height: 210px;
+  width: 300px;
+  padding: 0px;
+}
+.navbar-default .navbar-user-dropdown .nav-user-image-dropdown-box {
+  background-color: #2C3E50;
+  min-height: 150px;
+}
+.navbar-default .navbar-user-dropdown .nav-user-image-dropdown-box .nav-user-image-dropdown {
+  height: 100px;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+.navbar-default .navbar-user-dropdown .nav-user-image-dropdown-box .nav-user-name-dropdown {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.navbar-default .navbar-user-dropdown .nav-user-buttons-dropdown {
+  min-height: 45px;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #D5D8DC;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #D5D8DC;
+    background-color: #566573;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

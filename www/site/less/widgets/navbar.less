@@ -1,0 +1,150 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 25, 2017, 12:16:40 AM
+    Author     : Panagiotis
+*/
+
+
+
+/* Red Color */
+/*
+@bgDefault      : #e74c3c;
+@bgHighlight    : #c0392b;
+@colDefault     : #ecf0f1;
+@colHighlight   : #ffbbbc;
+@colbgHighlight : #c0392b;*/
+
+/* Dark Grey */
+@bgDefault      : #2C3E50;
+@bgHighlight    : #566573;
+@colDefault     : #ecf0f1;
+@colHighlight   : #D5D8DC;
+@colbgHighlight : #566573;
+
+
+@dropDown       : false;
+
+.ddm() when (@dropDown) {
+    > li > .dropdown-menu {
+        background-color: @bgDefault;
+        > li {
+            > a {
+                color: @colDefault;
+                &:hover,  &:focus {
+                    color: @colHighlight;
+                    background-color: @bgHighlight; }}
+            &.divider {
+                background-color: @bgHighlight;}}}
+    .open .dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+            color: @colHighlight;
+            background-color: @bgHighlight; }}}
+
+.navbar-default {
+    border-radius: 0px;
+    background-color: @bgDefault;
+    border-color: @bgHighlight;
+    
+    
+    .app-image {
+        width: 18px;
+    }
+    .navbar-brand {
+        color: @colDefault;
+        font-size: 20px !important;
+        min-width: 200px;
+        text-align: center;
+        font-weight: 800;
+
+        &:hover, &:focus {
+            color: @colHighlight; }}
+    .navbar-text {
+        color: @colDefault; }
+    .navbar-nav {
+        > li {
+            > a {
+                color: @colDefault;
+                &:hover,  &:focus {
+                    background-color: @colbgHighlight;
+                    color: @colHighlight; }}}
+        .ddm;
+        > .active {
+            > a, > a:hover, > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight; }}
+        > .open {
+            > a, > a:hover, > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight; }}}
+    .navbar-toggle {
+        border-color: @bgHighlight;
+        &:hover, &:focus {
+            background-color: @bgHighlight; }
+        .icon-bar {
+            background-color: @colDefault; }}
+    .navbar-collapse,
+    .navbar-form {
+        border-color: @colDefault; }
+    .navbar-link {
+        color: @colDefault;
+        &:hover {
+            color: @colHighlight; }}
+    .nav-user-image {
+        width: 25px;
+        margin-top: -2px;
+        margin-right: 10px;
+        float: left;
+    }
+    .navbar-user-dropdown {
+        min-height: 210px;  
+
+    }
+    .navbar-user-dropdown {
+        min-height: 210px;
+        width: 300px;
+        padding: 0px;
+
+        .nav-user-image-dropdown-box {
+            background-color: @bgDefault;
+            min-height: 150px;
+
+            .nav-user-image-dropdown {
+                height: 100px;
+                width: 100px;
+                padding-top: 10px; 
+                padding-bottom: 10px; 
+                margin-left: 100px;
+                margin-right: 100px;
+                margin-bottom: 10px;    
+            }
+            .nav-user-name-dropdown {
+
+                color: white;
+                margin-bottom: 10px;
+                text-align: center;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+
+        }
+        .nav-user-buttons-dropdown {
+            min-height: 45px;
+        }
+    }
+
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu {
+        > li > a {
+            color: @colDefault;
+            &:hover, &:focus {
+                color: @colHighlight; }}
+        > .active {
+            > a, > a:hover, > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight; }}}
+}

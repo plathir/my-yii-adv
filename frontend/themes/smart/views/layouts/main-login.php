@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $content string */
 
 frontend\assets\GoogleAsset::register($this);
-dmstr\web\AdminLteAsset::register($this);
+//dmstr\web\AdminLteAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

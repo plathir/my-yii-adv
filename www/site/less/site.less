@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2017, 9:23:06 PM
+    Author     : Panagiotis
+*/
+@import "core/smart.less";
+@import "variables.less";
+@import "login.less";
+@import "singup.less";
+@import "req_pass.less";
+@import "blog.less";
+@import "blog_post.less";
+@import "footer.less";
+@import "profile.less";
+@import  "widgets/widgets.less";
+
+html {
+    height: 100%;
+    min-height: 100%;
+    /*    width : 100%;*/
+}
+
+
+body {
+    position: relative;
+    padding-bottom: 2rem;
+    min-height: 100%;
+    font-family:  @font_family;
+    background-color: @global_background;  
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+
+.image-in-list {
+    width: 100px;
+}
+
+.main-carousel {
+    margin-bottom: 15px;
+    max-height: 400px;
+    .carousel-inner {
+        max-height: 400px;
+    }
+}
+.label-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
