@@ -103,7 +103,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 #site-login-area {
-  padding-top: 100px;
+  padding-top: 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -115,7 +115,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 #site-singup-area {
-  padding-top: 100px;
+  padding-top: 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -127,7 +127,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 #site-request-password-reset-area {
-  padding-top: 100px;
+  padding-top: 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -209,7 +209,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .profile-area {
-  padding-top: 100px;
+  padding-top: 15px;
 }
 /*    .profile-img {
         display: block;
