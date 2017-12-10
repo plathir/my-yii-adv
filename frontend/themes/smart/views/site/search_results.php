@@ -48,23 +48,20 @@ foreach ($grp_modules as $moduleName) {
 }
 ?>
 
-
-<div class="box box-info">
-    <div class="box-header with-border">
-        <h3 class="box-title"><?= $title ?></h3>
-
-    </div><!-- /.box-header --> 
-    <div class="box-body" style="overflow:auto;">
-        <?php
-        if ($grp_modules) {
-            echo Tabs::widget(['items' => $items]);
-        }
-        ?>            
-    </div>
-
-
-    <div class="box-footer">
-
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <?= $title ?>
+        </div><!-- /.box-header --> 
+        <div class="panel-body" style="overflow:auto;">
+            <?php
+            if ($grp_modules) {
+                echo Tabs::widget(['items' => $items]);
+            }
+            ?>            
+        </div>
+        <div class="footer">
+        </div>
     </div>
 </div>
 

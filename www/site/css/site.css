@@ -197,7 +197,11 @@ and open the template in the editor.
   left: 0;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  background-color: white;
+  background-color: #2C3E50;
+  color: #ecf0f1;
+}
+.footer a:visited {
+  color: #ecf0f1;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -367,6 +371,8 @@ and open the template in the editor.
 }
 .navbar-default .navbar-nav > li > a {
   color: #ecf0f1;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {

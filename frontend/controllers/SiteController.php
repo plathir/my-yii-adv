@@ -68,6 +68,11 @@ class SiteController extends Controller {
         return $this->render('index');
     }
 
+    public function actionTerms() {
+        return $this->render('terms');
+    }
+
+
     public function actionSearch($q) {
         if ($q) {
             $results = Yii::$app->get('searcher')->search($q);

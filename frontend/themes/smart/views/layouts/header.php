@@ -26,31 +26,15 @@ $menuItemsLeft = [
 $appsItems = new \frontend\helpers\AppsMenuHelper();
 $menuAppItemsLeft = $appsItems->getFrontendMenu($this);
 
-$menuItemsRight = [
-    ['label' => 'About', 'url' => ['/site/about']],
-    ['label' => 'Contact', 'url' => ['/site/contact']],
-];
-if (Yii::$app->user->isGuest) {
-    $menuItemsRight[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-    $menuItemsRight[] = ['label' => 'Login', 'url' => ['/site/login']];
-} else {
-    $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-}
 echo Nav::widget([
     'encodeLabels' => false,
-    'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block',  'white-space' => 'nowrap'],
+    'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
     'items' => $menuItemsLeft,
 ]);
 
 echo Nav::widget([
     'encodeLabels' => false,
-    'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block',  'white-space' => 'nowrap'],
+    'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
     'items' => $menuAppItemsLeft,
 ]);
 
@@ -59,44 +43,29 @@ $search_html = '<form action="' . $url . '" method="get" class="navbar-form navb
     <div class="form-group">
         <input type="text" name="q" class="form-control navbar-nav navbar-left" id="navbar-search-input" placeholder="Search">
     </div>
+    <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
 </form>';
 echo $search_html;
-
-
 ?>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <?php if (!Yii::$app->user->isGuest) { ?>
-                        <!-- Messages: style can be found in dropdown.less-->
-                        <?php //require('header_files/header_messages.php'); ?>
-                        <!-- Notifications -->
-                        <?php //require('header_files/header_notifications.php'); ?>
+<ul class="nav navbar-nav navbar-right">
+    <?php
+    //require('header_files/header_about.php');
+   // require('header_files/header_contact.php');
+    if (!Yii::$app->user->isGuest) {
+        require('header_files/header_user.php');
+    } else {
+        require('header_files/header_user_signup.php');
+        ?>
+        <li>
+            <?php
+            require('header_files/header_user_login.php');
+            ?>
+        </li>
 
-                        <!-- Tasks: style can be found in dropdown.less -->
-                        <?php //require('header_files/header_tasks.php'); ?>
-
-                        <!-- User Account: style can be found in dropdown.less -->
-                        <?php
-                        require('header_files/header_user.php');
-                    } else {
-                        require('header_files/header_user_signup.php');
-                        ?>
-                        <li>
-                            <?php
-                            require('header_files/header_user_login.php');
-                            ?>
-                        </li>
-
-                    <?php } ?>
-
+<?php } ?>
+</ul>
 <?php
-
-//echo Nav::widget([
-//    'encodeLabels' => false,
-//    'options' => ['class' => 'navbar-nav navbar-right', 'display' => 'inline-block',  'white-space' => 'nowrap'],
-//    'items' => $menuItemsRight,
-//]);
-
 
 NavBar::end();
 
