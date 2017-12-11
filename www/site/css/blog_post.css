@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .blog-post-area .post-image-box {
-  max-height: 400px;
+  max-height: 150px;
   overflow: hidden;
 }
 .blog-post-area .post-image-box .post-image {
