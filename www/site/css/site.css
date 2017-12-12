@@ -164,11 +164,14 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .blog-post-area .post-image-box {
-  max-height: 150px;
+  max-height: 250px;
   overflow: hidden;
 }
 .blog-post-area .post-image-box .post-image {
   width: 100%;
+}
+.blog-post-area .post-header {
+  font-size: 25px;
 }
 .blog-post-area .author-info {
   padding: 15px 0px 15px 0px;
@@ -531,7 +534,7 @@ html {
 }
 body {
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   min-height: 100%;
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
   background-color: white;
