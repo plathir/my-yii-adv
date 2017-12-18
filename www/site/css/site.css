@@ -173,6 +173,11 @@ and open the template in the editor.
 .blog-post-area .post-header {
   font-size: 25px;
 }
+.blog-post-area .stars {
+  color: #ffcc00;
+  display: inline;
+  font-size: 14px;
+}
 .blog-post-area .author-info {
   padding: 15px 0px 15px 0px;
 }
@@ -208,6 +213,7 @@ and open the template in the editor.
 .blog-post-details-area .stars {
   color: #ffcc00;
   display: inline;
+  font-size: 14px;
 }
 .blog-post-details-area .post-details-author-info {
   padding: 15px 0px 15px 0px;
