@@ -9,6 +9,10 @@ and open the template in the editor.
 */
 .blog-post-details-area .post-details-header {
   font-size: 25px;
+  background-color: #A7B0BD;
+}
+.blog-post-details-area .post-details-header a {
+  color: #333333;
 }
 .blog-post-details-area .post-details-header-small {
   font-size: 15px;
@@ -26,7 +30,10 @@ and open the template in the editor.
   font-size: 14px;
 }
 .blog-post-details-area .post-details-author-info {
-  padding: 15px 0px 15px 0px;
+  background-color: aliceblue;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: 10px;
+  display: inline;
 }
 .blog-post-details-area .post-details-author-info .post-author-image {
   width: 30px;
