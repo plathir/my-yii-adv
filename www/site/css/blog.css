@@ -20,7 +20,11 @@ and open the template in the editor.
 .blog-area .panel-heading .panel-heading-title {
   font-size: 20px;
 }
-.blog-area .panel-heading .panel-heading-title .panel-heading-details {
+.blog-area .panel-heading .panel-heading-stars {
   font-size: 14px;
+}
+.panel-heading-details {
+  font-size: 15px;
+  margin-top: 5px;
 }
 /*# sourceMappingURL=blog.css.map */

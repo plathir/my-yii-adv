@@ -7,15 +7,22 @@ and open the template in the editor.
     Created on : Nov 19, 2017, 10:58:10 PM
     Author     : Panagiotis
 */
+.blog-post-details-area {
+  /*
+     Style for Star Rating
+    */
+}
 .blog-post-details-area .post-details-header {
+  border-bottom: solid;
+  border-bottom-color: #cccccc;
   font-size: 25px;
-  background-color: #A7B0BD;
 }
 .blog-post-details-area .post-details-header a {
   color: #333333;
 }
 .blog-post-details-area .post-details-header-small {
   font-size: 15px;
+  margin-top: 5px;
 }
 .blog-post-details-area .post-details-image-box {
   max-height: 250px;
@@ -27,7 +34,9 @@ and open the template in the editor.
 .blog-post-details-area .stars {
   color: #ffcc00;
   display: inline;
-  font-size: 14px;
+}
+.blog-post-details-area .rating-cust {
+  font-size: 25px;
 }
 .blog-post-details-area .post-details-author-info {
   background-color: aliceblue;

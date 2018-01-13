@@ -20,16 +20,27 @@ and open the template in the editor.
 .blog-post-area .stars {
   color: #ffcc00;
   display: inline;
-  font-size: 14px;
-}
-.blog-post-area .author-info {
-  padding: 15px 0px 15px 0px;
-}
-.blog-post-area .author-info .post-author-image {
-  width: 30px;
 }
 .blog-post-area .post-content {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.blog-post-area-footer .author-info {
+  padding: 0px;
+  display: inline-block;
+}
+.blog-post-area-footer .author-info .post-author-image {
+  width: 30px;
+  display: inline-block;
+}
+.blog-post-area-footer .author-info .post-create-date {
+  font-size: 15px;
+  display: inline-block;
+}
+/*
+ Style for Star Rating
+*/
+.rating-cust {
+  font-size: 18px;
 }
 /*# sourceMappingURL=blog_post.css.map */
