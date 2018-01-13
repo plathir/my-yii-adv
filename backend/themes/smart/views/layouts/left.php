@@ -81,7 +81,7 @@ $userHelper = new UserHelper();
                                 ['label' => 'Categories', 'icon' => 'file-text-o', 'url' => ['/blog/category'],],
                                 ['label' => 'Posts', 'icon' => 'file-text-o', 'url' => ['/blog/posts'],],
                                 ['label' => 'Static Pages', 'icon' => 'file-text-o', 'url' => ['/blog/static-pages'],],
-                                ['label' => 'Posts List Preview', 'icon' => 'file-text-o', 'url' => ['/blog/posts/list'],],
+                                ['label' => 'Carousel', 'icon' => 'file-text-o', 'url' => ['/blog/carousel'],],
                                 ['label' => 'File Manager', 'icon' => 'file-text-o', 'url' => ['/blog/posts/filemanager'],],
                             ]
                         ],
