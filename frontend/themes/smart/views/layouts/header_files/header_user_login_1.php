@@ -20,7 +20,7 @@ $userHelper = new UserHelper();
 
         <!-- Menu Body -->
         <li class="user-body">
-            
+
             <?= plathir\user\frontend\widgets\LoginWidget::widget([]); ?>
 
         </li>

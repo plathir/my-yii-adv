@@ -11,13 +11,11 @@ use Yii;
  */
 class DefaultController extends Controller {
 
-    
     public function __construct($id, $module) {
         parent::__construct($id, $module);
         $this->layout = "main";
     }
-    
-    
+
     public function behaviors() {
         return [
             'access' => [
@@ -30,7 +28,7 @@ class DefaultController extends Controller {
                     [
                         'actions' => [
                             //'index',
-                            
+
                             'filemanager',
                         ],
                         'allow' => true,
@@ -39,7 +37,8 @@ class DefaultController extends Controller {
                 ],
             ]
         ];
-    }    
+    }
+
     /**
      * Renders the index view for the module
      * @return string
@@ -53,10 +52,9 @@ class DefaultController extends Controller {
         ]);
     }
 
-    
-        public function actionFilemanager() {
+    public function actionFilemanager() {
 
         return $this->render('filemanager');
     }
-    
+
 }

@@ -15,7 +15,7 @@ if (Yii::$app->controller->action->id === 'backend-login' || Yii::$app->controll
             'main-login', ['content' => $content]
     );
 } elseif (!Yii::$app->user->isGuest) {
-    
+
     backend\assets\GoogleAsset::register($this);
     backend\assets\CodeHighlight::register($this);
     dmstr\web\AdminLteAsset::register($this);

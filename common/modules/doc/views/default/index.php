@@ -1,6 +1,4 @@
-<?php
-
-?>
+<?php ?>
 
 
 <!-- Content Header (Page header) -->

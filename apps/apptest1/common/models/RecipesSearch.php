@@ -10,13 +10,12 @@ use apps\apptest1\common\models\Recipes;
 /**
  * RecipesSearch represents the model behind the search form about `app\models\Recipes`.
  */
-class RecipesSearch extends Recipes
-{
+class RecipesSearch extends Recipes {
+
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id'], 'integer'],
             [['title', 'content'], 'safe'],
@@ -26,8 +25,7 @@ class RecipesSearch extends Recipes
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,8 +37,7 @@ class RecipesSearch extends Recipes
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Recipes::find();
 
         $dataProvider = new ActiveDataProvider([
@@ -60,8 +57,9 @@ class RecipesSearch extends Recipes
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'content', $this->content]);
+                ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }
+
 }

@@ -11,21 +11,19 @@ use Yii;
  * @property string $title
  * @property string $content
  */
-class Recipes extends \yii\db\ActiveRecord
-{
+class Recipes extends \yii\db\ActiveRecord {
+
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return '{{%recipes}}';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['title'], 'required'],
             [['content'], 'string'],
@@ -36,12 +34,12 @@ class Recipes extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => Yii::t('app', 'ID'),
             'title' => Yii::t('app', 'Title'),
             'content' => Yii::t('app', 'Content'),
         ];
     }
+
 }

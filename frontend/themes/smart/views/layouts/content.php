@@ -7,47 +7,47 @@ use plathir\widgets\common\helpers\PositionHelper;
 $positionHelper = new PositionHelper();
 ?>
 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+
+            <?php if ($positionHelper->LoadPosition('fe_dashboard_global_header')) { ?>
+                <div>
+                    <?php echo $positionHelper->LoadPosition('fe_dashboard_global_header'); ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12">
-
-                <?php if ($positionHelper->LoadPosition('fe_dashboard_global_header')) { ?>
-                    <div>
-                        <?php echo $positionHelper->LoadPosition('fe_dashboard_global_header'); ?>
-                    </div>
+            <section class="content-header">
+                <?php if (isset($this->blocks['content-header'])) { ?>
+                    <h1><?= $this->blocks['content-header'] ?></h1>
+                <?php } else { ?>
+                    <h1>
+                        <?php
+                        if ($this->title !== null) {
+                            echo \yii\helpers\Html::encode($this->title);
+                        } else {
+                            echo \yii\helpers\Inflector::camel2words(
+                                    \yii\helpers\Inflector::id2camel($this->context->module->id)
+                            );
+                            echo ($this->context->module->id !== \Yii::$app->id) ? '<small>Module</small>' : '';
+                        }
+                        ?>
+                    </h1>
                 <?php } ?>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <section class="content-header">
-                    <?php if (isset($this->blocks['content-header'])) { ?>
-                        <h1><?= $this->blocks['content-header'] ?></h1>
-                    <?php } else { ?>
-                        <h1>
-                            <?php
-                            if ($this->title !== null) {
-                                echo \yii\helpers\Html::encode($this->title);
-                            } else {
-                                echo \yii\helpers\Inflector::camel2words(
-                                        \yii\helpers\Inflector::id2camel($this->context->module->id)
-                                );
-                                echo ($this->context->module->id !== \Yii::$app->id) ? '<small>Module</small>' : '';
-                            }
-                            ?>
-                        </h1>
-                    <?php } ?>
 
-                    <?=
-                    Breadcrumbs::widget(
-                            [
-                                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                            ]
-                    );
-                    ?>
-                </section>
-            </div>
+                <?=
+                Breadcrumbs::widget(
+                        [
+                            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                        ]
+                );
+                ?>
+            </section>
         </div>
+    </div>
 
     <section class="content">
         <div class="row">
@@ -63,19 +63,19 @@ $positionHelper = new PositionHelper();
         </div>
     </section>
 
-        <div class="row">
-            <div class="main-content-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
+    <div class="row">
+        <div class="main-content-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
 
-                        </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+        </div> 
 
-        </div>                    
-    </div>
+    </div>                    
+</div>
 
 <!-- App Content End -->            
 

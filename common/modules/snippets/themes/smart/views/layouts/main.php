@@ -28,12 +28,12 @@ if (\Yii::$app->view->theme) {
     </div><!-- /.box-header -->
     <div class="box-body">
         <?php
-         $htmlFileManager = Html::a(Yii::t('app', '<i class="fa fa-folder-open"></i>File Manager'), ['/snippets/default/filemanager'], ['class' => 'btn btn-app']); 
-         $htmlSnippetsManage = Html::a(Yii::t('app', '<i class="fa fa-users"></i>' . Yii::t('app', 'Manage Snippets')), ['/snippets/snippets'], ['class' => 'btn btn-app']);
-         ?>
+        $htmlFileManager = Html::a(Yii::t('app', '<i class="fa fa-folder-open"></i>File Manager'), ['/snippets/default/filemanager'], ['class' => 'btn btn-app']);
+        $htmlSnippetsManage = Html::a(Yii::t('app', '<i class="fa fa-users"></i>' . Yii::t('app', 'Manage Snippets')), ['/snippets/snippets'], ['class' => 'btn btn-app']);
+        ?>
 
-        <?=  Html::tag('span', $htmlFileManager , ['title' => Yii::t('app', 'Open File Manager'),'data-toggle' => 'tooltip' ]) ?>
-        <?=  Html::tag('span', $htmlSnippetsManage , ['title' => Yii::t('app', 'Open Snippets Manager'),'data-toggle' => 'tooltip' ]) ?>
+        <?= Html::tag('span', $htmlFileManager, ['title' => Yii::t('app', 'Open File Manager'), 'data-toggle' => 'tooltip']) ?>
+        <?= Html::tag('span', $htmlSnippetsManage, ['title' => Yii::t('app', 'Open Snippets Manager'), 'data-toggle' => 'tooltip']) ?>
     </div>
 </div>
 <?php ?>

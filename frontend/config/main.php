@@ -14,8 +14,6 @@ $modules_var = [
         'class' => 'frontend\models\BackendDashBoard',
     ],
     'user' => [
-        
-        
         'class' => 'plathir\user\frontend\Module',
         'ProfileImagePath' => '@media/images/users',
         'ProfileImageTempPath' => '@media/temp/images/users',
@@ -24,7 +22,6 @@ $modules_var = [
         'Theme' => 'smart',
         'mediaUrl' => '@MediaUrl' . '/images/users',
         'mediaPath' => '@media' . '/images/users',
-      
     ],
     'blog' => [
         'class' => 'plathir\smartblog\frontend\Module',
@@ -184,7 +181,7 @@ return [
             'apps/*',
 //            'apptest1/*',
             'debug/*',
-           'recipes/*',
+            'recipes/*',
 //            '*'
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.

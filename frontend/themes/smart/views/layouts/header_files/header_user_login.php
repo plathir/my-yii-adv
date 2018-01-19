@@ -12,8 +12,7 @@ use \plathir\user\common\helpers\UserHelper;
 $userHelper = new UserHelper();
 ?>
 
-    <li class="dropdown user user-menu">
+<li class="dropdown user user-menu">
     <?= Html::a('<span class="fa fa-sign-in"></span><span class="hidden-xs"> Login</span>', ['/user/security/login']) ?>
 
-   </li>
-    
+</li>

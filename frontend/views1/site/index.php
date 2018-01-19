@@ -15,7 +15,7 @@ $this->title = 'My Yii Application';
                 <?php echo $positionHelper->LoadPosition('fe_blog_dashboard'); ?>
             </div>    
             <div class="col-lg-3">        
-                
+
             </div>
         </div>
     </div>

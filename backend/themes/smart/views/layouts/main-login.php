@@ -23,7 +23,7 @@ backend\assets\AdminLtePluginAsset::register($this);
 
         <?php $this->beginBody() ?>
 
-                <?= $content ?>
+        <?= $content ?>
 
 
         <?php $this->endBody() ?>

@@ -8,39 +8,39 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .blog-post-area .post-image-box {
-  max-height: 250px;
-  overflow: hidden;
+    max-height: 250px;
+    overflow: hidden;
 }
 .blog-post-area .post-image-box .post-image {
-  width: 100%;
+    width: 100%;
 }
 .blog-post-area .post-header {
-  font-size: 25px;
+    font-size: 25px;
 }
 .blog-post-area .stars {
-  color: #ffcc00;
-  display: inline;
+    color: #ffcc00;
+    display: inline;
 }
 .blog-post-area .post-content {
-  margin-top: 15px;
-  margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .blog-post-area-footer .author-info {
-  padding: 0px;
-  display: inline-block;
+    padding: 0px;
+    display: inline-block;
 }
 .blog-post-area-footer .author-info .post-author-image {
-  width: 30px;
-  display: inline-block;
+    width: 30px;
+    display: inline-block;
 }
 .blog-post-area-footer .author-info .post-create-date {
-  font-size: 15px;
-  display: inline-block;
+    font-size: 15px;
+    display: inline-block;
 }
 /*
  Style for Star Rating
 */
 .rating-cust {
-  font-size: 18px;
+    font-size: 18px;
 }
 /*# sourceMappingURL=blog_post.css.map */

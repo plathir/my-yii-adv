@@ -7,19 +7,17 @@ namespace common\modules\snippets\models;
  *
  * @see Snippets
  */
-class SnippetsQuery extends \yii\db\ActiveQuery
-{
-    /*public function active()
-    {
-        return $this->andWhere('[[status]]=1');
-    }*/
+class SnippetsQuery extends \yii\db\ActiveQuery {
+    /* public function active()
+      {
+      return $this->andWhere('[[status]]=1');
+      } */
 
     /**
      * @inheritdoc
      * @return Snippets[]|array
      */
-    public function all($db = null)
-    {
+    public function all($db = null) {
         return parent::all($db);
     }
 
@@ -27,8 +25,8 @@ class SnippetsQuery extends \yii\db\ActiveQuery
      * @inheritdoc
      * @return Snippets|array|null
      */
-    public function one($db = null)
-    {
+    public function one($db = null) {
         return parent::one($db);
     }
+
 }

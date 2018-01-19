@@ -1,5 +1,6 @@
-<?php use yii\helpers\Html;
+<?php
 
+use yii\helpers\Html;
 ?>
 
 <div class="apptest1-default-index">
@@ -14,5 +15,5 @@
         <code><?= __FILE__ ?></code>
     </p>
 
-     <?= Html::a(Yii::t('app', 'List of Recipes'), ['/apptest1/recipes/index'], ['class' => 'btn btn-success']) ?>
+    <?= Html::a(Yii::t('app', 'List of Recipes'), ['/apptest1/recipes/index'], ['class' => 'btn btn-success']) ?>
 </div>

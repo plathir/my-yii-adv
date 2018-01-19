@@ -7,7 +7,7 @@ use yii\web\AssetBundle;
 class apptest1Asset extends AssetBundle {
 
     public $js = [
-    //    'js/main.js'
+            //    'js/main.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

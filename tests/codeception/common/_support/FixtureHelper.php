@@ -11,8 +11,7 @@ use yii\test\FixtureTrait;
  * For example - populate database with demo login user that should be used in acceptance and functional tests.
  * All fixtures will be loaded before suite will be starded and unloaded after it.
  */
-class FixtureHelper extends Module
-{
+class FixtureHelper extends Module {
 
     /**
      * Redeclare visibility because codeception includes all public methods that not starts from "_"
@@ -32,24 +31,21 @@ class FixtureHelper extends Module
      * to use in acceptance and functional tests.
      * @param array $settings
      */
-    public function _beforeSuite($settings = [])
-    {
+    public function _beforeSuite($settings = []) {
         $this->loadFixtures();
     }
 
     /**
      * Method is called after all suite tests run
      */
-    public function _afterSuite()
-    {
+    public function _afterSuite() {
         $this->unloadFixtures();
     }
 
     /**
      * @inheritdoc
      */
-    public function fixtures()
-    {
+    public function fixtures() {
         return [
             'user' => [
                 'class' => UserFixture::className(),
@@ -57,4 +53,5 @@ class FixtureHelper extends Module
             ],
         ];
     }
+
 }

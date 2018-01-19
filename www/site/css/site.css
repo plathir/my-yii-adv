@@ -35,7 +35,7 @@ and open the template in the editor.
     Author     : iq10255
 */
 .btn {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -47,10 +47,10 @@ and open the template in the editor.
     Author     : iq10255
 */
 .form-control {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 .input-group-addon {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -62,27 +62,27 @@ and open the template in the editor.
     Author     : iq10255
 */
 .panel-heading {
-  border-radius: 0px;
-  border-top-style: outset;
-  background-color: whitesmoke;
+    border-radius: 0px;
+    border-top-style: outset;
+    background-color: whitesmoke;
 }
 .panel-default .panel-heading {
-  border-top-color: #999999  ;
+    border-top-color: #999999  ;
 }
 .panel-primary .panel-heading {
-  border-top-color: #265a88;
+    border-top-color: #265a88;
 }
 .panel-success .panel-heading {
-  border-top-color: #255625;
+    border-top-color: #255625;
 }
 .panel-danger .panel-heading {
-  border-top-color: #761c19;
+    border-top-color: #761c19;
 }
 .panel {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 .panel-no-border {
-  border: none;
+    border: none;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -103,7 +103,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 #site-login-area {
-  padding-top: 15px;
+    padding-top: 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -115,7 +115,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 #site-singup-area {
-  padding-top: 15px;
+    padding-top: 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -127,7 +127,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 #site-request-password-reset-area {
-  padding-top: 15px;
+    padding-top: 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -139,24 +139,24 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .blog-area .blog-list-left {
-  /*        border: 1px solid black; */
+    /*        border: 1px solid black; */
 }
 .blog-area .blog-sidebar-right {
-  /*        border: 1px solid black; */
+    /*        border: 1px solid black; */
 }
 .blog-area .blog-list-left .blog-intro-text {
-  padding: 0px 15px 15px 15px;
-  display: block;
+    padding: 0px 15px 15px 15px;
+    display: block;
 }
 .blog-area .panel-heading .panel-heading-title {
-  font-size: 20px;
+    font-size: 20px;
 }
 .blog-area .panel-heading .panel-heading-stars {
-  font-size: 14px;
+    font-size: 14px;
 }
 .panel-heading-details {
-  font-size: 15px;
-  margin-top: 5px;
+    font-size: 15px;
+    margin-top: 5px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -168,40 +168,40 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .blog-post-area .post-image-box {
-  max-height: 250px;
-  overflow: hidden;
+    max-height: 250px;
+    overflow: hidden;
 }
 .blog-post-area .post-image-box .post-image {
-  width: 100%;
+    width: 100%;
 }
 .blog-post-area .post-header {
-  font-size: 25px;
+    font-size: 25px;
 }
 .blog-post-area .stars {
-  color: #ffcc00;
-  display: inline;
+    color: #ffcc00;
+    display: inline;
 }
 .blog-post-area .post-content {
-  margin-top: 15px;
-  margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .blog-post-area-footer .author-info {
-  padding: 0px;
-  display: inline-block;
+    padding: 0px;
+    display: inline-block;
 }
 .blog-post-area-footer .author-info .post-author-image {
-  width: 30px;
-  display: inline-block;
+    width: 30px;
+    display: inline-block;
 }
 .blog-post-area-footer .author-info .post-create-date {
-  font-size: 15px;
-  display: inline-block;
+    font-size: 15px;
+    display: inline-block;
 }
 /*
  Style for Star Rating
 */
 .rating-cust {
-  font-size: 18px;
+    font-size: 18px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -213,49 +213,49 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .blog-post-details-area {
-  /*
-     Style for Star Rating
+    /*
+       Style for Star Rating
     */
 }
 .blog-post-details-area .post-details-header {
-  border-bottom: solid;
-  border-bottom-color: #cccccc;
-  font-size: 25px;
+    border-bottom: solid;
+    border-bottom-color: #cccccc;
+    font-size: 25px;
 }
 .blog-post-details-area .post-details-header a {
-  color: #333333;
+    color: #333333;
 }
 .blog-post-details-area .post-details-header-small {
-  font-size: 15px;
-  margin-top: 5px;
+    font-size: 15px;
+    margin-top: 5px;
 }
 .blog-post-details-area .post-details-image-box {
-  max-height: 250px;
-  overflow: hidden;
+    max-height: 250px;
+    overflow: hidden;
 }
 .blog-post-details-area .post-details-image-box .post-details-image {
-  width: 100%;
+    width: 100%;
 }
 .blog-post-details-area .stars {
-  color: #ffcc00;
-  display: inline;
+    color: #ffcc00;
+    display: inline;
 }
 .blog-post-details-area .rating-cust {
-  font-size: 25px;
+    font-size: 25px;
 }
 .blog-post-details-area .post-details-author-info {
-  background-color: aliceblue;
-  padding: 0px 0px 0px 0px;
-  margin-bottom: 10px;
-  display: inline;
+    background-color: aliceblue;
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 10px;
+    display: inline;
 }
 .blog-post-details-area .post-details-author-info .post-author-image {
-  width: 30px;
-  display: inline;
+    width: 30px;
+    display: inline;
 }
 .blog-post-details-area .post-details-content {
-  margin-top: 15px;
-  margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -267,18 +267,18 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .footer {
-  width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  background-color: #2C3E50;
-  color: #ecf0f1;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    background-color: #2C3E50;
+    color: #ecf0f1;
 }
 .footer a:visited {
-  color: #ecf0f1;
+    color: #ecf0f1;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -290,7 +290,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .profile-area {
-  padding-top: 15px;
+    padding-top: 15px;
 }
 /*    .profile-img {
         display: block;
@@ -350,33 +350,33 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .user-profile-box {
-  /*    .profile-tab  {
-    
-            a {
-                margin-right :0px;
-                border-radius: 0px;
-            }
-            .active {
-                border-top-style: outset;
-                border-top-color:  #33ccff;
-            }
-        }*/
+    /*    .profile-tab  {
+      
+              a {
+                  margin-right :0px;
+                  border-radius: 0px;
+              }
+              .active {
+                  border-top-style: outset;
+                  border-top-color:  #33ccff;
+              }
+          }*/
 }
 .user-profile-box .profile-img {
-  display: block;
-  width: 100px;
-  margin: 0 auto ;
-  padding: 3px;
-  border: 3px solid #d2d6de;
+    display: block;
+    width: 100px;
+    margin: 0 auto ;
+    padding: 3px;
+    border: 3px solid #d2d6de;
 }
 .user-profile-box .panel-heading {
-  border-top-style: outset;
-  border-top-color: #33ccff;
-  background-color: white;
+    border-top-style: outset;
+    border-top-color: #33ccff;
+    background-color: white;
 }
 .user-profile-box .profile-item {
-  border-left: none;
-  border-right: none;
+    border-left: none;
+    border-right: none;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -388,24 +388,24 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .user-profile-tabs {
-  border: none;
+    border: none;
 }
 .user-profile-tabs .panel-heading {
-  border-top-style: outset;
-  border-top-color: #33ccff;
-  background-color: white;
+    border-top-style: outset;
+    border-top-color: #33ccff;
+    background-color: white;
 }
 .user-profile-tabs .profile-item {
-  border-left: none;
-  border-right: none;
+    border-left: none;
+    border-right: none;
 }
 .user-profile-tabs .profile-tab a {
-  margin-right: 0px;
-  border-radius: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
 }
 .user-profile-tabs .profile-tab .active {
-  border-top-style: outset;
-  border-top-color: #33ccff;
+    border-top-style: outset;
+    border-top-color: #33ccff;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -425,120 +425,120 @@ and open the template in the editor.
 @colbgHighlight : #c0392b;*/
 /* Dark Grey */
 .navbar-default {
-  border-radius: 0px;
-  background-color: #2C3E50;
-  border-color: #566573;
+    border-radius: 0px;
+    background-color: #2C3E50;
+    border-color: #566573;
 }
 .navbar-default .app-image {
-  width: 18px;
+    width: 18px;
 }
 .navbar-default .navbar-brand {
-  color: #ecf0f1;
-  font-size: 20px !important;
-  min-width: 200px;
-  text-align: center;
-  font-weight: 800;
+    color: #ecf0f1;
+    font-size: 20px !important;
+    min-width: 200px;
+    text-align: center;
+    font-weight: 800;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #D5D8DC;
+    color: #D5D8DC;
 }
 .navbar-default .navbar-text {
-  color: #ecf0f1;
+    color: #ecf0f1;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #ecf0f1;
-  padding-left: 5px;
-  padding-right: 5px;
+    color: #ecf0f1;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  background-color: #566573;
-  color: #D5D8DC;
+    background-color: #566573;
+    color: #D5D8DC;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #D5D8DC;
-  background-color: #566573;
+    color: #D5D8DC;
+    background-color: #566573;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #D5D8DC;
-  background-color: #566573;
+    color: #D5D8DC;
+    background-color: #566573;
 }
 .navbar-default .navbar-toggle {
-  border-color: #566573;
+    border-color: #566573;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #566573;
+    background-color: #566573;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #ecf0f1;
+    background-color: #ecf0f1;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #ecf0f1;
+    border-color: #ecf0f1;
 }
 .navbar-default .navbar-link {
-  color: #ecf0f1;
+    color: #ecf0f1;
 }
 .navbar-default .navbar-link:hover {
-  color: #D5D8DC;
+    color: #D5D8DC;
 }
 .navbar-default .nav-user-image {
-  width: 25px;
-  margin-top: -2px;
-  margin-right: 10px;
-  float: left;
+    width: 25px;
+    margin-top: -2px;
+    margin-right: 10px;
+    float: left;
 }
 .navbar-default .navbar-user-dropdown {
-  min-height: 210px;
+    min-height: 210px;
 }
 .navbar-default .navbar-user-dropdown {
-  min-height: 210px;
-  width: 300px;
-  padding: 0px;
+    min-height: 210px;
+    width: 300px;
+    padding: 0px;
 }
 .navbar-default .navbar-user-dropdown .nav-user-image-dropdown-box {
-  background-color: #2C3E50;
-  min-height: 150px;
+    background-color: #2C3E50;
+    min-height: 150px;
 }
 .navbar-default .navbar-user-dropdown .nav-user-image-dropdown-box .nav-user-image-dropdown {
-  height: 100px;
-  width: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 10px;
+    height: 100px;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 10px;
 }
 .navbar-default .navbar-user-dropdown .nav-user-image-dropdown-box .nav-user-name-dropdown {
-  color: white;
-  margin-bottom: 10px;
-  text-align: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .navbar-default .navbar-user-dropdown .nav-user-buttons-dropdown {
-  min-height: 45px;
+    min-height: 45px;
 }
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #ecf0f1;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #D5D8DC;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #D5D8DC;
-    background-color: #566573;
-  }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #D5D8DC;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #D5D8DC;
+        background-color: #566573;
+    }
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -550,86 +550,86 @@ and open the template in the editor.
     Author     : iq10255
 */
 .content-header {
-  position: relative;
-  padding: 15px 0px 15px 0px;
+    position: relative;
+    padding: 15px 0px 15px 0px;
 }
 .content-header > h1 {
-  margin: 0;
-  font-size: 24px;
+    margin: 0;
+    font-size: 24px;
 }
 .content-header > h1 > small {
-  font-size: 15px;
-  display: inline-block;
-  padding-left: 4px;
-  font-weight: 300;
+    font-size: 15px;
+    display: inline-block;
+    padding-left: 4px;
+    font-weight: 300;
 }
 .content-header > .breadcrumb {
-  float: right;
-  background: transparent;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 12px;
-  padding: 7px 5px;
-  position: absolute;
-  top: 15px;
-  right: 10px;
+    float: right;
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    padding: 7px 5px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
 }
 .content-header > .breadcrumb > li > a {
-  color: #444;
-  text-decoration: none;
-  display: inline-block;
+    color: #444;
+    text-decoration: none;
+    display: inline-block;
 }
 .content-header > .breadcrumb > li > a > .fa,
 .content-header > .breadcrumb > li > a > .glyphicon,
 .content-header > .breadcrumb > li > a > .ion {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 .content-header > .breadcrumb > li + li:before {
-  content: '>\00a0';
+    content: '>\00a0';
 }
 @media (max-width: 767px) {
-  .content-header > .breadcrumb {
-    position: relative;
-    margin-top: 5px;
-    top: 0;
-    right: 0;
-    float: none;
-    /*      background: @gray-lte;*/
-    padding-left: 10px;
-  }
-  .content-header > .breadcrumb li:before {
-    /*        color: darken(@gray-lte, 20%);*/
-  }
+    .content-header > .breadcrumb {
+        position: relative;
+        margin-top: 5px;
+        top: 0;
+        right: 0;
+        float: none;
+        /*      background: @gray-lte;*/
+        padding-left: 10px;
+    }
+    .content-header > .breadcrumb li:before {
+        /*        color: darken(@gray-lte, 20%);*/
+    }
 }
 html {
-  height: 100%;
-  min-height: 100%;
-  /*    width : 100%;*/
+    height: 100%;
+    min-height: 100%;
+    /*    width : 100%;*/
 }
 body {
-  position: relative;
-  padding-bottom: 4rem;
-  min-height: 100%;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-  background-color: white;
+    position: relative;
+    padding-bottom: 4rem;
+    min-height: 100%;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    background-color: white;
 }
 .container {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 .image-in-list {
-  width: 100px;
+    width: 100px;
 }
 .main-carousel {
-  margin-bottom: 15px;
-  max-height: 400px;
+    margin-bottom: 15px;
+    max-height: 400px;
 }
 .main-carousel .carousel-inner {
-  max-height: 400px;
+    max-height: 400px;
 }
 .label-pill {
-  padding-right: .6em;
-  padding-left: .6em;
-  border-radius: 10rem;
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
 }
 /*# sourceMappingURL=site.css.map */

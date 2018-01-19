@@ -15,7 +15,7 @@ return [
     'modules' => [
         'datecontrol' => [
             'class' => 'kartik\datecontrol\Module'
-            ],
+        ],
 //            // format settings for displaying each date attribute (ICU format example)
 //            'displaySettings' => [
 //                Module::FORMAT_DATE => 'php:d-m-Y',

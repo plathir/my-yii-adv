@@ -69,7 +69,6 @@ $modules_var = [
     'snippets' => [
         'class' => 'common\modules\snippets\Module',
     ],
-
 //    'treemanager' => [
 //        'class' => '\kartik\tree\Module',
 //    // enter other module properties if needed

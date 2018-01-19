@@ -1,7 +1,7 @@
 <?php
 
 use plathir\user\common\helpers\UserHelper;
-        use mdm\admin\components\MenuHelper;
+use mdm\admin\components\MenuHelper;
 
 $userHelper = new UserHelper();
 ?>
@@ -38,7 +38,6 @@ $userHelper = new UserHelper();
                 [
                     'options' => ['class' => 'sidebar-menu'],
                     'items' => [
-
                         ['label' => 'Main Menu', 'options' => ['class' => 'header']],
                         ['label' => 'Users', 'icon' => 'fa fa-users', 'url' => ['/user/admin']],
                         ['label' => 'Blog', 'icon' => 'fa fa-list-alt', 'url' => ['/blog'],
@@ -58,13 +57,12 @@ $userHelper = new UserHelper();
                             ]
                         ],
                         ['label' => 'Widgets', 'icon' => 'fa fa-gear', 'url' => ['/widgets'],],
-                        ['label' => 'Permissions', 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 1) ],                        
+                        ['label' => 'Permissions', 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 1)],
 //                        [
 //                            'label' => 'Permissions',
 //                            'icon' => 'fa fa-share',
 //                            'url' => '#',
-                            
-                          //  'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id)
+                        //  'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id)
 //                            [
 //                                ['label' => 'Roles', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/role'],],
 //                                ['label' => 'Routes', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/route'],],
@@ -79,12 +77,11 @@ $userHelper = new UserHelper();
                             'icon' => 'fa fa-book',
                             'url' => ['/doc'],
                         ],
-                                                [
+                        [
                             'label' => 'Code Snippets',
                             'icon' => 'fa fa-gear',
                             'url' => ['/snippets'],
                         ]
-                        
                     ],
                 ]
         )

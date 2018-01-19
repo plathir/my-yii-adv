@@ -26,7 +26,7 @@ and open the template in the editor.
     Author     : iq10255
 */
 .btn {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -38,10 +38,10 @@ and open the template in the editor.
     Author     : iq10255
 */
 .form-control {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 .input-group-addon {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -53,26 +53,26 @@ and open the template in the editor.
     Author     : iq10255
 */
 .panel-heading {
-  border-radius: 0px;
-  border-top-style: outset;
-  background-color: whitesmoke;
+    border-radius: 0px;
+    border-top-style: outset;
+    background-color: whitesmoke;
 }
 .panel-default .panel-heading {
-  border-top-color: #999999  ;
+    border-top-color: #999999  ;
 }
 .panel-primary .panel-heading {
-  border-top-color: #265a88;
+    border-top-color: #265a88;
 }
 .panel-success .panel-heading {
-  border-top-color: #255625;
+    border-top-color: #255625;
 }
 .panel-danger .panel-heading {
-  border-top-color: #761c19;
+    border-top-color: #761c19;
 }
 .panel {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 .panel-no-border {
-  border: none;
+    border: none;
 }
 /*# sourceMappingURL=smart.css.map */

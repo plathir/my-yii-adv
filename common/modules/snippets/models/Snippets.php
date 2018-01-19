@@ -55,7 +55,6 @@ class Snippets extends \yii\db\ActiveRecord {
             [['description', 'full_text', 'publish'], 'required'],
             [['example'], 'string'],
             [['full_text'], 'string'],
-            
             [['description'], 'string', 'max' => 255],
             [['publish'], 'string', 'max' => 1],
         ];
@@ -101,6 +100,7 @@ class Snippets extends \yii\db\ActiveRecord {
 
         return $badge;
     }
+
     public function getCreatedByName() {
         return $this->hasOne(User::className(), ['id' => 'created_by'])->select(['username'])->one()->username;
     }
@@ -108,4 +108,5 @@ class Snippets extends \yii\db\ActiveRecord {
     public function getUpdatedByName() {
         return $this->hasOne(User::className(), ['id' => 'updated_by'])->select(['username'])->one()->username;
     }
+
 }

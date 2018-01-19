@@ -100,10 +100,11 @@ AppAsset::register($this);
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">   
-                            
+
                             <?php
                             $positionHelper = new PositionHelper();
-                            echo $positionHelper->LoadPosition('fe_blog_dashboard_footer'); ?>
+                            echo $positionHelper->LoadPosition('fe_blog_dashboard_footer');
+                            ?>
                         </div>
                     </div>    
                     <p class="pull-left">&copy; My Company <?= date('Y') ?></p>

@@ -10,7 +10,7 @@ use kartik\widgets\SwitchInput;
 ?>
 
 <div class="snippets-form">
-   <div class="box box-info">
+    <div class="box box-info">
         <div class="box-header with-border">
             <h3 class="box-title"><?= Html::encode($this->title) ?></h3>
             <div class="box-tools pull-right">
@@ -35,7 +35,7 @@ use kartik\widgets\SwitchInput;
             ?>
             <?= $form->field($model, 'publish')->widget(SwitchInput::classname(), []); ?>
             <?= $form->field($model, 'example')->textInput() ?>
-            
+
             <div class="box-footer"> 
                 <div class="form-group">
                     <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>

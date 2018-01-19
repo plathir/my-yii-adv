@@ -25,12 +25,12 @@ $userHelper = new UserHelper();
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
 
-                    <?php
-                    echo Nav::widget([
-                        'options' => ['class'=> 'dropdown-menu', 'color' => 'black' ],
-                        'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 9)
-                    ]);
-                    ?>
+                <?php
+                echo Nav::widget([
+                    'options' => ['class' => 'dropdown-menu', 'color' => 'black'],
+                    'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 9)
+                ]);
+                ?>
 
 
             </li>

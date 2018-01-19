@@ -10,8 +10,7 @@ class Examples extends Model {
     /**
      * @inheritdoc
      */
-            public $publish;
-            
+    public $publish;
 
     /**
      * @inheritdoc
@@ -30,4 +29,5 @@ class Examples extends Model {
             'publish' => Yii::t('app', 'Publish'),
         ];
     }
+
 }

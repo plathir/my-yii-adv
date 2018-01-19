@@ -2,21 +2,20 @@
 
 namespace apps\apptest1\backend;
 
-class Module extends \yii\base\Module
-{
+class Module extends \yii\base\Module {
+
     public $controllerNamespace = 'apps\apptest1\controllers';
 
-    public function init()
-    {
+    public function init() {
         parent::init();
         $this->setModules([
             'settings' => [
                 'class' => 'plathir\settings\Module',
-                 'modulename' => 'apptest1'
+                'modulename' => 'apptest1'
             ],
         ]);
 
-        $this->setComponents([    
+        $this->setComponents([
             'settings' => [
                 'class' => 'plathir\settings\components\Settings',
                 'modulename' => 'apptest1'
@@ -24,4 +23,5 @@ class Module extends \yii\base\Module
         ]);
         // custom initialization code goes here
     }
+
 }

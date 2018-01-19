@@ -16,15 +16,14 @@ $this->title = 'My Yii Application';
 <?php
 $comp = \Yii::$app->getModules();
 
-$userHelper =  new UserHelper();
-$postHelper =  new PostHelper();
+$userHelper = new UserHelper();
+$postHelper = new PostHelper();
 
 $positionHelper = new PositionHelper();
 
 $LatestUsers = $userHelper->getLatestUsers(5);
 $LatestPosts = $postHelper->getLatestPosts(10);
-
-        ?>
+?>
 
 <div class="row row-centered">
 

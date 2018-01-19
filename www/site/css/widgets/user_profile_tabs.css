@@ -8,23 +8,23 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .user-profile-tabs {
-  border: none;
+    border: none;
 }
 .user-profile-tabs .panel-heading {
-  border-top-style: outset;
-  border-top-color: #33ccff;
-  background-color: white;
+    border-top-style: outset;
+    border-top-color: #33ccff;
+    background-color: white;
 }
 .user-profile-tabs .profile-item {
-  border-left: none;
-  border-right: none;
+    border-left: none;
+    border-right: none;
 }
 .user-profile-tabs .profile-tab a {
-  margin-right: 0px;
-  border-radius: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
 }
 .user-profile-tabs .profile-tab .active {
-  border-top-style: outset;
-  border-top-color: #33ccff;
+    border-top-style: outset;
+    border-top-color: #33ccff;
 }
 /*# sourceMappingURL=user_profile_tabs.css.map */

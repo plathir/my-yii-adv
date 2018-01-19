@@ -25,7 +25,6 @@ $positionHelper = new PositionHelper();
 
 $LatestUsers = $userHelper->getLatestUsers(5);
 $LatestPosts = $postHelper->getLatestPosts(10);
-
 ?>
 
 <div class="row row-centered">

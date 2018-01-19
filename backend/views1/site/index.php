@@ -35,7 +35,6 @@ $applications = $appsHelper->getAppsList();
         echo $this->render(
                 'apps.php', ['applications' => $applications]
         );
-               
         ?>
         <?= '' // Html::a('test', Yii::$app->urlManagerFrontEnd->getBaseUrl() . DIRECTORY_SEPARATOR . Yii::$app->urlManagerFrontEnd->createUrl('/blog/posts/list')) . '<br>'; ?>
     </div>
@@ -54,14 +53,13 @@ $applications = $appsHelper->getAppsList();
 
     <div class="col-md-8">
         <?= $positionHelper->LoadPosition('be_dashboard_position1'); ?>
-        <?php 
+        <?php
 //        use mdm\admin\components\MenuHelper;
 //        use yii\bootstrap\Nav;
 //
 //        echo Nav::widget([
 //            'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id)
 //        ]);
-
         ?>
     </div>
 

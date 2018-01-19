@@ -25,17 +25,16 @@ $userHelper = new UserHelper();
                 </li>
                 <?php
             }
-            
             ?>
-                <li>
-                      <?= Html::a(Yii::t('app', '<img src="images/add_user.png" title ="Create New User" >' ), ['/user/admin/create']) ?>  
-                </li>                    
-                
-                </li>
+            <li>
+                <?= Html::a(Yii::t('app', '<img src="images/add_user.png" title ="Create New User" >'), ['/user/admin/create']) ?>  
+            </li>                    
+
+            </li>
         </ul><!-- /.users-list -->
     </div><!-- /.box-body -->
     <div class="box-footer text-center">
-        
+
         <?= Html::a(Yii::t('app', 'View All Users'), ['/user/admin'], ['class' => 'uppercase right']) ?>
     </div><!-- /.box-footer -->
 </div><!--/.box -->

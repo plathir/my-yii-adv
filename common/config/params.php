@@ -1,4 +1,5 @@
 <?php
+
 use kartik\datecontrol\Module;
 
 return [
@@ -6,8 +7,6 @@ return [
     'supportEmail' => 'support@example.com',
     'user.passwordResetTokenExpire' => 113600,
     'user.activateTokenExpire' => 113600,
-    
-    
 //    // format settings for displaying each date attribute (ICU format example)
 //    'dateControlDisplay' => [
 //        Module::FORMAT_DATE => 'php:d-m-Y',
@@ -21,5 +20,4 @@ return [
 //        Module::FORMAT_TIME => 'php:H:i:s',
 //        Module::FORMAT_DATETIME => 'php:Y-m-d H:i:s',
 //    ]
-
 ];

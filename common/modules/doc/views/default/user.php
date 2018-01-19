@@ -77,11 +77,11 @@
                 <div id="backend_login">
                     Backend Login
                 </div>
-                
+
                 <div id="backend_create_new_user">
                     New User
                 </div>
-                
+
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <a href="yii2-user.php" class="btn btn-sm btn-default btn-flat pull-right">More</a>
