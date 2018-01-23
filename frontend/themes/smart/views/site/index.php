@@ -20,7 +20,7 @@ $this->title = Yii::$app->settings->getSettings('ApplicationName');
             <?php echo $positionHelper->LoadPosition('fe_dashboard'); ?>
         </div>    
         <div class="col-lg-3">    
-
+           <?php echo $positionHelper->LoadPosition('fe_dashboard_right'); ?>
         </div>
     </div>
 </div>

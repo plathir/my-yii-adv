@@ -11,6 +11,26 @@ return [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
         ],
+        'log' => [
+            'targets' => [
+                'file' => [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning'],
+                    'logFile' => '@runtime/logs/error.log',
+                ],
+//                [
+//                    'class' => 'yii\log\FileTarget',
+//                    'categories' => ['blog'],
+//                    'logFile' => '@app/runtime/logs/blog.log',
+//                ],
+                
+                [
+                    'class' => 'yii\log\DbTarget',
+                    'categories' => ['blog'],                    
+                    //'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
     ],
     'modules' => [
         'datecontrol' => [
