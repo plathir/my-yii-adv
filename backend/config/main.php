@@ -69,6 +69,21 @@ $modules_var = [
     'snippets' => [
         'class' => 'common\modules\snippets\Module',
     ],
+    'log' => [
+        'class' => 'plathir\log\backend\Module',
+    ],
+    'logreader' => [
+        'class' => 'zhuravljov\yii\logreader\Module',
+        'aliases' => [
+            'Frontend Errors' => '@frontend/runtime/logs/app.log',
+            'Frontend Blog Errors' => '@frontend/runtime/logs/blog.log',
+            'Backend Errors' => '@backend/runtime/logs/app.log',
+            'Backend Errors1' => '@backend/runtime/logs/errors.log',
+            'Console Errors' => '@console/runtime/logs/app.log',
+        ],
+        'viewPath' => '@vendor/plathir/yii2-smart-log/backend/themes/smart/views/logreader',
+        'layout'=>'main',
+    ],
 //    'treemanager' => [
 //        'class' => '\kartik\tree\Module',
 //    // enter other module properties if needed
@@ -226,6 +241,7 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => [
         'log',
+        'logreader',
     //      'app\components\Bootstrap'
     ],
     'modules' => $modules_var,
@@ -241,6 +257,7 @@ return [
         'allowActions' => [
             'debug/*',
             'datecontrol/*',
+//              'log/*',
 //      'admin/*'
 //            'settings/*'
 //              'site/*',

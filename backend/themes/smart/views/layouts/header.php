@@ -172,6 +172,11 @@ $userHelper = new UserHelper();
                             <ul class="menu">
                                 <li>
                                     <a href="#">
+                                        <i class="fa fa-users text-aqua"></i> <?= \plathir\log\backend\widgets\LatestLogMsg::widget(); ?>
+                                    </a>
+                                </li>                                
+                                <li>
+                                    <a href="#">
                                         <i class="fa fa-users text-aqua"></i> 5 new members joined today
                                     </a>
                                 </li>
