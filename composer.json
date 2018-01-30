@@ -44,7 +44,9 @@
         "vintage/yii2-search": "*",
         "yii2mod/yii2-markdown": "*",   
         "altiore/yii2-markdown": "*",
-        "lav45/yii2-aceeditor": "1.1.*"
+        "lav45/yii2-aceeditor": "1.1.*",  
+        "zhuravljov/yii2-logreader": "*",
+        "abhi1693/yii2-system-info": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

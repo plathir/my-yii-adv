@@ -108,6 +108,23 @@ $userHelper = new UserHelper();
 //                            ],
 //                        ],
                         [
+                            'label' => 'System',
+                            'icon' => 'database',
+                            'url' => ['#'],
+                            'items' => [
+                                [
+                                    'label' => 'System Infos',
+                                    'icon' => '',
+                                    'url' => ['/site/system'],
+                                ],
+                                [
+                                    'label' => 'Log',
+                                    'icon' => '',
+                                    'url' => ['/log/log'],
+                                ],
+                            ]
+                        ],
+                        [
                             'label' => 'Documentation',
                             'icon' => 'book',
                             'url' => ['/doc'],

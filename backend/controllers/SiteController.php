@@ -26,7 +26,7 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'site-settings', 'search'],
+                        'actions' => ['logout', 'index', 'site-settings', 'search', 'system'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -61,6 +61,15 @@ class SiteController extends Controller {
         } else {
             throw new \yii\web\NotAcceptableHttpException(Yii::t('app', 'No Permission to Backend index'));
         }
+    }
+
+    public function actionSystem() {
+       // if (\yii::$app->user->can('BackendIndex')) {
+
+            return $this->render('system');
+//        } else {
+//            throw new \yii\web\NotAcceptableHttpException(Yii::t('app', 'No Permission to Backend index'));
+//        }
     }
 
     public function actionSearch($q) {
