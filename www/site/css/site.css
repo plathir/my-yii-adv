@@ -225,6 +225,9 @@ and open the template in the editor.
 .blog-post-details-area .post-details-header a {
   color: #333333;
 }
+.blog-post-details-area .post-details-header .button-edit {
+  color: white;
+}
 .blog-post-details-area .post-details-header-small {
   font-size: 15px;
   margin-top: 5px;

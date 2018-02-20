@@ -8,48 +8,51 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .blog-post-details-area {
-    /*
-       Style for Star Rating
+  /*
+     Style for Star Rating
     */
 }
 .blog-post-details-area .post-details-header {
-    border-bottom: solid;
-    border-bottom-color: #cccccc;
-    font-size: 25px;
+  border-bottom: solid;
+  border-bottom-color: #cccccc;
+  font-size: 25px;
 }
 .blog-post-details-area .post-details-header a {
-    color: #333333;
+  color: #333333;
+}
+.blog-post-details-area .post-details-header .button-edit {
+  color: white;
 }
 .blog-post-details-area .post-details-header-small {
-    font-size: 15px;
-    margin-top: 5px;
+  font-size: 15px;
+  margin-top: 5px;
 }
 .blog-post-details-area .post-details-image-box {
-    max-height: 250px;
-    overflow: hidden;
+  max-height: 250px;
+  overflow: hidden;
 }
 .blog-post-details-area .post-details-image-box .post-details-image {
-    width: 100%;
+  width: 100%;
 }
 .blog-post-details-area .stars {
-    color: #ffcc00;
-    display: inline;
+  color: #ffcc00;
+  display: inline;
 }
 .blog-post-details-area .rating-cust {
-    font-size: 25px;
+  font-size: 25px;
 }
 .blog-post-details-area .post-details-author-info {
-    background-color: aliceblue;
-    padding: 0px 0px 0px 0px;
-    margin-bottom: 10px;
-    display: inline;
+  background-color: aliceblue;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: 10px;
+  display: inline;
 }
 .blog-post-details-area .post-details-author-info .post-author-image {
-    width: 30px;
-    display: inline;
+  width: 30px;
+  display: inline;
 }
 .blog-post-details-area .post-details-content {
-    margin-top: 15px;
-    margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=blog_post_details.css.map */
