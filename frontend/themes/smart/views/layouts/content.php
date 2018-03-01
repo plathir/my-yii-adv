@@ -41,6 +41,8 @@ $positionHelper = new PositionHelper();
                 <?=
                 Breadcrumbs::widget(
                         [
+                            'homeLink' => ['label' => 'Home',
+                                'url' => Yii::$app->getHomeUrl() . '/' . Yii::$app->controller->module->id],
                             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                         ]
                 );

@@ -20,6 +20,9 @@ and open the template in the editor.
 .blog-post-details-area .post-details-header a {
   color: #333333;
 }
+.blog-post-details-area .post-details-header a:hover {
+  text-decoration: none;
+}
 .blog-post-details-area .post-details-header .button-edit {
   color: white;
 }
