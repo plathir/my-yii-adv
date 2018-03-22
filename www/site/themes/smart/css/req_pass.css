@@ -4,10 +4,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Nov 24, 2017, 10:43:14 AM
-    Author     : iq10255
+    Created on : Nov 19, 2017, 11:29:57 PM
+    Author     : Panagiotis
 */
-.btn {
-    border-radius: 0px;
+#site-request-password-reset-area {
+  padding-top: 15px;
 }
-/*# sourceMappingURL=buttons.css.map */
+/*# sourceMappingURL=req_pass.css.map */

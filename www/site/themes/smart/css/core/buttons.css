@@ -4,10 +4,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Nov 19, 2017, 11:12:19 PM
-    Author     : Panagiotis
+    Created on : Nov 24, 2017, 10:43:14 AM
+    Author     : iq10255
 */
-#site-singup-area {
-    padding-top: 15px;
+.btn {
+  border-radius: 0px;
 }
-/*# sourceMappingURL=singup.css.map */
+/*# sourceMappingURL=buttons.css.map */

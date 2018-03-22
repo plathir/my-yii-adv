@@ -17,7 +17,7 @@ use yii\web\View;
 //    );
 //} else {
 
-frontend\assets\GoogleAsset::register($this);
+frontend\assets\themes\smart\GoogleAsset::register($this);
 //dmstr\web\AdminLteAsset::register($this);
 //frontend\assets\AdminLtePluginAsset::register($this);
 //
@@ -27,7 +27,7 @@ frontend\assets\GoogleAsset::register($this);
 //    app\assets\AppAsset::register($this);
 //}
 
-frontend\assets\AppAsset::register($this);
+frontend\assets\themes\smart\AppAsset::register($this);
 
 //$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 ?>

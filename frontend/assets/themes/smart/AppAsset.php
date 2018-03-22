@@ -6,7 +6,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace frontend\assets;
+namespace frontend\assets\themes\smart;
 
 use yii\web\AssetBundle;
 
@@ -19,11 +19,11 @@ class AppAsset extends AssetBundle {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'site/css/site.css',
-        'site/fa/css/font-awesome.min.css'
+        'site/themes/smart/css/site.css',
+        'site/themes/smart/fa/css/font-awesome.min.css'
     ];
     public $js = [
-        'site/js/site.js'
+        'site/themes/smart/js/site.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
