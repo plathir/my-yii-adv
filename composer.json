@@ -17,7 +17,11 @@
         {
             "type": "vcs",
             "url": "https://github.com/plathir/yii2-search"
-        }
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }        
     ],
     "require": {
         "php": ">=5.4.0",
@@ -32,6 +36,7 @@
         "plathir/yii2-smart-settings": "@dev",
         "plathir/yii2-smart-widgets": "@dev",        
         "plathir/yii2-smart-log": "@dev",        
+        "plathir/yii2-smart-templates": "@dev",        
         "dmstr/yii2-adminlte-asset": "2.4.4",
         "yiisoft/yii2-jui": "^2.0",
         "kartik-v/yii2-ipinfo": "*",
@@ -55,12 +60,10 @@
         "yiisoft/yii2-faker": "*"
     },
     "config": {
-        "process-timeout": 1800
-    },
-    "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
         }
     }
 }
+

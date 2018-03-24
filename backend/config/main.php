@@ -72,6 +72,9 @@ $modules_var = [
     'log' => [
         'class' => 'plathir\log\backend\Module',
     ],
+    'templates' => [
+        'class' => 'plathir\templates\backend\Module',
+    ],
     'logreader' => [
         'class' => 'zhuravljov\yii\logreader\Module',
         'aliases' => [
@@ -82,7 +85,7 @@ $modules_var = [
             'Console Errors' => '@console/runtime/logs/app.log',
         ],
         'viewPath' => '@vendor/plathir/yii2-smart-log/backend/themes/smart/views/logreader',
-        'layout'=>'main',
+        'layout' => 'main',
     ],
 //    'treemanager' => [
 //        'class' => '\kartik\tree\Module',
@@ -171,7 +174,7 @@ $components_var = [
     ],
     'widgets' => [
         'class' => 'plathir\widgets\backend\Module',
-    ],
+    ],   
     'assetManager' => [
         'bundles' => [
             'dmstr\web\AdminLteAsset' => [
