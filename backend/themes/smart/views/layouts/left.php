@@ -113,6 +113,12 @@ $userHelper = new UserHelper();
                             'url' => ['#'],
                             'items' => [
                                 [
+                                    'label' => 'Templates',
+                                    'icon' => '',
+                                    'url' => ['/templates'],
+                                ],
+                                
+                                [
                                     'label' => 'System Infos',
                                     'icon' => '',
                                     'url' => ['/site/system'],
