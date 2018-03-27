@@ -158,6 +158,9 @@ $components_var = [
         'class' => 'plathir\settings\components\Settings',
         'modulename' => 'site',
     ],
+    'templates' => [
+        'class' => 'plathir\templates\components\Templates',
+    ],
     'urlManager' => [
         'class' => 'yii\web\urlManager',
         //'showScriptName' => false,
@@ -174,7 +177,7 @@ $components_var = [
     ],
     'widgets' => [
         'class' => 'plathir\widgets\backend\Module',
-    ],   
+    ],
     'assetManager' => [
         'bundles' => [
             'dmstr\web\AdminLteAsset' => [
