@@ -69,7 +69,7 @@ $userHelper = new UserHelper();
         <?=
         dmstr\widgets\Menu::widget(
                 [
-                    'options' => ['class' => 'sidebar-menu'],
+                    'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
                     'items' => [
                         ['label' => 'Applications', 'options' => ['class' => 'header']],
                         $apps_items,
@@ -117,7 +117,6 @@ $userHelper = new UserHelper();
                                     'icon' => '',
                                     'url' => ['/templates'],
                                 ],
-                                
                                 [
                                     'label' => 'System Infos',
                                     'icon' => '',

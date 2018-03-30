@@ -4,6 +4,14 @@ use \kartik\datecontrol\Module;
 
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    // uncomment line for move vendors folder to share with another apps
+   // 'vendorPath' => dirname(dirname(dirname(__DIR__))) . '/frameworks/yii2',
+    // uncomment lines for move vendors folder to share with another apps
+    
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm' => '@vendor/npm-asset',
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -23,11 +31,10 @@ return [
 //                    'categories' => ['blog'],
 //                    'logFile' => '@app/runtime/logs/blog.log',
 //                ],
-                
                 [
                     'class' => 'yii\log\DbTarget',
-                    'categories' => ['blog'],                    
-                    //'levels' => ['error', 'warning'],
+                    'categories' => ['blog'],
+                //'levels' => ['error', 'warning'],
                 ],
             ],
         ],

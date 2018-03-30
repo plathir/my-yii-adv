@@ -5,6 +5,12 @@ defined('YII_ENV') or define('YII_ENV', 'dev');
 
 require(__DIR__ . '/../vendor/autoload.php');
 require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
+
+// uncomment lines for move vendors folder to share with another apps
+//require(__DIR__ . '/../../frameworks/yii2/autoload.php');
+//require(__DIR__ . '/../../frameworks/yii2/yiisoft/yii2/Yii.php');
+// uncomment lines for move vendors folder to share with another apps
+
 require(__DIR__ . '/../common/config/bootstrap.php');
 require(__DIR__ . '/../frontend/config/bootstrap.php');
 require(__DIR__ . '/../common/config/aliases.php');
