@@ -13,6 +13,6 @@ $userHelper = new UserHelper();
 ?>
 
 <li class="dropdown user user-menu">
-    <?= Html::a('<span class="fa fa-sign-in"></span><span class="hidden-xs"> Login</span>', ['/user/security/login']) ?>
+    <?= Html::a('<span class="fa fa-sign-in"></span><span> Login</span>', ['/user/security/login']) ?>
 
 </li>
