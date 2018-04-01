@@ -49,6 +49,9 @@ $modules_var = [
     'installer' => [
         'class' => 'common\modules\installer\Module',
     ],
+    'templates' => [
+        'class' => 'plathir\templates\backend\Module',
+    ]
 ];
 
 $components_var = [
@@ -131,6 +134,9 @@ $components_var = [
             ],
         ]
     ],
+    'templates' => [
+        'class' => 'plathir\templates\components\Templates',
+    ]
 ];
 
 // load apps
