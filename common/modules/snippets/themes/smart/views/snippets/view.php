@@ -1,9 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
 use yii\helpers\Markdown;
-use yii\web\View;
 
 /* @var $this yii\web\View */
 /* @var $model common\modules\snippets\models\Snippets */

@@ -37,7 +37,8 @@ $modules_var = [
         'CategoryImageTempPathPreview' => '/media/temp/images/blog/categories',
         'KeyFolder' => 'id',
         'userModel' => 'plathir\user\common\models\account\User',
-        'userNameField' => 'username'
+        'userNameField' => 'username',
+        'editor' => 'CKEditor'
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',

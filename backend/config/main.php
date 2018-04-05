@@ -46,6 +46,7 @@ $modules_var = [
         'userModel' => 'plathir\user\common\models\account\User',
         'userNameField' => 'username',
         'Theme' => 'smart',
+        'editor' => 'markdown',
 //        'i18n' => [
 //            'class' => 'yii\i18n\PhpMessageSource',
 //            'basePath' => '@vendor/kartik-v/yii2-tree-manager/messages',
