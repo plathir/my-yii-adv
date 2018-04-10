@@ -32,11 +32,13 @@ echo Nav::widget([
     'items' => $menuItemsLeft,
 ]);
 
-echo Nav::widget([
-    'encodeLabels' => false,
-    'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
-    'items' => $menuAppItemsLeft,
-]);
+if ($menuAppItemsLeft) {   
+    echo Nav::widget([
+        'encodeLabels' => false,
+        'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
+        'items' => $menuAppItemsLeft,
+    ]);
+}
 
 $url = Url::toRoute(['/site/search']);
 $search_html = '<form action="' . $url . '" method="get" class="navbar-form navbar-nav navbar-left" role = "search"> 
