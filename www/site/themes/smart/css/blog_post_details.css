@@ -31,7 +31,7 @@ and open the template in the editor.
   margin-top: 5px;
 }
 .blog-post-details-area .post-details-image-box {
-  max-height: 250px;
+  /*        max-height: 250px; */
   overflow: hidden;
 }
 .blog-post-details-area .post-details-image-box .post-details-image {
