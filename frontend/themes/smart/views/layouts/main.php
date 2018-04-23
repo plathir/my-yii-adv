@@ -28,6 +28,7 @@ frontend\assets\themes\smart\GoogleAsset::register($this);
 //}
 
 frontend\assets\themes\smart\AppAsset::register($this);
+frontend\assets\themes\smart\CodeHighlight::register($this);
 
 //$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 ?>
@@ -70,6 +71,13 @@ frontend\assets\themes\smart\AppAsset::register($this);
                 });", View::POS_END
         );
         ?>
+
+        <?php
+        // Code Syntax highlight
+        $this->registerJs(
+                "hljs.initHighlightingOnLoad();", View::POS_END);
+        ?>
+
     </body>
 </html>
 <?php $this->endPage() ?>
