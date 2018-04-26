@@ -126,16 +126,16 @@ $components_var = [
 //            ],
 //        ]
 //    ],
-//    'authClientCollection' => [
-//        'class' => 'yii\authclient\Collection',
-//        'clients' => [
+    'authClientCollection' => [
+        'class' => 'yii\authclient\Collection',
+        'clients' => [
 //            'facebook' => [
 //                'class' => 'yii\authclient\clients\Facebook',
 //                'clientId' => '1705693669662485',
 //                'clientSecret' => 'a20b265600a4a65506e13f4494ebe4b4',
 //            ],
-//        ],
-//    ],
+        ],
+    ],
     'authManager' => [
         'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
     ],

@@ -67,16 +67,16 @@ $components_var = [
     'blog' => [
         'class' => 'plathir\smartblog\frontend',
     ],
-//    'authClientCollection' => [
-//        'class' => 'yii\authclient\Collection',
-//        'clients' => [
+    'authClientCollection' => [
+        'class' => 'yii\authclient\Collection',
+        'clients' => [
 //            'facebook' => [
 //                'class' => 'yii\authclient\clients\Facebook',
 //                'clientId' => '784640361639775',
 //                'clientSecret' => 'e9baa391de0f48838d3137682dd1ae5a',
 //            ],
-//        ],
-//    ],
+        ],
+    ],
     'authManager' => [
         'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
     ],
