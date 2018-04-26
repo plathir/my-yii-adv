@@ -163,7 +163,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log',
-        'app\components\Bootstrap',
+        //'app\components\Bootstrap',
     ],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => $modules_var,
