@@ -58,6 +58,7 @@
     },
     
     "config": {
+        "vendor-dir": "/var/www/frameworks/yii2",
         "process-timeout": 1800,
         "fxp-asset": {
             "enabled": false

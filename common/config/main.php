@@ -2,8 +2,11 @@
 
 use \kartik\datecontrol\Module;
 
+//require(__DIR__ . '/../../siteconfig/frontend.php');
+
 return [
-    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    //'vendorPath' => $vendor_path,
+   // 'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     // uncomment line for move vendors folder to share with another apps
    // 'vendorPath' => dirname(dirname(dirname(__DIR__))) . '/frameworks/yii2',
     // uncomment lines for move vendors folder to share with another apps
