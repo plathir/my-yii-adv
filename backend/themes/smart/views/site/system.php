@@ -30,11 +30,6 @@ $system = SystemInfo::getInfo();
                 <td>Operating System</td>
                 <td><?= $system::getOS() ?></td>
             </tr>
-            <tr>
-                <td>Kernel Version</td>
-                <td><?= $system::getKernelVersion() ?></td>
-            </tr>
-            <tr>
                 <td>CPU Model</td>
                 <td><?= $system::getCpuModel() ?></td>
             </tr>
@@ -47,20 +42,12 @@ $system = SystemInfo::getInfo();
                 <td><?= $system::getCpuFreq() ?></td>
             </tr>
             <tr>
-                <td>CPU Architecture</td>
-                <td><?= $system::getCpuArchitecture() ?></td>
-            </tr>
-            <tr>
                 <td>CPU Cores</td>
                 <td><?= $system::getCpuCores() ?></td>
             </tr>
             <tr>
                 <td>Load</td>
                 <td><?= $system::getLoad() ?></td>
-            </tr>
-            <tr>
-                <td>Up Time</td>
-                <td><?= $system::getUpTime() ?></td>
             </tr>
             <tr>
                 <td>PHP Version</td>
