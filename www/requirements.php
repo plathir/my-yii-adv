@@ -10,8 +10,10 @@
  * If you are using Linux you can create a hard link instead, using the following command:
  * ln requirements.php ../requirements.php
  */
-// you may need to adjust this path to the correct Yii framework path
-$frameworkPath = dirname(__FILE__) . '/vendor/yiisoft/yii2';
+ 
+ require(__DIR__ . '/../siteconfig/vendorpath.php');
+
+$frameworkPath =  $vendor_path.'/yiisoft/yii2';
 
 if (!is_dir($frameworkPath)) {
     echo '<h1>Error</h1>';
