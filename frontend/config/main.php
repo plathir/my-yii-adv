@@ -107,11 +107,11 @@ $components_var = [
         'enablePrettyUrl' => true,
         //'showScriptName' => false,
         'rules' => [
-            '<module>/posts/<id:\d+>-<slug>' => '<module>/posts/view',
-            '<module>/posts/<id:\d+>' => '<module>/posts/view',
-            '<module>/posts/update/<id:\d+>-<slug>' => '<module>/posts/update',
-            '<module>/posts/update/<id:\d+>' => '<module>/posts/update',
-            '<module>/category/<id:\d+>' => '<module>/posts/category',
+//            '<module>/posts/<id:\d+>-<slug>' => '<module>/posts/view',
+//            '<module>/posts/<id:\d+>' => '<module>/posts/view',
+//            '<module>/posts/update/<id:\d+>-<slug>' => '<module>/posts/update',
+//            '<module>/posts/update/<id:\d+>' => '<module>/posts/update',
+//            '<module>/category/<id:\d+>' => '<module>/posts/category',
         ]
     ],
     'view' => [
@@ -169,7 +169,9 @@ closedir($handle);
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log',
+    'bootstrap' => [
+        'log',
+        'frontend\components\ModuleBootstrap'
     //'app\components\Bootstrap',
     ],
     'controllerNamespace' => 'frontend\controllers',

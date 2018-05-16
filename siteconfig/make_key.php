@@ -1,8 +1,9 @@
 <?php
 
-//Make $cookieValidationKey for frontend and backend
+// Make $cookieValidationKey for frontend and backend
 
-//read the entire string
+// read the entire string for backend and frontend
+
 $frontend = file_get_contents('frontend.php');
 $backend = file_get_contents('backend.php');
 
