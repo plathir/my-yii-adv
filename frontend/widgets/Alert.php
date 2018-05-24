@@ -24,8 +24,6 @@ namespace frontend\widgets;
  * \Yii::$app->getSession()->setFlash('error', ['Error 1', 'Error 2']);
  * ```
  *
- * @author Kartik Visweswaran <kartikv2@gmail.com>
- * @author Alexander Makarov <sam@rmcreative.ru>
  */
 class Alert extends \yii\bootstrap\Widget {
 
