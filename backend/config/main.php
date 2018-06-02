@@ -168,6 +168,7 @@ $components_var = [
         //'showScriptName' => false,
         'enablePrettyUrl' => true,
         'rules' => [
+        'encodeParams' => false,
         //'admin' => 'www/admin',
         ]
     ],
