@@ -105,8 +105,10 @@ $components_var = [
     'urlManager' => [
         //   'baseUrl' => $baseUrl,
         'enablePrettyUrl' => true,
+        
         //'showScriptName' => false,
         'rules' => [
+            
 //            '<module>/posts/<id:\d+>-<slug>' => '<module>/posts/view',
 //            '<module>/posts/<id:\d+>' => '<module>/posts/view',
 //            '<module>/posts/update/<id:\d+>-<slug>' => '<module>/posts/update',
