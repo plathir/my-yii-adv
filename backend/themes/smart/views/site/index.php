@@ -3,7 +3,7 @@
 
 use yii\helpers\Html;
 use plathir\user\common\helpers\UserHelper;
-use plathir\smartblog\helpers\PostHelper;
+use plathir\smartblog\backend\helpers\PostHelper;
 use plathir\smartblog\backend\widgets\LatestPosts;
 use plathir\apps\models\AppsSearch;
 use plathir\apps\helpers\AppsHelper;
