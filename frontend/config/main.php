@@ -107,9 +107,9 @@ $components_var = [
 //        'baseUrl' => $baseUrl,
 //    ],
     'urlManager' => [
-        //   'baseUrl' => $baseUrl,
+        //   'baseUrl' => $baseUrl,       
         'enablePrettyUrl' => true,
-        //'showScriptName' => false,
+        'showScriptName' => false,
         'rules' => [
 //            '<module>/posts/<id:\d+>-<slug>' => '<module>/posts/view',
 //            '<module>/posts/<id:\d+>' => '<module>/posts/view',
