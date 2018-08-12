@@ -65,7 +65,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //        ],
 //    ])
             ?>
-            <?= Markdown::process($model->full_text, 'gfm'); ?>
+            <?= Markdown::process($model->full_text, 'extra'); ?>
             <?php
             if ($model->example) {
                 echo '<h4>Example:</h4>';

@@ -89,12 +89,12 @@ $modules_var = [
         'viewPath' => '@vendor/plathir/yii2-smart-log/backend/themes/smart/views/logreader',
         'layout' => 'main',
     ],
-//    'treemanager' => [
-//        'class' => '\kartik\tree\Module',
-//    // enter other module properties if needed
-//    // for advanced/personalized configuration
-//    // (refer module properties available below)
-//    ]
+    'treemanager' => [
+        'class' => '\kartik\tree\Module',
+    // enter other module properties if needed
+    // for advanced/personalized configuration
+    // (refer module properties available below)
+    ]
 ];
 
 $components_var = [

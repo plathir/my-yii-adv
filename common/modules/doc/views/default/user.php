@@ -1,4 +1,8 @@
-<?php ?>
+<?php 
+
+
+use yii\helpers\Markdown;
+?>
 
 
 <section class="content-header">
@@ -30,59 +34,11 @@
                 <!-- /.box-header -->
 
                 <div class="box-body">
-                    Yii2-smart-user Extension
-                    <hr>
 
-                    <p>
-                    <h3>
-                        Backend 
-                    </h3>
-                    <ul>
-                        <li><a href="#backend_login">Login User</a></li>
-                        <li>Create new User</li>
-                        <li>Admin Users</li>
-                        <li>Roles for Users</li>
-                        <li>Update Profile</li>
-                        <li>Change Password</li>
-                    </ul>
-                    <code>
-                        &lt;?php echo 'this is a test' ?&gt;
-                    </code>
-                    </p>
-                    <p>
-                    <h3>
-                        Frontend 
-                    </h3>
-                    <ul>
-                        <li>sign up User</li>
-                        <li>Login User</li>
-                        <li>Update Profile</li>
-                        <li>Change Password</li>
-                        <li>Password Recover</li>
-                    </ul>
+                    <?php $markdown_data = file_get_contents(__DIR__ . "/user.md"); ?>
+                    <?= Markdown::process($markdown_data, 'extra'); ?>
 
-                    </p>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <div id="backend_login">
-                    Backend Login
-                </div>
-
-                <div id="backend_create_new_user">
-                    New User
-                </div>
-
-                <!-- /.box-body -->
+                    <!-- /.box-body -->
                 <div class="box-footer">
                     <a href="yii2-user.php" class="btn btn-sm btn-default btn-flat pull-right">More</a>
                 </div>
