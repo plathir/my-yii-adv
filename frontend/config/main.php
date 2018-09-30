@@ -37,8 +37,8 @@ $modules_var = [
         'KeyFolder' => 'id',
         'userModel' => 'plathir\user\common\models\account\User',
         'userNameField' => 'username',
-        //'editor' => 'CKEditor'
-        'editor' => 'markdown'
+        'editor' => 'CKEditor'
+        //'editor' => 'markdown'
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
