@@ -25,6 +25,16 @@ and open the template in the editor.
     Created on : Nov 24, 2017, 11:13:05 AM
     Author     : iq10255
 */
+/* Dark Grey */
+/* Red Color 
+ 
+@bgDefault      : #e74c3c;
+@bgHighlight    : #c0392b;
+@colDefault     : #ecf0f1;
+@colHighlight   : #ffbbbc;
+@colbgHighlight : #c0392b;
+
+*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -129,6 +139,57 @@ and open the template in the editor.
 #site-request-password-reset-area {
   padding-top: 15px;
 }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2017, 11:00:55 PM
+    Author     : Panagiotis
+*/
+.profile-area {
+  padding-top: 15px;
+}
+/*    .profile-img {
+        display: block;
+        width: 100px;
+        margin: 0 auto ;
+        padding: 3px; 
+        border: 3px solid #d2d6de;
+    }
+
+    .panel-heading {
+        border-top-style: outset;
+        border-top-color:  #33ccff;
+        background-color: white; 
+    }
+
+    .profile-item {
+        border-left: none;
+        border-right: none;
+    }
+
+    .profile-tab  {
+
+        a {
+            margin-right :0px;
+            border-radius: 0px;
+        }
+        .active {
+            border-top-style: outset;
+            border-top-color:  #33ccff;
+
+            a {
+            }
+        }
+        :hover {
+        }
+
+        :focus {
+        }
+    }
+}*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -356,57 +417,6 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Nov 19, 2017, 11:00:55 PM
-    Author     : Panagiotis
-*/
-.profile-area {
-  padding-top: 15px;
-}
-/*    .profile-img {
-        display: block;
-        width: 100px;
-        margin: 0 auto ;
-        padding: 3px; 
-        border: 3px solid #d2d6de;
-    }
-
-    .panel-heading {
-        border-top-style: outset;
-        border-top-color:  #33ccff;
-        background-color: white; 
-    }
-
-    .profile-item {
-        border-left: none;
-        border-right: none;
-    }
-
-    .profile-tab  {
-
-        a {
-            margin-right :0px;
-            border-radius: 0px;
-        }
-        .active {
-            border-top-style: outset;
-            border-top-color:  #33ccff;
-
-            a {
-            }
-        }
-        :hover {
-        }
-
-        :focus {
-        }
-    }
-}*/
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
     Created on : Nov 24, 2017, 3:54:16 PM
     Author     : iq10255
 */
@@ -493,7 +503,14 @@ and open the template in the editor.
 @colDefault     : #ecf0f1;
 @colHighlight   : #ffbbbc;
 @colbgHighlight : #c0392b;*/
-/* Dark Grey */
+/* Dark Grey
+@bgDefault      : #2C3E50;
+@bgHighlight    : #566573;
+@colDefault     : #ecf0f1;
+@colHighlight   : #D5D8DC; 
+@colbgHighlight : #566573;
+
+ */
 .navbar-default {
   border-radius: 0px;
   background-color: #2C3E50;
