@@ -27,14 +27,12 @@ use yii\helpers\Html;
                                     ]
                             ), ["/$application->name"], ['class' => 'btn btn-default']);
                     ?>
-                    <p><strong><?= $application->descr ?></strong></p>
-
+                </div>
+                <div class="row row-centered">
+                    <strong><?= $application->descr ?></strong>
                 </div>
             </div>            
         <?php } ?>
 
     </div><!-- /.box-body -->
-    <div class="box-footer">
-        Test footer
-    </div><!-- /.box-footer-->
 </div><!--/.direct-chat -->
