@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2017, 10:58:10 PM
+    Author     : Panagiotis
+*/
+.recipes-recipe-area .recipe-image-box {
+  /*        max-height: 250px; */
+  overflow: hidden;
+}
+.recipes-recipe-area .recipe-image-box .post-image {
+  width: 100%;
+}
+.recipes-recipe-area .recipe-header {
+  font-size: 25px;
+}
+.recipes-recipe-area .stars {
+  color: #ffcc00;
+  display: inline;
+}
+.recipes-recipe-area .recipe-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.recipes-recipe-area-footer .author-info {
+  padding: 0px;
+  display: inline-block;
+}
+.recipes-recipe-area-footer .author-info .post-author-image {
+  width: 30px;
+  display: inline-block;
+}
+.recipes-recipe-area-footer .author-info .recipe-create-date {
+  font-size: 15px;
+  display: inline-block;
+}
+/*
+ Style for Star Rating
+*/
+.rating-cust {
+  font-size: 18px;
+}
+/*# sourceMappingURL=recipes_recipes.css.map */

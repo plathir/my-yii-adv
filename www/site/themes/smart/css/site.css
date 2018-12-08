@@ -394,6 +394,204 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
+    Created on : Nov 19, 2017, 10:58:10 PM
+    Author     : Panagiotis
+*/
+.recipes-area .blog-list-left {
+  /*        border: 1px solid black; */
+}
+.recipes-area .recipes-sidebar-right {
+  /*        border: 1px solid black; */
+}
+.recipes-area .recipes-list-left .blog-intro-text {
+  padding: 0px 15px 15px 15px;
+  display: block;
+}
+.recipes-area .panel-heading .panel-heading-title {
+  font-size: 20px;
+}
+.recipes-area .panel-heading .panel-heading-title a:hover {
+  text-decoration: none;
+}
+.recipes-area .panel-heading .panel-heading-stars {
+  font-size: 14px;
+}
+.panel-heading-details {
+  font-size: 15px;
+  margin-top: 5px;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2017, 10:58:10 PM
+    Author     : Panagiotis
+*/
+.recipes-recipe-area .recipe-image-box {
+  /*        max-height: 250px; */
+  overflow: hidden;
+}
+.recipes-recipe-area .recipe-image-box .post-image {
+  width: 100%;
+}
+.recipes-recipe-area .recipe-header {
+  font-size: 25px;
+}
+.recipes-recipe-area .stars {
+  color: #ffcc00;
+  display: inline;
+}
+.recipes-recipe-area .recipe-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.recipes-recipe-area-footer .author-info {
+  padding: 0px;
+  display: inline-block;
+}
+.recipes-recipe-area-footer .author-info .post-author-image {
+  width: 30px;
+  display: inline-block;
+}
+.recipes-recipe-area-footer .author-info .recipe-create-date {
+  font-size: 15px;
+  display: inline-block;
+}
+/*
+ Style for Star Rating
+*/
+.rating-cust {
+  font-size: 18px;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2017, 10:58:10 PM
+    Author     : Panagiotis
+*/
+.recipes-recipe-details-area {
+  /*
+     Style for Star Rating
+    */
+}
+.recipes-recipe-details-area .recipe-details-header {
+  border-bottom: solid;
+  border-bottom-color: #cccccc;
+  font-size: 25px;
+}
+.recipes-recipe-details-area .recipe-details-header a {
+  color: #333333;
+}
+.recipes-recipe-details-area .recipe-details-header a:hover {
+  text-decoration: none;
+}
+.recipes-recipe-details-area .recipe-details-header .button-edit {
+  color: white;
+}
+.recipes-recipe-details-area .recipe-details-header-small {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.recipes-recipe-details-area .recipe-details-image-box {
+  /*        max-height: 250px; */
+  overflow: hidden;
+}
+.recipes-recipe-details-area .recipe-details-image-box .post-details-image {
+  width: 100%;
+}
+.recipes-recipe-details-area .stars {
+  color: #ffcc00;
+  display: inline;
+}
+.recipes-recipe-details-area .rating-cust {
+  font-size: 25px;
+}
+.recipes-recipe-details-area .recipe-details-author-info {
+  background-color: aliceblue;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: 10px;
+  display: inline;
+}
+.recipes-recipe-details-area .recipe-details-author-info .recipe-author-image {
+  width: 30px;
+  display: inline;
+}
+.recipes-recipe-details-area .recipe-details-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2017, 10:58:10 PM
+    Author     : Panagiotis
+*/
+.recipes-grid-recipe {
+  min-height: 470px;
+  margin-bottom: 5px;
+  /*    .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .text {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }*/
+}
+.recipes-grid-recipe:hover {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+}
+.recipes-grid-recipe .title {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.recipes-grid-recipe .title a:hover {
+  text-decoration: none;
+}
+.recipes-grid-recipe .grid-image {
+  max-height: 350px;
+  overflow: hidden;
+  max-width: 450px;
+  display: block;
+  /*        .middle {
+                    &:hover  {
+                        opacity: 1;  
+                    }           
+                }*/
+}
+.recipes-grid-recipe .grid-image img {
+  width: 100%;
+  /*border-radius: 4px;*/
+}
+.recipes-grid-recipe .grid-image img:hover {
+  opacity: 0.8;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
     Created on : Nov 19, 2017, 11:15:10 PM
     Author     : Panagiotis
 */
