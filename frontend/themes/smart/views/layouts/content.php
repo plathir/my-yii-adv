@@ -85,7 +85,7 @@ $positionHelper = new PositionHelper();
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                Copyright &copy; 2017 by <a href="http://www.smartbyii.com"><strong>SmartByii.com</strong></a>
+                Copyright &copy; 2018-2019 by <a href="http://www.smartbyii.com"><strong>SmartByii.com</strong></a>
                 <span class="pull-right"><strong>1.0</strong></span>
             </div>
         </div>

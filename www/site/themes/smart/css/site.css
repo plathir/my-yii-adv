@@ -535,7 +535,7 @@ and open the template in the editor.
     Author     : Panagiotis
 */
 .recipes-grid-recipe {
-  min-height: 470px;
+  min-height: 350px;
   margin-bottom: 5px;
   /*    .middle {
             transition: .5s ease;
@@ -569,9 +569,9 @@ and open the template in the editor.
   text-decoration: none;
 }
 .recipes-grid-recipe .grid-image {
-  max-height: 350px;
+  max-height: 250px;
   overflow: hidden;
-  max-width: 450px;
+  max-width: 330px;
   display: block;
   /*        .middle {
                     &:hover  {
