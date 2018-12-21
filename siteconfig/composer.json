@@ -56,7 +56,7 @@
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1"
     },
-    
+
     "config": {
         "vendor-dir": "/var/www/frameworks/yii2",
         "process-timeout": 1800,
