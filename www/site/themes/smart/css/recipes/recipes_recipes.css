@@ -11,7 +11,7 @@ and open the template in the editor.
   /*        max-height: 250px; */
   overflow: hidden;
 }
-.recipes-recipe-area .recipe-image-box .post-image {
+.recipes-recipe-area .recipe-image-box .recipe-image {
   width: 100%;
 }
 .recipes-recipe-area .recipe-header {
@@ -29,7 +29,7 @@ and open the template in the editor.
   padding: 0px;
   display: inline-block;
 }
-.recipes-recipe-area-footer .author-info .post-author-image {
+.recipes-recipe-area-footer .author-info .recipe-author-image {
   width: 30px;
   display: inline-block;
 }

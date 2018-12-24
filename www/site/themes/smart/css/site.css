@@ -403,7 +403,7 @@ and open the template in the editor.
 .recipes-area .recipes-sidebar-right {
   /*        border: 1px solid black; */
 }
-.recipes-area .recipes-list-left .blog-intro-text {
+.recipes-area .recipes-list-left .recipes-intro-text {
   padding: 0px 15px 15px 15px;
   display: block;
 }
@@ -433,7 +433,7 @@ and open the template in the editor.
   /*        max-height: 250px; */
   overflow: hidden;
 }
-.recipes-recipe-area .recipe-image-box .post-image {
+.recipes-recipe-area .recipe-image-box .recipe-image {
   width: 100%;
 }
 .recipes-recipe-area .recipe-header {
@@ -451,7 +451,7 @@ and open the template in the editor.
   padding: 0px;
   display: inline-block;
 }
-.recipes-recipe-area-footer .author-info .post-author-image {
+.recipes-recipe-area-footer .author-info .recipe-author-image {
   width: 30px;
   display: inline-block;
 }
@@ -501,7 +501,7 @@ and open the template in the editor.
   /*        max-height: 250px; */
   overflow: hidden;
 }
-.recipes-recipe-details-area .recipe-details-image-box .post-details-image {
+.recipes-recipe-details-area .recipe-details-image-box .recipe-details-image {
   width: 100%;
 }
 .recipes-recipe-details-area .stars {

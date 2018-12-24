@@ -34,7 +34,7 @@ and open the template in the editor.
   /*        max-height: 250px; */
   overflow: hidden;
 }
-.recipes-recipe-details-area .recipe-details-image-box .post-details-image {
+.recipes-recipe-details-area .recipe-details-image-box .recipe-details-image {
   width: 100%;
 }
 .recipes-recipe-details-area .stars {
