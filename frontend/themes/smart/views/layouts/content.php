@@ -62,7 +62,9 @@ $positionHelper = new PositionHelper();
                     </div>             
                 </div>
             <?php }; ?>
+            
             <?= $content ?>
+            
         </div>
     </section>
 

@@ -10,7 +10,9 @@ $positionHelper = new PositionHelper();
 $this->title = Yii::$app->settings->getSettings('ApplicationName');
 ?>
 
+<div class="container">
     <?php
     $layoutHelper = new LayoutHelper();
     echo $layoutHelper->LoadLayout(__FILE__);
     ?>    
+</div>
