@@ -3,6 +3,7 @@
 use yii\widgets\Breadcrumbs;
 use dmstr\widgets\Alert;
 use plathir\widgets\common\helpers\PositionHelper;
+use plathir\widgets\common\helpers\LayoutHelper;
 
 $positionHelper = new PositionHelper();
 ?>
@@ -11,11 +12,11 @@ $positionHelper = new PositionHelper();
     <div class="row">
         <div class="col-lg-12 col-md-12">
 
-            <?php if ($positionHelper->LoadPosition('fe_dashboard_global_header')) { ?>
-                <div>
-                    <?php echo $positionHelper->LoadPosition('fe_dashboard_global_header'); ?>
-                </div>
-            <?php } ?>
+    <?php
+    $layoutHelper = new LayoutHelper();
+    echo $layoutHelper->LoadLayout(__FILE__);
+    ?>             
+
         </div>
     </div>
     <div class="container">
