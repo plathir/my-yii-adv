@@ -12,10 +12,10 @@ $positionHelper = new PositionHelper();
     <div class="row">
         <div class="col-lg-12 col-md-12">
 
-    <?php
-    $layoutHelper = new LayoutHelper();
-    echo $layoutHelper->LoadLayout(__FILE__);
-    ?>             
+            <?php
+            $layoutHelper = new LayoutHelper();
+            echo $layoutHelper->LoadLayout(__FILE__);
+            ?>             
 
         </div>
     </div>
@@ -28,7 +28,7 @@ $positionHelper = new PositionHelper();
                     <h1>
                         <?php
                         if ($this->title !== null) {
-                            echo \yii\helpers\Html::encode($this->title);
+                        //    echo \yii\helpers\Html::encode($this->title);
                         } else {
                             echo \yii\helpers\Inflector::camel2words(
                                     \yii\helpers\Inflector::id2camel($this->context->module->id)
@@ -62,9 +62,9 @@ $positionHelper = new PositionHelper();
                     </div>             
                 </div>
             <?php }; ?>
-            
+
             <?= $content ?>
-            
+
         </div>
     </section>
 

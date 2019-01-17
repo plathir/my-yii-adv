@@ -38,7 +38,7 @@ $modules_var = [
         'userModel' => 'plathir\user\common\models\account\User',
         'userNameField' => 'username',
         'editor' => 'CKEditor'
-        //'editor' => 'markdown'
+    //'editor' => 'markdown'
     ],
     'apps' => [
         'class' => 'plathir\apps\Module',
@@ -56,7 +56,10 @@ $modules_var = [
     'treemanager' => [
         'class' => '\kartik\tree\Module',
     // other module settings, refer detailed documentation
-    ]
+    ],
+    'doc' => [
+        'class' => 'common\modules\doc\Module',
+    ],
 ];
 
 $components_var = [
