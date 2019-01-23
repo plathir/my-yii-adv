@@ -1,4 +1,5 @@
 <?php
+
 $params = array_merge(
         require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
@@ -111,10 +112,10 @@ $components_var = [
 //    ],
     'urlManager' => [
         //   'baseUrl' => $baseUrl,   
-        'class' => 'codemix\localeurls\UrlManager',
-        // List all supported languages here
-        // Make sure, you include your app's default language.
-        'languages' => ['en', 'el'],
+//        'class' => 'codemix\localeurls\UrlManager',
+//        // List all supported languages here
+//        // Make sure, you include your app's default language.
+//        'languages' => ['en', 'el'],
         'enablePrettyUrl' => true,
         'showScriptName' => false,
         'rules' => [
@@ -156,7 +157,17 @@ $components_var = [
     ],
     'templates' => [
         'class' => 'plathir\templates\components\Templates',
-    ]
+    ],
+    'i18n' => [
+        'translations' => [
+            'app*' => [
+                'class' => 'yii\i18n\PhpMessageSource',
+                //'basePath' => '@app/messages',
+                //'sourceLanguage' => 'en-US',
+                'basePath' => Yii::getAlias('@frontend/messages'),
+            ],
+        ],
+    ],
 ];
 
 // load apps

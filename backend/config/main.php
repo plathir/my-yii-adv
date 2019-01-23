@@ -285,7 +285,6 @@ return [
         if (Yii::$app->session->get('lang')) {
             Yii::$app->language = Yii::$app->session->get('lang');
         } else {
-            echo 'Language EN';
             Yii::$app->language = 'en';
         }
     },
