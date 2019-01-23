@@ -89,7 +89,7 @@ $modules_var = [
         'viewPath' => '@vendor/plathir/yii2-smart-log/backend/themes/smart/views/logreader',
         'layout' => 'main',
     ],
-       'treemanager' => [
+    'treemanager' => [
         'class' => '\kartik\tree\Module',
     // other module settings, refer detailed documentation
     ],
@@ -178,7 +178,7 @@ $components_var = [
         //'showScriptName' => false,
         'enablePrettyUrl' => true,
         'rules' => [
-       // 'encodeParams' => false,
+        // 'encodeParams' => false,
         //'admin' => 'www/admin',
         ]
     ],
@@ -211,6 +211,18 @@ $components_var = [
             ],
         ]
     ],
+    
+    'i18n' => [
+        'translations' => [
+            'app*' => [
+                'class' => 'yii\i18n\PhpMessageSource',
+                //'basePath' => '@app/messages',
+                //'sourceLanguage' => 'en-US',
+                'basePath' => Yii::getAlias('@backend/messages'),
+            ],
+        ],
+    ],
+    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
@@ -269,6 +281,12 @@ return [
         $user = Yii::$app->user->identity;
         if ($user && $user->timezone) {
             Yii::$app->setTimeZone($user->timezone);
+        }
+        if (Yii::$app->session->get('lang')) {
+            Yii::$app->language = Yii::$app->session->get('lang');
+        } else {
+            echo 'Language EN';
+            Yii::$app->language = 'en';
         }
     },
     'as access' => [

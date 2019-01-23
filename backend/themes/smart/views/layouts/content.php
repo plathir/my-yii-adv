@@ -3,6 +3,7 @@
 use yii\widgets\Breadcrumbs;
 use dmstr\widgets\Alert;
 use yii\helpers\Url;
+use yii\helpers\Html;
 ?>
 <div class="content-wrapper">
     <section class="content-header">
@@ -23,6 +24,12 @@ use yii\helpers\Url;
                 ?>
             </h1>
         <?php } ?>
+
+        <?php
+//        echo \Yii::t('app', 'Language :'). Yii::$app->language . ' | ';
+//        echo Html::a(\Yii::t('app', 'English'), Url::toRoute(['/site/changelang', 'language' => 'en'])). ' | ';
+//        echo Html::a(\Yii::t('app', 'Greek'), Url::toRoute(['/site/changelang', 'language' => 'el']));
+        ?>
         <?=
         Breadcrumbs::widget(
                 [

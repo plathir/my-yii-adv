@@ -3,6 +3,7 @@
 use plathir\user\common\helpers\UserHelper;
 use mdm\admin\components\MenuHelper;
 use yii\helpers\Url;
+use yii\helpers\Html;
 
 $userHelper = new UserHelper();
 ?>
@@ -21,6 +22,12 @@ $userHelper = new UserHelper();
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
+        
+                <?php
+        echo \Yii::t('app', 'Language :'). Yii::$app->language . ' | ';
+        echo Html::a(\Yii::t('app', 'English'), Url::toRoute(['/site/changelang', 'language' => 'en'])). ' | ';
+        echo Html::a(\Yii::t('app', 'Greek'), Url::toRoute(['/site/changelang', 'language' => 'el']));
+        ?>
 
         <!-- search form -->
         <?php $url = Url::toRoute(['/site/search']) ?>

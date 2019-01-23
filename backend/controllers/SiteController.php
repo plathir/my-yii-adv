@@ -1,5 +1,4 @@
 <?php
-
 namespace backend\controllers;
 
 use Yii;
@@ -7,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use plathir\user\common\models\security\LoginForm;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
 
 /**
  * Site controller
@@ -26,7 +26,7 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'site-settings', 'search', 'system'],
+                        'actions' => ['logout', 'index', 'site-settings', 'search', 'system', 'changelang'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -64,9 +64,9 @@ class SiteController extends Controller {
     }
 
     public function actionSystem() {
-       // if (\yii::$app->user->can('BackendIndex')) {
+        // if (\yii::$app->user->can('BackendIndex')) {
 
-            return $this->render('system');
+        return $this->render('system');
 //        } else {
 //            throw new \yii\web\NotAcceptableHttpException(Yii::t('app', 'No Permission to Backend index'));
 //        }
@@ -106,6 +106,11 @@ class SiteController extends Controller {
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionChangelang($language) {
+        Yii::$app->session->set('lang', $language);
+        return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
     }
 
 }

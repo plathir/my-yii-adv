@@ -54,6 +54,7 @@ echo $search_html;
     <?php
     //require('header_files/header_about.php');
     // require('header_files/header_contact.php');
+    require('header_files/header_language.php');
     if (!Yii::$app->user->isGuest) {
         require('header_files/header_user.php');
     } else {
