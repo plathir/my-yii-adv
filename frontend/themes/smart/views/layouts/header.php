@@ -32,7 +32,7 @@ echo Nav::widget([
     'items' => $menuItemsLeft,
 ]);
 
-if ($menuAppItemsLeft) {   
+if ($menuAppItemsLeft) {
     echo Nav::widget([
         'encodeLabels' => false,
         'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
@@ -54,7 +54,22 @@ echo $search_html;
     <?php
     //require('header_files/header_about.php');
     // require('header_files/header_contact.php');
-    require('header_files/header_language.php');
+    //require('header_files/header_language.php');
+
+
+
+    $langItems[] = ['label' => \Yii::t('app', 'English'), 'url' => Url::toRoute(['/site/changelang', 'language' => 'en'])];
+    $langItems[] = ['label' => \Yii::t('app', 'Greek'), 'url' => Url::toRoute(['/site/changelang', 'language' => 'el'])];
+
+    $lang[] = ['label' => strtoupper(Yii::$app->language), 'url' => '#',
+        'items' => $langItems];
+
+    echo Nav::widget([
+        'encodeLabels' => false,
+        'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
+        'items' => $lang,
+    ]);
+
     if (!Yii::$app->user->isGuest) {
         require('header_files/header_user.php');
     } else {
