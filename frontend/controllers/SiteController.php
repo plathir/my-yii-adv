@@ -182,10 +182,4 @@ class SiteController extends Controller {
     public function actionSmartSettings() {
         return $this->render('smart-settings');
     }
-
-    public function actionChangelang($language) {
-        Yii::$app->session->set('lang', $language);
-        return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
-    }
-
 }

@@ -58,18 +58,25 @@ echo $search_html;
 
 
 
-    $langItems[] = ['label' => \Yii::t('app', 'English'), 'url' => Url::toRoute(['/site/changelang', 'language' => 'en'])];
-    $langItems[] = ['label' => \Yii::t('app', 'Greek'), 'url' => Url::toRoute(['/site/changelang', 'language' => 'el'])];
+//    $langItems[] = ['label' => \Yii::t('app', 'English'), 'url' => Url::toRoute(['/site/changelang', 'language' => 'en'])];
+//    $langItems[] = ['label' => \Yii::t('app', 'Greek'), 'url' => Url::toRoute(['/site/changelang', 'language' => 'el'])];
+//
+//    $lang[] = ['label' => strtoupper(Yii::$app->language), 'url' => '#',
+//        'items' => $langItems];
+    ?>
 
-    $lang[] = ['label' => strtoupper(Yii::$app->language), 'url' => '#',
-        'items' => $langItems];
+    <?php
+//        echo Nav::widget([
+//            'encodeLabels' => false,
+//            'options' => ['class' => 'nav navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
+//            'items' => $lang,
+//        ]);
+    ?>
 
-    echo Nav::widget([
-        'encodeLabels' => false,
-        'options' => ['class' => 'navbar-nav navbar-left', 'display' => 'inline-block', 'white-space' => 'nowrap'],
-        'items' => $lang,
-    ]);
+  
 
+    <?php
+    require('header_files/header_language.php');
     if (!Yii::$app->user->isGuest) {
         require('header_files/header_user.php');
     } else {

@@ -174,7 +174,11 @@ $components_var = [
         'class' => 'plathir\templates\components\Templates',
     ],
     'urlManager' => [
-        'class' => 'yii\web\urlManager',
+        'class' => 'codemix\localeurls\UrlManager',
+//        // List all supported languages here
+//        // Make sure, you include your app's default language.
+        'languages' => ['en', 'el'],
+        
         //'showScriptName' => false,
         'enablePrettyUrl' => true,
         'rules' => [
@@ -211,7 +215,6 @@ $components_var = [
             ],
         ]
     ],
-    
     'i18n' => [
         'translations' => [
             'app*' => [
@@ -222,7 +225,6 @@ $components_var = [
             ],
         ],
     ],
-    
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [

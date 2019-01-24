@@ -5,6 +5,9 @@ use dmstr\widgets\Alert;
 use plathir\widgets\common\helpers\PositionHelper;
 use plathir\widgets\common\helpers\LayoutHelper;
 
+use yii\helpers\Html;
+use yii\helpers\Url;
+
 $positionHelper = new PositionHelper();
 ?>
 

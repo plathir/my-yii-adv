@@ -112,10 +112,10 @@ $components_var = [
 //    ],
     'urlManager' => [
         //   'baseUrl' => $baseUrl,   
-//        'class' => 'codemix\localeurls\UrlManager',
+        'class' => 'codemix\localeurls\UrlManager',
 //        // List all supported languages here
 //        // Make sure, you include your app's default language.
-//        'languages' => ['en', 'el'],
+        'languages' => ['en', 'el'],
         'enablePrettyUrl' => true,
         'showScriptName' => false,
         'rules' => [
@@ -203,11 +203,6 @@ return [
         $user = Yii::$app->user->identity;
         if ($user && $user->timezone) {
             Yii::$app->setTimeZone($user->timezone);
-        }
-        if (Yii::$app->session->get('lang')) {
-            Yii::$app->language = Yii::$app->session->get('lang');
-        } else {
-            Yii::$app->language = 'en';
         }
     },
     'as access' => [
