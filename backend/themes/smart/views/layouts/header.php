@@ -172,7 +172,7 @@ $userHelper = new UserHelper();
                                             <ul class="menu">
                                                 <li>
                                                     <a href="#">
-                                                        <i class="fa fa-users text-aqua"></i> <?= ''// \plathir\log\backend\widgets\LatestLogMsg::widget();    ?>
+                                                        <i class="fa fa-users text-aqua"></i> <?= ''// \plathir\log\backend\widgets\LatestLogMsg::widget();      ?>
                                                     </a>
                                                 </li>                                
                                                 <li>
@@ -218,21 +218,33 @@ $userHelper = new UserHelper();
                         <i class="fa fa-flag-o"></i>
                         <?= strtoupper(Yii::$app->language) ?> <span class="caret"></span>
                     </a>
-                    
-                    <?php echo common\components\LanguageDropdown::widget(); ?>
-<!--                    <ul class="dropdown-menu">
-                        <li>
-                            <ul class="menu">
-                                <li>
-                                    <?= '' // Html::a(\Yii::t('app', 'English'), Url::toRoute(['/site/changelang', 'language' => 'en'])) ?>
-                                </li>
 
-                                <li>
-                                    <?= '' // Html::a(\Yii::t('app', 'Greek'), Url::toRoute(['/site/changelang', 'language' => 'el'])) ?>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>-->
+
+                    <?php
+                    echo common\components\LanguageDropdown::widget(
+                            ['options' =>
+                                ['class' => 'dropdown-menu',
+                                  //  'style' => 'background-color: #3c8dbc;color: aliceblue',
+                                ]
+                    ]);
+                    ?>
+                    <!--                    <ul class="dropdown-menu">
+                                            <li>
+                                                <ul class="menu">
+                                                    <ul>
+                        
+                                                    </ul>
+                                                    
+                                                    <li>
+                    <?= ''// Html::a(\Yii::t('app', 'English'), Url::toRoute(['/site/changelang', 'language' => 'en']))  ?>
+                                                    </li>
+                    
+                                                    <li>
+                    <?= ''//  Html::a(\Yii::t('app', 'Greek'), Url::toRoute(['/site/changelang', 'language' => 'el']))  ?>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>-->
                 </li>
 
                 <!--                -->                

@@ -47,7 +47,8 @@
         "yii2mod/yii2-markdown": "1.1",   
         "lav45/yii2-aceeditor": "1.2.*",  
         "zhuravljov/yii2-logreader": "1.1.3",
-        "abhi1693/yii2-system-info": "@dev"
+        "abhi1693/yii2-system-info": "@dev",
+        "codemix/yii2-localeurls" : "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

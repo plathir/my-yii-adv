@@ -1,4 +1,5 @@
 <?php
+
 namespace common\components;
 
 use Yii;
@@ -15,7 +16,7 @@ class LanguageDropdown extends Dropdown {
         $appLanguage = Yii::$app->language;
         $params = $_GET;
         $this->_isError = $route === Yii::$app->errorHandler->errorAction;
-          array_unshift($params, '/' . $route);
+        array_unshift($params, '/' . $route);
 
         foreach (Yii::$app->urlManager->languages as $language) {
             //  $isWildcard = substr($language, -2) === '-*';
@@ -29,6 +30,9 @@ class LanguageDropdown extends Dropdown {
             $this->items[] = [
                 'label' => self::label($language),
                 'url' => urldecode(Url::toRoute($params)),
+               'options' => ['class' => 'menu',
+                   
+                   ],
             ];
         }
         parent::init();
