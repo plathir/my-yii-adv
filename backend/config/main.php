@@ -225,6 +225,11 @@ $components_var = [
             ],
         ],
     ],
+    
+    'translate' => [
+        'class' => 'wfstudioru\translate\Translation',
+        'key' => 'trnsl.1.1.20190128T142141Z.a0f73543958da192.e862f6a79a4692fb56e11fef1b8137357f839768',
+    ],
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
