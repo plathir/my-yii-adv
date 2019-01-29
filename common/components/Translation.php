@@ -9,8 +9,8 @@ use yii\helpers\Html;
  * Yii2 extension for Yandex Translate API
  *
  */
-class Translation
-{
+class Translation {
+
     /**
      * API key
      * @var string
@@ -30,13 +30,12 @@ class Translation
      * @param string $text   Source text string
      * @return array
      */
-    public function translate($source, $target, $text)
-    {
-        $langDirection = explode('-',$source)[0].'-'.explode('-',$target)[0];
-        if (strlen($text)>300) {
-            return $this->getPostResponse($text, $langDirection);
+    public function translate($source, $target, $text, $format = 'html') {
+        $langDirection = explode('-', $source)[0] . '-' . explode('-', $target)[0];
+        if (strlen($text) > 300) {
+            return $this->getPostResponse($text, $langDirection, $format);
         } else {
-            return $this->getResponse($text, $langDirection);
+            return $this->getResponse($text, $langDirection, $format);
         }
     }
 
@@ -46,24 +45,26 @@ class Translation
      * @param  string $lang   Translation direction ru-en, en-es
      * @return array          Data properties
      */
-    protected function getPostResponse($text = '', $lang = 'en-ru')
-    {
+    protected function getPostResponse($text = '', $lang = 'en-ru', $format = 'html') {
+        if ($format != 'html') {
+            $text = Html::encode($text);
+        }
         $opts = array('http' =>
             array(
-                'method'  => 'POST',
-                'header'  => 'Content-type: application/x-www-form-urlencoded',
+                'method' => 'POST',
+                'header' => 'Content-type: application/x-www-form-urlencoded',
                 'content' => http_build_query(
-                    [
-                        'key' => $this->key,
-                        'lang' => $lang,
-                        'text' => $text,
-                        'format' => 'html',
-                    ]
+                        [
+                            'key' => $this->key,
+                            'lang' => $lang,
+                            'text' => $text,
+                            'format' => $format,
+                        ]
                 )
             )
         );
 
-        $context  = stream_context_create($opts);
+        $context = stream_context_create($opts);
 
         $response = file_get_contents(self::API_URL, false, $context);
         return Json::decode($response, true);
@@ -75,18 +76,22 @@ class Translation
      * @param  string $lang   Translation direction ru-en, en-es
      * @return array          Data properties
      */
-    protected function getResponse($text = '', $lang = 'el')
-    {
+    protected function getResponse($text = '', $lang = 'el', $format = 'html') {
+        if ($format != 'html') {
+            $text = Html::encode($text);
+        }
+
         $request = self::API_URL . '?' . http_build_query(
-            [
-                'key' => $this->key,
-                'lang' => $lang,
-                'text' => $text,
-                'format' => 'html',
-            ]
+                        [
+                            'key' => $this->key,
+                            'lang' => $lang,
+                            'text' => $text,
+                            'format' => $format,
+                        ]
         );
 
         $response = file_get_contents($request);
         return Json::decode($response, true);
     }
+
 }
