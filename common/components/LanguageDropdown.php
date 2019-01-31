@@ -52,6 +52,7 @@ class LanguageDropdown extends Dropdown {
             self::$_labels = [
                 'en' => Yii::t('app', 'English'),
                 'el' => Yii::t('app', 'Greek'),
+                'ru' => Yii::t('app', 'Russian'),
             ];
         }
 

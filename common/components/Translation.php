@@ -1,5 +1,4 @@
 <?php
-
 namespace common\components;
 
 use yii\helpers\Json;
@@ -31,6 +30,7 @@ class Translation {
      * @return array
      */
     public function translate($source, $target, $text, $format = 'html') {
+
         $langDirection = explode('-', $source)[0] . '-' . explode('-', $target)[0];
         if (strlen($text) > 300) {
             return $this->getPostResponse($text, $langDirection, $format);
@@ -45,7 +45,7 @@ class Translation {
      * @param  string $lang   Translation direction ru-en, en-es
      * @return array          Data properties
      */
-    protected function getPostResponse($text = '', $lang = 'en-ru', $format = 'html') {
+    protected function getPostResponse($text = '', $lang = 'en-ru', $format = 'html') {        
         if ($format != 'html') {
             $text = Html::encode($text);
         }
@@ -67,7 +67,7 @@ class Translation {
         $context = stream_context_create($opts);
 
         $response = file_get_contents(self::API_URL, false, $context);
-        return Json::decode($response, true);
+        return Json::decode($response, true);        
     }
 
     /**

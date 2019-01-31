@@ -115,7 +115,7 @@ $components_var = [
         'class' => 'codemix\localeurls\UrlManager',
 //        // List all supported languages here
 //        // Make sure, you include your app's default language.
-        'languages' => ['en', 'el'],
+        'languages' => ['en', 'el', 'ru'],       
         'enablePrettyUrl' => true,
         'showScriptName' => false,
         'rules' => [
