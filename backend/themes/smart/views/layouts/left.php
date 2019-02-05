@@ -21,7 +21,7 @@ $userHelper = new UserHelper();
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
-        
+
         <!-- search form -->
         <?php $url = Url::toRoute(['/site/search']) ?>
         <form action="<?= $url ?>" method="get" class="sidebar-form">
@@ -59,89 +59,79 @@ $userHelper = new UserHelper();
 
             return $return;
         };
-
+        $appsItems = '';
         foreach ($apps as $app) {
             if ($app->menu != null) {
-                $apps_items = ['label' => $app->descr, 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, $app->menu->menu_id, $callback, true)];
+                $appsItems[] = ['label' => $app->descr, 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, $app->menu->menu_id, $callback, true)];
             }
         }
+
+
+        $headerApps = [['label' => 'Applications', 'options' => ['class' => 'header']]];
+
+        $mainMenuItems = [
+            ['label' => 'Main Menu', 'options' => ['class' => 'header']],
+            ['label' => 'Users', 'icon' => 'users', 'url' => ['/user']],
+            ['label' => 'Blog', 'icon' => 'list-alt', 'url' => ['/blog'],
+                'items' => [
+                    ['label' => 'Blog Dashboard', 'icon' => 'dashboard', 'url' => ['/blog'],],
+                    ['label' => 'Categories', 'icon' => 'file-text-o', 'url' => ['/blog/category'],],
+                    ['label' => 'Posts', 'icon' => 'file-text-o', 'url' => ['/blog/posts'],],
+                    ['label' => 'Static Pages', 'icon' => 'file-text-o', 'url' => ['/blog/static-pages'],],
+                    ['label' => 'Carousel', 'icon' => 'file-text-o', 'url' => ['/blog/carousel'],],
+                    ['label' => 'File Manager', 'icon' => 'file-text-o', 'url' => ['/blog/posts/filemanager'],],
+                ]
+            ],
+            ['label' => 'Apps', 'icon' => 'cogs', 'url' => ['/apps'],
+                'items' => [
+                    ['label' => 'Apps Dashboard', 'icon' => 'dashboard', 'url' => ['/apps'],],
+                    ['label' => 'Apps Admin', 'icon' => 'fa fa-cogs', 'url' => ['/apps/admin'],],
+                ]
+            ],
+            ['label' => 'Widgets', 'icon' => 'gear', 'url' => ['/widgets'],],
+            ['label' => 'Permissions', 'icon' => 'user-times', 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 1, $callback, true)],
+            [
+                'label' => 'System',
+                'icon' => 'database',
+                'url' => ['#'],
+                'items' => [
+                    [
+                        'label' => 'Templates',
+                        'icon' => '',
+                        'url' => ['/templates'],
+                    ],
+                    [
+                        'label' => 'System Infos',
+                        'icon' => '',
+                        'url' => ['/site/system'],
+                    ],
+                    [
+                        'label' => 'Log',
+                        'icon' => '',
+                        'url' => ['/log/log'],
+                    ],
+                ]
+            ],
+            [
+                'label' => 'Documentation',
+                'icon' => 'book',
+                'url' => ['/doc'],
+            ],
+            [
+                'label' => 'Code Snippets',
+                'icon' => 'file-code-o',
+                'url' => ['/snippets'],
+            ]
+                ]
         ?>
+
         <?=
         dmstr\widgets\Menu::widget(
                 [
                     'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
-                    'items' => [
-                        ['label' => 'Applications', 'options' => ['class' => 'header']],
-                        $apps_items,
-                        ['label' => 'Main Menu', 'options' => ['class' => 'header']],
-                        ['label' => 'Users', 'icon' => 'users', 'url' => ['/user']],
-                        ['label' => 'Blog', 'icon' => 'list-alt', 'url' => ['/blog'],
-                            'items' => [
-                                ['label' => 'Blog Dashboard', 'icon' => 'dashboard', 'url' => ['/blog'],],
-                                ['label' => 'Categories', 'icon' => 'file-text-o', 'url' => ['/blog/category'],],
-                                ['label' => 'Posts', 'icon' => 'file-text-o', 'url' => ['/blog/posts'],],
-                                ['label' => 'Static Pages', 'icon' => 'file-text-o', 'url' => ['/blog/static-pages'],],
-                                ['label' => 'Carousel', 'icon' => 'file-text-o', 'url' => ['/blog/carousel'],],
-                                ['label' => 'File Manager', 'icon' => 'file-text-o', 'url' => ['/blog/posts/filemanager'],],
-                            ]
-                        ],
-                        ['label' => 'Apps', 'icon' => 'cogs', 'url' => ['/apps'],
-                            'items' => [
-                                ['label' => 'Apps Dashboard', 'icon' => 'dashboard', 'url' => ['/apps'],],
-                                ['label' => 'Apps Admin', 'icon' => 'fa fa-cogs', 'url' => ['/apps/admin'],],
-                            ]
-                        ],
-                        ['label' => 'Widgets', 'icon' => 'gear', 'url' => ['/widgets'],],
-                        ['label' => 'Permissions', 'icon' => 'user-times', 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, 1, $callback, true)],
-//                        [
-//                            'label' => 'Permissions',
-//                            'icon' => 'fa fa-share',
-//                            'url' => '#',
-                        //  'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id)
-//                            [
-//                                ['label' => 'Roles', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/role'],],
-//                                ['label' => 'Routes', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/route'],],
-//                                ['label' => 'Rules', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/rule'],],
-//                                ['label' => 'Permissions', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/permission'],],
-//                                ['label' => 'Assignments', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/assignment'],],
-//                                ['label' => 'Menus', 'icon' => 'fa fa-file-code-o', 'url' => ['/admin/menu'],],
-//                            ],
-//                        ],
-                        [
-                            'label' => 'System',
-                            'icon' => 'database',
-                            'url' => ['#'],
-                            'items' => [
-                                [
-                                    'label' => 'Templates',
-                                    'icon' => '',
-                                    'url' => ['/templates'],
-                                ],
-                                [
-                                    'label' => 'System Infos',
-                                    'icon' => '',
-                                    'url' => ['/site/system'],
-                                ],
-                                [
-                                    'label' => 'Log',
-                                    'icon' => '',
-                                    'url' => ['/log/log'],
-                                ],
-                            ]
-                        ],
-                        [
-                            'label' => 'Documentation',
-                            'icon' => 'book',
-                            'url' => ['/doc'],
-                        ],
-                        [
-                            'label' => 'Code Snippets',
-                            'icon' => 'file-code-o',
-                            'url' => ['/snippets'],
-                        ]
-                    ],
+                    'items' => is_array($appsItems) ? array_merge($headerApps, $appsItems, $mainMenuItems): $mainMenuItems
                 ]
-        )
+        );
         ?>
 
     </section>
