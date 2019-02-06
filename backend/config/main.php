@@ -209,10 +209,7 @@ $components_var = [
                 'class' => \plathir\smartblog\backend\models\PostsGlobalSearch::class,
                 'label' => 'Posts',
             ],
-            'Recipes' => [
-                'class' => apps\recipes\backend\models\RecipesGlobalSearch::class,
-                'label' => 'Recipes',
-            ],
+
         ]
     ],
     'i18n' => [
@@ -280,7 +277,7 @@ return [
     'bootstrap' => [
         'log',
         'logreader',
-    //      'app\components\Bootstrap'
+        'backend\components\ModuleBootstrap'
     ],
     'modules' => $modules_var,
     'components' => $components_var,

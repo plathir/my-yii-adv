@@ -26,10 +26,10 @@ class ModuleBootstrap implements BootstrapInterface {
             } else {
 
                 if (is_array($aModule) && strpos($aModule['class'], 'apps') === 0) {
-                    $sFilePathConfig = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'apps' . DIRECTORY_SEPARATOR . $sKey . DIRECTORY_SEPARATOR . 'frontend'. DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . '_url_rules.php';
-                                        
+                    $sFilePathConfig = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'apps' . DIRECTORY_SEPARATOR . $sKey . DIRECTORY_SEPARATOR . 'frontend' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . '_url_rules.php';
+
                     if (file_exists($sFilePathConfig)) {
-               //         echo $sFilePathConfig .'<br>';
+                        //         echo $sFilePathConfig .'<br>';
                         $oApplication->getUrlManager()->addRules(require($sFilePathConfig));
                     }
                 } else {
@@ -49,6 +49,22 @@ class ModuleBootstrap implements BootstrapInterface {
                 }
             }
         }
+
+        $apps = \plathir\apps\models\Apps::find()->where(['active' => 1])->all();
+        $applic["Posts"] = [
+            'class' => \plathir\smartblog\frontend\models\PostsGlobalSearch::class,
+            'label' => 'Posts',
+        ];
+        foreach ($apps as $app) {
+            $class = 'apps' . '\\' . $app->name . '\\' . 'frontend\models\RecipesGlobalSearch';
+            if (class_exists($class)) {
+                $applic[$app->name] = [
+                    'class' => $class,
+                    'label' => $app->name,
+                ];
+            }
+        };
+        Yii::$app->searcher->models = array_merge($applic);
     }
 
 }
