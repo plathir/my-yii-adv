@@ -50,7 +50,7 @@ class ModuleBootstrap implements BootstrapInterface {
             }
         }
 
-        $apps = \plathir\apps\models\Apps::find()->where(['active' => 1])->all();
+        $apps = \plathir\apps\backend\models\Apps::find()->where(['active' => 1])->all();
         $applic["Posts"] = [
             'class' => \plathir\smartblog\frontend\models\PostsGlobalSearch::class,
             'label' => 'Posts',

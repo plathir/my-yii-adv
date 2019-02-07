@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use plathir\user\common\helpers\UserHelper;
 use plathir\smartblog\backend\helpers\PostHelper;
 use plathir\smartblog\backend\widgets\LatestPosts;
-use plathir\apps\models\AppsSearch;
+use plathir\apps\backend\models\AppsSearch;
 use plathir\apps\helpers\AppsHelper;
 use plathir\widgets\common\helpers\PositionHelper;
 //use kartik\markdown\MarkdownEditor;

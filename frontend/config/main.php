@@ -41,7 +41,7 @@ $modules_var = [
     //'editor' => 'markdown'
     ],
     'apps' => [
-        'class' => 'plathir\apps\Module',
+        'class' => 'plathir\apps\backend\Module',
     ],
     'settings' => [
         'class' => 'plathir\settings\Module',
