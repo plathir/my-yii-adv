@@ -48,7 +48,8 @@
         "lav45/yii2-aceeditor": "1.2.*",  
         "zhuravljov/yii2-logreader": "1.1.3",
         "abhi1693/yii2-system-info": "@dev",
-        "codemix/yii2-localeurls" : "*"
+        "codemix/yii2-localeurls" : "*",
+        "2amigos/yii2-disqus-widget" : "~1.0"
         
     },
     "require-dev": {
