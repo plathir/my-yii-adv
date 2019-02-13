@@ -168,7 +168,7 @@ $components_var = [
 // load apps
 $modules_dir = Yii::getAlias('@apps');
 $handle = opendir($modules_dir);
-
+$appAccess = [];
 while (false !== ($file = readdir($handle))) {
     if ($file != '.' && $file != '..' && $file != 'uploads') {
         $modules_var["$file"] = [
@@ -178,10 +178,28 @@ while (false !== ($file = readdir($handle))) {
         $components_var["$file"] = [
             'class' => 'apps' . '\\' . $file . '\\' . 'frontend',
         ];
+
+        $appAccess[] = $file . '/*';
     }
 }
 
 closedir($handle);
+
+$allowActions = [
+    'site/*',
+    'user/security/logout',
+    'user/security/login',
+    'user/registration/*',
+    'user/security/auth', // for Oauth ( Login from facebook etc. )
+    'blog/*',
+//    'apps/*',
+    'debug/*',
+        // The actions listed here will be allowed to everyone including guests.
+        // So, 'admin/*' should not appear here in the production, of course.
+        // But in the earlier stages of your development, you may probably want to
+        // add a lot of actions here until you finally completed setting up rbac,
+        // otherwise you may not even take a first step.
+];
 
 return [
     'id' => 'app-frontend',
@@ -202,27 +220,7 @@ return [
     },
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
-        'allowActions' => [
-//            'installer/*',
-            'site/*',
-//            'user/auth/*',
-            'user/security/logout',
-            'user/security/login',
-            'user/registration/*',
-            'user/security/auth', // for Oauth ( Login from facebook etc. )
-            'blog/*',
-            //    'blog/posts/view',
-            'apps/*',
-//            'apptest1/*',
-            'debug/*',
-            'recipes/*',
-//            '*'
-        // The actions listed here will be allowed to everyone including guests.
-        // So, 'admin/*' should not appear here in the production, of course.
-        // But in the earlier stages of your development, you may probably want to
-        // add a lot of actions here until you finally completed setting up rbac,
-        // otherwise you may not even take a first step.
-        ]
+        'allowActions' => array_merge($appAccess, $allowActions)
     ],
     'params' => $params,
 ];
