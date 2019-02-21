@@ -27,7 +27,7 @@ class m190210_141936_BaseMigration extends Migration
         $this->createTable('migration', [
             'version' => $this->string(180)->notNull(),
             'apply_time' => $this->integer(11)->notNull(),
-        ]);
+        ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
 
         $this->addPrimaryKey('pk_version', 'migration', ['version']);
     }
