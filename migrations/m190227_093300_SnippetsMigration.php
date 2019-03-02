@@ -25,7 +25,7 @@ class m190227_093300_SnippetsMigration extends Migration {
             'id' => $this->PrimaryKey(),
             'description' => $this->string(255)->notNull(),
             'example' => $this->string(255)->notNull(),
-            'full_text' => $this->longtext()->notNull(),
+            'full_text' => $this->text()->notNull(),
             'created_by' => $this->integer(11)->notNull(),
             'created_at' => $this->integer(11)->notNull(),
             'updated_by' => $this->integer(11)->notNull(),
