@@ -21,7 +21,7 @@ class m190227_093300_SnippetsMigration extends Migration {
 
         $this->dropIfExist('snippets');
 
-        $this->createTable('snippets', [
+        $this->createTable('{{%snippets}}', [
             'id' => $this->PrimaryKey(),
             'description' => $this->string(255)->notNull(),
             'example' => $this->string(255)->notNull(),
@@ -36,8 +36,8 @@ class m190227_093300_SnippetsMigration extends Migration {
     }
 
     public function dropIfExist($tableName) {
-        if (in_array($tableName, $this->getDb()->schema->tableNames)) {
-            $this->dropTable($tableName);
+        if (in_array($this->db->tablePrefix .$tableName, $this->getDb()->schema->tableNames)) {
+            $this->dropTable($this->db->tablePrefix .$tableName);
         }
     }
 

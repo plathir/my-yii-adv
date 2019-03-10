@@ -24,19 +24,20 @@ class m190210_141936_BaseMigration extends Migration
 
         $this->dropIfExist('migration');
 
-        $this->createTable('migration', [
+        $this->createTable('{{%migration}}', [
             'version' => $this->string(180)->notNull(),
             'apply_time' => $this->integer(11)->notNull(),
         ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
 
-        $this->addPrimaryKey('pk_version', 'migration', ['version']);
+        $this->addPrimaryKey('pk_version', '{{%migration}}', ['version']);
     }
 
     public function dropIfExist($tableName) {
-        if (in_array($tableName, $this->getDb()->schema->tableNames)) {
-            $this->dropTable($tableName);
+        if (in_array($this->db->tablePrefix .$tableName, $this->getDb()->schema->tableNames)) {
+            $this->dropTable($this->db->tablePrefix .$tableName);
         }
     }
+
 
 }
 
