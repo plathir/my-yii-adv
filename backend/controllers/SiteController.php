@@ -74,6 +74,10 @@ class SiteController extends Controller {
 
     public function actionSearch($q) {
         if ($q) {
+//            echo '<pre>';
+//            print_r(Yii::$app->get('searcher'));
+//            echo '</pre>';
+//            die();
             $results = Yii::$app->get('searcher')->search($q);
             return $this->render('search_results', ['results' => $results]);
         } else {
