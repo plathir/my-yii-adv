@@ -19,15 +19,18 @@ $userHelper = new UserHelper();
         <ul class="users-list clearfix">
             <?php foreach ($LatestUsers as $user) { ?>
                 <li>
-                    <img src="<?php echo $userHelper->getProfileImage($user['id'], $this) ?>"User Image">
-                         <a class="users-list-name" <?= Html::a($user['username'], ['/user/admin/view', 'id' => $user['id']]) ?></a>
-                    <span class="users-list-date"><?= Yii::$app->formatter->asDate($user['created_at']) ?> </span>
+                    <img src="<?= $userHelper->getProfileImage($user['id'], $this) ?>" alt="User Image">
+                    <span><?= Html::a($user['username'], ['/user/admin/view', 'id' => $user['id']], ['class' => "users-list-name"]) ?></span>
+                    <span class="users-list-date"><?= Yii::$app->formatter->asDate($user['created_at'], 'dd-MM-yyyy') ?></span>
                 </li>
                 <?php
             }
             ?>
+
+
             <li>
-                <?= Html::a(Yii::t('app', '<img src="images/add_user.png" title ="Create New User" >'), ['/user/admin/create']) ?>  
+                <?= Html::a(Yii::t('app', '<img src="' . $userHelper->getAddUserImage($user['id'], $this) . '" title ="Create New User" >'), ['/user/admin/create']) ?>  
+                <span><?= Html::a('New User', ['/user/admin/create'], ['class' => "users-list-name"]) ?></span>
             </li>                    
 
             </li>

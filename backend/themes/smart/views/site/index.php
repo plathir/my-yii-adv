@@ -23,7 +23,7 @@ $postHelper = new PostHelper();
 
 $positionHelper = new PositionHelper();
 
-$LatestUsers = $userHelper->getLatestUsers(5);
+$LatestUsers = $userHelper->getLatestUsers(20);
 $LatestPosts = $postHelper->getLatestPosts(10);
 ?>
 
