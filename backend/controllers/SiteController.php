@@ -1,4 +1,5 @@
 <?php
+
 namespace backend\controllers;
 
 use Yii;
@@ -26,7 +27,7 @@ class SiteController extends Controller {
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'site-settings', 'search', 'system', 'changelang'],
+                        'actions' => ['logout', 'index', 'site-settings', 'search', 'system', 'cache', 'changelang', 'deletefrontendcache', 'deletebackendcache'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -36,6 +37,8 @@ class SiteController extends Controller {
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'logout' => ['post'],
+                    'deletefrontendcache' => ['post'],
+                    'deletebackendcache' => ['post'],
                 ],
             ],
         ];
@@ -72,6 +75,24 @@ class SiteController extends Controller {
 //        }
     }
 
+    public function actionCache() {
+
+        return $this->render('cache');
+    }
+
+    public function actionDeletebackendcache() {
+        
+       //Yii::$app->backendCache->flush();
+        Yii::$app->cache->flush(); 
+        $this->redirect(['cache']);
+    }
+
+    public function actionDeletefrontendcache() {
+
+        Yii::$app->frontendCache->flush();
+        $this->redirect(['cache']);
+    }
+
     public function actionSearch($q) {
         if ($q) {
 //            echo '<pre>';
@@ -97,9 +118,9 @@ class SiteController extends Controller {
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            echo 'test in site Controller   ';
-            print_r($model);
-            die();
+//            echo 'test in site Controller   ';
+//            print_r($model);
+//            die();
             return $this->render('backend-login', [
                         'model' => $model,
             ]);

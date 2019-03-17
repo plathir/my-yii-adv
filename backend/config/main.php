@@ -178,7 +178,6 @@ $components_var = [
 //        // List all supported languages here
 //        // Make sure, you include your app's default language.
         'languages' => ['en', 'el', 'ru'],
-        
         //'showScriptName' => false,
         'enablePrettyUrl' => true,
         'rules' => [
@@ -209,7 +208,6 @@ $components_var = [
                 'class' => \plathir\smartblog\backend\models\PostsGlobalSearch::class,
                 'label' => 'Posts',
             ],
-
         ]
     ],
     'i18n' => [
@@ -222,11 +220,15 @@ $components_var = [
             ],
         ],
     ],
-    
     'translate' => [
         'class' => 'common\components\Translation',
         'key' => 'trnsl.1.1.20190128T142141Z.a0f73543958da192.e862f6a79a4692fb56e11fef1b8137357f839768',
     ],
+    'frontendCache' => [
+        'class' => 'yii\caching\FileCache',
+        'cachePath' => Yii::getAlias('@frontend') . '/runtime/cache'
+    ],
+
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [
