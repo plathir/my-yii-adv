@@ -163,6 +163,18 @@ $components_var = [
             ],
         ],
     ],
+    
+    'session' => [
+        'class' => 'yii\web\DbSession',
+        'name' => 'SMARTSESSIONFRONTEND',
+        'writeCallback' => function ($session) {
+            return [
+                'user_id' => Yii::$app->user->id,
+                'environment' => 'frontend',
+                'last_write' => date("Y-m-d H:i:s"),
+            ];
+        },
+    ],    
 ];
 
 // load apps

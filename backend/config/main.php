@@ -58,7 +58,7 @@ $modules_var = [
         'class' => 'plathir\apps\backend\Module',
     ],
     'settings' => [
-        'class' => 'plathir\settings\Module',
+        'class' => 'plathir\settings\backend\Module',
         'modulename' => 'site'
     ],
     'widgets' => [
@@ -228,7 +228,17 @@ $components_var = [
         'class' => 'yii\caching\FileCache',
         'cachePath' => Yii::getAlias('@frontend') . '/runtime/cache'
     ],
-
+    'session' => [
+        'class' => 'yii\web\DbSession',
+        'name' => 'SMARTSESSIONBACKEND',
+        'writeCallback' => function ($session) {
+            return [
+                'user_id' => Yii::$app->user->id,
+                'environment' => 'backend',
+                'last_write' => date("Y-m-d H:i:s"),
+            ];
+        },
+    ],
 //    'assetManager' => [
 //        'bundles' => [
 //            'dmstr\web\AdminLteAsset' => [

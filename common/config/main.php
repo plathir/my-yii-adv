@@ -6,11 +6,11 @@ use \kartik\datecontrol\Module;
 
 return [
     //'vendorPath' => $vendor_path,
-   // 'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    // 'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     // uncomment line for move vendors folder to share with another apps
-   // 'vendorPath' => dirname(dirname(dirname(__DIR__))) . '/frameworks/yii2',
+    // 'vendorPath' => dirname(dirname(dirname(__DIR__))) . '/frameworks/yii2',
     // uncomment lines for move vendors folder to share with another apps
-    
+
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
@@ -41,6 +41,15 @@ return [
                 ],
             ],
         ],
+//        'session' => [
+//            'class' => 'yii\web\DbSession',
+//            'writeCallback' => function ($session) {
+//                return [
+//                    'user_id' => Yii::$app->user->id,
+//                    'last_write' => date("Y-m-d H:i:s"),
+//                ];
+//            },
+//        ],
     ],
     'modules' => [
         'datecontrol' => [

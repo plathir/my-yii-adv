@@ -138,4 +138,10 @@ class SiteController extends Controller {
         return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
     }
 
+    public function actionSessions() {
+        
+        
+        
+    }
+    
 }

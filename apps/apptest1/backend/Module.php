@@ -13,7 +13,7 @@ class Module extends \yii\base\Module {
         parent::init();
         $this->setModules([
             'settings' => [
-                'class' => 'plathir\settings\Module',
+                'class' => 'plathir\settings\backend\Module',
                 'modulename' => 'apptest1'
             ],
         ]);
