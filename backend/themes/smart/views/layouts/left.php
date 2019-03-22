@@ -110,6 +110,12 @@ $userHelper = new UserHelper();
                         'icon' => '',
                         'url' => ['/log/log'],
                     ],
+                    [
+                        'label' => 'Cache',
+                        'icon' => '',
+                        'url' => ['/site/cache'],
+                    ],
+                    
                 ]
             ],
             [

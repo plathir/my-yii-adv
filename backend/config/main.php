@@ -80,10 +80,10 @@ $modules_var = [
     'logreader' => [
         'class' => 'zhuravljov\yii\logreader\Module',
         'aliases' => [
-            'Frontend Errors' => '@frontend/runtime/logs/app.log',
-            'Frontend Blog Errors' => '@frontend/runtime/logs/blog.log',
-            'Backend Errors' => '@backend/runtime/logs/app.log',
-            'Backend Errors1' => '@backend/runtime/logs/errors.log',
+            'Frontend Errors' => '@RootPath/runtime/logs/app.log',
+            'Frontend Blog Errors' => '@RootPath/runtime/logs/blog.log',
+            'Backend Errors' => '@adminRootPath/runtime/logs/app.log',
+            'Backend Errors1' => '@adminRootPath/runtime/logs/errors.log',
             'Console Errors' => '@console/runtime/logs/app.log',
         ],
         'viewPath' => '@vendor/plathir/yii2-smart-log/backend/themes/smart/views/logreader',
@@ -226,7 +226,7 @@ $components_var = [
     ],
     'frontendCache' => [
         'class' => 'yii\caching\FileCache',
-        'cachePath' => Yii::getAlias('@frontend') . '/runtime/cache'
+        'cachePath' => Yii::getAlias('@RootPath') . '/runtime/cache'
     ],
     'session' => [
         'class' => 'yii\web\DbSession',
@@ -267,6 +267,10 @@ $components_var = [
 $modules_dir = Yii::getAlias('@apps');
 $handle = opendir($modules_dir);
 
+//echo Yii::getAlias('@adminRootPath') . '/runtime' . '<br>';
+//echo Yii::getAlias('@RootPath') . '/runtime' . '<br>';
+//die();
+
 while (false !== ($file = readdir($handle))) {
     if ($file != '.' && $file != '..' && $file != 'uploads') {
         $modules_var["$file"] = [
@@ -285,6 +289,7 @@ return [
     'name' => 'test Name',
     'timezone' => 'Europe/Athens',
     'basePath' => dirname(__DIR__),
+    'runtimePath' => Yii::getAlias('@adminRootPath') . '/runtime',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => [
         'log',

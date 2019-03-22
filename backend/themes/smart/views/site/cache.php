@@ -14,7 +14,7 @@ use yii\helpers\Html;
     </div><!-- /.box-header -->
     <div class="box-body">
         <?=
-        Html::a('<i class="fa fa-trash-o"></i> Backend Cashe Delete', ['deletebackendcache'], [
+        Html::a('<i class="fa fa-trash-o"></i> Backend Cache Delete', ['deletebackendcache'], [
             'class' => 'btn btn-danger btn-flat btn-loader',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -25,7 +25,7 @@ use yii\helpers\Html;
         <br>
         <br>
         <?=
-        Html::a('<i class="fa fa-trash-o"></i> Frontend Cashe Delete', ['deletefrontendcache'], [
+        Html::a('<i class="fa fa-trash-o"></i> Frontend Cache Delete', ['deletefrontendcache'], [
             'class' => 'btn btn-danger btn-flat btn-loader',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',

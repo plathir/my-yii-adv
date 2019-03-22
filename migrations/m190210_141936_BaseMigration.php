@@ -37,6 +37,7 @@ class m190210_141936_BaseMigration extends Migration {
             'expire' => $this->integer(),
             'data' => $this->binary(),
             'user_id' => $this->integer(11),
+            'environment' => $this->string(10),
             'last_write' => $this->timestamp(),
             'PRIMARY KEY ([[id]])',
                 ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');

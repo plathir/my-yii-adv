@@ -216,6 +216,7 @@ $allowActions = [
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
+    'runtimePath'=> Yii::getAlias('@RootPath') . '/runtime',
     'bootstrap' => [
         'log',
         'frontend\components\ModuleBootstrap'
