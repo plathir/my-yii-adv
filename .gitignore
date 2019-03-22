@@ -1,6 +1,7 @@
 # yii console command
 /yii
 
+
 # phpstorm project files
 .idea
 
@@ -28,9 +29,17 @@ composer.phar
 phpunit.phar
 # local phpunit config
 /phpunit.xml
-/frontend/web/media/images/users/
-/frontend/web/media/temp/images/users/
-/frontend/web/media/images/blog/posts/
-/frontend/web/media/temp/images/blog/posts/
-/frontend/web/media/images/blog/
-/frontend/web/media/temp/images/blog/
+/www/media/images/users/
+/www/media/temp/images/users/
+/www/media/images/blog/posts/
+/www/media/temp/images/blog/posts/
+/www/media/images/blog/
+/www/media/temp/images/blog/
+
+
+cp_migrations.sh
+migrate.sh
+migrate_down
+migrate_up
+sql_export.sh
+
