@@ -1,20 +1,34 @@
 <?php
-
 namespace installation\controllers;
 
 use yii\web\Controller;
 use installation\models\Install;
+use installation\models\Import;
 use Yii;
+use yii\filters\VerbFilter;
 
 /**
  * Site controller
  */
 class SiteController extends Controller {
 
+    public function behaviors() {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'ajax-db-install' => ['post'],
+                ],
+            ],
+        ];
+    }
+
     public function actionIndex() {
         $model = new Install();
+        $modelImport = new Import();
         return $this->render('index', [
                     'model' => $model,
+                    'modelImport' => $modelImport,
         ]);
     }
 
@@ -26,23 +40,19 @@ class SiteController extends Controller {
         ]);
     }
 
-    public function actionAjaxDbInstall() {
-echo 'In';
+    public function actionAjaxInstall() {
         if (Yii::$app->request->isAjax) {
-         //   echo 'In';
-         //   die();
             \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
             return [
                 'data' => [
                     'success' => true,
-                    'model' => $model,
                     'message' => 'Model has been saved.',
+                    'ajax' => Yii::$app->request->isAjax,
                 ],
                 'code' => 0,
             ];
         }
     }
-    
+
 }
-    

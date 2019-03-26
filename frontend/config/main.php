@@ -1,6 +1,6 @@
 <?php
 $params = array_merge(
-        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
+        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/params.php')
 );
 
 use \yii\web\Request;
@@ -63,6 +63,11 @@ $modules_var = [
 ];
 
 $components_var = [
+    'request' => [
+        // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+        'cookieValidationKey' => $cookieValidationKey,
+        'csrfParam' => '_frontendCSRF',
+    ],
     'user' => [
         'identityClass' => 'plathir\user\common\models\account\User',
         'loginUrl' => ['user/security/login'],
@@ -163,7 +168,6 @@ $components_var = [
             ],
         ],
     ],
-    
     'session' => [
         'class' => 'yii\web\DbSession',
         'name' => 'SMARTSESSIONFRONTEND',
@@ -174,7 +178,7 @@ $components_var = [
                 'last_write' => date("Y-m-d H:i:s"),
             ];
         },
-    ],    
+    ],
 ];
 
 // load apps
@@ -216,7 +220,7 @@ $allowActions = [
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'runtimePath'=> Yii::getAlias('@RootPath') . '/runtime',
+    'runtimePath' => Yii::getAlias('@RootPath') . '/runtime',
     'bootstrap' => [
         'log',
         'frontend\components\ModuleBootstrap'

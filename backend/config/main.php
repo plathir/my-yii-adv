@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 
 $params = array_merge(
-        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
+        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/params.php')
 );
 
 //$FrontEndUrl = '/my-yii-adv/frontend/web'; // Change if publish site
@@ -108,6 +108,11 @@ $modules_var = [
 ];
 
 $components_var = [
+    'request' => [
+        // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+        'cookieValidationKey' => $cookieValidationKey, //   
+        'csrfParam' => '_backendCSRF',
+    ],
     'user' => [
         'identityClass' => 'plathir\user\common\models\account\User',
         'loginUrl' => ['user/security/backend-login'],

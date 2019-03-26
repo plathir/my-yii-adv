@@ -10,6 +10,7 @@ class Install extends Model {
     public $database;
     public $username;
     public $password;
+    public $prefix;
     
     public function rules() {
         return [
@@ -18,6 +19,7 @@ class Install extends Model {
             ['username', 'required'],
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+            ['prefix', 'string'],
         ];
     }
     public function attributeLabels() {
@@ -26,6 +28,7 @@ class Install extends Model {
             'database' => Yii::t('app', 'DataBase'),
             'username' => Yii::t('app', 'DataBase User'),
             'password' => Yii::t('app', 'Password'),
+            'prefix' => Yii::t('app', 'Table Prefix'),
         ];
     }
     
