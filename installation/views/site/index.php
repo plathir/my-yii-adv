@@ -36,30 +36,32 @@ use yii\bootstrap\ActiveForm;
     </div>
 </div>
 <hr>
-<div class="row">
-    <?php
-    $form = ActiveForm::begin(['id' => 'install-form2',
-                'action' => ['site/ajax-install-import'],
+<div class="import" >
+    <div class="row">
+        <?php
+        $form = ActiveForm::begin(['id' => 'install-form2',
+                    'action' => ['site/ajax-install-import'],
 //                'enableClientValidation' => true,
-                'options' => [
-                    'class' => 'install-form-import'
-                ]
-    ]);
-    ?>
+                    'options' => [
+                        'class' => 'install-form-import'
+                    ]
+        ]);
+        ?>
 
-    <?= $form->field($modelImport, 'import')->checkBox(); ?>
-    <?= Html::submitButton('import', ['id' => 'btnSubmit', 'class' => 'btn btn-success']) ?>
+        <?= $form->field($modelImport, 'import')->checkBox(); ?>
+        <?= Html::submitButton('import', ['id' => 'btnSubmit', 'class' => 'btn btn-success']) ?>
 
-    <?php ActiveForm::end() ?>
-    <br>
-    <div class="importresultsdiv">
+        <?php ActiveForm::end() ?>
+        <br>
+        <div class="importresultsdiv">
 
-    </div>    
+        </div>    
+    </div>
+</div>
+<?php
+$token = Yii::$app->request->getCsrfToken();
 
-    <?php
-    $token = Yii::$app->request->getCsrfToken();
-
-    $js = <<< JS
+$js = <<< JS
 $(document).ready(
     $(".install-form").on('beforeSubmit', function(event, jqXHR, settings) {
         var form = $(this);
@@ -91,7 +93,7 @@ $(document).ready(
             
   function DisableFields () {
     $("#btnSubmit").attr("disabled", true);
-
+   
    }
             
   function DisplayMessages(message) {
@@ -102,7 +104,6 @@ $(document).ready(
             
 JS;
 
-    $this->registerJs($js);
-    ?>
-</div>
+$this->registerJs($js);
+?>
 
