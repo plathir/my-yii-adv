@@ -22,4 +22,7 @@ return [
         ],
     ]),
     'params' => $params,
+	'aliases' => [
+           '@migration' => dirname(dirname(__DIR__)). '/migrations/',
+    ],    
 ];

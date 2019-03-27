@@ -26,7 +26,6 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
-cp_migrations.sh
 migrate.sh
 migrate_down
 migrate_up
