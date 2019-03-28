@@ -59,6 +59,10 @@ use yii\bootstrap\ActiveForm;
     </div>
 </div>
 <?php
+
+$helper = new \installation\helpers\InstallHelper();
+echo $helper->UpdateDBSettings();
+
 $token = Yii::$app->request->getCsrfToken();
 
 $js = <<< JS

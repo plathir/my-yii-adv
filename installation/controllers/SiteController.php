@@ -43,7 +43,10 @@ class SiteController extends Controller {
     public function actionAjaxInstall() {
         if (Yii::$app->request->isAjax) {
             \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
+           $data = Yii::$app->request->post();
+           $helper = new \installation\helpers\InstallHelper();
+           $helper->UpdateDBSettings($data);
+                   
             return [
                 'data' => [
                     'success' => true,
