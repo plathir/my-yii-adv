@@ -60,9 +60,6 @@ use yii\bootstrap\ActiveForm;
 </div>
 <?php
 
-$helper = new \installation\helpers\InstallHelper();
-echo $helper->UpdateDBSettings();
-
 $token = Yii::$app->request->getCsrfToken();
 
 $js = <<< JS
@@ -85,6 +82,7 @@ $(document).ready(
                 if (response.data.success == true) {
                    DisableFields();
                    DisplayMessages(response.data.message);
+                   console.log(response.data.data);
                 }
             })
             .fail(function() {

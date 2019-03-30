@@ -3,6 +3,7 @@ require(__DIR__ . '/vendorpath.php');
 require(__DIR__ . '/db.php');
 
 return [
+    'name' => '__APP_NAME__',
     'vendorPath' => $vendor_path,
     'components' => array_merge(
             $db, [

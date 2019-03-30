@@ -291,7 +291,7 @@ closedir($handle);
 
 return [
     'id' => 'app-backend',
-    'name' => 'test Name',
+ //   'name' => 'test Name',
     'timezone' => 'Europe/Athens',
     'basePath' => dirname(__DIR__),
     'runtimePath' => Yii::getAlias('@adminRootPath') . '/runtime',

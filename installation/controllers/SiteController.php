@@ -43,14 +43,17 @@ class SiteController extends Controller {
     public function actionAjaxInstall() {
         if (Yii::$app->request->isAjax) {
             \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-           $data = Yii::$app->request->post();
+           $data = Yii::$app->request->post("Install");
            $helper = new \installation\helpers\InstallHelper();
-           $helper->UpdateDBSettings($data);
+           $zz = $helper->UpdateDBSettings($data);
+           $zz1 = $helper->UpdateAppName($data);
                    
             return [
                 'data' => [
                     'success' => true,
-                    'message' => 'Model has been saved.',
+                    'message' => 'Model has been saved.' ,
+//                    'data' => $data["database"] . $zz ,
+                    'data' => $zz . '--' . $zz1,
                     'ajax' => Yii::$app->request->isAjax,
                 ],
                 'code' => 0,
