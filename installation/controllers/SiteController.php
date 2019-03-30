@@ -1,4 +1,5 @@
 <?php
+
 namespace installation\controllers;
 
 use yii\web\Controller;
@@ -43,22 +44,40 @@ class SiteController extends Controller {
     public function actionAjaxInstall() {
         if (Yii::$app->request->isAjax) {
             \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-           $data = Yii::$app->request->post("Install");
-           $helper = new \installation\helpers\InstallHelper();
-           $zz = $helper->UpdateDBSettings($data);
-           $zz1 = $helper->UpdateAppName($data);
-                   
-            return [
-                'data' => [
-                    'success' => true,
-                    'message' => 'Model has been saved.' ,
-//                    'data' => $data["database"] . $zz ,
-                    'data' => $zz . '--' . $zz1,
-                    'ajax' => Yii::$app->request->isAjax,
-                ],
-                'code' => 0,
-            ];
+            if (!$this->checkInstalled()) {
+                $data = Yii::$app->request->post("Install");
+                $helper = new \installation\helpers\InstallHelper();
+
+                $db_results = $helper->UpdateDBSettings($data);
+                $app_results = $helper->UpdateAppName($data);
+                $keys_results = $helper->MakeKeys();
+
+                return [
+                    'data' => [
+                        'success' => true,
+                        'message' => 'Model has been saved.',
+                        'data' => $db_results . '<br>' . $app_results . '<br>' . $keys_results . '<br>',
+                        'ajax' => Yii::$app->request->isAjax,
+                    ],
+                    'code' => 0,
+                ];
+            } else {
+                return [
+                    'data' => [
+                        'success' => true,
+                        'message' => 'Application Allready Installed !',
+                        'data' => '',
+                        'ajax' => Yii::$app->request->isAjax,
+                    ],
+                    'code' => 0,
+                ];
+            }
         }
+    }
+
+    public function checkInstalled() {
+
+        return true;
     }
 
 }

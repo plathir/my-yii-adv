@@ -31,4 +31,3 @@ migrate_down
 migrate_up
 sql_export.sh
 
-siteconfig/db-local.php

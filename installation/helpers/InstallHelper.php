@@ -1,4 +1,5 @@
 <?php
+
 namespace installation\helpers;
 
 use Yii;
@@ -33,4 +34,25 @@ class InstallHelper {
         return $dbFile;
     }
 
+    
+    public function MakeKeys() {
+
+        $frontend_file = Yii::getAlias('@realAppPath') . '/siteconfig/frontend.php';
+        $backend_file = Yii::getAlias('@realAppPath') . '/siteconfig/backend.php';
+
+        $frontend = file_get_contents($frontend_file);
+        $backend = file_get_contents($backend_file);
+
+        $fe_key = md5(uniqid(rand(), true));
+        $be_key = md5(uniqid(rand(), true));
+
+        $frontend = str_replace("frontend-key-for-my-yii-adv", $fe_key, $frontend);
+        $backend = str_replace("backend-key-for-my-yii-adv", $be_key, $backend);
+
+        if (file_put_contents($frontend_file, $frontend) && file_put_contents($backend_file, $backend)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
