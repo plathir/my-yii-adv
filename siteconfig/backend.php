@@ -8,4 +8,5 @@
 
 require(__DIR__ . '/vendorpath.php');
 
+
 $cookieValidationKey =  'backend-key-for-my-yii-adv';

@@ -50,7 +50,8 @@
         "abhi1693/yii2-system-info": "@dev",
         "codemix/yii2-localeurls" : "*",
         "2amigos/yii2-disqus-widget" : "~1.0",
-        "kop/yii2-scroll-pager": "dev-master"
+        "kop/yii2-scroll-pager": "dev-master",
+        "fxp/composer-asset-plugin":"~1.2.0"
         
     },
     "require-dev": {

@@ -17,6 +17,7 @@ $(document).ready(
                 if (response.data.success == true) {
                     DisableFields();
                     DisplayMessages(response.data.message);
+                  //  DisplayData(response.data.data);
                     console.log(response.data.data);
                 }
             })
@@ -36,6 +37,12 @@ function DisableFields() {
 function DisplayMessages(message) {
     console.log("message : " + message);
     $("div.resultsdiv").html(message);
+
+}
+
+function DisplayData(data) {
+    console.log("data : " + data);
+    $("div.resultsdiv").html("<pre>" + data + "<pre>");
 
 }
 

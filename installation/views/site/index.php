@@ -12,7 +12,9 @@ use yii\bootstrap\ActiveForm;
 <hr>
 
 <div class="row">
+    
     <?php
+    echo __FILE__;
     $form = ActiveForm::begin(['id' => 'install-form1',
                 'action' => ['site/ajax-install'],
 //                'enableClientValidation' => true,
@@ -23,6 +25,7 @@ use yii\bootstrap\ActiveForm;
     ?>
 
     <?= $form->field($model, 'appname'); ?>
+    <?= $form->field($model, 'dbhost'); ?>
     <?= $form->field($model, 'database'); ?>
     <?= $form->field($model, 'username'); ?>
     <?= $form->field($model, 'password'); ?>
@@ -59,9 +62,9 @@ use yii\bootstrap\ActiveForm;
     </div>
 </div>
 <?php
+
+
 $token = Yii::$app->request->getCsrfToken();
 
-//$js = __DIR__ . '/install.js';
-//$this->registerJsFile($js);
 ?>
 

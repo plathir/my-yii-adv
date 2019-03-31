@@ -7,6 +7,7 @@ use Yii;
 class Install extends Model {
 
     public $appname;
+    public $dbhost;
     public $database;
     public $username;
     public $password;
@@ -15,6 +16,7 @@ class Install extends Model {
     public function rules() {
         return [
             ['appname', 'required'],
+            ['dbhost', 'required'],
             ['database', 'required'],
             ['username', 'required'],
             ['password', 'required'],
@@ -26,6 +28,7 @@ class Install extends Model {
         return [
             'appname' => Yii::t('app', 'Application Name'),
             'database' => Yii::t('app', 'DataBase'),
+            'dbhost' => Yii::t('app', 'DB Host'),
             'username' => Yii::t('app', 'DataBase User'),
             'password' => Yii::t('app', 'Password'),
             'prefix' => Yii::t('app', 'Table Prefix'),

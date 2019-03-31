@@ -17,3 +17,7 @@ echo "Copy Blog"
 cp vendor/plathir/yii2-smart-blog/migrations/* migrations
 
 
+echo "Starting migrations...."
+php yii migrate/up --migrationPath="@migration"
+
+php yii install/load
