@@ -1,5 +1,4 @@
 <?php
-
 namespace installation\helpers;
 
 use Yii;
@@ -79,7 +78,7 @@ class InstallHelper {
         $key_frontend_inst = false;
         $key_backend_inst = false;
 
-        
+
         if ((strpos($dbfile_data, '__DB_HOST__') == false) &&
                 (strpos($dbfile_data, '__DATABASE__') == false) &&
                 (strpos($dbfile_data, '__DB_USER__') == false) &&
@@ -141,6 +140,70 @@ class InstallHelper {
 
         Yii:$app = $oldApp;
         return $result;
+    }
+
+    public function copyMigrationFiles() {
+        $copy_result = '';
+        $target = Yii::getalias("@migration");
+
+        $matches_path1 = Yii::getalias("@vendor") . '/plathir/yii2-smart-settings/migrations/*';
+
+        $matches_path2 = Yii::getalias("@vendor") . '/plathir/yii2-smart-apps/migrations/*';
+        $matches_path3 = Yii::getalias("@vendor") . '/plathir/yii2-smart-templates/migrations/*';
+        $matches_path4 = Yii::getalias("@vendor") . '/plathir/yii2-smart-log/migrations/*';
+        $matches_path5 = Yii::getalias("@vendor") . '/plathir/yii2-smart-user/migrations/*';
+        $matches_path6 = Yii::getalias("@vendor") . '/plathir/yii2-smart-widgets/migrations/*';
+        $matches_path7 = Yii::getalias("@vendor") . '/plathir/yii2-smart-blog/migrations/*';
+
+        $fileList1 = glob($matches_path1);
+        $fileList2 = glob($matches_path2);
+        $fileList3 = glob($matches_path3);
+        $fileList4 = glob($matches_path4);
+        $fileList5 = glob($matches_path5);
+        $fileList6 = glob($matches_path6);
+        $fileList7 = glob($matches_path7);
+
+
+
+
+        foreach ($fileList1 as $file) {
+            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+        }
+
+        foreach ($fileList2 as $file) {
+            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+        }
+
+        foreach ($fileList3 as $file) {
+            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+        }
+
+        foreach ($fileList4 as $file) {
+            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+        }
+
+        foreach ($fileList5 as $file) {
+            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+        }
+
+        foreach ($fileList6 as $file) {
+            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+        }
+
+        foreach ($fileList7 as $file) {
+            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+        }
+
+        return $cp_result;
+    }
+
+    public function copyFile($source, $target) {
+        $file = file_get_contents($source);
+        if (file_put_contents($target, $file)) {
+            return 'file ' . $source . 'copied to ' . $target;
+        } else {
+            return 'file ' . $source . ' error copied to ' . $target;
+        }
     }
 
 }

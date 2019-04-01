@@ -12,11 +12,11 @@ use yii\bootstrap\ActiveForm;
 <hr>
 
 <div class="row">
-    
+
     <?php
     echo __FILE__;
     $form = ActiveForm::begin(['id' => 'install-form1',
-                'action' => ['site/ajax-install'],
+//                'action' => ['site/ajax-install'],
 //                'enableClientValidation' => true,
                 'options' => [
                     'class' => 'install-form'
@@ -39,32 +39,3 @@ use yii\bootstrap\ActiveForm;
     </div>
 </div>
 <hr>
-<div class="import" >
-    <div class="row">
-        <?php
-        $form = ActiveForm::begin(['id' => 'install-form2',
-                    'action' => ['site/ajax-install-import'],
-//                'enableClientValidation' => true,
-                    'options' => [
-                        'class' => 'install-form-import'
-                    ]
-        ]);
-        ?>
-
-        <?= $form->field($modelImport, 'import')->checkBox(); ?>
-        <?= Html::submitButton('import', ['id' => 'btnSubmit', 'class' => 'btn btn-success']) ?>
-
-        <?php ActiveForm::end() ?>
-        <br>
-        <div class="importresultsdiv">
-
-        </div>    
-    </div>
-</div>
-<?php
-
-
-$token = Yii::$app->request->getCsrfToken();
-
-?>
-
