@@ -14,11 +14,11 @@ return [
             //comment the following array to send mail using php's mail function
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
-                'host' => 'smtp.gmail.com',
-                'username' => 'plathir.localhost@gmail.com',
-                'password' => 'george1234',
-                'port' => '587',
-                'encryption' => 'tls',
+                'host' => '__SMTP_HOST__', //'smtp.gmail.com',
+                'username' => '__SMTP_USERNAME__', //'plathir.localhost@gmail.com',
+                'password' => '__SMTP_PASSWORD__', //'george1234',
+                'port' => '__SMTP_PORT__', //'587',
+                'encryption' => '__SMTP_ENCRYPTION__', //'tls',
             ],
         ],
     ])

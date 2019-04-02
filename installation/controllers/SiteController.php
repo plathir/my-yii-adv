@@ -47,6 +47,10 @@ class SiteController extends Controller {
                         'result' => $result,
             ]);
         } else {
+            if (!isset($model->dbhost)) {
+                $model->dbhost = 'localhost';
+            };
+
             return $this->render('index', [
                         'model' => $model,
             ]);
@@ -72,8 +76,5 @@ class SiteController extends Controller {
 
         return ob_get_clean();
     }
-    
-    
-
 
 }

@@ -1,8 +1,7 @@
 <?php
 
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'dev');
 
+require(__DIR__ . '/../../siteconfig/env.php');
 require(__DIR__ . '/../../siteconfig/frontend.php');
 
 require($vendor_path . '/autoload.php');

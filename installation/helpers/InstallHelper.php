@@ -31,6 +31,11 @@ class InstallHelper {
         $appfile_data = file_get_contents($appFile);
         if ($appfile_data) {
             $appfile_data = str_replace("__APP_NAME__", $data["appname"], $appfile_data);
+            $appfile_data = str_replace("__SMTP_HOST__", $data["smtp_host"], $appfile_data);
+            $appfile_data = str_replace("__SMTP_USERNAME__", $data["smtp_user"], $appfile_data);
+            $appfile_data = str_replace("__SMTP_PASSWORD__", $data["smtp_password"], $appfile_data);
+            $appfile_data = str_replace("__SMTP_PORT__", $data["smtp_port"], $appfile_data);
+            $appfile_data = str_replace("__SMTP_ENCRYPTION__", $data["smtp_encryption"], $appfile_data);
             if (file_put_contents($appFile, $appfile_data)) {
                 return true;
             } else {
