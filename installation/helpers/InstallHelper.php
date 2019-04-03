@@ -125,7 +125,7 @@ class InstallHelper {
         ]);
 
         if ($db->open()) {
-            $db . close();
+            $db->close();
             return true;
         } else {
             return false;
@@ -152,7 +152,6 @@ class InstallHelper {
         $target = Yii::getalias("@migration");
 
         $matches_path1 = Yii::getalias("@vendor") . '/plathir/yii2-smart-settings/migrations/*';
-
         $matches_path2 = Yii::getalias("@vendor") . '/plathir/yii2-smart-apps/migrations/*';
         $matches_path3 = Yii::getalias("@vendor") . '/plathir/yii2-smart-templates/migrations/*';
         $matches_path4 = Yii::getalias("@vendor") . '/plathir/yii2-smart-log/migrations/*';
