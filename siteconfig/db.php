@@ -9,6 +9,7 @@ $db['db'] = [
     'tablePrefix' => '__TB_PREFIX__',
 ];
 
+
 $filename = __DIR__ . '/db-local.php';
 
 if (file_exists($filename)) {

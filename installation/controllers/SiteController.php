@@ -25,34 +25,39 @@ class SiteController extends Controller {
 
     public function actionIndex() {
         $model = new Install();
+        $helper = new \installation\helpers\InstallHelper();
+        
+        if (!$helper->checkInstalled()) {
+            if ($model->load(Yii::$app->request->post())) {
+                $copy_files = $helper->copyMigrationFiles();
+                $db_results = $helper->UpdateDBSettings($model);
+                $app_results = $helper->UpdateAppName($model);
+                $keys_results = $helper->MakeKeys();
+                $migr_results = $this->MigrateInitialData();
 
-        if ($model->load(Yii::$app->request->post())) {
+                $result["copy_files"] = $copy_files;
+                $result["db_results"] = $db_results;
+                $result["app_results"] = $app_results;
+                $result["keys_results"] = $keys_results;
+                $result["migr_results"] = $migr_results;
 
-            $helper = new \installation\helpers\InstallHelper();
-            //    if (!$helper->checkInstalled()) {
+                return $this->render('result', [
+                            'result' => $result,
+                ]);
+            } else {
+                if (!isset($model->dbhost)) {
+                    $model->dbhost = 'localhost';
+                };
 
-            $copy_files = $helper->copyMigrationFiles();
-            $db_results = $helper->UpdateDBSettings($model);
-            $app_results = $helper->UpdateAppName($model);
-            $keys_results = $helper->MakeKeys();
-            $migr_results = $this->MigrateInitialData();
-
-            $result["copy_files"] = $copy_files;
-            $result["db_results"] = $db_results;
-            $result["app_results"] = $app_results;
-            $result["keys_results"] = $keys_results;
-            $result["migr_results"] = $migr_results;
-
-            return $this->render('result', [
-                        'result' => $result,
-            ]);
+                return $this->render('index', [
+                            'model' => $model,
+                            'allowInstall' => true
+                ]);
+            }
         } else {
-            if (!isset($model->dbhost)) {
-                $model->dbhost = 'localhost';
-            };
-
             return $this->render('index', [
                         'model' => $model,
+                        'allowInstall' => false
             ]);
         }
     }
