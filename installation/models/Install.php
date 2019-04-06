@@ -25,7 +25,7 @@ class Install extends Model {
             ['dbhost', 'required'],
             ['database', 'required'],
             ['username', 'required'],
-            ['password', 'required'],
+      //      ['password', 'required'],
             ['password', 'string', 'min' => 3],
             ['prefix', 'string'],
             ['environment', 'required'],
