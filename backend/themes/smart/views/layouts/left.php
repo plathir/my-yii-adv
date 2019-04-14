@@ -59,7 +59,7 @@ $userHelper = new UserHelper();
 
             return $return;
         };
-        $appsItems = '';
+        $appsItems = [];
         foreach ($apps as $app) {
             if ($app->menu != null) {
                 $appsItems[] = ['label' => $app->descr, 'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, $app->menu->menu_id, $callback, true)];
