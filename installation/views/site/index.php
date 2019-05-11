@@ -7,9 +7,15 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\helpers\Url;
+
 ?>
 <h2>SmartByii Installation </h2>
 <hr>
+<a href="<?= Url::toRoute(['site/buildthemes']); ?>">Build Themes</a>
+<br>
+<br>
+<br>
 
 <?php if ($allowInstall == true) { ?>
     <div class="row vertical-divider">

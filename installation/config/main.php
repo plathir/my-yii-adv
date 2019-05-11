@@ -7,7 +7,8 @@ return [
     'basePath' => dirname(__DIR__),
     //'controllerNamespace' => 'installation\controllers',
     'controllerNamespace' => 'installation\controllers',
-//    'defaultRoute' => 'site',
+   'defaultRoute' => 'site',
+   // 'defaultRoute' => 'site/index1',
     'vendorPath' => $vendor_path,
     'components' => array_merge($db, [
         'request' => [

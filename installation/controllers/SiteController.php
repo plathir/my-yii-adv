@@ -26,7 +26,7 @@ class SiteController extends Controller {
     public function actionIndex() {
         $model = new Install();
         $helper = new \installation\helpers\InstallHelper();
-        
+
         if (!$helper->checkInstalled()) {
             if ($model->load(Yii::$app->request->post())) {
                 $copy_files = $helper->copyMigrationFiles();
@@ -80,6 +80,16 @@ class SiteController extends Controller {
         fclose(\STDERR);
 
         return ob_get_clean();
+    }
+
+    public function actionBuildthemes() {
+        $helper = new \installation\helpers\InstallHelper();
+        
+        $results[] = $helper->BuildViews();
+        
+        return $this->render('buildthemes',
+                [ 'results' => $results ]
+                );
     }
 
 }
