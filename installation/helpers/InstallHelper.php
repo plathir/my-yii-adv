@@ -237,17 +237,21 @@ class InstallHelper {
 
     public function BuildModuleViews($moduleName, $modulePath) {
 
-        $this->BuildBackendModuleViews($moduleName, $modulePath);
-        $this->BuildBackendWidgetsViews($moduleName, $modulePath);
-        //$this->BuildFrontendModuleViews($moduleName, $modulePath);
+        $this->BuildViewsFiles('backend', 'admin', $moduleName, $modulePath);
+        $this->BuildWidgetsViewsFiles('backend', 'admin', $moduleName, $modulePath);
+        
+
+        $this->BuildViewsFiles('frontend', 'site', $moduleName, $modulePath);
+        $this->BuildWidgetsViewsFiles('frontend', 'site', $moduleName, $modulePath);
+        
 //        $this->BuildCommonModuleViews($moduleName, $modulePath);
         return true;
     }
 
-    public function BuildBackendModuleViews($moduleName, $modulePath) {
+    public function BuildViewsFiles($app, $env, $moduleName, $modulePath) {
 
-        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . 'backend' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
-        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
+        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . $app . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
+        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
 
         if (file_exists($sourceViewsPath)) {
             if (!file_exists($targetViewsPath)) {
@@ -257,10 +261,10 @@ class InstallHelper {
         }
     }
 
-    public function BuildBackendWidgetsViews($moduleName, $modulePath) {
+    public function BuildWidgetsViewsFiles($app, $env, $moduleName, $modulePath) {
 
-        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . 'backend' . DIRECTORY_SEPARATOR . 'widgets' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
-        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName . DIRECTORY_SEPARATOR . 'widgets';
+        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . $app . DIRECTORY_SEPARATOR . 'widgets' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
+        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName . DIRECTORY_SEPARATOR . 'widgets';
         if (file_exists($sourceViewsPath)) {
             if (!file_exists($targetViewsPath)) {
                 @mkdir($targetViewsPath);
@@ -268,7 +272,34 @@ class InstallHelper {
             $this->recursive_copy($sourceViewsPath, $targetViewsPath);
         }
     }
-
+  
+    
+//    public function BuildFrontendModuleViews($moduleName, $modulePath) {
+//
+//        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . 'frontend' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
+//        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'site' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
+//
+//        if (file_exists($sourceViewsPath)) {
+//            if (!file_exists($targetViewsPath)) {
+//                @mkdir($targetViewsPath);
+//            }
+//            $this->recursive_copy($sourceViewsPath, $targetViewsPath);
+//        }
+//    }
+//
+//    public function BuildFrontendWidgetsViews($moduleName, $modulePath) {
+//
+//        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . 'frontend' . DIRECTORY_SEPARATOR . 'widgets' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
+//        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'site' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName . DIRECTORY_SEPARATOR . 'widgets';
+//        if (file_exists($sourceViewsPath)) {
+//            if (!file_exists($targetViewsPath)) {
+//                @mkdir($targetViewsPath);
+//            }
+//            $this->recursive_copy($sourceViewsPath, $targetViewsPath);
+//        }
+//    }
+//    
+//    
     public function recursive_copy($src, $dst) {
         $dir = opendir($src);
         @mkdir($dst);
