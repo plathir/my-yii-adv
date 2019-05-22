@@ -219,33 +219,33 @@ class InstallHelper {
             'log' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-log'],
             'user' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-user'],
             'widgets' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-widgets'],
-            'blog' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-blog']
+            'blog' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-blog'],
+            'base' => ['path' => Yii::getalias("@realAppPath")],
         ];
 
-
+        $results = [];
         foreach ($modules as $moduleName => $module) {
-            $results = [];
             if ($this->BuildModuleViews($moduleName, $module['path'])) {
                 $results[$moduleName] = 'Views Builded !';
             } else {
                 $results[$moduleName] = 'Views Cannot Build !';
             }
         }
-
         return $results;
     }
 
     public function BuildModuleViews($moduleName, $modulePath) {
+        try {
+            $this->BuildViewsFiles('backend', 'admin', $moduleName, $modulePath);
+            $this->BuildWidgetsViewsFiles('backend', 'admin', $moduleName, $modulePath);
 
-        $this->BuildViewsFiles('backend', 'admin', $moduleName, $modulePath);
-        $this->BuildWidgetsViewsFiles('backend', 'admin', $moduleName, $modulePath);
-        
 
-        $this->BuildViewsFiles('frontend', 'site', $moduleName, $modulePath);
-        $this->BuildWidgetsViewsFiles('frontend', 'site', $moduleName, $modulePath);
-        
-//        $this->BuildCommonModuleViews($moduleName, $modulePath);
-        return true;
+            $this->BuildViewsFiles('frontend', 'site', $moduleName, $modulePath);
+            $this->BuildWidgetsViewsFiles('frontend', 'site', $moduleName, $modulePath);
+            return true;
+        } catch (Exception $ex) {
+            return false;
+        }
     }
 
     public function BuildViewsFiles($app, $env, $moduleName, $modulePath) {
@@ -272,34 +272,7 @@ class InstallHelper {
             $this->recursive_copy($sourceViewsPath, $targetViewsPath);
         }
     }
-  
-    
-//    public function BuildFrontendModuleViews($moduleName, $modulePath) {
-//
-//        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . 'frontend' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
-//        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'site' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
-//
-//        if (file_exists($sourceViewsPath)) {
-//            if (!file_exists($targetViewsPath)) {
-//                @mkdir($targetViewsPath);
-//            }
-//            $this->recursive_copy($sourceViewsPath, $targetViewsPath);
-//        }
-//    }
-//
-//    public function BuildFrontendWidgetsViews($moduleName, $modulePath) {
-//
-//        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . 'frontend' . DIRECTORY_SEPARATOR . 'widgets' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
-//        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'site' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName . DIRECTORY_SEPARATOR . 'widgets';
-//        if (file_exists($sourceViewsPath)) {
-//            if (!file_exists($targetViewsPath)) {
-//                @mkdir($targetViewsPath);
-//            }
-//            $this->recursive_copy($sourceViewsPath, $targetViewsPath);
-//        }
-//    }
-//    
-//    
+
     public function recursive_copy($src, $dst) {
         $dir = opendir($src);
         @mkdir($dst);

@@ -131,7 +131,8 @@ $components_var = [
 //            'basePath' => '@app/themes/smart/views',
 //            'baseUrl' => '@web/themes/smart',
             'pathMap' => [
-                '@app/views' => '@app/themes/smart/views',
+                '@app/views' => '@app/themes/smart/views'
+//                '@app/views' => '@realAppPath/themes/smart/admin/module/base/views', // path for new views Path
             ],
         ],
     ],
