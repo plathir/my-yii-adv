@@ -132,12 +132,12 @@ $components_var = [
     ],
     'view' => [
         'theme' => [
-//            'basePath' => '@app/themes/smart/views',
-//            'baseUrl' => '@web/themes/smart',
+            'basePath' => '@app/themes/smart/views',
+            'baseUrl' => '@web/themes/smart',
             'pathMap' => [
                 '@app/views' => '@app/themes/smart/views',
             ],
-        ],
+        ]
     ],
     'assetManager' => [
         'bundles' => [
@@ -223,7 +223,8 @@ return [
     'runtimePath' => Yii::getAlias('@RootPath') . '/runtime',
     'bootstrap' => [
         'log',
-        'frontend\components\ModuleBootstrap'
+        'frontend\components\ModuleBootstrap',
+        'frontend\components\ThemeBootstrap'
     //'app\components\Bootstrap',
     ],
     'controllerNamespace' => 'frontend\controllers',

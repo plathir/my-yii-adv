@@ -1,5 +1,4 @@
 <?php
-
 namespace backend\controllers;
 
 use Yii;
@@ -81,9 +80,9 @@ class SiteController extends Controller {
     }
 
     public function actionDeletebackendcache() {
-        
-       //Yii::$app->backendCache->flush();
-        Yii::$app->cache->flush(); 
+
+        //Yii::$app->backendCache->flush();
+        Yii::$app->cache->flush();
         $this->redirect(['cache']);
     }
 
@@ -140,8 +139,16 @@ class SiteController extends Controller {
 
     public function actionSessions() {
         
-        
-        
     }
-    
+
+    public function actionThemeswitch($theme) {
+        Yii::$app->getView()->theme = new Theme([
+            'basePath' => "@app/themes/$theme",
+            'baseUrl' => "@web/themes/$theme",
+            'pathMap' => [
+                '@app/views' => "@app/themes/$theme",
+            ],
+        ]);
+    }
+
 }

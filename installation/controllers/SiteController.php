@@ -84,12 +84,11 @@ class SiteController extends Controller {
 
     public function actionBuildthemes() {
         $helper = new \installation\helpers\InstallHelper();
-        
+
         $results[] = $helper->BuildViews();
-        
-        return $this->render('buildthemes',
-                [ 'results' => $results ]
-                );
+
+        return $this->render('buildthemes', ['results' => $results]
+        );
     }
 
 }

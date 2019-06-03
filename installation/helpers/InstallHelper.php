@@ -151,51 +151,22 @@ class InstallHelper {
         $copy_result = '';
         $target = Yii::getalias("@migration");
 
-        $matches_path1 = Yii::getalias("@vendor") . '/plathir/yii2-smart-settings/migrations/*';
-        $matches_path2 = Yii::getalias("@vendor") . '/plathir/yii2-smart-apps/migrations/*';
-        $matches_path3 = Yii::getalias("@vendor") . '/plathir/yii2-smart-templates/migrations/*';
-        $matches_path4 = Yii::getalias("@vendor") . '/plathir/yii2-smart-log/migrations/*';
-        $matches_path5 = Yii::getalias("@vendor") . '/plathir/yii2-smart-user/migrations/*';
-        $matches_path6 = Yii::getalias("@vendor") . '/plathir/yii2-smart-widgets/migrations/*';
-        $matches_path7 = Yii::getalias("@vendor") . '/plathir/yii2-smart-blog/migrations/*';
-
-        $fileList1 = glob($matches_path1);
-        $fileList2 = glob($matches_path2);
-        $fileList3 = glob($matches_path3);
-        $fileList4 = glob($matches_path4);
-        $fileList5 = glob($matches_path5);
-        $fileList6 = glob($matches_path6);
-        $fileList7 = glob($matches_path7);
+        $paths = [
+            Yii::getalias("@vendor") . '/plathir/yii2-smart-settings/migrations/*',
+            Yii::getalias("@vendor") . '/plathir/yii2-smart-apps/migrations/*',
+            Yii::getalias("@vendor") . '/plathir/yii2-smart-templates/migrations/*',
+            Yii::getalias("@vendor") . '/plathir/yii2-smart-log/migrations/*',
+            Yii::getalias("@vendor") . '/plathir/yii2-smart-user/migrations/*',
+            Yii::getalias("@vendor") . '/plathir/yii2-smart-widgets/migrations/*',
+            Yii::getalias("@vendor") . '/plathir/yii2-smart-blog/migrations/*'];
 
 
+        foreach ($paths as $path) {
 
-
-        foreach ($fileList1 as $file) {
-            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
-        }
-
-        foreach ($fileList2 as $file) {
-            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
-        }
-
-        foreach ($fileList3 as $file) {
-            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
-        }
-
-        foreach ($fileList4 as $file) {
-            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
-        }
-
-        foreach ($fileList5 as $file) {
-            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
-        }
-
-        foreach ($fileList6 as $file) {
-            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
-        }
-
-        foreach ($fileList7 as $file) {
-            $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+            $fileList = glob($path);
+            foreach ($fileList as $file) {
+                $cp_result[] = $this->copyFile($file, $target . '/' . basename($file));
+            }
         }
 
         return $cp_result;
@@ -209,6 +180,10 @@ class InstallHelper {
             return 'file ' . $source . ' error copied to ' . $target;
         }
     }
+
+    /*
+     *  Build Views
+     */
 
     public function BuildViews() {
 
@@ -251,7 +226,7 @@ class InstallHelper {
     public function BuildViewsFiles($app, $env, $moduleName, $modulePath) {
 
         $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . $app . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
-        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
+        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
 
         if (file_exists($sourceViewsPath)) {
             if (!file_exists($targetViewsPath)) {
@@ -264,7 +239,7 @@ class InstallHelper {
     public function BuildWidgetsViewsFiles($app, $env, $moduleName, $modulePath) {
 
         $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . $app . DIRECTORY_SEPARATOR . 'widgets' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
-        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName . DIRECTORY_SEPARATOR . 'widgets';
+        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName . DIRECTORY_SEPARATOR . 'widgets';
         if (file_exists($sourceViewsPath)) {
             if (!file_exists($targetViewsPath)) {
                 @mkdir($targetViewsPath);
