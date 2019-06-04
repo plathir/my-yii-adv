@@ -354,7 +354,9 @@ INSERT INTO {{%settings}} (`id`, `module_name`, `key_name`, `description`, `valu
 (393, 'site', 'ApplicationNameHTML', 'ApplicationNameHTML', '<b>SmartB</b>yii Local', 'string', 1, 1540988481, 1540988988),
 (394, 'site', 'MasterContentLang', 'Master Content Language', 'en', 'string', 1, 1548662607, 1548662649),
 (395, 'site', 'DisqusShortname', 'DisqusShortname', 'developerpagesgr', 'string', 1, 1549525898, 1549527220),
-(396, 'site', 'Comments', 'Comments', '0', 'boolean', 1, 1549527199, 1549527246);
+(396, 'site', 'Comments', 'Comments', '0', 'boolean', 1, 1549527199, 1549527246),
+(397, 'site', 'FrontendTheme ', 'FrontendTheme', '', 'string', 1, 1549527199, 1549527246),
+(398, 'site', 'BackendTheme ', 'BackendTheme', '', 'string', 1, 1549527199, 1549527246);
 
 --
 -- Dumping data for table `snippets`
