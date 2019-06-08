@@ -76,7 +76,7 @@ $components_var = [
         ],
     ],
     'blog' => [
-        'class' => 'plathir\smartblog\frontend',
+        'class' => plathir\smartblog\frontend\Module::class,
     ],
     'authClientCollection' => [
         'class' => 'yii\authclient\Collection',

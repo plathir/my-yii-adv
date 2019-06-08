@@ -27,9 +27,9 @@ $modules_var = [
     'admin' => [
         'class' => 'mdm\admin\Module',
     ],
-    'smartblog' => [
-        'class' => 'plathir\smartblog\Module',
-    ],
+//    'smartblog' => [
+//        'class' => 'plathir\smartblog\Module',
+//    ],
     'blog' => [
         'class' => 'plathir\smartblog\backend\Module',
         'ImagePath' => '@media/images/blog/posts',
