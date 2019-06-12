@@ -1,4 +1,4 @@
-<?php
+<?php  
 namespace frontend\helpers;
 
 use Yii;
@@ -60,12 +60,6 @@ class ThemesHelper {
 
     public function AppWidgetsRealPath($appDir) {
         return dirname($appDir) . 'widgets' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'views';
-    }
-
-    public function getPathFromModule($module) {
-
-        $module = \Yii::$app->getModule($module);
-        return $module->getBasePath();
     }
 
 }
