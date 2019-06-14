@@ -1,4 +1,4 @@
-<?php  
+<?php
 namespace frontend\helpers;
 
 use Yii;
@@ -9,13 +9,26 @@ use Yii;
  */
 class ThemesHelper {
 
-    public function ModuleThemePath($module, $currentPath) {
+    public function ModuleThemePath($module, $environment, $currentPath) {
 
-        if (Yii::$app->settings->getSettings('FrontendTheme') != null) {
-            return realpath(Yii::getAlias('@realAppPath') . '/themes/site/' . Yii::$app->settings->getSettings('FrontendTheme') . "/module/$module/views");
-        } else {
-           // return realpath($this->getPathFromModule($module));
-            return realpath($this->ModuleRealPath($currentPath));
+
+        switch ($environment) {
+            case 'frontend':
+                if (Yii::$app->settings->getSettings('FrontendTheme') != null) {
+                    return realpath(Yii::getAlias('@realAppPath') . '/themes/site/' . Yii::$app->settings->getSettings('FrontendTheme') . "/module/$module");
+                } else {
+                    return $currentPath;
+                }
+                break;
+            case 'backend':
+                if (Yii::$app->settings->getSettings('BackendTheme') != null) {
+                    return realpath(Yii::getAlias('@realAppPath') . '/themes/admin/' . Yii::$app->settings->getSettings('BackendTheme') . "/module/$module");
+                } else {
+                    return $currentPath;
+                }
+                break;
+            default:
+                break;
         }
     }
 
