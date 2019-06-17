@@ -1,4 +1,5 @@
 <?php
+
 namespace installation\helpers;
 
 use Yii;
@@ -195,6 +196,7 @@ class InstallHelper {
             'user' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-user'],
             'widgets' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-widgets'],
             'blog' => ['path' => Yii::getalias("@vendor") . '/plathir/yii2-smart-blog'],
+            'admin' => ['path' => Yii::getalias("@vendor") . '/mdmsoft/yii2-admin'],
             'base' => ['path' => Yii::getalias("@realAppPath")],
         ];
 
@@ -214,9 +216,10 @@ class InstallHelper {
             $this->BuildViewsFiles('backend', 'admin', $moduleName, $modulePath);
             $this->BuildWidgetsViewsFiles('backend', 'admin', $moduleName, $modulePath);
 
-
-            $this->BuildViewsFiles('frontend', 'site', $moduleName, $modulePath);
-            $this->BuildWidgetsViewsFiles('frontend', 'site', $moduleName, $modulePath);
+            if (!$moduleName == 'admin') {
+                $this->BuildViewsFiles('frontend', 'site', $moduleName, $modulePath);
+                $this->BuildWidgetsViewsFiles('frontend', 'site', $moduleName, $modulePath);
+            }
             return true;
         } catch (Exception $ex) {
             return false;
@@ -225,8 +228,18 @@ class InstallHelper {
 
     public function BuildViewsFiles($app, $env, $moduleName, $modulePath) {
 
-        $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . $app . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
-        $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
+        if ($moduleName == 'admin') {
+            $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . 'views';
+            $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
+
+            if (!file_exists($targetViewsPath)) {
+                @mkdir($targetViewsPath);
+            }
+            $targetViewsPath = $targetViewsPath . DIRECTORY_SEPARATOR . 'views';
+        } else {
+            $sourceViewsPath = $modulePath . DIRECTORY_SEPARATOR . $app . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'smart';
+            $targetViewsPath = Yii::getalias("@themes") . DIRECTORY_SEPARATOR . $env . DIRECTORY_SEPARATOR . 'smart' . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARATOR . $moduleName;
+        }
 
         if (file_exists($sourceViewsPath)) {
             if (!file_exists($targetViewsPath)) {

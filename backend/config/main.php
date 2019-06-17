@@ -26,6 +26,7 @@ $modules_var = [
     ],
     'admin' => [
         'class' => 'mdm\admin\Module',
+        'viewPath' => '@app/themes/smart/views'
     ],
 //    'smartblog' => [
 //        'class' => 'plathir\smartblog\Module',
