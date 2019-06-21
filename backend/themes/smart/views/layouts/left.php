@@ -101,6 +101,11 @@ $userHelper = new UserHelper();
                         'url' => ['/templates'],
                     ],
                     [
+                        'label' => 'Themes',
+                        'icon' => '',
+                        'url' => ['/templates/themes'],
+                    ],
+                    [
                         'label' => 'System Infos',
                         'icon' => '',
                         'url' => ['/site/system'],

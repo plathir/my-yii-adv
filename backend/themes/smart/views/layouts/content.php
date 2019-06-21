@@ -7,7 +7,7 @@ use yii\helpers\Html;
 ?>
 <div class="content-wrapper">
     <section class="content-header">
-        <?php $loader = '<div class="inline loader" id="loader"><img src="' . Url::to('@web/images/loader.gif') . '" alt="Loading"/></div>'; ?>        
+        <?php $loader = '<div class="inline loader" id="loader"><img src="' . Url::to('@web/themes/smart/images/loader.gif') . '" alt="Loading"/></div>'; ?>        
         <?php if (isset($this->blocks['content-header'])) { ?>
             <h1><?= $this->blocks['content-header'] ?></h1>
         <?php } else { ?>
